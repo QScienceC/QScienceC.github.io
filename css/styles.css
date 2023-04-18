@@ -111,6 +111,20 @@ color: #8B0000;
     padding: 25px 0;
     color: #fff;
 }
+.hero-text {
+  font-size: 5em;
+  text-align: center;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  text-stroke-width: 2px;
+  text-stroke-color: black;
+}
+.hero-text-q {
+  -webkit-text-stroke-width: 0px;
+  -webkit-text-stroke-color: none;
+  text-stroke-width: 0px;
+  text-stroke-color: none;
+}
 .heroBtn {
     float: right;
     margin: 24px 0;
