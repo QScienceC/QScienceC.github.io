@@ -16,13 +16,22 @@
     /* Add margin between sections */
     section {
         margin-bottom: 100px;
-        scroll-margin-top: 300px; 
+        scroll-margin-top: 100px; 
       }
       /* Add padding to the top of the page */
       body {
           padding-top: 100px;
       }
   </style>
+  <style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    [data-scroll] {
+        scroll-margin-top: 80px; 
+    }
+</style>
 </head>
 
 
@@ -45,7 +54,7 @@
                         <li class="scroll active"><a href="#aml">AMSO-AI</a></li> 
                         <li class="scroll"><a href="#defining-data">Data</a></li>
                         <li class="scroll"><a href="#selecting-options">Options</a></li> 
-                        <li class="scroll"><a href="#model-testing">Training and Testing</a></li>  
+                        <li class="scroll"><a href="#model-testing">Testing and Development</a></li>  
                         <li class="scroll"><a href="#unlock-potential">Real-Time Alerts</a></li>  
                         <li class="scroll"><a href="#interest-business">Interested?</a></li>                        
                     </ul>
@@ -107,15 +116,16 @@
         </div>
     </section>
 
-  <script src="js/jquery.js"></script>
-  <script src="js/bootstrap.min.js"></script> 
-  <script src="js/mousescroll.js"></script>
-  <script src="js/smoothscroll.js"></script>
-  <script src="js/jquery.prettyPhoto.js"></script>
-  <script src="js/jquery.isotope.min.js"></script>
-  <script src="js/jquery.inview.min.js"></script>
-  <script src="js/wow.min.js"></script>
-  <script src="js/custom-scripts.js"></script>
-    
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script> 
+    <script src="js/mousescroll.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/jquery.inview.min.js"></script>
+  <!--<script src="js/custom-scripts.js"></script>-->
 </body>
 </html>
