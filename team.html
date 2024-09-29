@@ -12,7 +12,7 @@
   <link href="css/prettyPhoto.css" rel="stylesheet">
   <title>Meet Our Team</title>
   <link rel="shortcut icon" href="images/logo_hex.png">
-
+<!--
   <style>
     body {
       padding-top: 100px;
@@ -35,7 +35,35 @@
       margin-top: 0;
     }
   </style>
+-->
+  <style>
+    /* Set image size for team member images */
+    .team-img {
+        width: 100%; /* Ensure the image fills its container */
+        max-width: 150px; /* Set a max width for the image */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 20px; /* Space below the image */
+    }
 
+    /* Adjust text container to align next to the image */
+    .team-member {
+        display: flex; /* Flexbox layout for side-by-side alignment */
+        align-items: center; /* Vertically center text with image */
+        flex-wrap: wrap; /* Wrap content if screen size is small */
+        margin-bottom: 40px; /* Space between team member sections */
+    }
+
+    /* Adjustments for small screens */
+    @media (max-width: 768px) {
+        .team-member {
+            flex-direction: column; /* Stack image and text vertically on smaller screens */
+        }
+
+        .team-img {
+            max-width: 100%; /* Full width image on small screens */
+        }
+    }
+  </style>
 </head>
 
 <body id="team">
@@ -72,7 +100,7 @@
 
       <!-- Mikey Profile -->
       <div class="team-member wow fadeInUp">
-        <img src="images/team/mikey.png" alt="Dr. Mikey Tabak" class="img-responsive">
+        <img src="images/team/mikey.png" alt="Dr. Mikey Tabak" class="img-responsive team-img">
         <div>
             <h3>Dr. Mikey Tabak 
                 <span style="font-size: 20px; font-weight: normal; color: #888;">Chief Science Officer & Founder</span>
@@ -83,7 +111,7 @@
 
         <!-- Matt Profile -->
         <div class="team-member wow fadeInUp">
-            <img src="images/team/matt.png" alt="Matt Bair" class="img-responsive">
+            <img src="images/team/matt.png" alt="Matt Bair" class="img-responsive team-img">
             <div>
                 <h3>Matt Bair
                     <span style="font-size: 20px; font-weight: normal; color: #888;">Chief Innovation Officer</span>
@@ -94,7 +122,7 @@
 
         <!-- Liz Profile -->
         <div class="team-member wow fadeInUp">
-            <img src="images/team/liz.jpg" alt="Dr. Liz Mandeville" class="img-responsive">
+            <img src="images/team/liz.jpg" alt="Dr. Liz Mandeville" class="img-responsive team-img">
             <div>
                 <h3>Dr. Liz Mandeville
                     <span style="font-size: 20px; font-weight: normal; color: #888;">Chief Computational Biologist</span>
