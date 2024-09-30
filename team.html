@@ -12,37 +12,16 @@
   <link href="css/prettyPhoto.css" rel="stylesheet">
   <title>Meet Our Team</title>
   <link rel="shortcut icon" href="images/logo_hex.png">
-<!--
-  <style>
-    body {
-      padding-top: 100px;
-    }
 
-    /* Styling for team member profile */
-    .team-member {
-      display: flex;
-      align-items: center;
-      margin-bottom: 40px;
-    }
-
-    .team-member img {
-      max-height: auto;
-      width: 300px;
-      margin-right: 20px;
-    }
-
-    .team-member h3 {
-      margin-top: 0;
-    }
-  </style>
--->
   <style>
     /* Set image size for team member images */
     .team-img {
         width: 100%; /* Ensure the image fills its container */
-        max-width: 150px; /* Set a max width for the image */
+        max-width: 300px; /* Set a max width for the image */
         height: auto; /* Maintain aspect ratio */
         margin-bottom: 20px; /* Space below the image */
+        margin: 0 auto 20px auto; /* Center the image horizontally and add space below */
+        display: block; /* Ensure it's treated as a block element */
     }
 
     /* Adjust text container to align next to the image */
@@ -51,16 +30,19 @@
         align-items: center; /* Vertically center text with image */
         flex-wrap: wrap; /* Wrap content if screen size is small */
         margin-bottom: 40px; /* Space between team member sections */
+        text-align: center; /* Center text for smaller screens */
     }
 
     /* Adjustments for small screens */
     @media (max-width: 768px) {
         .team-member {
             flex-direction: column; /* Stack image and text vertically on smaller screens */
+            text-align: center; /* Center text when stacked */
         }
 
         .team-img {
             max-width: 100%; /* Full width image on small screens */
+            margin-bottom: 20px; /* Ensure space below the image */
         }
     }
   </style>
@@ -95,7 +77,7 @@
     <div class="container">
       <div class="section-header">
         <h2 class="section-title wow fadeInDown">Meet Our Team</h2>
-        <p class="wow fadeInDown" style="font-size: 14pt;">Our team is made up of experts in data science, AI, and software development. We are committed to environmental sustainablility. Learn more about our members below:</p>
+        <p class="wow fadeInDown" style="font-size: 14pt;">Our team is made up of experts in data science, AI, and software development. Learn more about our members below:</p>
       </div>
 
       <!-- Mikey Profile -->
@@ -108,6 +90,7 @@
           <p>I have a decade of post-PhD experience developing AI models that drive solutions for environmental protection, climate change mitigation, and advancing business goals. Leveraging state-of-the-art technologies and high-performance computing, I work across diverse fields, including biology, renewable energy, pharmaceuticals, computer vision, and agriculture. I hold a Bachelor's degree from Vanderbilt University and a PhD from the University of Wyoming. Over the course of my career, I have published <a href="https://scholar.google.com/citations?user=YkiPcGUAAAAJ&hl=en&oi=sra">dozens of peer-reviewed scientific articles</a>. Outside of work, I enjoy long trail runs, cross country skiing, and playing in forests and lakes with my family. </p>
         </div>
       </div><!-- End of Team Member Profile -->
+      <br>
 
         <!-- Matt Profile -->
         <div class="team-member wow fadeInUp">
@@ -118,14 +101,14 @@
                   </h3>
                 <p>I have had a life-long passion for finding creative and useful application of technology. I have worked in the software and data space for over 25 years, specializing in the manufacturing and pharmaceutical industries. I am constantly on the lookout for new challenges. I love hiking, traveling, reading, writing and tasting craft beer. I live with family in colorful Colorado.</p>
             </div>
-            </div><!-- End of Team Member Profile -->
-
+          </div><!-- End of Team Member Profile -->
+          <br>
         <!-- Liz Profile -->
         <div class="team-member wow fadeInUp">
             <img src="images/team/liz.jpg" alt="Dr. Liz Mandeville" class="img-responsive team-img">
             <div>
                 <h3>Dr. Liz Mandeville
-                    <span style="font-size: 20px; font-weight: normal; color: #888;">Chief Computational Biologist</span>
+                    <span style="font-size: 20px; font-weight: normal; color: #888;">Computational Biologist</span>
                   </h3>
                 <p>My expertise lies at the intersection of advanced computational methods and management of fish and wildlife species. My university research focuses on biodiversity of freshwater fishes, particularly on the evolutionary and ecological mechanisms that promote or inhibit hybridization between species. I use big genomic data to try to understand current and past patterns of fish diversity. Recently, I’ve also become interested in the vast evolutionary diversity of fish sex chromosomes, and how this extreme variation among closely related species might shape fish evolution. I have an extensive record of <a href="https://scholar.google.com/citations?user=k2OAOOIAAAAJ&hl=en">publishing research in the scientific literature</a>. When I'm not working, I'm on the trails: running, biking, and skiing. </p>
             </div>
