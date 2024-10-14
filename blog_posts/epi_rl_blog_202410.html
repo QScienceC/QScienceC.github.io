@@ -69,7 +69,7 @@
     <div class="container">
         <p class="wow fadeInDown" style="font-size: 14pt;">In the wake of the COVID-19 pandemic, balancing public health measures with economic stability became a global challenge. A recent study by <a href="https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-024-18251-0">Kao et al., 2024</a> demonstrated the power of <b>Reinforcement Learning (RL)</b> in finding this balance. Researchers developed an RL algorithm to dynamically manage disease control and economic activity in four key Japanese regions: Tokyo, Osaka, Okinawa, and Hokkaido. The model not only reduced the peak number of infections but also shortened the duration of epidemic waves, demonstrating how AI can assist in real-world policy decisions.</p>
         <h3 class="section-title wow fadeInDown">How Does Reinforcement Learning (RL) Work in Epidemic Management?</h3>
-        <p class="wow fadeInDown" style="font-size: 14pt;">At the core of this study is the <b>Susceptible-Exposed-Infected-Quarantined-Removed (SEIQR)</b> model, enhanced by RL. Each region in the model acts as a semi-connected entity with travel hubs linking them. The RL agent is trained to take daily actions, such as controlling movement and applying screening measures, based on ongoing observations. Over time, the agent learns optimal policies to reduce infection peaks and limit the epidemic's duration while maintaining economic activity.
+        <p class="wow fadeInDown" style="font-size: 14pt;">At the core of this study is the <b>Susceptible-Exposed-Infected-Quarantined-Removed (SEIQR)</b> model, enhanced by RL. RL is a type of machine learning where an agent learns to make decisions by interacting with its environment, receiving feedback in the form of rewards or penalties, and improving its actions over time (<a href="../reinforcement_learning.html">learn more about Reinforcement Learning</a>). Each region in the model acts as a semi-connected entity with travel hubs linking them. The RL agent is trained to take daily actions, such as controlling movement and applying screening measures, based on ongoing observations. Over time, the agent learns optimal policies to reduce infection peaks and limit the epidemic's duration while maintaining economic activity.
             <img src="../images/blog/epi_rl_blog_img.png" alt="SEIQR model figure" width="600" height="500"  class="img-responsive center-block">
             <br><br>
             For example, in Okinawa, where the agent observed a high rate of infections but low mortality, it opted for more lenient movement restrictions compared to other regions, underscoring its adaptability to local conditions.
@@ -97,7 +97,7 @@
             Kao, Y., Chu, PJ., Chou, PC. et al. 2024. <a href="https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-024-18251-0">A dynamic approach to support outbreak management using reinforcement learning and semi-connected SEIQR models.</a>  BMC Public Health 24, 751.
         </p>
         <br><br>
-        <p><a href="../blog.html">Return to QSC's blog page</a></p>
+        <p class="wow fadeInDown" style="font-size: 14pt;"><a href="../blog.html">Return to QSC's blog page</a></p>
 
     </div>
 </section>
