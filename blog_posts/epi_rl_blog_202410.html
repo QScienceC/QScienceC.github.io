@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reinforcement Learning for Pandemic Control">
+  <meta name="author" content="Dr. Mikey Tabak">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/font-awesome.min.css" rel="stylesheet">
+  <link href="../css/animate.min.css" rel="stylesheet"> 
+  <link href="../css/prettyPhoto.css" rel="stylesheet">
+  <title>QSC's AI Blog</title>
+  <link rel="shortcut icon" href="../images/logo_hex.png">
+
+  <style>
+    /* Add margin between sections */
+
+      /* Add padding to the top of the page */
+      body {
+          padding-top: 100px;
+      }
+      /* Make the list not as left aligned */
+      ol {
+        margin-left: 40px; 
+      }
+</style>
+</head>
+
+<body id="blog">
+  <header id="header">
+    <nav id="main-nav" class="navbar navbar-default navbar-fixed-top" role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html"><img src="../images/logo_hex.png" alt="Quantitative Science Consulting logo" width="60" height="65"></a>
+        </div>
+
+        <div class="collapse navbar-collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div><!--/.container-->
+    </nav><!--/nav-->
+  </header><!--/header-->
+
+   <!-- Page Title Section -->
+   <section class="page-title">
+    <div class="container">
+        <div class="section-header">
+          <h2 class="section-title wow fadeInDown">Leveraging Reinforcement Learning for Pandemic Control – A Look into AI’s Role in Process Optimization</h2>
+          <p class="wow fadeInDown" style="font-size: 14pt;">
+            Mikey Tabak, PhD <br>
+            15 October 2024
+          </p>
+        </div>
+    </div>
+  </section>
+
+  <section id="blog-text">
+    <div class="container">
+        <p class="wow fadeInDown" style="font-size: 14pt;">In the wake of the COVID-19 pandemic, balancing public health measures with economic stability became a global challenge. A recent study by <a href="https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-024-18251-0">Kao et al., 2024</a> demonstrated the power of <b>Reinforcement Learning (RL)</b> in finding this balance. Researchers developed an RL algorithm to dynamically manage disease control and economic activity in four key Japanese regions: Tokyo, Osaka, Okinawa, and Hokkaido. The model not only reduced the peak number of infections but also shortened the duration of epidemic waves and decreased the economic impact of mitigation measures, demonstrating how AI can assist in real-world policy decisions.</p>
+        <h3 class="section-title wow fadeInDown">How Does Reinforcement Learning (RL) Work in Epidemic Management?</h3>
+        <p class="wow fadeInDown" style="font-size: 14pt;">At the core of this study is the <b>Susceptible-Exposed-Infected-Quarantined-Removed (SEIQR)</b> model, enhanced by RL. RL is a type of machine learning where an agent learns to make decisions by interacting with its environment, receiving feedback in the form of rewards or penalties, and improving its actions over time (<a href="../reinforcement_learning.html">learn more about Reinforcement Learning</a>). Each region in the model acts as a semi-connected entity with travel hubs linking them. The RL agent is trained to take daily actions, such as controlling movement and applying screening measures, based on ongoing observations. Over time, the agent learns optimal policies to reduce infection peaks and limit the epidemic's duration while maintaining economic activity.
+            <img src="../images/blog/epi_rl_blog_img.png" alt="SEIQR model figure" width="600" height="500"  class="img-responsive center-block">
+            <br>
+            For example, in Okinawa, where the agent observed a high rate of infections but low mortality, it opted for more lenient movement restrictions compared to other regions, underscoring its adaptability to local conditions.
+            </p>
+        <h3 class="section-title wow fadeInDown">Results of the Study</h3>
+        <p class="wow fadeInDown" style="font-size: 14pt;">Across different epidemic waves, the RL agent consistently outperformed static approaches by reducing the number of infectious cases and shortening the epidemic's length. The agent found that stringent screening measures were highly effective in controlling the virus, even in situations where reducing human movement wasn’t the best course of action. In particular, it allowed for maintaining economic activity in low-risk areas while tightening controls when infections surged.</p>
+        <h3 class="section-title wow fadeInDown">Expanding This Approach to Other Fields</h3>
+        <p class="wow fadeInDown" style="font-size: 14pt;">
+            This study’s success shows that RL is a valuable tool not only for public health policy but also for other complex systems where trade-offs must be managed. At <a href="../index.html">Quantitative Science Consulting (QSC)</a>, we see great potential in extending this approach to wildlife and livestock disease management, where similar complexities exist. For example, managing animal populations often involves balancing culling, vaccination, other management actions, and economic impacts, much like controlling the spread of an epidemic.
+            <br>
+            By using RL, we can develop dynamic models that adapt based on real-time data, whether we are looking at disease transmission in animal populations or the broader ecosystem impacts of management decisions. Additionally, RL can be used to test various scenarios and interventions, helping policymakers make more informed choices.
+            </p>
+        <h3 class="section-title wow fadeInDown">A Step Toward Complex, Adaptive Systems</h3>
+        <p class="wow fadeInDown" style="font-size: 14pt;">
+        The beauty of RL lies in its ability to adapt and learn from its environment, making it ideal for multifaceted problems like disease control. At QSC, we believe this technology can be applied to a wide range of scientific and industrial applications, from <a href="../reinforcement_learning.html">optimizing manufacturing processes</a> to improving conservation strategies.
+        <br>
+        By adding complexity—such as modeling the effects of vaccination, culling, or even the introduction of multiple species or pathogens—we can create systems that better reflect the real-world challenges faced by industries and governments.
+        </p>
+        <h3 class="section-title wow fadeInDown">The Future of AI in Risk-Baded Decision Making</h3>
+        <p class="wow fadeInDown" style="font-size: 14pt;">
+            As demonstrated in this COVID-19 study, RL offers a way to navigate the fine line between multiple, often conflicting, goals. QSC is committed to bringing the power of Reinforcement Learning to industries like agricultural epidemiology, manufacturing, and beyond. 
+            Whether it's minimizing economic impact during a pandemic or optimizing manufacturing processes, RL provides a promising solution to complex, evolving problems.
+        </p>
+        <h3 class="section-title wow fadeInDown">Bibliography</h3>
+        <p class="wow fadeInDown" style="font-size: 14pt;">
+            Kao, Y., Chu, PJ., Chou, PC. et al. 2024. <a href="https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-024-18251-0">A dynamic approach to support outbreak management using reinforcement learning and semi-connected SEIQR models.</a>  BMC Public Health 24, 751.
+        </p>
+        <br>
+        <p class="wow fadeInDown" style="font-size: 14pt;"><a href="../blog.html">Return to QSC's blog page</a></p>
+
+    </div>
+</section>
+
+
+  <div id="bottom-image-container">
+    <img src="../images/mntns.jpg" alt="Mountains" class="desktop-only">
+  </div>
+
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          &copy; <script>document.write(new Date().getFullYear())</script> Quantitative Science Consulting, LLC. Upper Peninsula Science.
+        </div>
+        <div class="col-sm-6">
+          <ul class="social-icons">
+            <li><a href="https://www.linkedin.com/company/quantitative-science-consulting/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer><!--/#footer-->
+
+  <script src="../js/jquery.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/wow.min.js"></script>
+  <script src="../js/jquery.isotope.min.js"></script>
+  <script src="../js/jquery.inview.min.js"></script>
+  <script src="../js/custom-scripts.js"></script>
+
+</body>
+</html>
