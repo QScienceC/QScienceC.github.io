@@ -1,109 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AI Blog - Quantitative Science Consulting">
-  <meta name="author" content="Dr. Mikey Tabak">
-  <link rel="stylesheet" href="css/styles.css">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/font-awesome.min.css" rel="stylesheet">
-  <link href="css/animate.min.css" rel="stylesheet"> 
-  <link href="css/prettyPhoto.css" rel="stylesheet">
-  <title>QSC's AI Blog</title>
-  <link rel="shortcut icon" href="images/logo_hex.png">
-
-  <style>
-    /* Add margin between sections */
-
-      /* Add padding to the top of the page */
-      body {
-          padding-top: 100px;
-      }
-      /* Make the list not as left aligned */
-      ol {
-        margin-left: 40px; 
-      }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QSC Blog | Artificial Intelligence Insights</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="images/logo_hex.png" />
 </head>
+<body class="bg-white text-gray-800 font-sans">
 
-<body id="blog">
-  <header id="header">
-    <nav id="main-nav" class="navbar navbar-default navbar-fixed-top" role="banner">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html"><img src="images/logo_hex.png" alt="Quantitative Science Consulting logo" width="60" height="65"></a>
-        </div>
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-3">
+        <img src="images/logo_hex.png" alt="QSC logo" class="h-10 w-10" />
+        <span class="text-xl font-bold text-gray-800">Quantitative Science Consulting</span>
+      </a>
+      <nav class="space-x-6 text-sm font-semibold">
+        <a href="index.html" class="hover:text-green-600">Home</a>
+        <a href="about.html" class="hover:text-green-600">About</a>
+        <a href="services.html" class="hover:text-green-600">Services</a>
+        <a href="mission.html" class="hover:text-green-600">Mission</a>
+        <a href="blog.html" class="hover:text-green-600">Blog</a>
+        <a href="contact.html" class="hover:text-green-600">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-        <div class="collapse navbar-collapse navbar-right">
-          <ul class="nav navbar-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
-          </ul>
-        </div>
-      </div><!--/.container-->
-    </nav><!--/nav-->
-  </header><!--/header-->
-
-  <!-- Page Title Section -->
-  <section class="page-title">
-    <div class="container">
-        <div class="section-header">
-          <h2 class="section-title wow fadeInDown">Welcome to QSC's Artificial Intelligence Blog</h2>
-          <p></p>
-        </div>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-green-100 to-blue-100 py-20 px-6 text-center">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+        Welcome to the QSC Blog
+      </h1>
+      <p class="text-lg md:text-xl mb-8">
+        Sharing how we use Artificial Intelligence to drive impact in science, sustainability, and business.
+      </p>
     </div>
   </section>
 
-  <section id="blog_posts_list">
-    <div class="container">
-        <h3 class="section-title wow fadeInDown">Blog posts:</h2>
-          <p class="wow fadeInDown" style="font-size: 14pt;">At <a href="./index.html">QSC</a>, we write blog posts to share our work and to educate about how Artificial Intelligence can be used.</p>
-        <ul>
-          <li class="wow fadeInDown" style="font-size: 14pt;"><a href="./blog_posts/epi_rl_blog_202410.html">Leveraging Reinforcement Learning for Pandemic Control – A Look into AI’s Role in Process Optimization</a></li>
-          <li class="wow fadeInDown" style="font-size: 14pt;"><a href="./blog_posts/inventory_optimization_202411.html">Optimizing Inventory Costs Through Demand Forecasting and Safety Stock Adjustment</a></li>
-          <li class="wow fadeInDown" style="font-size: 14pt;"><a href="./blog_posts/202412_apy_blog.html">Examining APY: Understanding Your Savings Growth</a></li>
+  <!-- Blog List Section -->
+  <section class="py-16 bg-white px-6">
+    <div class="max-w-5xl mx-auto space-y-8">
+      <div>
+        <h2 class="text-3xl font-bold mb-4">Latest Posts</h2>
+        <p class="text-lg mb-6">We use this space to highlight our work and explain how AI can solve complex real-world problems.</p>
+        <ul class="space-y-4 text-green-700 text-lg list-disc list-inside">
+          <li>
+            <a href="./blog_posts/epi_rl_blog_202410.html" class="hover:underline font-medium">
+              Leveraging Reinforcement Learning for Pandemic Control – A Look into AI’s Role in Process Optimization
+            </a>
+          </li>
+          <li>
+            <a href="./blog_posts/inventory_optimization_202411.html" class="hover:underline font-medium">
+              Optimizing Inventory Costs Through Demand Forecasting and Safety Stock Adjustment
+            </a>
+          </li>
+          <li>
+            <a href="./blog_posts/202412_apy_blog.html" class="hover:underline font-medium">
+              Examining APY: Understanding Your Savings Growth
+            </a>
+          </li>
         </ul>
-        <!-- <p class="wow fadeInDown" style="font-size: 14pt;">Click on the links above to learn more</p> -->
-        <br><br>
-        <p class="wow fadeInDown" style="font-size: 14pt;">Feeling blogged down? <a href="./index.html">Back up to QSC's homepage</a></p>
+      </div>
+      <p class="text-lg">
+        Feeling blogged down? <a href="index.html" class="text-green-600 font-semibold underline hover:text-green-800">Back to the homepage</a>
+      </p>
     </div>
   </section>
-  
 
-
-  <div id="bottom-image-container">
-    <img src="images/mntns.jpg" alt="Mountains" class="desktop-only">
-  </div>
-
-  <footer id="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6">
-          &copy; 2024 Quantitative Science Consulting, LLC. Upper Peninsula Science.
-        </div>
-        <div class="col-sm-6">
-          <ul class="social-icons">
-            <li><a href="https://www.linkedin.com/company/quantitative-science-consulting/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-          </ul>
-        </div>
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-300 py-10 text-sm">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-6">
+      <div>
+        <p class="font-bold text-white mb-2">Quantitative Science Consulting</p>
+        <p>Science-grounded AI for sustainable impact. Upper Peninsula Science</p>
+      </div>
+      <div class="flex flex-col md:items-end space-y-2">
+        <a href="mailto:info@qsc.earth" class="hover:underline">info@qsc.earth</a>
+        <a href="https://www.linkedin.com/company/quantitative-science-consulting" class="hover:underline" target="_blank">LinkedIn</a>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> QSC. All rights reserved.</p>
       </div>
     </div>
-  </footer><!--/#footer-->
-
-  <script src="js/jquery.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/wow.min.js"></script>
-  <script src="js/jquery.isotope.min.js"></script>
-  <script src="js/jquery.inview.min.js"></script>
-  <script src="js/custom-scripts.js"></script>
+  </footer>
 
 </body>
 </html>
