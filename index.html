@@ -1,266 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLH2Y342RP"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QSC | AI for the Environment</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="images/logo_hex.png" />
+</head>
+<body class="bg-white text-gray-800 font-sans">
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-3">
+        <img src="images/logo_hex.png" alt="QSC logo" class="h-10 w-10" />
+        <span class="text-xl font-bold text-gray-800">Quantitative Science Consulting</span>
+      </a>
+      <nav class="space-x-6 text-sm font-semibold">
+        <a href="about.html" class="hover:text-green-600">About</a>
+        <a href="services.html" class="hover:text-green-600">Services</a>
+        <a href="partners.html" class="hover:text-green-600">Partners</a>
+        <a href="contact.html" class="hover:text-green-600">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-        gtag('config', 'G-SLH2Y342RP');
-    </script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Quantitative Science Consulting. Artificial Intelligence. Upper Peninsula Science. Comprehensive Data Solutions. Computer Vision. Machine Learning. Workflow Optimization. Geospatial Analyses. Deep Learning. Reinforcement Learning. Software">
-    <meta name="author" content="Dr. Mikey Tabak">
-    <title>Quantitative Science Consulting (QSC) - Data Science Services</title>
-	<!-- core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/animate.min.css" rel="stylesheet"> 
-    <link href="css/prettyPhoto.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet"> 
-    <link rel="shortcut icon" href="images/logo_hex.png">
-</head> 
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-green-100 to-blue-100 py-20 px-6 text-center">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+        AI Solutions for the Environment, Economy, and Communities
+      </h1>
+      <p class="text-lg md:text-xl mb-8">
+        We help governments, researchers, and companies tackle complex challenges with
+        modern AI tools and a scientific foundation.
+      </p>
+      <a href="contact.html" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-xl shadow-md">
+        Start a Conversation
+      </a>
+    </div>
+  </section>
 
-<body id="home">
-
-    <header id="header">
-        <nav id="main-nav" class="navbar navbar-default navbar-fixed-top" role="banner">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html"><img src="images/logo_hex.png" alt="Quantitative Science Consulting logo" width="60" height="65"></a>
-                </div>
-				
-                <div class="collapse navbar-collapse navbar-right">
-                    <ul class="nav navbar-nav">
-                        <li class="scroll active"><a href="#home">Home</a></li> 
-                        <li class="scroll"><a href="#services">Services</a></li>
-                        <li class="scroll"><a href="#about">About</a></li> 
-                        <li><a href="team.html">Team</a></li>
-                        <li> <a href="mission.html">Mission</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li class="scroll"><a href="#contact-us">Contact</a></li>                        
-                    </ul>
-                </div>
-            </div><!--/.container-->
-        </nav><!--/nav-->
-    </header><!--/header-->
-
-    <section id="hero-banner">
-        <div class="banner-inner">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-12">  
-                <h2 class="hero-text">Quantitative Science Consulting</h2>
-              </div>
-            </div>
-          </div>
+  <!-- Services Preview -->
+  <section class="py-16 bg-white px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12">What We Offer</h2>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-md transition">
+          <h3 class="text-xl font-semibold mb-2">AI Model Development</h3>
+          <p>From climate to chemistry, we build interpretable, high-performance models tailored to your data and goals.</p>
         </div>
-      </section>
-      
-
- <section id="services" >
-        <div class="container">
-
-            <div class="section-header">
-                <h2 class="section-title wow fadeInDown">Services</h2>
-                <p class="wow fadeInDown" style="font-size: 14pt;">Quantitative Science Consulting (QSC) builds artificial intelligence applications using state of the art technologies: <br>Deep Learning, hierarchical Bayesian modeling, and Generative AI.</p>
-            </div>
-
-            <div class="row">
-                <div class="features">
-                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="50ms">
-                        <div class="media service-box">
-                            <div class="pull-left">
-                                <i class="fa fa-camera-retro"></i>
-                                <!--*** Bear image this way
-                                <img src="images/logo_hex.png" alt="logo" width="60" height="65">
-                                -->
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Computer Vision</h4>
-                                <p><a href="computer_vision.html">Automatically Identify and Count Objects in Images and Video with Deep Learning</a></p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-
-                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">
-                        <div class="media service-box">
-                            <div class="pull-left">
-                                <i class="fa fa-database"></i>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Comprehensive Data Solutions</h4>
-                                <p><a href="comprehensive_data_solutions.html">Collection, Storage, Analysis, and Visualization of Data</a></p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-
-                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">
-                        <div class="media service-box">
-                            <div class="pull-left">
-                                <i class="fa fa-bullseye"></i>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Workflow Optimization</h4>
-                                <p><a href="reinforcement_learning.html">Optimizing Process Workflows in Manufacturing with Reinforcement Learning</a></p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-                
-                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms">
-                        <div class="media service-box">
-                            <div class="pull-left">
-                                <i class="fa fa-compass"></i>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Geospatial Analyses</h4>
-                                <p><a href="geospatial.html">Modeling Environmental Processes on a Geospatial - Temporal Scale</a></p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-
-                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms">
-                        <div class="media service-box">
-                            <div class="pull-left">
-                                <i class="fa fa-bolt"></i>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Business Solutions with AI</h4>
-                                <p><a href="aml.html">AI-Powered Solutions to Drive Innovation and Efficiency for Your Business</a></p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-
-                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="500ms">
-                        <div class="media service-box">
-                            <div class="pull-left">
-                                <i class="fa fa-globe"></i>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Ecological & Epidemiological Modeling</h4>
-                                <p><a href="ecology.html">Population and Environmental Analyses, Genomics, and Pathogen Dynamics</a></p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-
-                </div>
-            </div><!--/.row-->    
-        </div><!--/.container-->
-    </section><!--/#services-->
-
-
- <section id="about">
-        <div class="container">
-
-            <div class="section-header">
-                <h2 class="section-title wow fadeInDown">About Us</h2>
-                <p class="wow fadeInDown" style="font-size: 14pt;">QSC is a data science company specializing in machine learning, computer vision, and Bayesian modeling. <br>
-                 We are committed to providing scientifically accurate and reliable products. <br>
-                 Also known as 'Upper Peninsula Science,' we work to support the environment and economy of Michigan's Upper Peninsula.</p>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-6 wow fadeInLeft">
-                  <img class="img-responsive" src="images/deer_bike_logo_used.png" alt="deer riding bike qsc" width="800" height="1200">
-                </div>
-
-                <div class="col-sm-6 wow fadeInRight">
-                    <h3 class="column-title">Our Company</h3>
-                    <p class="wow fadeInDown" style="font-size: 14pt;">Our <a href="team.html">team</a> is a group of experts in artificial intelligence, software engineering, and advanced computational methods. We are excited about driving technological advancement and we enjoy taking on new challenges. Our passion for the outdoors drives our committment to environmental preservation.</p>
-                    
-                    <p class="wow fadeInDown" style="font-size: 14pt;">Our expertise in AI and software engineering uniquely positions us to deliver <a href="comprehensive_data_solutions.html">Comprehensive Data Solutions</a> tailored to your needs.</p>
-
-					<p class="wow fadeInDown" style="font-size: 14pt;">Scientific integrity and customer satisfaction are our top priorities. We provide the AI solutions and software applications that align with customers' goals. </p>
-
-                    <p class="wow fadeInDown" style="font-size: 14pt;">We have a <a href="blog.html"> blog page</a> where you can learn more about our work and AI in general.</p>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 20px;">
-                <a href="https://www.designrush.com/" target="_blank">
-                    <img src="./images/designrush_banner.png" alt="DesignRush"  class="designrush-logo">
-                </a>
-            </div>
+        <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-md transition">
+          <h3 class="text-xl font-semibold mb-2">Scientific Consulting</h3>
+          <p>We bridge academic rigor and real-world deployment across energy, agriculture, manufacturing, and more.</p>
         </div>
-    </section>
-   
-    <section id="contact-us">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title wow fadeInDown">Contact Us</h2>
-                <p class="wow fadeInDown" style="font-size: 14pt;">Do you want to use artificial intelligence to advance your business? <br> Get in touch to learn more.</p>
-            </div>
+        <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-md transition">
+          <h3 class="text-xl font-semibold mb-2">Partnerships & Capacity Building</h3>
+          <p>Long-term collaboration to help organizations understand, develop, and deploy custom AI solutions.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="contact">
-        
-        <div class="container">
-            <div class="container contact-info">
-                <div class="row">
-				  <div class="col-sm-4 col-md-6">
-                        <div class="contact-form">
-                            <h3>Contact Info</h3>
-
-                            <address>
-                              <strong>Quantitative Science Consulting</strong><br>
-                              <a href="https://www.linkedin.com/company/quantitative-science-consulting/" target="_blank">QSC on LinkedIn</i></a>
-                              <br>
-                              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Questions@qsc.earth&su=Inquiry%20for%20QSC&body=%0A%0A----------------%0AThank%20you%20for%20contacting%20Quantitative%20Science%20Consulting%20%28QSC%29.%20Please%20type%20your%20comment%20above." target="_blank">Email QSC</i></a>
-                              <br>
-                              <a href="blog.html">QSC's Blog Page</a>
-                            </address>
-					</div></div>
-                    <img src="images/penguin.jpeg" alt="rockhopper" width="500" height="300"  class="img-responsive center-block">
-                </div>
-            </div>
-        </div>   
-   </section><!--/#bottom-->
-
-    <footer id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    &copy; <script>document.write(new Date().getFullYear())</script> Quantitative Science Consulting, LLC. Upper Peninsula Science. Template by <a target="_blank" href="http://webthemez.com/" title="Free Bootstrap Themes and HTML Templates">WebThemez.com</a>
-                </div>
-                <div class="col-sm-6">
-                    <ul class="social-icons">
-                        <li><a href="https://www.linkedin.com/company/quantitative-science-consulting/" target="_blank"><i class="fa fa-linkedin"></i></a></li> 
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer><!--/#footer-->
-
-    <style>
-        .designrush-logo {
-            max-width: 200px; /* Default size for larger screens */
-            height: auto;
-        }
-    
-        @media (max-width: 600px) {
-            .designrush-logo {
-                max-width: 120px; /* Smaller size for mobile screens */
-            }
-        }
-    </style>
-
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script> 
-    <script src="js/mousescroll.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/jquery.inview.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/custom-scripts.js"></script>
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-300 py-10 text-sm">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-6">
+      <div>
+        <p class="font-bold text-white mb-2">Quantitative Science Consulting</p>
+        <p>Science-grounded AI for sustainable impact. Based in Michigan’s Upper Peninsula.</p>
+      </div>
+      <div class="flex flex-col md:items-end space-y-2">
+        <a href="mailto:info@qsc.earth" class="hover:underline">info@qsc.earth</a>
+        <a href="https://www.linkedin.com/company/quantitative-science-consulting" class="hover:underline" target="_blank">LinkedIn</a>
+        <p>&copy; 2025 QSC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
