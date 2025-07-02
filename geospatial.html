@@ -1,123 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Geospatial Modeling. Quantitative Science Consulting. Data Science">
-  <meta name="author" content="Dr. Mikey Tabak">
-  <link rel="stylesheet" href="css/styles.css">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/font-awesome.min.css" rel="stylesheet">
-  <link href="css/animate.min.css" rel="stylesheet"> 
-  <link href="css/prettyPhoto.css" rel="stylesheet">
-  <title>Geospatial Modeling</title>
-  <link rel="shortcut icon" href="images/logo_hex.png">
-
-  <style>
-    /* Add margin between sections */
-
-      /* Add padding to the top of the page */
-      body {
-          padding-top: 100px;
-      }
-      /* Make the list not as left aligned */
-      ol {
-        margin-left: 40px; 
-      }
-</style>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geospatial Analyses | QSC</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="images/logo_hex.png" />
 </head>
+<body class="bg-white text-gray-800 font-sans">
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-3">
+        <img src="images/logo_hex.png" alt="QSC logo" class="h-10 w-10" />
+        <span class="text-xl font-bold text-gray-800">Quantitative Science Consulting</span>
+      </a>
+      <nav class="space-x-6 text-sm font-semibold">
+        <a href="about.html" class="hover:text-green-600">About</a>
+        <a href="services.html" class="text-green-600">Services</a>
+        <a href="partners.html" class="hover:text-green-600">Partners</a>
+        <a href="contact.html" class="hover:text-green-600">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<body id="geospatial">
-  <header id="header">
-      <nav id="main-nav" class="navbar navbar-default navbar-fixed-top" role="banner">
-          <div class="container">
-              <div class="navbar-header">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                      <span class="sr-only">Toggle navigation</span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                  </button>
-                  <a class="navbar-brand" href="index.html"><img src="images/logo_hex.png" alt="Quantitative Science Consulting logo" width="60" height="65"></a>
-              </div>
-      
-              <div class="collapse navbar-collapse navbar-right">
-                  <ul class="nav navbar-nav">
-                      <li><a href="index.html">Home</a></li>
-                      <li class="scroll"><a href="#geospatial">Geospatial Modeling</a></li> 
-                      <li class="scroll"><a href="#examples">Examples</a></li> 
-                      <li class="scroll"><a href="#qsc">Partner with QSC</a></li>                    
-                  </ul>
-              </div>
-          </div><!--/.container-->
-      </nav><!--/nav-->
-  </header><!--/header-->
+    <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-green-100 to-blue-100 py-20 px-6 text-center">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+        Geospatial Modeling
+      </h1>
+      <p class="text-lg md:text-xl mb-8">
+        Whether you’re mapping carbon stocks or forecasting ecological impacts, QSC builds geospatial solutions that meet your research and operational goals.
+      </p>
+    </div>
+  </section>
 
-  <section id="geospatial">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title wow fadeInDown">Geospatial Modeling</h2>
-        <p class="wow fadeInDown" style="font-size: 14pt;">Geospatial modeling is a powerful approach that combines geospatial data and mathematical models to analyze and simulate environmental processes on a geospatial-temporal scale. It involves capturing, representing, and analyzing spatial information to gain insights and make informed decisions related to land use planning, natural resource management, urban development, and more.</p>
-        <p class="wow fadeInDown" style="font-size: 14pt;">By integrating geographic information systems (GIS), remote sensing data, and mathematical modeling techniques, geospatial modeling enables the exploration and understanding of complex interactions between various environmental factors, such as terrain, vegetation, water resources, and climate. It provides valuable tools for predicting and assessing the impacts of environmental changes, guiding sustainable development, and supporting evidence-based decision-making.</p>
-        <p class="wow fadeInDown" style="font-size: 14pt;">At <a href="./index.html">QSC</a>, we specialize in geospatial modeling and offer customized solutions tailored to our clients' specific needs. Our team combines expertise in GIS, remote sensing, and advanced modeling techniques to deliver accurate and reliable geospatial models. Whether it's predicting land use patterns, assessing ecological risks, or analyzing environmental impacts, we leverage geospatial modeling to provide valuable insights for effective planning and management.</p>
+  <!-- Applications -->
+  <section class="py-16 px-6 bg-white">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+      <div>
+        <h2 class="text-2xl font-semibold mb-2">What is Geospatial Modeling?</h2>
+        <p class="text-gray-700 mb-4">
+          Geospatial modeling combines spatial data and predictive algorithms to analyze environmental processes across time and space. We help clients visualize, simulate, and assess how land use, resource management, and climate change intersect.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-semibold mb-2">Geospatial Modeling in Action</h2>
+        <p class="text-gray-700 mb-4">
+          Our work leverages GIS, remote sensing, and statistical modeling to deliver actionable insights into terrain, vegetation, hydrology, and more — enabling sustainable planning and environmental risk mitigation.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-semibold mb-2">Environmental Applications</h2>
+        <ul class="list-disc ml-5 text-gray-700 mb-4">
+          <li>Simulating invasive species spread and testing management strategies</li>
+          <li>Estimating forest carbon biomass using satellite imagery</li>
+          <li>Modeling ecosystem vulnerability under climate change</li>        
+      </ul>
+      </div>
+
+        <div>
+        <h2 class="text-2xl font-semibold mb-2">Urban Planning Applications</h2>
+        <ul class="list-disc ml-5 text-gray-700 mb-4">
+          <li>Assessing urban development’s impact on coastal water resources</li>
+          <li>Analyzing land use effects on erosion and sediment transport</li>        
+      </ul>
+      </div>
+    </section>
+
+
+  <!-- CTA -->
+  <section class="bg-green-100 py-16 px-6 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4">Let’s Build Your Geospatial Solution</h2>
+      <p class="text-lg mb-6">
+        From urban planning to environmental modeling, we offer tailored geospatial support to meet your organization’s needs.
+      </p>
+      <a href="contact.html" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-xl shadow">
+        Contact Us
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-300 py-10 text-sm">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-6">
+      <div>
+        <p class="font-bold text-white mb-2">Quantitative Science Consulting</p>
+        <p>Science-grounded AI for sustainable impact. Based in Michigan’s Upper Peninsula.</p>
+      </div>
+      <div class="flex flex-col md:items-end space-y-2">
+        <a href="mailto:info@qsc.earth" class="hover:underline">info@qsc.earth</a>
+        <a href="https://www.linkedin.com/company/quantitative-science-consulting" class="hover:underline" target="_blank">LinkedIn</a>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> QSC. All rights reserved.</p>
       </div>
     </div>
-  </section>
-
-  <section id="examples">
-    <div class="container">
-        <h2 class="section-title wow fadeInDown">Examples of Geospatial Modeling</h2>
-        <p class="wow fadeInDown" style="font-size: 14pt;">At <a href="./index.html">QSC</a>, we have successfully applied geospatial modeling techniques to various projects, contributing to scientific research and practical applications. Here are a few examples of our work:</p>
-        <ul>
-          <li style="font-size: 14pt;">Simulating the spread of invasive species and developing effective management strategies</li>
-          <li style="font-size: 14pt;">Predicting the amount of carbon biomass in forests using satellite imagery</li>
-          <li style="font-size: 14pt;">Analyzing the impact of urbanization on water resources in a coastal region</li>
-          <li style="font-size: 14pt;">Assessing the vulnerability of ecosystems to climate change using spatially explicit models</li>
-          <li style="font-size: 14pt;">Modeling the effects of land use practices on soil erosion rates and sediment transport</li>
-        </ul>
-        <p class="wow fadeInDown" style="font-size: 14pt;">These examples demonstrate the versatility and effectiveness of geospatial modeling in addressing complex environmental challenges. Through our expertise in geospatial analysis and modeling, we help our clients gain a comprehensive understanding of the spatial dynamics and interactions within their domains of interest.</p>
-    </div>
-  </section>
-  
-  <section id="qsc">
-    <div class="container">
-        <h2 class="section-title wow fadeInDown">Partner with QSC</h2>
-        <p class="wow fadeInDown" style="font-size: 14pt;">If you are seeking to harness the power of geospatial modeling for your business, research, or planning initiatives, we at <a href="./index.html">QSC</a> are here to assist you. Our team of experienced professionals can provide tailored solutions, consultation, and collaboration opportunities in geospatial modeling. <a href="./index.html#contact-us">Contact Us</a> to discuss your specific needs and explore how geospatial modeling can unlock valuable insights and drive success in your projects.</p>
-    </div>
-  </section>
+  </footer>
 </body>
-
-  
-  <div id="bottom-image-container">
-    <img src="images/mntns.jpg" alt="Mountains" class="desktop-only">
-  </div>
-
-  <footer id="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                &copy; 2024 Quantitative Science Consulting, LLC. Upper Peninsula Science.
-            </div>
-            <div class="col-sm-6">
-                <ul class="social-icons">
-                    <li><a href="https://www.linkedin.com/company/quantitative-science-consulting/" target="_blank"><i class="fa fa-linkedin"></i></a></li> 
-                </ul>
-            </div>
-        </div>
-    </div>
-  </footer><!--/#footer-->
-
-  <script src="js/jquery.js"></script>
-  <script src="js/bootstrap.min.js"></script> 
-  <script src="js/mousescroll.js"></script>
-  <script src="js/smoothscroll.js"></script>
-  <script src="js/jquery.prettyPhoto.js"></script>
-  <script src="js/jquery.isotope.min.js"></script>
-
-  <script src="js/wow.min.js"></script>
-  <script src="js/jquery.isotope.min.js"></script>
-  <script src="js/jquery.inview.min.js"></script>
-  <script src="js/custom-scripts.js"></script>
-  </body>
 </html>
