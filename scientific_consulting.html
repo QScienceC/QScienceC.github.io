@@ -58,7 +58,16 @@
 <!-- End Header-->
 
   <!-- Hero Section -->
-  <section class="bg-gradient-to-br from-green-100 to-blue-100 py-20 px-6 text-center">
+  <style>
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in {
+    animation: fade-in 1s ease-out both;
+  }
+  </style>
+  <section class="bg-gradient-to-br from-green-100 to-blue-100 py-20 px-6 text-center animate-fade-in">
     <div class="max-w-4xl mx-auto">
       <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
         Scientific Consulting Across Disciplines
