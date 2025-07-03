@@ -19,5 +19,45 @@
   <url>
     <loc>https://qsc.earth/contact.html</loc>
   </url>
+    <url>
+    <loc>https://qsc.earth/business_solutions.html</loc>
+  </url>
+    <url>
+    <loc>https://qsc.earth/cds.html</loc>
+  </url>
+    <url>
+    <loc>https://qsc.earth/computer_vision.html</loc>
+  </url>
+    <url>
+    <loc>https://qsc.earth/data_science_biology.html</loc>
+  </url>
+    <url>
+    <loc>https://qsc.earth/faq.html</loc>
+  </url>
+    <url>
+    <loc>https://qsc.earth/geospatial.html</loc>
+  </url>
+    <url>
+    <loc>https://qsc.earth/partnerships.html</loc>
+  </url>
   <!-- Add any additional service pages here -->
+      <url>
+    <loc>https://qsc.earth/reinforcement_learning.html</loc>
+  </url>
+      <url>
+    <loc>https://qsc.earth/scientific_consulting.html</loc>
+  </url>
+      <url>
+    <loc>https://qsc.earth/services.html</loc>
+  </url>
+      <url>
+    <loc>https://qsc.earth/blog_posts/202412_apy_blog.html</loc>
+  </url>
+      <url>
+    <loc>https://qsc.earth/blog_posts/epi_rl_blog_202410.html</loc>
+  </url>
+      <url>
+    <loc>https://qsc.earth/blog_posts/inventory_optimization_202411.html</loc>
+  </url>
 </urlset>
+m
