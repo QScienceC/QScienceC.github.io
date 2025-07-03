@@ -73,6 +73,22 @@
     mobileMenu.classList.toggle('hidden');
   });
 </script>
+<style>
+  .parallax-mission {
+    background-image: url('images/banner/banner.webp');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Adjust as needed */
+  }
+
+  @media (max-width: 768px) {
+    .parallax-mission {
+      background-attachment: scroll;
+    }
+  }
+</style>
+
 <!-- End Header-->
 
   <!-- Hero Section -->
@@ -97,8 +113,7 @@
     </div>
   </section>
   <!-- Banner Image Section -->
-  <section class="w-full">
-    <img src="images/banner/banner.webp" alt="Mission banner" class="w-full h-auto object-cover max-h-[500px]" />
+  <section class="parallax-mission w-full flex items-center justify-center">
   </section>
 
   <!-- Mission Statements -->
