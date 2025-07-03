@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://qsc.earth/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://qsc.earth/about.html</loc>
+  </url>
+  <url>
+    <loc>https://qsc.earth/services.html</loc>
+  </url>
+  <url>
+    <loc>https://qsc.earth/mission.html</loc>
+  </url>
+  <url>
+    <loc>https://qsc.earth/blog.html</loc>
+  </url>
+  <url>
+    <loc>https://qsc.earth/contact.html</loc>
+  </url>
+  <!-- Add any additional service pages here -->
+</urlset>
