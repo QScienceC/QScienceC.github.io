@@ -24,6 +24,23 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" href="images/logo.webp" />
+
+  <style>
+  .parallax-hogback {
+    background-image: url('images/hogback.webp');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 450px; /* You can adjust the height as needed */
+  }
+
+  @media (max-width: 768px) {
+    .parallax-hogback {
+      background-attachment: scroll; /* fallback for mobile */
+    }
+  }
+</style>
+
 </head>
 <body class="bg-white text-gray-800 font-sans">
   <!-- Header -->
@@ -89,9 +106,12 @@
     <div class="max-w-4xl mx-auto">
       <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">About Us</h1>
       <p class="text-lg md:text-xl leading-relaxed">
-        QSC helps governments, researchers, and businesses tackle complex challenges using modern AI tools grounded in scientific expertise. Our work is collaborative, rigorous, and focused on real-world impact. We are committed to providing scientifically accurate and reliable products. We strive to serve local communities, natural areas, tribal nations, and public institutions.
+        We are a team of experts in data science, AI, and scientific research, driven by a shared passion for the outdoors and a commitment to protecting the environment.  Our solutions are grounded in scientific methods and designed to support businesses, environment causes, and public institutions.
       </p>
     </div>
+  </section>
+
+  <section class="parallax-hogback w-full">
   </section>
 
   <!-- Team Section -->
