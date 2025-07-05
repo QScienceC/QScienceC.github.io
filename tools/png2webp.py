@@ -23,7 +23,7 @@ def convert_png_to_webp(png_path, webp_path, quality=80):
         print(f"An error occurred during conversion: {e}")
 
 # usage:
-input_png_file = './images/ChatGPT Image Jul 3, 2025, 03_54_28 PM.png'  
-output_webp_file = './images/business.webp'
+input_png_file = './images/safety_stock_fig.png'  
+output_webp_file = './images/safety_stock_fig.webp'
 
 convert_png_to_webp(input_png_file, output_webp_file)
