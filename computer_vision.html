@@ -1,142 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Computer Vision. Quantitative Science Consulting. Data Science">
-  <meta name="author" content="Dr. Mikey Tabak">
-  <link rel="stylesheet" href="css/styles.css">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/font-awesome.min.css" rel="stylesheet">
-  <link href="css/animate.min.css" rel="stylesheet"> 
-  <link href="css/prettyPhoto.css" rel="stylesheet">
-  <title>Computer Vision</title>
-  <link rel="shortcut icon" href="images/logo_hex.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Computer Vision | QSC</title>
+    <!-- Begin Descriptive Content -->
+    <meta name="description" content="QSC's uses computer vision to automatically detect, count, and analyze objects in images and video.">
+    <meta name="keywords" content="computer vision, data science, artificial intelligence, business AI, QSC services">
 
-  <style>
-    /* Add margin between sections */
+    <!-- Open Graph: used by Facebook, LinkedIn, Discord, Slack, etc. -->
+    <meta property="og:title" content="QSC | Computer Vision" />
+    <meta property="og:description" content="QSC's uses computer vision to automatically detect, count, and analyze objects in images and video." />
+    <meta property="og:url" content="https://qsc.earth/computer_vision.html" />
+    <meta property="og:image" content="https://qsc.earth/images/logo.webp" />
+    <meta property="og:type" content="website" />
 
-      /* Add padding to the top of the page */
-      body {
-          padding-top: 100px;
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="QSC | Computer Vision"  />
+    <meta name="twitter:description" content="QSC's uses computer vision to automatically detect, count, and analyze objects in images and video." />
+    <meta name="twitter:image" content="https://qsc.earth/images/logo.webp" />
+
+    <!-- End Descriptive Content -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="images/logo.webp" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Computer Vision",
+      "provider": {
+        "@type": "Organization",
+        "name": "Quantitative Science Consulting",
+        "url": "https://qsc.earth",
+        "logo": "https://qsc.earth/images/logo.webp",
+        "sameAs": [
+          "https://www.linkedin.com/company/quantitative-science-consulting"
+        ]
+      },
+      "description": "QSC's uses computer vision to automatically detect, count, and analyze objects in images and video.",
+      "areaServed": {
+        "@type": "Place",
+        "name": "Global"
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://qsc.earth/contact.html",
+        "availableLanguage": ["English"]
+      },
+      "serviceOutput": "Computer Vision with AI",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Companies, Researchers"
       }
-      /* Make the list not as left aligned */
-      ol {
-        margin-left: 40px; 
-      }
-</style>
+    }
+  </script>
+  <link rel="canonical" href="https://qsc.earth/computer_vision.html" />
 
 </head>
+<body class="bg-white text-gray-800 font-sans">
+  <!-- Header -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <!-- Logo -->
+    <a href="index.html" class="flex items-center space-x-3">
+      <img src="images/logo.webp" alt="QSC logo" class="h-10 w-10" />
+      <span class="text-xl font-bold text-gray-800">Quantitative Science Consulting</span>
+    </a>
 
-<body id="computer-vision">
-  <header id="header">
-      <nav id="main-nav" class="navbar navbar-default navbar-fixed-top" role="banner">
-          <div class="container">
-              <div class="navbar-header">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                      <span class="sr-only">Toggle navigation</span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                  </button>
-                  <a class="navbar-brand" href="index.html"><img src="images/logo_hex.png" alt="Quantitative Science Consulting logo" width="60" height="65"></a>
-              </div>
-      
-              <div class="collapse navbar-collapse navbar-right">
-                  <ul class="nav navbar-nav">
-                      <li><a href="index.html">Home</a></li>
-                      <li class="scroll active"><a href="#cv">Computer Vision</a></li> 
-                      <li class="scroll"><a href="#camera-trap">Wildlife Camera Traps</a></li>
-                      <li class="scroll"><a href="#drones">Drone Image Analysis</a></li> 
-                      <li class="scroll"><a href="#fluids">Fluid Analysis</a></li> 
-                      <li class="scroll"><a href="#examples">Examples</a></li> 
-                      <li class="scroll"><a href="#qsc">Partner with QSC</a></li>                    
-                  </ul>
-              </div>
-          </div><!--/.container-->
-      </nav><!--/nav-->
-  </header><!--/header-->
+    <!-- Hamburger Icon (mobile only) -->
+    <button id="menu-toggle" class="md:hidden text-gray-800 focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
 
-  <section id="cv">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title wow fadeInDown">Computer Vision</h2>
-        <p class="wow fadeInDown" style="font-size: 14pt;">Computer vision is a field of artificial intelligence that focuses on enabling machines to understand and interpret visual data. With computer vision, machines can locate, identify, and count objects in images and videos. This technology has revolutionized industries such as healthcare, manufacturing, and autonomous systems, allowing for more efficient and accurate analysis of visual information.</p>
-      
+    <!-- Navigation Links -->
+    <nav id="menu" class="hidden md:flex md:space-x-6 text-sm font-semibold">
+      <a href="index.html" class="hover:text-green-600">Home</a>
+      <a href="about.html" class="hover:text-green-600">About</a>
+      <a href="services.html" class="hover:text-green-600">Services</a>
+      <a href="mission.html" class="hover:text-green-600">Mission</a>
+      <a href="blog.html" class="hover:text-green-600">Blog</a>
+      <a href="contact.html" class="hover:text-green-600">Contact</a>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <nav id="mobile-menu" class="hidden flex-col space-y-2 px-4 pt-2 pb-4 text-sm font-semibold bg-white shadow-md md:hidden">
+      <a href="index.html" class="block hover:text-green-600">Home</a>
+      <a href="about.html" class="block hover:text-green-600">About</a>
+      <a href="services.html" class="block hover:text-green-600">Services</a>
+      <a href="mission.html" class="block hover:text-green-600">Mission</a>
+      <a href="blog.html" class="block hover:text-green-600">Blog</a>
+      <a href="contact.html" class="block hover:text-green-600">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  toggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+<!-- End Header-->
+
+  <!-- Hero Section -->
+  <style>
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in {
+    animation: fade-in 1s ease-out both;
+  }
+  </style>
+  <section class="bg-gradient-to-br from-green-100 to-blue-100 py-20 px-6 text-center animate-fade-in">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+        Computer Vision
+      </h1>
+      <p class="text-lg md:text-xl mb-8">
+        Computer vision enables machines to identify, locate, and count objects in images and videos. At QSC, we build solutions that apply deep learning and image analysis to automate workflows, gain insights from visual data, and support research and operations in fields from conservation to manufacturing.
+      </p>
+    </div>
+  </section>
+
+      <!-- Parallax Image Section -->
+    <section class="relative h-[450px] overflow-hidden hidden sm:block">
+      <div
+        class="absolute inset-0 bg-fixed bg-center bg-cover"
+        style="background-image: url('images/puma_camera_trap.webp');"
+        role="img"
+        aria-label="mountain lions in camera trap image IDed by AI"
+      ></div>
+    </section>
+
+  <!-- Applications -->
+  <section class="py-16 px-6 bg-white">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+      <div class="flex items-start space-x-4">
+        <img src="images/icons/camera_trap.webp" alt="camera trap icon" class="w-12 h-12 mt-1" />
+        <div>
+          <h2 class="text-2xl font-semibold mb-2">Wildlife Camera Traps</h2>
+          <p class="text-gray-700 mb-4">
+          We automate the analysis of motion-triggered wildlife imagery, helping scientists monitor species, behavior, and ecological patterns efficiently with AI-based identification and tracking.
+          </p>
+        </div>
+      </div>
+
+
+      <div class="flex items-start space-x-4">
+        <img src="images/icons/drone.webp" alt="drone icon" class="w-12 h-6 mt-1" />
+        <div>
+          <h2 class="text-2xl font-semibold mb-2">Drone Image Analysis</h2>
+          <p class="text-gray-700 mb-4">
+            Our models extract meaning from aerial imagery — mapping land cover, detecting objects, and assisting with environmental monitoring, infrastructure inspection, and agriculture.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex items-start space-x-4">
+        <img src="images/icons/microscope.webp" alt="microscope icon" class="w-12 h-12 mt-1" />
+        <div>
+          <h2 class="text-2xl font-semibold mb-2">Fluid Sample Imaging</h2>
+          <p class="text-gray-700 mb-4">
+            We use computer vision to detect and quantify particles in fluid samples — such as microplastics, algae, turbidity, or contaminants — supporting water quality monitoring and biomedical applications.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-semibold mb-2">Scientific Contributions</h2>
+        <p class="text-gray-700 mb-2">
+          Our team has contributed to peer-reviewed research in computer vision:
+        </p>
+        <ul class="space-y-0 text-green-700 text-lg list-disc list-inside">
+          <li><a href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13120" class="hover:underline font-small" target="_blank">Machine learning to classify animal species in camera trap images</a></li>
+          <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S1574954121003174" class="hover:underline font-small" target="_blank">Automated classification of bat echolocation call recordings</a></li>
+          <li><a href="https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.6692" class="hover:underline font-small" target="_blank">Identification of animals in camera trap images: MLWIC2</a></li>
+          <li><a href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.14044" class="hover:underline font-small" target="_blank">Evaluation of platforms for AI processing of camera-trap data</a></li>
+        </ul>
       </div>
     </div>
   </section>
-  
-  <section id="camera-trap">
-    <div class="container">
-        <h2 class="section-title wow fadeInDown">Computer Vision for Camera Trap Analysis</h2>
-        <p class="wow fadeInDown" style="font-size: 14pt;">Computer vision plays a crucial role in analyzing wildlife in motion-activated game cameras, "camera trap," images and videos. By leveraging advanced algorithms, computer vision can automatically detect and track animal species, identify individual animals, and monitor their behavior. This enables researchers to gather valuable insights about wildlife populations, habitat usage, and ecological patterns.</p>
-    </div>
-  </section>
-  
-  <section id="drones">
-    <div class="container">
-        <h2 class="section-title wow fadeInDown">Drone Image Analysis</h2>
-        <p class="wow fadeInDown" style="font-size: 14pt;">Drones equipped with cameras generate vast amounts of image data, and computer vision algorithms can be applied to extract meaningful information from these images. Computer vision enables tasks such as object detection, land cover mapping, and aerial surveillance. By harnessing the power of computer vision, drones become powerful tools for various applications, including agriculture, environmental monitoring, and infrastructure inspection.</p>
+
+  <section class="mb-10">
+    <div class="text-center mt-10">
+      <a href="services.html" class="inline-flex items-center gap-2 bg-green-100 text-green-800 hover:bg-green-200 font-semibold py-3 px-6 rounded-xl shadow-sm transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform -scale-x-100" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+        </svg>
+        See All Services
+      </a>
     </div>
   </section>
 
-  <section id="fluids">
-    <div class="container">
-        <h2 class="section-title wow fadeInDown">Fluid Analysis</h2>
-        <p class="wow fadeInDown" style="font-size: 14pt;">Computer vision techniques are revolutionizing the analysis of substances within fluids. With advanced algorithms, computer vision enables automated detection, classification, and quantification of contaminants, biological particles, turbidity, and more. These capabilities have profound implications in various domains, including environmental monitoring, water quality assessment, and biomedical research. By leveraging computer vision, it becomes possible to identify and analyze contaminants like microplastics and chemical pollutants, detect and quantify biological particles such as algae or mold, and accurately measure turbidity. These automated analysis methods offer advantages in terms of efficiency, accuracy, and scalability. They reduce reliance on manual inspection, enabling rapid, consistent, and objective analysis of fluid samples. At QSC, we specialize in applying computer vision techniques to fluid analysis, offering tailored solutions for diverse industries and research domains.</p>
+  <!-- CTA -->
+  <section class="bg-green-100 py-16 px-6 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4">Interested in Bringing Computer Vision to Your Work?</h2>
+      <p class="text-lg mb-6">
+        Whether you’re working with camera traps, drones, microscopy, or industrial inspection, QSC can help. Let’s talk about how computer vision can unlock new insights and efficiency for your mission.
+      </p>
+      <a href="contact.html" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-xl shadow">
+        Contact Us
+      </a>
     </div>
   </section>
 
-  <section id="examples">
-    <div class="container">
-        <h2 class="section-title wow fadeInDown">Examples of Peer-Reviewed Scientific Publications</h2>
-        <p class="wow fadeInDown" style="font-size: 14pt;"><a href="./index.html">QSC</a> scientists have contributed to the field of computer vision through their research and publication of peer-reviewed scientific papers. These publications cover topics such as object detection, classification, localization, and counting. Explore our publications to learn more about our cutting-edge contributions to the field:</p>
-        <ul>
-          <li style="font-size: 14pt;"><a href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13120">Machine learning to classify animal species in camera trap images: Applications in ecology</a></li>
-          <li style="font-size: 14pt;"><a href="https://www.sciencedirect.com/science/article/abs/pii/S1574954121003174">Automated classification of bat echolocation call recordings with artificial intelligence</a></li>
-          <li style="font-size: 14pt;"><a href="https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.6692">Improving the accessibility and transferability of machine learning algorithms for identification of animals in camera trap images: MLWIC2</a></li>
-          <li style="font-size: 14pt;"><a href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.14044">An evaluation of platforms for processing camera-trap data using artificial intelligence</a></li>
-        </ul>
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-300 py-10 text-sm">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-6">
+      <div>
+        <p class="font-bold text-white mb-2">Quantitative Science Consulting</p>
+        <p>Science-grounded AI for sustainable impact. </p>
+      </div>
+      <div class="flex flex-col md:items-end space-y-2">
+        <a href="mailto:info@qsc.earth" class="hover:underline">info@qsc.earth</a>
+        <a href="https://www.linkedin.com/company/quantitative-science-consulting" class="hover:underline" target="_blank">LinkedIn</a>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> QSC. All rights reserved.</p>
+      </div>
     </div>
-  </section>
-  
-  <section id="qsc">
-    <div class="container">
-        <h2 class="section-title wow fadeInDown">Interested in Working with Computer Vision?</h2>
-        <p class="wow fadeInDown" style="font-size: 14pt;">If you are passionate about computer vision and want to explore its potential in your business or research, we at <a href="./index.html">QSC</a> are here to help. Our team of experts can provide tailored solutions, consultation, and collaboration opportunities in computer vision. <a href="./index.html#contact-us">Contact Us</a> to discuss your specific needs and discover how computer vision can drive innovation and success in your endeavors.</p>
-    </div>
-  </section>
-  
-  <div id="bottom-image-container">
-    <img src="images/mntns.jpg" alt="Mountains" class="desktop-only">
-  </div>
-
-  <footer id="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                &copy; 2024 Quantitative Science Consulting, LLC. Upper Peninsula Science.
-            </div>
-            <div class="col-sm-6">
-                <ul class="social-icons">
-                    <li><a href="https://www.linkedin.com/company/quantitative-science-consulting/" target="_blank"><i class="fa fa-linkedin"></i></a></li> 
-                </ul>
-            </div>
-        </div>
-    </div>
-  </footer><!--/#footer-->
-
-  <script src="js/jquery.js"></script>
-  <script src="js/bootstrap.min.js"></script> 
-  <script src="js/mousescroll.js"></script>
-  <script src="js/smoothscroll.js"></script>
-  <script src="js/jquery.prettyPhoto.js"></script>
-  <script src="js/jquery.isotope.min.js"></script>
-
-  <script src="js/wow.min.js"></script>
-  <script src="js/jquery.isotope.min.js"></script>
-  <script src="js/jquery.inview.min.js"></script>
-  <script src="js/custom-scripts.js"></script>
-  </body>
+  </footer>
+</body>
 </html>

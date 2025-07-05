@@ -3,32 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Mission | QSC</title>
-    <!-- Begin Descriptive Content -->
-    <meta name="description" content="Discover QSC’s mission: harnessing science-powered AI for environmental impact, community empowerment, and sustainable progress in Michigan’s U.P.">
-    <meta name="keywords" content="mission, environment, sustainability, community engagement, Michigan Upper Peninsula, QSC">
-
-    <!-- Open Graph: used by Facebook, LinkedIn, Discord, Slack, etc. -->
-    <meta property="og:title" content="Our Mission | Quantitative Science Consulting" />
-    <meta property="og:description" content="Learn how QSC empowers communities, protects ecosystems, and advances sustainable science-driven AI in the Upper Peninsula." />
-    <meta property="og:url" content="https://qsc.earth/mission.html" />
-    <meta property="og:image" content="https://qsc.earth/images/logo.webp" />
-    <meta property="og:type" content="website" />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Our Mission | Quantitative Science Consulting" />
-    <meta name="twitter:description" content="Learn how QSC empowers communities, protects ecosystems, and advances sustainable science‑driven AI in the Upper Peninsula." />
-    <meta name="twitter:image" content="https://qsc.earth/images/logo.webp" />
-
-    <!-- End Descriptive Content -->
+  <title>Contact | QSC</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" href="images/logo.webp" />
-    <script type="application/ld+json">
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "serviceType": "QSC's Mission",
+      "serviceType": "Contact QSC",
       "provider": {
         "@type": "Organization",
         "name": "Quantitative Science Consulting",
@@ -38,7 +20,7 @@
           "https://www.linkedin.com/company/quantitative-science-consulting"
         ]
       },
-      "description": "Discover QSC’s mission: harnessing science-powered AI for environmental impact, community empowerment, and sustainable progress in Michigan’s U.P.",
+      "description": "Contact us at QSC. Fill out the form or Email.",
       "areaServed": {
   "@type": "Place",
   "name": "Global"
@@ -50,7 +32,7 @@
       }
     }
   </script>
-<link rel="canonical" href="https://qsc.earth/mission.html" />
+<link rel="canonical" href="https://qsc.earth/contact.html" />
 </head>
 <body class="bg-white text-gray-800 font-sans">
   <!-- Header -->
@@ -102,26 +84,10 @@
     mobileMenu.classList.toggle('hidden');
   });
 </script>
-<style>
-  .parallax-mission {
-    background-image: url('images/banner/banner.webp');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    height: 400px; /* Adjust as needed */
-  }
-
-  @media (max-width: 768px) {
-    .parallax-mission {
-      background-attachment: scroll;
-    }
-  }
-</style>
-
 <!-- End Header-->
 
-  <!-- Hero Section -->
-  <style>
+  <!-- Contact Section -->
+    <style>
   @keyframes fade-in {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -131,35 +97,34 @@
   }
   </style>
   <section class="bg-gradient-to-br from-green-100 to-blue-100 py-20 px-6 text-center animate-fade-in">
-
-    <div class="max-w-4xl mx-auto">
-      <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-        Our Mission
-      </h1>
-      <p class="text-lg md:text-xl">
-        Science-grounded AI for people, planet, and progress.
-      </p>
+    <div class="max-w-2xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">Get in Touch</h1>
+      <p class="text-lg md:text-xl text-gray-700">Have a question or want to collaborate? Reach out — we'd love to hear from you.</p>
     </div>
   </section>
-  <!-- Banner Image Section -->
-  <section class="parallax-mission w-full flex items-center justify-center">
-  </section>
 
-  <!-- Mission Statements -->
-  <section class="py-16 bg-white px-6">
-    <div class="max-w-6xl mx-auto space-y-16">
-      <div>
-        <h2 class="text-3xl font-bold mb-4">Harnessing AI to Protect and Preserve the Environment</h2>
-        <p class="text-lg text-gray-700">
-          We are dedicated to using AI to enhance environmental sustainability. By helping companies optimize processes, we reduce waste and lower environmental impact. Our research also supports the adoption of renewable energy, reducing reliance on fossil fuels and combating climate change. Our AI solutions extend to the conservation of wild species, contributing to global biodiversity preservation.
-        </p>
-      </div>
+  <section class="py-16 px-6 bg-white">
+    <div class="max-w-3xl mx-auto space-y-8">
+      <form action=https://formspree.io/f/xpwrnwky method="POST" class="space-y-6">
+        <div>
+          <label for="name" class="block font-semibold mb-1">Name</label>
+          <input type="text" id="name" name="name" required class="w-full border border-gray-300 rounded-md px-4 py-2" />
+        </div>
+        <div>
+          <label for="email" class="block font-semibold mb-1">Email</label>
+          <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded-md px-4 py-2" />
+        </div>
+        <div>
+          <label for="message" class="block font-semibold mb-1">Message</label>
+          <textarea id="message" name="message" rows="5" required class="w-full border border-gray-300 rounded-md px-4 py-2"></textarea>
+        </div>
+        <button type="submit" class="bg-green-700 text-white px-6 py-2 rounded-md hover:bg-green-800">
+          Send Message
+        </button>
+      </form>
 
-      <div>
-        <h2 class="text-3xl font-bold mb-4">Empowering Our Community in Michigan’s Upper Peninsula</h2>
-        <p class="text-lg text-gray-700">
-          As a company headquartered in the Upper Peninsula, we are committed to supporting local businesses by offering data science and AI services to help them grow and thrive. We also strive to collaborate with indigenous communities, providing technology and resources to help preserve their natural lands and cultural heritage. Additionally, we are dedicated to preserving the region’s unique natural areas, promoting sustainable practices to protect these landscapes for future generations.
-        </p>
+      <div class="text-center text-sm text-gray-600">
+        Or email us directly: <a href="mailto:info@qsc.earth" class="text-green-700 font-semibold underline">info@qsc.earth</a>
       </div>
     </div>
   </section>

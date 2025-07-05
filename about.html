@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | QSC</title>
+   <!-- Begin Descriptive Content -->
+  <meta name="description" content="Learn about QSC’s team, mission, and scientific foundation. We combine data science expertise with real-world impact.">
+  <meta name="keywords" content="QSC team, AI company background, scientific AI, data science consulting, about QSC">
+
+  <!-- Open Graph: used by Facebook, LinkedIn, Discord, Slack, etc. -->
+  <meta property="og:title" content="About QSC | Data-Driven Impact with Science" />
+  <meta property="og:description" content="Meet the scientists and engineers behind QSC and learn what drives our mission." />
+  <meta property="og:image" content="https://qsc.earth/images/logo.webp" />
+  <meta property="og:url" content="https://qsc.earth/about.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About QSC | Data-Driven Impact with Science" />
+  <meta name="twitter:description" content="Meet the scientists and engineers behind QSC and learn what drives our mission." />
+  <meta name="twitter:image" content="https://qsc.earth/images/logo.webp" />
+  <!-- End Descriptive Content -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="images/logo.webp" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "About QSC",
+      "provider": {
+        "@type": "Organization",
+        "name": "Quantitative Science Consulting",
+        "url": "https://qsc.earth",
+        "logo": "https://qsc.earth/images/logo.webp",
+        "sameAs": [
+          "https://www.linkedin.com/company/quantitative-science-consulting"
+        ]
+      },
+      "description": "Meet the scientists and engineers behind QSC and learn what drives our mission.",
+      "areaServed": {
+  "@type": "Place",
+  "name": "Global"
+},
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://qsc.earth/contact.html",
+        "availableLanguage": ["English"]
+      }
+    }
+  </script>
+
+  <style>
+  .parallax-hogback {
+    background-image: url('images/hogback.webp');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 450px; /* You can adjust the height as needed */
+  }
+
+  @media (max-width: 768px) {
+    .parallax-hogback {
+      background-attachment: scroll; /* fallback for mobile */
+    }
+  }
+</style>
+
+</head>
+<body class="bg-white text-gray-800 font-sans">
+  <!-- Header -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <!-- Logo -->
+    <a href="index.html" class="flex items-center space-x-3">
+      <img src="images/logo.webp" alt="QSC logo" class="h-10 w-10" />
+      <span class="text-xl font-bold text-gray-800">Quantitative Science Consulting</span>
+    </a>
+
+    <!-- Hamburger Icon (mobile only) -->
+    <button id="menu-toggle" class="md:hidden text-gray-800 focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
+    <!-- Navigation Links -->
+    <nav id="menu" class="hidden md:flex md:space-x-6 text-sm font-semibold">
+      <a href="index.html" class="hover:text-green-600">Home</a>
+      <a href="about.html" class="hover:text-green-600">About</a>
+      <a href="services.html" class="hover:text-green-600">Services</a>
+      <a href="mission.html" class="hover:text-green-600">Mission</a>
+      <a href="blog.html" class="hover:text-green-600">Blog</a>
+      <a href="contact.html" class="hover:text-green-600">Contact</a>
+      <a href="faq.html" class="hover:text-green-600">FAQ</a>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <nav id="mobile-menu" class="hidden flex-col space-y-2 px-4 pt-2 pb-4 text-sm font-semibold bg-white shadow-md md:hidden">
+      <a href="index.html" class="block hover:text-green-600">Home</a>
+      <a href="about.html" class="block hover:text-green-600">About</a>
+      <a href="services.html" class="block hover:text-green-600">Services</a>
+      <a href="mission.html" class="block hover:text-green-600">Mission</a>
+      <a href="blog.html" class="block hover:text-green-600">Blog</a>
+      <a href="contact.html" class="block hover:text-green-600">Contact</a>
+      <a href="faq.html" class="block hover:text-green-600">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  toggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+<!-- End Header-->
+
+  <!-- About Section -->
+  <style>
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in {
+    animation: fade-in 1s ease-out both;
+  }
+  </style>
+  <section class="bg-gradient-to-br from-green-100 to-blue-100 py-20 px-6 text-center animate-fade-in">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">About Us</h1>
+      <p class="text-lg md:text-xl leading-relaxed">
+        We are a team of experts in data science, AI, and scientific research, driven by a shared passion for the outdoors and a commitment to protecting the environment.  Our solutions are grounded in scientific methods and designed to support businesses, environment causes, and public institutions.
+      </p>
+    </div>
+  </section>
+
+  <section class="parallax-hogback w-full">
+  </section>
+
+  <!-- Team Section -->
+  <section class="py-20 px-6 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12">Meet the Team</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <!-- Team Member -->
+        <div class="text-center">
+          <img src="images/team/mikey.webp" alt="Dr. Mikey Tabak" class="mx-auto w-40 h-40 object-cover rounded-full shadow mb-4" />
+          <h3 class="text-xl font-semibold">Mikey Tabak, PhD</h3>
+          <p class="text-sm text-gray-600 mb-2">Chief Science Officer & Founder</p>
+          <p class="text-sm text-gray-700">
+            I develop AI models that drive solutions for environmental protection, climate change mitigation, and advancing business goals. Leveraging state-of-the-art technologies, I work across diverse fields, including biology, renewable energy, pharmaceuticals, computer vision, and agriculture. I enjoy long trail runs, XC skiing, and playing in forests and lakes.
+          </p>
+        </div>
+        <!-- Matt -->
+        <div class="text-center">
+          <img src="images/team/matt.webp" alt="Matt Bair" class="mx-auto w-40 h-40 object-cover rounded-full shadow mb-4" />
+          <h3 class="text-xl font-semibold">Matt Bair</h3>
+          <p class="text-sm text-gray-600 mb-2">Chief Innovation Officer</p>
+          <p class="text-sm text-gray-700">
+            I have had a life-long passion for finding creative and useful application of technology. I have worked in the software and data space for over 25 years, specializing in the manufacturing and pharmaceutical industries. I love hiking, traveling, reading, writing and tasting craft beer. I live with family in colorful Colorado.
+          </p>
+        </div>
+        <!-- Liz -->
+        <div class="text-center">
+          <img src="images/team/liz.webp" alt="Dr. Liz Mandeville" class="mx-auto w-40 h-40 object-cover rounded-full shadow mb-4" />
+          <h3 class="text-xl font-semibold">Liz Mandeville, PhD</h3>
+          <p class="text-sm text-gray-600 mb-2">Computational Biologist</p>
+          <p class="text-sm text-gray-700">
+            My expertise lies at the intersection of advanced computational methods and management of fish and wildlife species. I use big genomic data to try to understand current and past patterns of fish diversity. Recently, I’ve also become interested in the vast evolutionary diversity of fish sex chromosomes, and how this extreme variation among closely related species might shape fish evolution. When I'm not working, I'm on the trails: running, biking, and skiing.
+          </p>
+        </div>
+
+        <!-- Add more team members below using same structure -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-300 py-10 text-sm">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-6">
+      <div>
+        <p class="font-bold text-white mb-2">Quantitative Science Consulting</p>
+        <p>Science-grounded AI for sustainable impact. </p>
+      </div>
+      <div class="flex flex-col md:items-end space-y-2">
+        <a href="mailto:info@qsc.earth" class="hover:underline">info@qsc.earth</a>
+        <a href="https://www.linkedin.com/company/quantitative-science-consulting" class="hover:underline" target="_blank">LinkedIn</a>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> QSC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

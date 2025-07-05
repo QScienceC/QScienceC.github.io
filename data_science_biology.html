@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Science Biology | QSC</title>
+    <!-- Begin Descriptive Content -->
+    <meta name="description" content="QSC specializes is using advanced data science methods to study ecology, epidemiology, climate change, genomics, and the environment.">
+    <meta name="keywords" content="ecology, environment, climate change, epidemiology, distribution modeling, simulations, genomics.">
+
+    <!-- Open Graph: used by Facebook, LinkedIn, Discord, Slack, etc. -->
+    <meta property="og:title" content="QSC | Data Science Biology" />
+    <meta property="og:description" content="QSC specializes is using advanced data science methods to study ecology, epidemiology, climate change, and the environment." />
+    <meta property="og:url" content="https://qsc.earth/data_science_biology.html" />
+    <meta property="og:image" content="https://qsc.earth/images/logo.webp" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="QSC | Data Science Biology"  />
+    <meta name="twitter:description" content="QSC specializes is using advanced data science methods to study ecology, epidemiology, climate change, and the environment." />
+    <meta name="twitter:image" content="https://qsc.earth/images/logo.webp" />
+
+    <!-- End Descriptive Content -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="images/logo.webp" />
+</head>
+<body class="bg-white text-gray-800 font-sans">
+  <!-- Header -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <!-- Logo -->
+    <a href="index.html" class="flex items-center space-x-3">
+      <img src="images/logo.webp" alt="QSC logo" class="h-10 w-10" />
+      <span class="text-xl font-bold text-gray-800">Quantitative Science Consulting</span>
+    </a>
+
+    <!-- Hamburger Icon (mobile only) -->
+    <button id="menu-toggle" class="md:hidden text-gray-800 focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
+    <!-- Navigation Links -->
+    <nav id="menu" class="hidden md:flex md:space-x-6 text-sm font-semibold">
+      <a href="index.html" class="hover:text-green-600">Home</a>
+      <a href="about.html" class="hover:text-green-600">About</a>
+      <a href="services.html" class="hover:text-green-600">Services</a>
+      <a href="mission.html" class="hover:text-green-600">Mission</a>
+      <a href="blog.html" class="hover:text-green-600">Blog</a>
+      <a href="contact.html" class="hover:text-green-600">Contact</a>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <nav id="mobile-menu" class="hidden flex-col space-y-2 px-4 pt-2 pb-4 text-sm font-semibold bg-white shadow-md md:hidden">
+      <a href="index.html" class="block hover:text-green-600">Home</a>
+      <a href="about.html" class="block hover:text-green-600">About</a>
+      <a href="services.html" class="block hover:text-green-600">Services</a>
+      <a href="mission.html" class="block hover:text-green-600">Mission</a>
+      <a href="blog.html" class="block hover:text-green-600">Blog</a>
+      <a href="contact.html" class="block hover:text-green-600">Contact</a>
+    </nav>
+  </div>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Data Science Biology",
+    "provider": {
+      "@type": "Organization",
+      "name": "Quantitative Science Consulting",
+      "url": "https://qsc.earth",
+      "logo": "https://qsc.earth/images/logo.webp",
+      "sameAs": [
+        "https://www.linkedin.com/company/quantitative-science-consulting"
+      ]
+    },
+    "description": "QSC specializes is using advanced data science methods to study ecology, epidemiology, climate change, genomics, and the environment.",
+    "areaServed": {
+      "@type": "Place",
+      "name": "Global"
+    },
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "serviceUrl": "https://qsc.earth/contact.html",
+      "availableLanguage": ["English"]
+    },
+      "serviceOutput": "Environmental Data Science",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Companies, Researchers"
+      }
+  }
+</script>
+  <link rel="canonical" href="https://qsc.earth/data_science_biology.html" />
+
+</header>
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  toggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+<!-- End Header-->
+
+  <!-- Hero Section -->
+  <style>
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in {
+    animation: fade-in 1s ease-out both;
+  }
+  </style>
+  <section class="bg-gradient-to-br from-green-100 to-blue-100 py-20 px-6 text-center animate-fade-in">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+        Data Science in Biology
+      </h1>
+      <p class="text-lg md:text-xl mb-8">
+        Ecological and Epidemiological datasets can be large and require robust scientific analyses. We use state-of-the-art technologies to provide scientificly defensible results.
+      </p>
+    </div>
+  </section>
+
+  <!-- Parallax Image Section -->
+  <section class="relative h-[450px] overflow-hidden hidden sm:block">
+    <div
+      class="absolute inset-0 bg-fixed bg-center bg-cover"
+      style="background-image: url('images/bareback.webp'); background-position: center -115px;"
+      role="img"
+      aria-label="View of trees in autumn from a mountain peak"
+    ></div>
+  </section>
+
+
+
+  <!-- Applications -->
+  <section class="py-16 px-6 bg-white">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+      <div>
+        <h2 class="text-2xl font-semibold mb-2">Environmental Data Science</h2>
+        <p class="text-gray-700 mb-4">
+          Data science plays a vital role in advancing the fields of Ecology, Epidemiology, and Genomics. By employing sophisticated demographic and disease simulations, we can make accurate predictions about populations and their pathogens. The management, access, and analysis of vast amounts of data, including genomic data, necessitate robust programming and data science techniques.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-semibold mb-2">Data Science for Ecology</h2>
+        <p class="text-gray-700 mb-2">
+          We have extensive expertise in developing ecological models for populations, metapopulations, and metacommunities. These sophisticated analyses enable us to predict population dynamics.
+        </p>
+        <ul class="space-y-0 text-green-700 text-med list-disc list-inside">
+          <li><a class="hover:underline font-small" target="_blank" href="https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.1844">Anthropogenic factors predict movement of an invasive species</a> </li>
+          <li><a class="hover:underline font-small" target="_blank" href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13120">Machine learning to classify animal species in camera trap images: Applications in ecology</a></li>
+          <li><a class="hover:underline font-small" target="_blank" href="https://www.sciencedirect.com/science/article/abs/pii/S1574954121003174">Automated classification of bat echolocation call recordings with artificial intelligence</a></li>
+          <li><a class="hover:underline font-small" target="_blank" href="https://www.nature.com/articles/s41598-018-28654-w">Propagule size and structure, life history, and environmental conditions affect establishment success of an invasive species</a></li>        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-semibold mb-2">Epidemiology with Data Science</h2>
+        <p class="text-gray-700 mb-2">
+          Using observed patterns from historical disease surveillance data, we employ data science techniques to predict future transmission patterns and conduct risk assessments.
+        </p>
+        <ul class="space-y-0 text-green-700 text-med list-disc list-inside">
+          <li><a class="hover:underline font-small" target="_blank" href="https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.5558">Detection error influences both temporal seroprevalence predictions and risk factors associations in wildlife disease models</a></li>
+          <li><a class="hover:underline font-small" target="_blank" href="https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.2657">Accounting for heterogeneous invasion rates reveals management impacts on the spatial expansion of an invasive species</a></li>
+      </ul>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-semibold mb-2">Genomics with Data Science</h2>
+        <p class="text-gray-700 mb-2">
+          We leverage high-performance computing to study the genomes of wildlife and plants. This approach allows us to gain valuable insights into species evolution and develop effective population management strategies. </p>
+        <ul class="space-y-0 text-green-700 text-med list-disc list-inside">
+            <li><a class="hover:underline font-small" target="_blank" href="https://onlinelibrary.wiley.com/doi/abs/10.1111/mec.13118">Highly variable reproductive isolation among pairs of Catostomus species</a></li>
+          <li><a class="hover:underline font-small" target="_blank" href="https://www.annualreviews.org/doi/abs/10.1146/annurev-ecolsys-110316-022652">Analysis of Population Genomic Data from Hybrid Zones</a></li>
+          <li><a class="hover:underline font-small" target="_blank" href="https://onlinelibrary.wiley.com/doi/full/10.1111/jeb.13112">Speciation, species persistence and the goals of studying genomic barriers to gene flow</a></li>
+          <li><a class="hover:underline font-small" target="_blank" href=https://onlinelibrary.wiley.com/doi/abs/10.1111/mec.15392>Mixed ancestry from wild and domestic lineages contributes to the rapid expansion of invasive feral swine</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-10">
+    <div class="text-center mt-10">
+      <a href="services.html" class="inline-flex items-center gap-2 bg-green-100 text-green-800 hover:bg-green-200 font-semibold py-3 px-6 rounded-xl shadow-sm transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform -scale-x-100" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+        </svg>
+        See All Services
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-green-100 py-16 px-6 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4">Have Environmental Questions?</h2>
+      <p class="text-lg mb-6">
+        If you are interested in utilizing these cutting-edge techniques to address questions relevant to your business or research, contact us at QSC. Our team is ready to provide tailored solutions and collaborate.      </p>
+      <a href="contact.html" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-xl shadow">
+        Contact Us
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-300 py-10 text-sm">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-6">
+      <div>
+        <p class="font-bold text-white mb-2">Quantitative Science Consulting</p>
+        <p>Science-grounded AI for sustainable impact. </p>
+      </div>
+      <div class="flex flex-col md:items-end space-y-2">
+        <a href="mailto:info@qsc.earth" class="hover:underline">info@qsc.earth</a>
+        <a href="https://www.linkedin.com/company/quantitative-science-consulting" class="hover:underline" target="_blank">LinkedIn</a>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> QSC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
