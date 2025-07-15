@@ -85,10 +85,14 @@
     <lastmod>2025-07-03</lastmod>
     <priority>0.6</priority>
   </url>
-
+  <url>
+    <loc>https://qsc.earth/blog_posts/202507_equipment_maintenance_demo.html</loc>
+      <lastmod>2025-07-16</lastmod>
+      <priority>0.6</priority>
+    </url>
       <url>
     <loc>https://qsc.earth/blog_posts/202412_apy_blog.html</loc>
-      <lastmod>2024-12-03</lastmod>
+      <lastmod>2025-07-16</lastmod>
       <priority>0.5</priority>
     </url>
       <url>
