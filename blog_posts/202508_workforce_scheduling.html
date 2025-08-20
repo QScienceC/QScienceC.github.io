@@ -14631,19 +14631,51 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <!-- End of mathjax configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 
+<!--*** Add hero section etc-->
+ <link rel="canonical" href="https://qsc.earth/blog_posts/202508_workforce_scheduling.html" />
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="../index.html" class="flex items-center space-x-3">
+        <img src="../images/logo.webp" alt="QSC logo" class="h-10 w-10" />
+        <span class="text-xl font-bold text-gray-800">Quantitative Science Consulting</span>
+      </a>
+      <nav class="space-x-6 text-sm font-semibold">
+        <a href="../index.html" class="hover:text-green-600">Home</a>
+        <a href="../about.html" class="hover:text-green-600">About</a>
+        <a href="../services.html" class="hover:text-green-600">Services</a>
+        <a href="../mission.html" class="hover:text-green-600">Mission</a>
+        <a href="../blog.html" class="hover:text-green-600">Blog</a>
+        <a href="../contact.html" class="hover:text-green-600">Contact</a>
+        <a href="../faq.html" class="hover:text-green-600">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-green-100 to-blue-100 py-20 px-6 text-center">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+        Workforce Scheduling with Reinforcement Learning
+      </h1>
+      <p class="text-lg md:text-xl mb-2">Use Q-Learning to Assign Workers, Balance Machine Use, and Boost Factory Productivity</p>
+      <p class="text-md text-gray-600">Mikey Tabak, PhD &bull; 21 Aug 2025</p>
+    </div>
+  </section>
+
+  <!-- End add hero section, etc-->
+  <!--Blog content from jupyter notebook-->
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Workforce-Scheduling-Optimization-with-Reinforcement-Learning">Workforce Scheduling Optimization with Reinforcement Learning<a class="anchor-link" href="#Workforce-Scheduling-Optimization-with-Reinforcement-Learning">&#182;</a></h1><p><strong>Author</strong>: Mikey Tabak, PhD</p>
-<p><strong>Company</strong>: Quantitative Science Consulting, LLC</p>
-<p><strong>Date</strong>: Aug 21 2025</p>
-<p><strong>Website</strong>: <a href="https://www.QSC.earth">www.QSC.earth</a></p>
+<h1 id="Workforce-Scheduling-Optimization-with-Reinforcement-Learning">Workforce Scheduling Optimization with Reinforcement Learning<a class="anchor-link" href="#Workforce-Scheduling-Optimization-with-Reinforcement-Learning">&#182;</a></h1>
+
 <hr>
-<p>In this blog post, we demonstrate how reinforcement learning can be used to optimize workforce scheduling in a factory setting. \
-Workers have different skills, instruments require certain skillsets, raw materials are limited, and downtime (like calibration) can disrupt operations. \
+<p>In this blog post, we demonstrate how reinforcement learning can be used to optimize workforce scheduling in a factory setting. 
+Workers have different skills, instruments require certain skillsets, raw materials are limited, and downtime (like calibration) can disrupt operations. 
 We'll simulate this environment and train a Q-learning agent to assign workers to instruments hour by hour, aiming to maximize productivity and minimize inefficiencies like idle time, skill mismatches, or resource shortages.</p>
 
 </div>
@@ -15108,6 +15140,38 @@ We modeled realistic production dynamics like skill compatibility, resource cons
 </div>
 </div>
 </div>
+
+<!--*** Add CTA and Footer-->
+<!-- CTA -->
+  <section class="bg-green-100 py-16 px-6 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4">Bring Predictive Maintenance to Your Operation</h2>
+      <p class="text-lg mb-6">
+        From prototyping with synthetic data to deploying real-time monitoring systems, QSC helps businesses use AI to reduce downtime, extend equipment life, and optimize performance. Let’s work together to turn your sensor data into actionable insights.
+            </p>
+      <a href="contact.html" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-xl shadow">
+        Contact Us
+      </a>
+    </div>
+  </section>
+
+ <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-300 py-10 text-sm">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-6">
+      <div>
+        <p class="font-bold text-white mb-2">Quantitative Science Consulting</p>
+        <p>Science-grounded AI for sustainable impact.</p>
+      </div>
+      <div class="flex flex-col md:items-end space-y-2">
+        <a href="mailto:info@qsc.earth" class="hover:underline">info@qsc.earth</a>
+        <a href="https://www.linkedin.com/company/quantitative-science-consulting" target="_blank" class="hover:underline">LinkedIn</a>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> QSC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- End add CTA and footer-->
+
 </body>
 
 
