@@ -14663,6 +14663,15 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     </div>
   </header>
 
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    toggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
   <!-- Hero -->
   <section class="bg-gradient-to-br from-green-100 to-blue-100 py-20 px-6 text-center">
     <div class="max-w-4xl mx-auto">
