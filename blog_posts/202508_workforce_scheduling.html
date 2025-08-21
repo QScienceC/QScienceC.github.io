@@ -14768,7 +14768,7 @@ We'll simulate this environment and train a Q-learning agent to assign workers t
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">instrument_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"NMR"</span><span class="p">,</span> <span class="s2">"GC"</span><span class="p">,</span> <span class="s2">"HPLC"</span><span class="p">,</span> <span class="s2">"FTIR"</span><span class="p">,</span> <span class="s2">"Mass Spec"</span><span class="p">]</span> <span class="c1">#***MB from MT: Recommend real instrument names here</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">instrument_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"NMR"</span><span class="p">,</span> <span class="s2">"GC"</span><span class="p">,</span> <span class="s2">"HPLC"</span><span class="p">,</span> <span class="s2">"FTIR"</span><span class="p">,</span> <span class="s2">"Mass Spec"</span><span class="p">]</span> <span class="c1"></span>
 <span class="n">scheduler</span> <span class="o">=</span> <span class="n">WorkforceScheduler</span><span class="p">(</span>
     <span class="n">num_workers</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> 
     <span class="n">num_machines</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">instrument_names</span><span class="p">),</span> 
