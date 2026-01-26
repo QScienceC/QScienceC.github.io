@@ -14768,7 +14768,7 @@ We'll simulate this environment and train a Q-learning agent to assign workers t
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">instrument_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"NMR"</span><span class="p">,</span> <span class="s2">"GC"</span><span class="p">,</span> <span class="s2">"HPLC"</span><span class="p">,</span> <span class="s2">"FTIR"</span><span class="p">,</span> <span class="s2">"Mass Spec"</span><span class="p">]</span> <span class="c1">#***MB from MT: Recommend real instrument names here</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">instrument_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"NMR"</span><span class="p">,</span> <span class="s2">"GC"</span><span class="p">,</span> <span class="s2">"HPLC"</span><span class="p">,</span> <span class="s2">"FTIR"</span><span class="p">,</span> <span class="s2">"Mass Spec"</span><span class="p">]</span> <span class="c1"></span>
 <span class="n">scheduler</span> <span class="o">=</span> <span class="n">WorkforceScheduler</span><span class="p">(</span>
     <span class="n">num_workers</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> 
     <span class="n">num_machines</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">instrument_names</span><span class="p">),</span> 
@@ -15166,7 +15166,7 @@ class="
 <h2 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">&#182;</a></h2><p>This simulation demonstrates how reinforcement learning, and Q-learning specifically, can be applied to complex scheduling problems involving multiple interacting constraints.
 We modeled realistic production dynamics like skill compatibility, resource constraints, instrument downtime, and QA bottlenecks.</p>
 <p>The Q-learning agent was able to discover a scheduling policy that improves over time —minimizing penalties and optimizing throughput.</p>
-<p>This approach is extensible to real-world production scheduling, predictive maintenance, and labor optimization in factories, labs, and other resource-constrained environments.</p>
+<p>This approach is extensible to real-world production scheduling, <a href="./202507_equipment_maintenance_demo.html" class="text-green-700 underline">predictive maintenance</a>, and labor optimization in factories, labs, and other resource-constrained environments.</p>
 
 </div>
 </div>
@@ -15180,7 +15180,7 @@ We modeled realistic production dynamics like skill compatibility, resource cons
       <h2 class="text-3xl font-bold mb-4">Optimize Workforce Scheduling with Reinforcement Learning</h2>
       <p class="text-lg mb-6">
         From simulating complex factory dynamics to building AI agents that adapt in real time, QSC helps businesses improve productivity, reduce inefficiencies, and make smarter use of people and machines. Develop AI-driven solutions to workforce management with QSC.  </p>
-      <a href="contact.html" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-xl shadow">
+      <a href="../contact.html" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-xl shadow">
         Contact Us
       </a>
     </div>
