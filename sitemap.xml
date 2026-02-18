@@ -40,13 +40,13 @@
   <!-- Service Pages -->
   <url>
     <loc>https://qsc.earth/reinforcement_learning.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-02-18</lastmod>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://qsc.earth/data_science_biology.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-02-18</lastmod>
     <priority>0.8</priority>
   </url>
 
@@ -64,19 +64,26 @@
 
   <url>
     <loc>https://qsc.earth/business_solutions.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-02-18</lastmod>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://qsc.earth/computer_vision.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-02-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+
+  <url>
+    <loc>https://qsc.earth/geospatial.html</loc>
+    <lastmod>2026-02-18</lastmod>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://qsc.earth/cds.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-02-18</lastmod>
     <priority>0.8</priority>
   </url>
 
