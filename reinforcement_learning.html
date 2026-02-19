@@ -33,6 +33,7 @@
   <!-- End Descriptive Content -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" href="images/logo.webp" />
+  <link rel="stylesheet" href="css/service_sections.css" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -166,9 +167,9 @@
   </section>
 
   <!-- Detailed Use Cases -->
-  <section class="py-16 bg-white px-6">
-    <div class="max-w-6xl mx-auto space-y-8">
-      <div>
+  <section class="py-16 bg-white px-6 service_section">
+    <div class="max-w-6xl mx-auto space-y-8 service_section_stack">
+      <div class="service_card">
         <h2 class="text-2xl font-semibold mb-2">What is Reinforcement Learning?</h2>
         <p class="text-lg md:text-xl mb-4">
           RL is best for high-variance environments where teams must balance throughput, quality, and risk under changing conditions.
@@ -180,20 +181,21 @@
         </ul>
       </div>
       <div class="grid md:grid-cols-2 gap-8">
-      <div>
+      <div class="service_card">
         <h2 class="text-2xl font-semibold mb-2">Optimizing Manufacturing Workflows</h2>
         <p class="text-lg md:text-xl mb-8">
           We build RL policies for scheduling, inventory flow, and process control to improve throughput and reduce avoidable downtime. <a class="text-green-700 hover:underline font-small" href="./blog_posts/inventory_optimization_202411.html">See an example here.</a>
         </p>
       </div>
 
-      <div>
+      <div class="service_card">
         <h2 class="text-2xl font-semibold mb-2">Safer and Greener Operations</h2>
         <p class="text-lg md:text-xl mb-8">
           We also tune policies for safety and sustainability goals, helping teams reduce incident risk while improving energy and material efficiency.
         </p>
       </div>
       </div>
+    </div>
   </section>
 
   <section class="mb-10">
