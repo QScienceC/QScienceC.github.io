@@ -82,6 +82,7 @@
   <link rel="canonical" href="https://qsc.earth/faq.html" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" href="images/logo.webp" />
+  <link rel="stylesheet" href="css/service_sections.css" />
 </head>
 <body class="bg-white text-gray-800 font-sans">
 
@@ -110,6 +111,7 @@
         <a href="mission.html" class="hover:text-green-600">Mission</a>
         <a href="blog.html" class="hover:text-green-600">Blog</a>
         <a href="contact.html" class="hover:text-green-600">Contact</a>
+        <a href="faq.html" class="hover:text-green-600">FAQ</a>
         </nav>
 
         <!-- Mobile Navigation -->
@@ -120,9 +122,19 @@
         <a href="mission.html" class="block hover:text-green-600">Mission</a>
         <a href="blog.html" class="block hover:text-green-600">Blog</a>
         <a href="contact.html" class="block hover:text-green-600">Contact</a>
+        <a href="faq.html" class="block hover:text-green-600">FAQ</a>
         </nav>
     </div>
     </header>
+
+  <script>
+    const menu_toggle = document.getElementById('menu-toggle');
+    const mobile_menu = document.getElementById('mobile-menu');
+
+    menu_toggle.addEventListener('click', () => {
+      mobile_menu.classList.toggle('hidden');
+    });
+  </script>
 
 
   <!-- Hero Section -->
@@ -136,30 +148,30 @@
   </section>
 
   <!-- FAQ Section -->
-  <section class="py-16 px-6 bg-white">
-    <div class="max-w-4xl mx-auto space-y-12">
-      <div>
+  <section class="py-16 px-6 bg-white service_section">
+    <div class="max-w-5xl mx-auto space-y-8 service_section_stack">
+      <div class="service_card">
         <h2 class="text-2xl font-semibold mb-2">What industries does QSC serve?</h2>
         <p class="text-gray-700">QSC works with clients in environmental science, manufacturing, public health, agriculture, and more. We build science-driven data and AI tools to solve real-world problems.</p>
       </div>
 
-      <div>
+      <div class="service_card">
         <h2 class="text-2xl font-semibold mb-2">How does QSC ensure scientific accuracy?</h2>
         <p class="text-gray-700">Our <a href="about.html" class="hover:underline font-small text-green-700">team</a> is composed of PhD-trained scientists and experienced engineers who prioritize rigor, transparency, and peer-reviewed methods in every project.</p>
       </div>
 
-      <div>
+      <div class="service_card">
         <h2 class="text-2xl font-semibold mb-2">Can QSC build custom software or dashboards?</h2>
         <p class="text-gray-700">Yes, we build custom web tools, APIs, dashboards, and machine learning pipelines tailored to each client's needs.
           Learn more about our <a href="cds.html" class="hover:underline font-small text-green-700">Comprehensive Data Solutions</a></p>
       </div>
 
-      <div>
+      <div class="service_card">
         <h2 class="text-2xl font-semibold mb-2">Where is QSC based?</h2>
         <p class="text-gray-700">We are headquartered in Michigan’s Upper Peninsula but work with partners across North America and globally.</p>
       </div>
 
-      <div>
+      <div class="service_card">
         <h2 class="text-2xl font-semibold mb-2">What is QSC's typical project timeline?</h2>
         <p class="text-gray-700">Timelines vary based on scope, but most projects range from 2 weeks to 6 months. We offer rapid prototyping and long-term collaboration options.</p>
       </div>
