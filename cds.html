@@ -126,6 +126,15 @@
   .animate-fade-in {
     animation: fade-in 1s ease-out both;
   }
+
+  /*
+    Crop roughly 10% from the top and bottom of the parallax image
+    without editing the source asset by increasing only vertical scale.
+  */
+  .parallax_image_cropped {
+    background-size: 100% 120%;
+    background-position: center center;
+  }
   </style>
   <section class="bg-gradient-to-br from-green-100 to-blue-100 py-20 px-6 text-center animate-fade-in">
     <div class="max-w-4xl mx-auto">
@@ -156,19 +165,14 @@
   </section>
 
     <!-- Parallax Image Section -->
-  <!-- <section class="relative h-[450px] overflow-hidden">
-    <div class="absolute inset-0 bg-fixed bg-center bg-cover" style="background-image: url('images/safety_stock_fig.webp');" alt="Figures"></div>
-  </section> -->
-
-    <!-- Parallax Image Section -->
-    <!-- <section class="relative h-[450px] overflow-hidden hidden sm:block">
+    <section class="relative h-[450px] overflow-hidden hidden sm:block">
       <div
-        class="absolute inset-0 bg-fixed bg-center bg-cover"
-        style="background-image: url('images/safety_stock_fig.webp');"
+        class="absolute inset-0 bg-fixed bg-center bg-cover parallax_image_cropped"
+        style="background-image: url('images/data_pipeline_text_boxes_hero.webp');"
         role="img"
-        aria-label="Scientific figures"
+        aria-label="data pipeline with four stages labeled data collection, storage, analysis, and insight"
       ></div>
-    </section> -->
+    </section>
 
   <!-- Detailed Capabilities -->
   <section class="py-16 px-6 bg-white">
