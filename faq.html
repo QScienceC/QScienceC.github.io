@@ -127,6 +127,15 @@
     </div>
     </header>
 
+  <script>
+    const menu_toggle = document.getElementById('menu-toggle');
+    const mobile_menu = document.getElementById('mobile-menu');
+
+    menu_toggle.addEventListener('click', () => {
+      mobile_menu.classList.toggle('hidden');
+    });
+  </script>
+
 
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-green-100 to-blue-100 py-20 px-6 text-center animate-fade-in">
