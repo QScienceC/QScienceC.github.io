@@ -359,7 +359,7 @@
         <ul class="list-disc pl-8 space-y-2">
           <li><code class="bg-gray-100 px-2 py-1 rounded">distance_km</code> instead of <code class="bg-gray-100 px-2 py-1 rounded">Distance (km)</code></li>
           <li><code class="bg-gray-100 px-2 py-1 rounded">room_temperature_c</code> instead of <code class="bg-gray-100 px-2 py-1 rounded">temp</code></li>
-          <li><code class="bg-gray-100 px-2 py-1 rounded">internal_vibration_vbs</code></li>
+          <li><code class="bg-gray-100 px-2 py-1 rounded">internal_vibration_vbs</code> instead of <code class="bg-gray-100 px-2 py-1 rounded">Vibration</code></li>
         </ul>
       </div>
 
@@ -375,9 +375,9 @@
       <div>
         <h2 class="text-2xl font-semibold text-gray-800">Avoid using visual formatting as data</h2>
         <p>
-          Don’t rely on color, bold text, or cell shading to store meaning (for example, “red means bad”).
-          If something is important, store it explicitly in a column, such as
-          <code class="bg-gray-100 px-2 py-1 rounded">status = "warning"</code>.
+          Don’t rely on color, bold text, or cell shading to store meaning (for example, “blue rows encode rainy days”).
+          Instead, store it explicitly in a column, such as
+          <code class="bg-gray-100 px-2 py-1 rounded">weather = "rain"</code>.
         </p>
       </div>
 
@@ -385,7 +385,7 @@
         <h2 class="text-2xl font-semibold text-gray-800">Don’t use spaces or special characters in file names</h2>
         <p>
           Including the creation date in the filename is often very helpful.
-          For example: <code class="bg-gray-100 px-2 py-1 rounded">bird_measurements_20240229.csv</code>.
+          For example: <code class="bg-gray-100 px-2 py-1 rounded">measurements_20240229.csv</code>.
         </p>
       </div>
     </section>
