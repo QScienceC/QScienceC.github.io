@@ -100,13 +100,21 @@
       --intro_note_start: #eff6ff;
       --intro_note_end: #ecfeff;
       --intro_note_border: #bfdbfe;
+      --intro_note_padding: 2rem;
+      --intro_note_padding_md: 3.5rem;
     }
 
     .intro_note {
       background: linear-gradient(135deg, var(--intro_note_start) 0%, var(--intro_note_end) 100%);
       border: 1px solid var(--intro_note_border);
       border-radius: 1rem;
-      padding: 1.5rem;
+      padding: var(--intro_note_padding);
+    }
+
+    @media (min-width: 768px) {
+      .intro_note {
+        padding: var(--intro_note_padding_md);
+      }
     }
 
     .intro_note_sage {
