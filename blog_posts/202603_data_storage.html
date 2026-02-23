@@ -92,11 +92,41 @@
       box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
     }
 
+    /* intro paragraph color controls:
+       - edit these variables to test new shades quickly.
+       - you can also switch the section class to one of the preset variants below.
+    */
+    :root {
+      --intro_note_start: #eff6ff;
+      --intro_note_end: #ecfeff;
+      --intro_note_border: #bfdbfe;
+    }
+
     .intro_note {
-      background: linear-gradient(135deg, #fefce8 0%, #eef2ff 100%);
-      border: 1px solid #ddd6fe;
+      background: linear-gradient(135deg, var(--intro_note_start) 0%, var(--intro_note_end) 100%);
+      border: 1px solid var(--intro_note_border);
       border-radius: 1rem;
       padding: 1.5rem;
+    }
+
+    .intro_note_sage {
+      background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
+      border-color: #a7f3d0;
+    }
+
+    .intro_note_lavender {
+      background: linear-gradient(135deg, #f5f3ff 0%, #eef2ff 100%);
+      border-color: #c4b5fd;
+    }
+
+    .intro_note_peach {
+      background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+      border-color: #fdba74;
+    }
+
+    .intro_note_slate {
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      border-color: #cbd5e1;
     }
 
     .example_panel {
@@ -175,6 +205,8 @@
 
   <!-- Blog Content -->
   <main class="blog_article max-w-5xl mx-auto px-6 py-14 md:py-16 space-y-10 text-lg leading-relaxed">
+    <!-- to try a preset, add one of these classes:
+         intro_note_sage | intro_note_lavender | intro_note_peach | intro_note_slate -->
     <section class="intro_note space-y-5">
       <p class="text-xl md:text-2xl font-medium text-gray-800 leading-relaxed">
         I’ve been working with data for around 20 years, and these are some of the easiest ways to improve how you store it.
