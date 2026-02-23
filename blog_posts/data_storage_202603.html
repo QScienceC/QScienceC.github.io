@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Data Storage Best Practices | QSC</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="../images/logo.webp" />
+  <link rel="canonical" href="https://qsc.earth/blog_posts/data_storage_202603.html" />
+</head>
+<body class="bg-white text-gray-800 font-sans">
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="../index.html" class="flex items-center space-x-3">
+        <img src="../images/logo.webp" alt="QSC logo" class="h-10 w-10" />
+        <span class="text-xl font-bold text-gray-800">Quantitative Science Consulting</span>
+      </a>
+
+      <button id="menu-toggle" class="md:hidden text-gray-800 focus:outline-none" aria-label="Toggle menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <nav id="menu" class="hidden md:flex md:space-x-6 text-sm font-semibold">
+        <a href="../index.html" class="hover:text-green-600">Home</a>
+        <a href="../about.html" class="hover:text-green-600">About</a>
+        <a href="../services.html" class="hover:text-green-600">Services</a>
+        <a href="../mission.html" class="hover:text-green-600">Mission</a>
+        <a href="../blog.html" class="hover:text-green-600">Blog</a>
+        <a href="../contact.html" class="hover:text-green-600">Contact</a>
+        <a href="../faq.html" class="hover:text-green-600">FAQ</a>
+      </nav>
+    </div>
+
+    <nav id="mobile-menu" class="hidden flex-col space-y-2 px-4 pt-2 pb-4 text-sm font-semibold bg-white shadow-md md:hidden">
+      <a href="../index.html" class="block hover:text-green-600">Home</a>
+      <a href="../about.html" class="block hover:text-green-600">About</a>
+      <a href="../services.html" class="block hover:text-green-600">Services</a>
+      <a href="../mission.html" class="block hover:text-green-600">Mission</a>
+      <a href="../blog.html" class="block hover:text-green-600">Blog</a>
+      <a href="../contact.html" class="block hover:text-green-600">Contact</a>
+      <a href="../faq.html" class="block hover:text-green-600">FAQ</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const mobile_menu = document.getElementById('mobile-menu');
+
+    toggle.addEventListener('click', () => {
+      mobile_menu.classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-green-100 to-blue-100 py-20 px-6 text-center">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+        Simple Best Practices for Storing Data (That Save Time Later)
+      </h1>
+      <p class="text-lg md:text-xl mb-2">Practical habits for cleaner, reusable data</p>
+      <p class="text-md text-gray-600">QSC Team &bull; March 2026</p>
+    </div>
+  </section>
+
+  <!-- Blog Content -->
+  <main class="max-w-4xl mx-auto px-6 py-16 space-y-10 text-lg leading-relaxed">
+    <p>
+      I’ve been working with data for around 20 years, and these are some of the easiest ways to improve how you store it.
+      These rules aren’t just for data scientists or analysts; they apply to anyone who puts information into a table.
+      Even if you’re just entering a few numbers into a spreadsheet, you never know how the data might be useful in the future.
+      If you’ve stored data poorly in the past, it’s not a problem—we can wrangle messy data.
+      But taking a few minutes to follow these simple guidelines up front can save hours later.
+    </p>
+
+    <h2 class="text-2xl font-semibold text-gray-800">Use consistent data types and formats for each column</h2>
+    <p>Each column should contain one kind of data, stored consistently.</p>
+    <ul class="list-disc pl-8 space-y-2">
+      <li>Numbers only in numeric columns (no letters or comments).</li>
+      <li>Dates in a single format, such as <code class="bg-gray-100 px-2 py-1 rounded">YYYY-MM-DD</code>.</li>
+      <li>Booleans as <code class="bg-gray-100 px-2 py-1 rounded">true/false</code> or <code class="bg-gray-100 px-2 py-1 rounded">0/1</code>—don’t mix and match.</li>
+      <li>Put comments in a separate notes column, not in the data itself.</li>
+    </ul>
+
+    <div class="rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+      <div class="bg-gray-50 px-4 py-3 border-b border-gray-200">
+        <p class="font-semibold text-base">Example: Bad data vs. good data structure</p>
+      </div>
+      <div class="p-4 grid md:grid-cols-2 gap-4 text-base">
+        <div>
+          <p class="font-semibold text-red-700 mb-2">Less useful</p>
+          <ul class="list-disc pl-6 space-y-1">
+            <li>Date values like <code>01/02/26</code>, <code>2026-01-02</code>, and <code>Jan 2</code></li>
+            <li>Values like <code>34</code>, <code>34kg</code>, and <code>~35</code> in one column</li>
+            <li>"Important" rows highlighted in color only</li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-semibold text-green-700 mb-2">More useful</p>
+          <ul class="list-disc pl-6 space-y-1">
+            <li>A single date format across all rows</li>
+            <li>Pure numeric values with units in the column name</li>
+            <li>Explicit status field (for example, <code>status = "warning"</code>)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-semibold text-gray-800">Represent missing data explicitly</h2>
+    <p>
+      Use blank cells or <code class="bg-gray-100 px-2 py-1 rounded">NA</code> to represent missing values.
+      Don’t encode missing data with values like <code class="bg-gray-100 px-2 py-1 rounded">-999</code>,
+      which can be mistaken for real data.
+    </p>
+
+    <h2 class="text-2xl font-semibold text-gray-800">Use consistent category labels</h2>
+    <p>
+      Pick one set of labels and stick with it. For example, use "low", "medium", "high"
+      instead of mixing "Low", "med", and "H".
+      Inconsistent labels often create duplicate categories when filtering, summarizing, or plotting data.
+    </p>
+
+    <h2 class="text-2xl font-semibold text-gray-800">Column names: avoid spaces and special characters; include units</h2>
+    <p>Clear names make analysis and automation much easier.</p>
+    <ul class="list-disc pl-8 space-y-2">
+      <li><code class="bg-gray-100 px-2 py-1 rounded">distance_km</code> instead of <code class="bg-gray-100 px-2 py-1 rounded">Distance (km)</code></li>
+      <li><code class="bg-gray-100 px-2 py-1 rounded">room_temperature_c</code></li>
+      <li><code class="bg-gray-100 px-2 py-1 rounded">internal_vibration_vbs</code></li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold text-gray-800">Include a README file with your data</h2>
+    <p>
+      In each folder where you store data, include a short README file that describes what each file contains.
+      Write it so that someone else could understand it.
+      Two minutes spent writing this now can save you hours of confusion next year.
+    </p>
+
+    <h2 class="text-2xl font-semibold text-gray-800">Avoid using visual formatting as data</h2>
+    <p>
+      Don’t rely on color, bold text, or cell shading to store meaning (for example, “red means bad”).
+      If something is important, store it explicitly in a column, such as
+      <code class="bg-gray-100 px-2 py-1 rounded">status = "warning"</code>.
+    </p>
+
+    <h2 class="text-2xl font-semibold text-gray-800">Don’t use spaces or special characters in file names</h2>
+    <p>
+      Including the creation date in the filename is often very helpful.
+      For example: <code class="bg-gray-100 px-2 py-1 rounded">bird_measurements_20240229.csv</code>.
+    </p>
+
+    <p>
+      Good data storage doesn’t require advanced tools or expertise, just a few consistent habits.
+      These practices make your data easier to understand, easier to share, and far easier to reuse in the future.
+      If you want to turn your data into actionable insight,
+      <a href="https://www.qsc.earth" class="text-green-700 underline">learn more at QSC</a>.
+    </p>
+
+    <p><a href="../blog.html" class="text-green-700 underline">← Back to Blog</a></p>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-300 py-10 text-sm mt-10">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-6">
+      <div>
+        <p class="font-bold text-white mb-2">Quantitative Science Consulting</p>
+        <p>Science-grounded AI for sustainable impact.</p>
+      </div>
+      <div class="flex flex-col md:items-end space-y-2">
+        <a href="mailto:info@qsc.earth" class="hover:underline">info@qsc.earth</a>
+        <a href="https://www.linkedin.com/company/quantitative-science-consulting" target="_blank" class="hover:underline">LinkedIn</a>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> QSC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
