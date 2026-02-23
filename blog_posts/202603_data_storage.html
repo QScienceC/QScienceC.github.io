@@ -143,79 +143,83 @@
       <li>Put comments in a separate notes column, not in the data itself.</li>
     </ul>
 
-    <div class="rounded-xl border border-gray-200 shadow-sm overflow-auto resize min-h-[20rem] max-w-full">
-      <div class="bg-gray-50 px-4 py-3 border-b border-gray-200">
-        <p class="font-semibold text-base">Example: Data Storage Methods</p>
-      </div>
-      <div class="p-4 grid md:grid-cols-2 gap-4 text-base">
-        <div class="space-y-2">
-          <p class="font-semibold text-red-700">Less useful</p>
-          <div class="overflow-x-auto rounded-lg border border-red-100">
-            <table class="min-w-full text-sm">
-              <thead class="bg-red-50">
-                <tr>
-                  <th class="px-3 py-2 text-left font-semibold text-gray-700 border-b border-red-100">date</th>
-                  <th class="px-3 py-2 text-left font-semibold text-gray-700 border-b border-red-100">height</th>
-                  <th class="px-3 py-2 text-left font-semibold text-gray-700 border-b border-red-100">bear on site</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-red-100 bg-white">
-                <tr>
-                  <td class="px-3 py-2 font-mono text-xs">2024-02-28</td>
-                  <td class="px-3 py-2">1.8</td>
-                  <td class="px-3 py-2">no</td>
-                </tr>
-                <tr>
-                  <td class="px-3 py-2">Feb 29, 2024</td>
-                  <td class="px-3 py-2">1.5</td>
-                  <td class="px-3 py-2">TRUE</td>
-                </tr>
-                <tr>
-                  <td class="px-3 py-2">1/3/2024</td>
-                  <td class="px-3 py-2">2ish</td>
-                  <td class="px-3 py-2">0</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+    <div class="relative md:-mx-10">
+      <div class="rounded-xl border border-gray-200 shadow-sm overflow-x-auto overflow-y-hidden resize-x min-h-[20rem] min-w-full md:max-w-[90vw]">
+        <div class="bg-gray-50 px-4 py-3 border-b border-gray-200">
+          <p class="font-semibold text-base">Example: Data Storage Methods</p>
         </div>
-        <div class="space-y-2">
-          <p class="font-semibold text-green-700">More useful</p>
-          <div class="overflow-x-auto rounded-lg border border-green-100">
-            <table class="min-w-full text-sm">
-              <thead class="bg-green-50">
-                <tr>
-                  <th class="px-3 py-2 text-left font-semibold text-gray-700 border-b border-green-100">date_sampled</th>
-                  <th class="px-3 py-2 text-left font-semibold text-gray-700 border-b border-green-100">height_m</th>
-                  <th class="px-3 py-2 text-left font-semibold text-gray-700 border-b border-green-100">height_m_notes</th>
-                  <th class="px-3 py-2 text-left font-semibold text-gray-700 border-b border-green-100">bear_detected</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-green-100 bg-white">
-                <tr>
-                  <td class="px-3 py-2 font-mono text-xs">2024-02-28</td>
-                  <td class="px-3 py-2">1.8</td>
-                  <td class="px-3 py-2"></td>
-                  <td class="px-3 py-2">0</td>
-                </tr>
-                <tr>
-                  <td class="px-3 py-2 font-mono text-xs">2024-02-29</td>
-                  <td class="px-3 py-2">1.5</td>
-                  <td class="px-3 py-2"></td>
-                  <td class="px-3 py-2">1</td>
-                </tr>
-                <tr>
-                  <td class="px-3 py-2 font-mono text-xs">2024-03-01</td>
-                  <td class="px-3 py-2">2</td>
-                  <td class="px-3 py-2">uncertain</td>
-                  <td class="px-3 py-2">0</td>
-                </tr>
-              </tbody>
-            </table>
+        <div class="p-4 grid md:grid-cols-2 gap-4 text-base">
+          <div class="space-y-2">
+            <p class="font-semibold text-red-700">Less useful</p>
+            <div class="overflow-x-auto rounded-lg border border-red-100">
+              <table class="min-w-full text-sm">
+                <thead class="bg-red-50">
+                  <tr>
+                    <th class="px-3 py-2 text-left font-semibold text-gray-700 border-b border-red-100">date</th>
+                    <th class="px-3 py-2 text-left font-semibold text-gray-700 border-b border-red-100">height</th>
+                    <th class="px-3 py-2 text-left font-semibold text-gray-700 border-b border-red-100">bear on site</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-red-100 bg-white">
+                  <tr>
+                    <td class="px-3 py-2 font-mono text-xs">2024-02-28</td>
+                    <td class="px-3 py-2">1.8</td>
+                    <td class="px-3 py-2">no</td>
+                  </tr>
+                  <tr>
+                    <td class="px-3 py-2">Feb 29, 2024</td>
+                    <td class="px-3 py-2">1.5</td>
+                    <td class="px-3 py-2">TRUE</td>
+                  </tr>
+                  <tr>
+                    <td class="px-3 py-2">1/3/2024</td>
+                    <td class="px-3 py-2">2ish</td>
+                    <td class="px-3 py-2">0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="space-y-2">
+            <p class="font-semibold text-green-700">More useful</p>
+            <div class="overflow-x-auto rounded-lg border border-green-100">
+              <table class="min-w-full text-sm">
+                <thead class="bg-green-50">
+                  <tr>
+                    <th class="px-3 py-2 text-left font-semibold text-gray-700 border-b border-green-100">date_sampled</th>
+                    <th class="px-3 py-2 text-left font-semibold text-gray-700 border-b border-green-100">height_m</th>
+                    <th class="px-3 py-2 text-left font-semibold text-gray-700 border-b border-green-100">height_m_notes</th>
+                    <th class="px-3 py-2 text-left font-semibold text-gray-700 border-b border-green-100">bear_detected</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-green-100 bg-white">
+                  <tr>
+                    <td class="px-3 py-2 font-mono text-xs">2024-02-28</td>
+                    <td class="px-3 py-2">1.8</td>
+                    <td class="px-3 py-2"></td>
+                    <td class="px-3 py-2">0</td>
+                  </tr>
+                  <tr>
+                    <td class="px-3 py-2 font-mono text-xs">2024-02-29</td>
+                    <td class="px-3 py-2">1.5</td>
+                    <td class="px-3 py-2"></td>
+                    <td class="px-3 py-2">1</td>
+                  </tr>
+                  <tr>
+                    <td class="px-3 py-2 font-mono text-xs">2024-03-01</td>
+                    <td class="px-3 py-2">2</td>
+                    <td class="px-3 py-2">uncertain</td>
+                    <td class="px-3 py-2">0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <p class="text-sm text-gray-500 mt-2">Tip: drag the bottom-right handle of this table panel to widen it.</p>
 
     <h2 class="text-2xl font-semibold text-gray-800">Represent missing data explicitly</h2>
     <p>
