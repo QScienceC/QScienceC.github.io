@@ -241,7 +241,7 @@
 
     <section class="tip_card space-y-5">
       <div>
-        <h2 class="text-2xl font-semibold text-gray-800">Use consistent data types and formats for each column</h2>
+        <h2 class="text-2xl font-semibold text-gray-800">1. Use consistent data types and formats for each column</h2>
         <p>Each column should contain one kind of data, stored consistently.</p>
         <ul class="list-disc pl-8 space-y-2">
         <li>Numbers only in numeric columns (no letters or comments).</li>
@@ -251,7 +251,7 @@
         </ul>
       </div>
       <div>
-        <h2 class="text-2xl font-semibold text-gray-800">Represent missing data explicitly</h2>
+        <h2 class="text-2xl font-semibold text-gray-800">2. Represent missing data explicitly</h2>
         <p>
           Use blank cells or <code class="bg-gray-100 px-2 py-1 rounded">NA</code> to represent missing values.
           Don’t encode missing data with values like <code class="bg-gray-100 px-2 py-1 rounded">-999</code>,
@@ -260,7 +260,7 @@
       </div>
 
       <div>
-        <h2 class="text-2xl font-semibold text-gray-800">Use consistent category labels</h2>
+        <h2 class="text-2xl font-semibold text-gray-800">3. Use consistent category labels</h2>
         <p>
           Pick one set of labels and stick with it. For example, use <code class="bg-gray-100 px-2 py-1 rounded">low</code>, 
           <code class="bg-gray-100 px-2 py-1 rounded">medium</code>, <code class="bg-gray-100 px-2 py-1 rounded">high</code>
@@ -274,7 +274,7 @@
       </div>
 
       <div>
-        <h2 class="text-2xl font-semibold text-gray-800">Column names: avoid spaces and special characters; include units</h2>
+        <h2 class="text-2xl font-semibold text-gray-800">4. Column names: avoid spaces and special characters; include units</h2>
         <p>Clear names make analysis and automation much easier.</p>
         <ul class="list-disc pl-8 space-y-2">
           <li><code class="bg-gray-100 px-2 py-1 rounded">distance_km</code> instead of <code class="bg-gray-100 px-2 py-1 rounded">Distance (km)</code></li>
@@ -326,7 +326,7 @@
             </div>
           </div>
           <div class="space-y-2">
-            <p class="font-semibold text-green-700">More useful</p>
+            <p class="font-semibold text-green-700">5. More useful</p>
             <div class="overflow-x-auto rounded-lg border border-green-100">
               <table class="min-w-full text-sm">
                 <thead class="bg-green-50">
@@ -367,7 +367,7 @@
     <section class="tip_card space-y-5">
 
       <div>
-        <h2 class="text-2xl font-semibold text-gray-800">Include a README file with your data</h2>
+        <h2 class="text-2xl font-semibold text-gray-800">5. Include a README file with your data</h2>
         <p>
           In each folder where you store data, include a short README file that describes what each file contains.
           Write it so that someone else could understand it.
@@ -376,7 +376,7 @@
       </div>
 
       <div>
-        <h2 class="text-2xl font-semibold text-gray-800">Avoid using visual formatting as data</h2>
+        <h2 class="text-2xl font-semibold text-gray-800">6. Avoid using visual formatting as data</h2>
         <p>
           Don’t rely on color, bold text, or cell shading to store meaning (for example, “blue rows encode rainy days”).
           Instead, store it explicitly in a column, such as
@@ -385,7 +385,7 @@
       </div>
 
       <div>
-        <h2 class="text-2xl font-semibold text-gray-800">Don’t use spaces or special characters in file names</h2>
+        <h2 class="text-2xl font-semibold text-gray-800">7. Don’t use spaces or special characters in file names</h2>
         <p>
           Including the creation date in the filename is often very helpful.
           For example: <code class="bg-gray-100 px-2 py-1 rounded">measurements_20240229.csv</code>.
