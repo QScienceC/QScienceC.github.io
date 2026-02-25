@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLH2Y342RP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SLH2Y342RP');
+  </script>
+  <!-- End Google tag -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Data Storage Best Practices | QSC</title>
+  <meta name="description" content="Simple, practical data storage habits that keep datasets reusable: consistent formats, explicit missing values, better column names, and documentation tips from QSC." />
+  <meta name="keywords" content="data storage best practices, data management, spreadsheet hygiene, data quality, reproducible data, QSC blog" />
+  <meta name="author" content="Quantitative Science Consulting" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Simple Data Storage Best Practices | QSC Blog" />
+  <meta property="og:description" content="Learn practical habits for cleaner, reusable data with examples of better table structure, naming, and formatting." />
+  <meta property="og:url" content="https://qsc.earth/blog_posts/202603_data_storage.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://qsc.earth/images/blog/data_storage.webp" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Simple Data Storage Best Practices | QSC Blog" />
+  <meta name="twitter:description" content="Use these simple data storage practices to reduce cleanup time and make your data easier to analyze and share." />
+  <meta name="twitter:image" content="https://qsc.earth/images/blog/data_storage.webp" />
+
+  <link rel="icon" href="../images/logo.webp" />
+  <link rel="canonical" href="https://qsc.earth/blog_posts/202603_data_storage.html" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Simple Best Practices for Storing Data (That Save Time Later)",
+      "description": "Simple, practical data storage habits that keep datasets reusable: consistent formats, explicit missing values, better column names, and documentation tips from QSC.",
+      "image": "https://qsc.earth/images/blog/data_storage.webp",
+      "datePublished": "2026-03-01",
+      "author": {
+        "@type": "Organization",
+        "name": "Quantitative Science Consulting",
+        "url": "https://qsc.earth"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Quantitative Science Consulting",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://qsc.earth/images/logo.webp"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://qsc.earth/blog_posts/202603_data_storage.html"
+      }
+    }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .article_body {
+      background: linear-gradient(to bottom, #f8fafc 0%, #ffffff 18rem);
+    }
+
+    .blog_article p {
+      color: #1f2937;
+      line-height: 1.9;
+    }
+
+    .blog_article h2 {
+      letter-spacing: -0.01em;
+      padding-bottom: 0.45rem;
+      margin-bottom: 0.9rem;
+      border-bottom: 2px solid #d1fae5;
+    }
+
+    .blog_article code {
+      font-size: 0.9em;
+    }
+
+    .tip_card {
+      background-color: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.9rem;
+      padding: 1.5rem;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+    }
+
+    /* intro paragraph color controls:
+       - edit these variables to test new shades quickly.
+       - you can also switch the section class to one of the preset variants below.
+    */
+    :root {
+      --intro_note_start: #eff6ff;
+      --intro_note_end: #ecfeff;
+      --intro_note_border: #bfdbfe;
+      --intro_note_padding: 2rem;
+      --intro_note_padding_md: 1.5rem;
+    }
+
+    .intro_note {
+      background: linear-gradient(135deg, var(--intro_note_start) 0%, var(--intro_note_end) 100%);
+      border: 1px solid var(--intro_note_border);
+      border-radius: 1rem;
+      padding: var(--intro_note_padding);
+    }
+
+    @media (min-width: 768px) {
+      .intro_note {
+        padding: var(--intro_note_padding_md);
+      }
+    }
+
+    .intro_note_sage {
+      background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
+      border-color: #a7f3d0;
+    }
+
+    .intro_note_lavender {
+      background: linear-gradient(135deg, #f5f3ff 0%, #eef2ff 100%);
+      border-color: #c4b5fd;
+    }
+
+    .intro_note_peach {
+      background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+      border-color: #fdba74;
+    }
+
+    .intro_note_slate {
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      border-color: #cbd5e1;
+    }
+
+    .example_panel {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 1rem;
+      padding: 1rem;
+    }
+
+    .conclusion_panel {
+      background: #1f2937;
+      color: #f9fafb;
+    }
+
+    .blog_article .conclusion_panel p {
+      color: #f9fafb;
+    }
+  </style>
+</head>
+<body class="article_body text-gray-800 font-sans">
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="../index.html" class="flex items-center space-x-3">
+        <img src="../images/logo.webp" alt="QSC logo" class="h-10 w-10" />
+        <span class="text-xl font-bold text-gray-800">Quantitative Science Consulting</span>
+      </a>
+
+      <button id="menu-toggle" class="md:hidden text-gray-800 focus:outline-none" aria-label="Toggle menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <nav id="menu" class="hidden md:flex md:space-x-6 text-sm font-semibold">
+        <a href="../index.html" class="hover:text-green-600">Home</a>
+        <a href="../about.html" class="hover:text-green-600">About</a>
+        <a href="../services.html" class="hover:text-green-600">Services</a>
+        <a href="../mission.html" class="hover:text-green-600">Mission</a>
+        <a href="../blog.html" class="hover:text-green-600">Blog</a>
+        <a href="../contact.html" class="hover:text-green-600">Contact</a>
+        <a href="../faq.html" class="hover:text-green-600">FAQ</a>
+      </nav>
+    </div>
+
+    <nav id="mobile-menu" class="hidden flex-col space-y-2 px-4 pt-2 pb-4 text-sm font-semibold bg-white shadow-md md:hidden">
+      <a href="../index.html" class="block hover:text-green-600">Home</a>
+      <a href="../about.html" class="block hover:text-green-600">About</a>
+      <a href="../services.html" class="block hover:text-green-600">Services</a>
+      <a href="../mission.html" class="block hover:text-green-600">Mission</a>
+      <a href="../blog.html" class="block hover:text-green-600">Blog</a>
+      <a href="../contact.html" class="block hover:text-green-600">Contact</a>
+      <a href="../faq.html" class="block hover:text-green-600">FAQ</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const mobile_menu = document.getElementById('mobile-menu');
+
+    toggle.addEventListener('click', () => {
+      mobile_menu.classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-green-100 to-blue-100 py-20 px-6 text-center">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+        Simple Data Storage Practices for Everyone
+      </h1>
+      <p class="text-lg md:text-xl mb-2">7 habits that will save you hours later</p>
+      <p class="text-md text-gray-600">Mikey Tabak, PhD  &bull; March 2026</p>
+    </div>
+  </section>
+
+  <!-- Blog Content -->
+  <main class="blog_article max-w-5xl mx-auto px-6 py-14 md:py-16 space-y-10 text-lg leading-relaxed">
+    <!-- to try a preset, add one of these classes:
+         intro_note_sage | intro_note_lavender | intro_note_peach | intro_note_slate -->
+    <section class="intro_note intro_note_lavender space-y-5">
+      <p class="text-xl md:text-2xl font-medium text-gray-800 leading-relaxed">
+        I’ve been working with data for around 20 years, and these are the easiest ways to improve data storage.
+        <!-- If everyone who sent me data followed these practices, it would save a lot of time and money. -->
+      </p>
+      <div class="rounded-xl border-l-4 border-blue-500 bg-blue-50 p-4 md:p-5">
+        <p class="text-base md:text-lg font-medium text-blue-900">
+          These tips apply to spreadsheets, CSVs, and simple tables.
+        </p>
+      </div>
+      <p>
+        Even if you’re just entering a few numbers into a spreadsheet, you never know how the data might be useful in the future.
+        If you’ve stored data poorly in the past, it’s not a problem—we can wrangle messy data.
+        But taking a few minutes to follow these simple guidelines up front can save hours later.
+      </p>
+
+
+
+      <div class="bg-white/70 border border-green-100 rounded-xl p-4 md:p-5">
+        <p class="text-base font-semibold text-green-900 mb-2">Quick checklist</p>
+        <ul class="grid md:grid-cols-2 gap-x-6 gap-y-2 text-base text-gray-700">
+          <li>✓ One data type per column</li>
+          <li>✓ Explicit missing values</li>
+          <li>✓ Consistent labels and naming</li>
+          <li>✓ README documentation nearby</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="tip_card space-y-5">
+      <div>
+        <h2 class="text-2xl font-semibold text-gray-800">1. Use consistent data types and formats for each column</h2>
+        <p>Each column should contain one kind of data, stored consistently.</p>
+        <ul class="list-disc pl-8 space-y-2">
+        <li>Numbers only in numeric columns (no letters or comments).</li>
+        <li>Dates in a single format, such as <code class="bg-gray-100 px-2 py-1 rounded">YYYY-MM-DD</code>.</li>
+        <li>Booleans as <code class="bg-gray-100 px-2 py-1 rounded">true/false</code> or <code class="bg-gray-100 px-2 py-1 rounded">0/1</code>—don’t mix and match.</li>
+        <li>Put comments in a separate notes column, not in the data itself.</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-2xl font-semibold text-gray-800">2. Represent missing data explicitly</h2>
+        <p>
+          Use blank cells or <code class="bg-gray-100 px-2 py-1 rounded">NA</code> to represent missing values.
+          Don’t encode missing data with values like <code class="bg-gray-100 px-2 py-1 rounded">-999</code>,
+          which can be mistaken for real data.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-semibold text-gray-800">3. Use consistent category labels</h2>
+        <p>
+          Pick one set of labels and stick with it. For example, use <code class="bg-gray-100 px-2 py-1 rounded">low</code>, 
+          <code class="bg-gray-100 px-2 py-1 rounded">medium</code>, <code class="bg-gray-100 px-2 py-1 rounded">high</code>
+          instead of mixing 
+          <code class="bg-gray-100 px-2 py-1 rounded">Low</code>, <code class="bg-gray-100 px-2 py-1 rounded">low</code>,
+          <code class="bg-gray-100 px-2 py-1 rounded">med</code>, <code class="bg-gray-100 px-2 py-1 rounded">Medium</code>,
+          <code class="bg-gray-100 px-2 py-1 rounded">H</code>
+          and <code class="bg-gray-100 px-2 py-1 rounded">high</code>.
+          Inconsistent labels can create duplicate categories.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-semibold text-gray-800">4. Column names: avoid spaces and special characters; include units</h2>
+        <p>Clear names make analysis and automation much easier.</p>
+        <ul class="list-disc pl-8 space-y-2">
+          <li><code class="bg-gray-100 px-2 py-1 rounded">distance_km</code> instead of <code class="bg-gray-100 px-2 py-1 rounded">Distance (km)</code></li>
+          <li><code class="bg-gray-100 px-2 py-1 rounded">room_temperature_c</code> instead of <code class="bg-gray-100 px-2 py-1 rounded">temp</code></li>
+          <li><code class="bg-gray-100 px-2 py-1 rounded">internal_vibration_vbs</code> instead of <code class="bg-gray-100 px-2 py-1 rounded">Vibration</code></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="example_panel space-y-3">
+      <div>
+        <p class="text-base md:text-lg font-semibold text-gray-800">Example: Proper Data Storage</p>
+      </div>
+
+      <div class="relative overflow-x-auto">
+      <!-- <div class="rounded-xl border border-gray-200 shadow-sm overflow-y-hidden resize-x min-h-[20rem] w-max min-w-full">      <div class="bg-gray-50 px-4 py-3 border-b border-gray-200">
+          <p class="font-semibold text-base text-gray-700">Table comparison</p> 
+        </div> -->
+        <div class="p-4 grid md:grid-cols-2 gap-4 text-base">
+          <div class="space-y-2">
+            <p class="font-semibold text-red-700">Less useful</p>
+            <div class="overflow-x-auto rounded-lg border border-red-100">
+              <table class="min-w-full text-sm">
+                <thead class="bg-red-50">
+                  <tr>
+                    <th class="px-3 py-2 text-left font-semibold text-gray-700 border-b border-red-100">date</th>
+                    <th class="px-3 py-2 text-left font-semibold text-gray-700 border-b border-red-100">height</th>
+                    <th class="px-3 py-2 text-left font-semibold text-gray-700 border-b border-red-100">bear on site</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-red-100 bg-white">
+                  <tr>
+                    <td class="px-3 py-2 font-mono text-xs">2024-02-28</td>
+                    <td class="px-3 py-2">1.8</td>
+                    <td class="px-3 py-2">no</td>
+                  </tr>
+                  <tr>
+                    <td class="px-3 py-2">Feb 29, 2024</td>
+                    <td class="px-3 py-2">1.5</td>
+                    <td class="px-3 py-2">TRUE</td>
+                  </tr>
+                  <tr>
+                    <td class="px-3 py-2">1/3/2024</td>
+                    <td class="px-3 py-2">2ish</td>
+                    <td class="px-3 py-2">0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="space-y-2">
+            <p class="font-semibold text-green-700">More useful</p>
+            <div class="overflow-x-auto rounded-lg border border-green-100">
+              <table class="min-w-full text-sm">
+                <thead class="bg-green-50">
+                  <tr>
+                    <th class="px-3 py-2 text-left font-semibold text-gray-700 border-b border-green-100">date_sampled</th>
+                    <th class="px-3 py-2 text-left font-semibold text-gray-700 border-b border-green-100">height_m</th>
+                    <th class="px-3 py-2 text-left font-semibold text-gray-700 border-b border-green-100">height_m_notes</th>
+                    <th class="px-3 py-2 text-left font-semibold text-gray-700 border-b border-green-100">bear_detected</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-green-100 bg-white">
+                  <tr>
+                    <td class="px-3 py-2 font-mono text-xs">2024-02-28</td>
+                    <td class="px-3 py-2">1.8</td>
+                    <td class="px-3 py-2"></td>
+                    <td class="px-3 py-2">0</td>
+                  </tr>
+                  <tr>
+                    <td class="px-3 py-2 font-mono text-xs">2024-02-29</td>
+                    <td class="px-3 py-2">1.5</td>
+                    <td class="px-3 py-2"></td>
+                    <td class="px-3 py-2">1</td>
+                  </tr>
+                  <tr>
+                    <td class="px-3 py-2 font-mono text-xs">2024-03-01</td>
+                    <td class="px-3 py-2">2</td>
+                    <td class="px-3 py-2">uncertain</td>
+                    <td class="px-3 py-2">0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tip_card space-y-5">
+
+      <div>
+        <h2 class="text-2xl font-semibold text-gray-800">5. Include a README file with your data</h2>
+        <p>
+          In each folder where you store data, include a short README file that describes what each file contains.
+          Write it so that someone else could understand it.
+          Two minutes spent writing this now can save you hours of confusion next year.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-semibold text-gray-800">6. Avoid using visual formatting as data</h2>
+        <p>
+          Don’t rely on color, bold text, or cell shading to store meaning (for example, “blue rows encode rainy days”).
+          Instead, store it explicitly in a column, such as
+          <code class="bg-gray-100 px-2 py-1 rounded">weather = "rain"</code>. (Don't be afraid to have many columns.)
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-semibold text-gray-800">7. Don’t use spaces or special characters in file names</h2>
+        <p>
+          Including the creation date in the filename is often very helpful.
+          For example: <code class="bg-gray-100 px-2 py-1 rounded">measurements_20240229.csv</code>.
+        </p>
+      </div>
+    </section>
+
+    <section class="conclusion_panel rounded-2xl p-7 md:p-8 space-y-4">
+      <p class="text-lg md:text-xl">
+        Good data storage doesn’t require advanced tools or expertise, just a few consistent habits.
+        These practices make your data easier to understand, share, and use in the future.
+        Clean data means fewer errors, fewer surprises, and faster analysis.
+      </p>
+      <p>
+        If you want to turn your data into actionable insight,
+        <a href="../index.html" class="text-green-200 underline">learn how with QSC</a>.
+      </p>
+      <p><a href="../blog.html" class="text-green-200 underline">← Back to Blog</a></p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-300 py-10 text-sm mt-10">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-6">
+      <div>
+        <p class="font-bold text-white mb-2">Quantitative Science Consulting</p>
+        <p>Science-grounded AI for sustainable impact.</p>
+      </div>
+      <div class="flex flex-col md:items-end space-y-2">
+        <a href="mailto:info@qsc.earth" class="hover:underline">info@qsc.earth</a>
+        <a href="https://www.linkedin.com/company/quantitative-science-consulting" target="_blank" class="hover:underline">LinkedIn</a>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> QSC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
