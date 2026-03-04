@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLH2Y342RP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-SLH2Y342RP');
+  </script>
+  <!-- End Google tag -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Study: Managing Production Risk When Demand Is Uncertain | QSC</title>
+
+  <!-- Begin Descriptive Content -->
+  <meta name="description" content="Read how QSC helped a pharmaceutical operations team manage production risk under demand uncertainty using probabilistic forecasting and scenario analysis." />
+  <meta name="keywords" content="case study, probabilistic forecasting, Bayesian forecasting, production planning, demand uncertainty, pharmaceutical operations, inventory risk" />
+  <meta name="author" content="Quantitative Science Consulting" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Case Study: Managing Production Risk When Demand Is Uncertain" />
+  <meta property="og:description" content="A representative QSC case study on shifting production planning from point forecasts to risk-aware decisions under uncertainty." />
+  <meta property="og:url" content="https://qsc.earth/case_study_production_risk.html" />
+  <meta property="og:image" content="https://qsc.earth/images/logo.webp" />
+  <meta property="og:type" content="article" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Case Study: Managing Production Risk When Demand Is Uncertain" />
+  <meta name="twitter:description" content="How probabilistic forecasting and scenario simulations helped quantify shortage and inventory risk." />
+  <meta name="twitter:image" content="https://qsc.earth/images/logo.webp" />
+
+  <link rel="canonical" href="https://qsc.earth/case_study_production_risk.html" />
+  <!-- End Descriptive Content -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="images/logo.webp" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Case Study: Managing Production Risk When Demand Is Uncertain",
+      "description": "A representative QSC engagement in pharmaceutical production planning under uncertain demand using probabilistic forecasting and scenario analysis.",
+      "author": {
+        "@type": "Organization",
+        "name": "Quantitative Science Consulting",
+        "url": "https://qsc.earth"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Quantitative Science Consulting",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://qsc.earth/images/logo.webp"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://qsc.earth/case_study_production_risk.html"
+      },
+      "inLanguage": "en",
+      "keywords": [
+        "case study",
+        "probabilistic forecasting",
+        "Bayesian forecasting",
+        "production planning",
+        "demand uncertainty",
+        "inventory risk"
+      ]
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-3">
+        <img src="images/logo.webp" alt="QSC logo" class="h-10 w-10" />
+        <span class="text-xl font-bold text-gray-800">Quantitative Science Consulting</span>
+      </a>
+
+      <button id="menu-toggle" class="md:hidden text-gray-800 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <nav id="menu" class="hidden md:flex md:space-x-6 text-sm font-semibold">
+        <a href="index.html" class="hover:text-green-600">Home</a>
+        <a href="about.html" class="hover:text-green-600">About</a>
+        <a href="services.html" class="hover:text-green-600">Services</a>
+        <a href="mission.html" class="hover:text-green-600">Mission</a>
+        <a href="blog.html" class="hover:text-green-600">Blog</a>
+        <a href="contact.html" class="hover:text-green-600">Contact</a>
+        <a href="faq.html" class="hover:text-green-600">FAQ</a>
+      </nav>
+
+      <nav id="mobile-menu" class="hidden flex-col space-y-2 px-4 pt-2 pb-4 text-sm font-semibold bg-white shadow-md md:hidden">
+        <a href="index.html" class="block hover:text-green-600">Home</a>
+        <a href="about.html" class="block hover:text-green-600">About</a>
+        <a href="services.html" class="block hover:text-green-600">Services</a>
+        <a href="mission.html" class="block hover:text-green-600">Mission</a>
+        <a href="blog.html" class="block hover:text-green-600">Blog</a>
+        <a href="contact.html" class="block hover:text-green-600">Contact</a>
+        <a href="faq.html" class="block hover:text-green-600">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const mobile_menu = document.getElementById('mobile-menu');
+
+    toggle.addEventListener('click', () => {
+      mobile_menu.classList.toggle('hidden');
+    });
+  </script>
+  <!-- End Header -->
+
+  <main>
+    <section class="bg-gradient-to-br from-green-100 to-blue-100 py-16 px-6">
+      <div class="max-w-4xl mx-auto">
+        <p class="text-sm uppercase tracking-wide text-green-800 font-semibold mb-3">Case Study</p>
+        <h1 class="text-4xl font-bold mb-4">Managing Production Risk When Demand Is Uncertain</h1>
+        <p class="text-lg md:text-xl text-gray-700">
+          How probabilistic forecasting helped a pharmaceutical operations team move from
+          single-value predictions to risk-informed production planning.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-14 px-6 bg-slate-50">
+      <article class="max-w-5xl mx-auto text-gray-800 leading-relaxed">
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-7 md:p-10 space-y-8">
+          <p class="text-lg text-slate-700">
+            Manufacturers often face a difficult planning problem: production decisions must be made
+            months in advance, while demand can fluctuate substantially across markets and time.
+          </p>
+
+          <div class="grid gap-4 md:grid-cols-3">
+            <div class="rounded-xl bg-green-50 border border-green-200 p-4">
+              <p class="text-xs font-semibold uppercase tracking-wide text-green-800">Industry</p>
+              <p class="mt-1 font-medium text-slate-800">Pharmaceutical operations</p>
+            </div>
+            <div class="rounded-xl bg-blue-50 border border-blue-200 p-4">
+              <p class="text-xs font-semibold uppercase tracking-wide text-blue-800">Core challenge</p>
+              <p class="mt-1 font-medium text-slate-800">Production decisions under demand uncertainty</p>
+            </div>
+            <div class="rounded-xl bg-amber-50 border border-amber-200 p-4">
+              <p class="text-xs font-semibold uppercase tracking-wide text-amber-800">Approach</p>
+              <p class="mt-1 font-medium text-slate-800">Probabilistic forecasting + scenario analysis</p>
+            </div>
+          </div>
+
+          <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-slate-900">The Planning Problem</h2>
+            <p>
+              In this case, a pharmaceutical manufacturer was preparing production plans for a
+              high-value product with long lead times and strict manufacturing constraints.
+              Production occurred in large batches, and changing course once manufacturing began
+              was costly and slow. At the same time, demand for the product varied significantly
+              across regions due to changes in prescribing patterns, supply chain delays, and
+              regulatory differences between markets.
+            </p>
+            <p>
+              The company’s operations team relied on traditional demand forecasts to guide
+              production planning. These forecasts provided single predicted values for future
+              demand, typically based on historical sales trends and recent market data. While the
+              forecasts were often directionally reasonable, they did not provide a clear sense of
+              the uncertainty surrounding those predictions.
+            </p>
+            <p>
+              This created a difficult situation for planners. A forecast might suggest that demand
+              would increase over the next quarter, but the team had little insight into how
+              confident they should be in that prediction. If production was increased too
+              aggressively, the company risked producing excess inventory for a product that was
+              expensive to store and had a limited shelf life. If production remained too
+              conservative, shortages could occur, potentially disrupting supply to hospitals and
+              pharmacies.
+            </p>
+            <p class="rounded-lg border-l-4 border-slate-400 bg-slate-100 p-4 font-medium text-slate-700">
+              In practice, the challenge was not simply forecasting demand more accurately. The
+              real problem was making production decisions in the presence of uncertainty.
+            </p>
+          </section>
+
+          <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-slate-900">QSC’s Modeling Approach</h2>
+            <p>
+              To address this, QSC’s modeling approach focused on estimating the range of plausible
+              demand outcomes, rather than producing a single point forecast. Using historical
+              sales data and market indicators, a probabilistic forecasting framework was developed
+              to estimate how demand might evolve over time. Bayesian forecasting techniques were
+              used to incorporate uncertainty directly into the model, producing probability
+              distributions for future demand rather than single predicted values.
+            </p>
+            <p>
+              These forecasts allowed the team to evaluate multiple possible demand scenarios and
+              quantify the likelihood of each outcome. Instead of asking whether demand next
+              quarter would be, for example, 10,000 units, planners could examine the probability
+              that demand would exceed certain thresholds relevant to production decisions.
+            </p>
+            <p>
+              This shift in perspective proved important. Production planning decisions could now
+              be evaluated in terms of risk. For example, the team could estimate the probability
+              that planned production levels would lead to shortages, or alternatively the
+              probability that excess inventory would accumulate if demand fell below expectations.
+            </p>
+          </section>
+
+          <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-slate-900">Decision Support in Practice</h2>
+            <p>
+              To support these decisions, simple scenario simulations were developed that connected
+              demand uncertainty to operational constraints such as batch sizes, manufacturing lead
+              times, and inventory policies. These simulations helped the team explore questions
+              like:
+            </p>
+
+            <ul class="space-y-3">
+              <li class="flex gap-3">
+                <span class="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-green-600"></span>
+                <span>What is the probability that demand will exceed available inventory before the next production cycle?</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-green-600"></span>
+                <span>How sensitive is this risk to changes in production timing?</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-green-600"></span>
+                <span>Under what conditions would increasing production by one batch meaningfully reduce shortage risk?</span>
+              </li>
+            </ul>
+
+            <p>
+              Rather than relying on a single forecast, the operations team could now see how
+              different production strategies performed across a range of plausible demand outcomes.
+            </p>
+            <p>
+              This approach did not eliminate uncertainty. Demand for products will always involve
+              factors that cannot be predicted precisely. What changed was the ability to reason
+              about that uncertainty in a structured way.
+            </p>
+          </section>
+
+          <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-slate-900">Outcome</h2>
+            <p>
+              With probabilistic forecasts and scenario analysis in place, the production planning
+              process shifted from attempting to predict the future exactly to managing operational
+              risk more explicitly. Decisions about production increases, delays, or inventory
+              buffers could be tied directly to the likelihood of different demand outcomes.
+            </p>
+            <p>
+              For the operations team, the most valuable outcome was not simply a more
+              sophisticated model, but clearer visibility into the risks associated with each
+              production decision. Instead of debating whether a forecast was “correct,” planners
+              could focus on how different decisions performed under uncertainty.
+            </p>
+            <p class="text-lg font-medium text-slate-800">
+              This shift, from point forecasts to decision-focused modeling, allowed the team to
+              plan production with greater confidence and fewer surprises as demand evolved.
+            </p>
+          </section>
+
+          <div class="bg-gray-100 border-l-4 border-green-600 p-4 rounded-lg mt-10">
+            <p class="text-sm text-gray-700">
+              <strong>Note:</strong> This case study describes a representative engagement. Specific
+              details have been generalized to protect client confidentiality.
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="bg-green-100 py-14 px-6 text-center">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold mb-4">Need Better Visibility Into Planning Risk?</h2>
+        <p class="text-lg mb-6">
+          We help operations teams build forecasting and decision-support tools designed for
+          uncertainty, not just average outcomes.
+        </p>
+        <a href="contact.html" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-xl shadow">
+          Talk With QSC
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-300 py-10 text-sm">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-6">
+      <div>
+        <p class="font-bold text-white mb-2">Quantitative Science Consulting</p>
+        <p>Science-grounded AI for sustainable impact.</p>
+      </div>
+      <div class="flex flex-col md:items-end space-y-2">
+        <a href="mailto:info@qsc.earth" class="hover:underline">info@qsc.earth</a>
+        <a href="https://www.linkedin.com/company/quantitative-science-consulting" class="hover:underline" target="_blank">LinkedIn</a>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> QSC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
