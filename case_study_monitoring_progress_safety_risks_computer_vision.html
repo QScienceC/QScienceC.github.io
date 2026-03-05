@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLH2Y342RP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-SLH2Y342RP');
+  </script>
+  <!-- End Google tag -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Study: Monitoring Progress and Safety Risks with Computer Vision | QSC</title>
+
+  <!-- Begin Descriptive Content -->
+  <meta name="description" content="Read how QSC developed a computer vision monitoring system for construction safety, progress tracking, and decision support across large worksites." />
+  <meta name="keywords" content="case study, computer vision, construction safety, progress monitoring, object detection, anomaly detection" />
+  <meta name="author" content="Quantitative Science Consulting" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Case Study: Monitoring Progress and Safety Risks with Computer Vision" />
+  <meta property="og:description" content="A representative QSC case study on using computer vision to monitor construction safety conditions and project progress." />
+  <meta property="og:url" content="https://qsc.earth/case_study_monitoring_progress_safety_risks_computer_vision.html" />
+  <meta property="og:image" content="https://qsc.earth/images/logo.webp" />
+  <meta property="og:type" content="article" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Case Study: Monitoring Progress and Safety Risks with Computer Vision" />
+  <meta name="twitter:description" content="How QSC used computer vision and field-enabled software to improve construction safety monitoring and progress visibility." />
+  <meta name="twitter:image" content="https://qsc.earth/images/logo.webp" />
+
+  <link rel="canonical" href="https://qsc.earth/case_study_monitoring_progress_safety_risks_computer_vision.html" />
+  <!-- End Descriptive Content -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="images/logo.webp" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Case Study: Monitoring Progress and Safety Risks with Computer Vision",
+      "description": "A representative QSC engagement implementing a unified computer vision system for construction safety and progress monitoring.",
+      "author": {
+        "@type": "Organization",
+        "name": "Quantitative Science Consulting",
+        "url": "https://qsc.earth"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Quantitative Science Consulting",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://qsc.earth/images/logo.webp"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://qsc.earth/case_study_monitoring_progress_safety_risks_computer_vision.html"
+      },
+      "inLanguage": "en",
+      "keywords": [
+        "case study",
+        "computer vision",
+        "construction safety",
+        "progress monitoring",
+        "object detection"
+      ]
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-3">
+        <img src="images/logo.webp" alt="QSC logo" class="h-10 w-10" />
+        <span class="text-xl font-bold text-gray-800">Quantitative Science Consulting</span>
+      </a>
+
+      <button id="menu-toggle" class="md:hidden text-gray-800 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <nav id="menu" class="hidden md:flex md:space-x-6 text-sm font-semibold">
+        <a href="index.html" class="hover:text-green-600">Home</a>
+        <a href="about.html" class="hover:text-green-600">About</a>
+        <a href="services.html" class="hover:text-green-600">Services</a>
+        <a href="mission.html" class="hover:text-green-600">Mission</a>
+        <a href="blog.html" class="hover:text-green-600">Blog</a>
+        <a href="contact.html" class="hover:text-green-600">Contact</a>
+        <a href="faq.html" class="hover:text-green-600">FAQ</a>
+      </nav>
+
+      <nav id="mobile-menu" class="hidden flex-col space-y-2 px-4 pt-2 pb-4 text-sm font-semibold bg-white shadow-md md:hidden">
+        <a href="index.html" class="block hover:text-green-600">Home</a>
+        <a href="about.html" class="block hover:text-green-600">About</a>
+        <a href="services.html" class="block hover:text-green-600">Services</a>
+        <a href="mission.html" class="block hover:text-green-600">Mission</a>
+        <a href="blog.html" class="block hover:text-green-600">Blog</a>
+        <a href="contact.html" class="block hover:text-green-600">Contact</a>
+        <a href="faq.html" class="block hover:text-green-600">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const mobile_menu = document.getElementById('mobile-menu');
+
+    toggle.addEventListener('click', () => {
+      mobile_menu.classList.toggle('hidden');
+    });
+  </script>
+
+  <main>
+    <section class="bg-gradient-to-br from-green-100 to-blue-100 py-16 px-6">
+      <div class="max-w-4xl mx-auto">
+        <p class="text-sm uppercase tracking-wide text-green-800 font-semibold mb-3">Case Study</p>
+        <h1 class="text-4xl font-bold mb-4 text-gray-900 leading-tight">
+          Monitoring Progress and Safety Risks with Computer Vision
+        </h1>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          How computer vision and field-ready software can improve progress visibility, 
+          timeline management, and construction safety oversight.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-14 px-6 bg-white">
+      <div class="max-w-5xl mx-auto">
+        <article class="text-gray-800 leading-relaxed space-y-10">
+          <p class="text-lg text-slate-700">
+            Construction teams need a practical way to monitor fast-moving site conditions without relying only on periodic, manual inspections.
+          </p>
+
+          <div class="grid gap-4 md:grid-cols-3">
+            <div class="rounded-xl bg-green-50 border border-green-200 p-4">
+              <p class="text-xs font-semibold uppercase tracking-wide text-green-800">Industry</p>
+              <p class="mt-1 font-medium text-slate-800">Commercial construction operations</p>
+            </div>
+            <div class="rounded-xl bg-blue-50 border border-blue-200 p-4">
+              <p class="text-xs font-semibold uppercase tracking-wide text-blue-800">Core challenge</p>
+              <p class="mt-1 font-medium text-slate-800">Consistent safety and progress monitoring across large sites</p>
+            </div>
+            <div class="rounded-xl bg-amber-50 border border-amber-200 p-4">
+              <p class="text-xs font-semibold uppercase tracking-wide text-amber-800">Approach</p>
+              <p class="mt-1 font-medium text-slate-800">Computer vision + desktop and mobile monitoring tools</p>
+            </div>
+          </div>
+
+          <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-slate-900">The Problem</h2>
+            <p>
+              Managing safety and quality across large construction sites presents a significant operational challenge. Project managers
+              must monitor worker safety practices, track construction progress, and identify potential issues before they cause delays
+              or hazards. Traditionally, these responsibilities rely heavily on manual site inspections and periodic reporting from
+              field teams.
+            </p>
+            <p>
+              A commercial construction company faced these challenges across several active projects. Multiple crews were working
+              simultaneously across large sites, often in areas that were difficult to monitor continuously. While site supervisors
+              and safety officers conducted regular inspections, it was difficult to maintain consistent visibility across the entire
+              construction environment.
+            </p>
+            <p>
+              The organization installed fixed cameras around construction sites and occasionally used drones to capture aerial
+              imagery. These tools generated valuable visual data, but the images were largely reviewed manually (or often ignored).
+              With thousands of images captured each week, identifying safety risks or progress issues required significant time and
+              effort.
+            </p>
+            <p>
+              In addition, field engineers frequently captured photos using mobile phones during routine inspections. These images
+              documented site conditions and potential problems but were often stored in separate systems or shared informally through
+              messaging platforms. As a result, the organization lacked a unified way to analyze visual information across its
+              projects.
+            </p>
+            <p class="rounded-lg border-l-4 border-slate-400 bg-slate-100 p-4 font-medium text-slate-700">
+              The company needed a system that could continuously monitor construction activity, identify potential safety risks, and
+              help project managers understand progress across multiple sites without relying entirely on manual inspection.
+            </p>
+          </section>
+
+          <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-slate-900">QSC’s Modeling Approach</h2>
+            <p>
+              QSC developed a computer vision system designed to analyze images captured throughout the construction workflow.
+            </p>
+            <p>
+              The system integrated imagery from several sources, including fixed site cameras, drone surveys, and photographs
+              collected by field engineers using mobile devices. These images were routed through a centralized processing pipeline
+              where they could be analyzed consistently and stored in a unified data platform.
+            </p>
+            <p>
+              Using these image datasets, QSC developed computer vision models capable of detecting key objects and activities
+              relevant to construction operations. Deep learning techniques were used to train models that could identify workers,
+              equipment, safety gear, and construction materials within images.
+            </p>
+            <p>
+              Object detection models allowed the system to recognize conditions such as workers entering restricted areas, missing
+              safety equipment, or unusual equipment behavior. At the same time, anomaly detection techniques were used to identify
+              unexpected visual patterns that might indicate emerging issues on the construction site.
+            </p>
+            <p>
+              By analyzing images from fixed cameras and drone flights, the system could also monitor visible changes in construction
+              areas over time. This helped project managers track whether construction activities were progressing as expected and
+              identify areas that required attention.
+            </p>
+            <p>
+              In addition to the modeling components, QSC developed software tools to make the system usable for project teams.
+            </p>
+            <p>
+              A desktop application provided project managers with a centralized dashboard where they could monitor site activity,
+              review flagged images, and explore historical visual data from multiple projects. This allowed teams to investigate
+              potential issues and compare conditions across different areas of a site.
+            </p>
+            <p>
+              A mobile application supported engineers and safety officers working directly in the field. Through the mobile
+              interface, users could capture new images of site conditions and upload them directly into the monitoring system. These
+              images became part of the training dataset and helped improve the computer vision models as new scenarios were
+              encountered.
+            </p>
+            <p>
+              Together, the modeling framework and software tools created a unified visual monitoring system that combined automated
+              analysis with field observations from site personnel.
+            </p>
+          </section>
+
+          <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-slate-900">Decision Support in Practice</h2>
+            <p>
+              Once deployed, the system provided construction teams with a continuous view of site activity and safety conditions.
+            </p>
+            <p>
+              Images captured by fixed cameras and drones were analyzed automatically as they entered the system. When potential
+              safety risks or unusual conditions were detected, the system flagged the relevant images, highlighted them in the
+              monitoring dashboard, and sent alerts to management.
+            </p>
+            <p>
+              The system also helped teams track construction progress by identifying changes in materials, equipment placement, and
+              structural development across different areas of the site. By reviewing visual data collected over time, managers could
+              verify whether work was progressing according to schedule and improve timeline planning for future projects.
+            </p>
+            <p>
+              Field engineers and safety officers used the mobile application to capture additional images during inspections. These
+              images provided context for flagged events and helped expand the dataset used to train the computer vision models.
+            </p>
+            <p>
+              By combining automated image analysis with on-site observations, the system allowed construction teams to monitor safety
+              conditions and project progress more consistently across large and complex worksites.
+            </p>
+          </section>
+
+          <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-slate-900">Outcome</h2>
+            <p>
+              The most significant improvement was the organization’s ability to maintain consistent visibility across its
+              construction sites.
+            </p>
+            <p>
+              Instead of relying entirely on periodic inspections, the company gained a system that continuously analyzed visual data
+              from cameras, drones, and field observations. Potential safety risks could be identified earlier, and project managers
+              could investigate issues before they escalated into larger problems.
+            </p>
+            <p>
+              The integrated software platform also improved coordination between project managers, safety officers, and field
+              engineers. Images captured across the site were available in a single system, making it easier to review conditions,
+              investigate incidents, and track changes over time.
+            </p>
+            <p>
+              Equally important, the mobile application allowed field teams to contribute directly to the monitoring system by
+              capturing images during inspections. These observations strengthened the system’s ability to recognize new conditions
+              and provided valuable context for construction managers.
+            </p>
+            <p class="rounded-lg border-l-4 border-green-500 bg-green-50 p-4 font-medium text-green-900">
+              For the organization, the result was not simply a new inspection tool. It was a unified visual monitoring system that
+              helped teams maintain safer construction sites while improving visibility into project progress.
+            </p>
+          </section>
+
+          <section class="border-t border-slate-200 pt-6">
+            <p class="text-sm text-slate-600 italic">
+              This case study describes a representative engagement. Specific details have been generalized to protect
+              client confidentiality.
+            </p>
+          </section>
+        </article>
+      </div>
+    </section>
+
+    <section class="py-16 px-6 bg-slate-50 border-t border-slate-200">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">Need better visibility across operations?</h2>
+        <p class="text-lg text-slate-700 mb-8">
+          QSC helps teams turn visual data into practical monitoring and decision support tools for safety, progress, and quality.
+        </p>
+        <a href="contact.html" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-xl shadow">
+          Book a Free 30-Minute Computer Vision Strategy Assessment
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-800 text-gray-300 py-10 text-sm">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-6">
+      <div>
+        <p class="font-bold text-white mb-2">Quantitative Science Consulting</p>
+        <p>Science-grounded AI for sustainable impact. </p>
+      </div>
+      <div class="flex flex-col md:items-end space-y-2">
+        <a href="mailto:info@qsc.earth" class="hover:underline">info@qsc.earth</a>
+        <a href="https://www.linkedin.com/company/quantitative-science-consulting" class="hover:underline" target="_blank">LinkedIn</a>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> QSC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

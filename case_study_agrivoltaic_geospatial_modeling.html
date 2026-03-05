@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLH2Y342RP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-SLH2Y342RP');
+  </script>
+  <!-- End Google tag -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Study: Optimizing Agrivoltaic Solar Development with Geospatial Modeling | QSC</title>
+
+  <!-- Begin Descriptive Content -->
+  <meta name="description" content="Read how QSC used geospatial modeling to identify viable agrivoltaic farm sites and evaluate grid connectivity with nearby transmission infrastructure." />
+  <meta name="keywords" content="case study, agrivoltaics, geospatial modeling, solar siting, transmission infrastructure, suitability analysis" />
+  <meta name="author" content="Quantitative Science Consulting" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Case Study: Optimizing Agrivoltaic Solar Development with Geospatial Modeling" />
+  <meta property="og:description" content="A representative QSC case study on combining geospatial suitability modeling with transmission infrastructure analysis for agrivoltaic planning." />
+  <meta property="og:url" content="https://qsc.earth/case_study_agrivoltaic_geospatial_modeling.html" />
+  <meta property="og:image" content="https://qsc.earth/images/logo.webp" />
+  <meta property="og:type" content="article" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Case Study: Optimizing Agrivoltaic Solar Development with Geospatial Modeling" />
+  <meta name="twitter:description" content="How spatial suitability and transmission proximity analysis supported agrivoltaic site selection and infrastructure planning." />
+  <meta name="twitter:image" content="https://qsc.earth/images/logo.webp" />
+
+  <link rel="canonical" href="https://qsc.earth/case_study_agrivoltaic_geospatial_modeling.html" />
+  <!-- End Descriptive Content -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="images/logo.webp" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Case Study: Optimizing Agrivoltaic Solar Development with Geospatial Modeling",
+      "description": "A representative QSC engagement using geospatial suitability modeling and transmission infrastructure analysis to prioritize agrivoltaic development sites.",
+      "author": {
+        "@type": "Organization",
+        "name": "Quantitative Science Consulting",
+        "url": "https://qsc.earth"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Quantitative Science Consulting",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://qsc.earth/images/logo.webp"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://qsc.earth/case_study_agrivoltaic_geospatial_modeling.html"
+      },
+      "inLanguage": "en",
+      "keywords": [
+        "case study",
+        "agrivoltaics",
+        "geospatial modeling",
+        "solar siting",
+        "transmission infrastructure",
+        "suitability analysis"
+      ]
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-3">
+        <img src="images/logo.webp" alt="QSC logo" class="h-10 w-10" />
+        <span class="text-xl font-bold text-gray-800">Quantitative Science Consulting</span>
+      </a>
+
+      <button id="menu-toggle" class="md:hidden text-gray-800 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <nav id="menu" class="hidden md:flex md:space-x-6 text-sm font-semibold">
+        <a href="index.html" class="hover:text-green-600">Home</a>
+        <a href="about.html" class="hover:text-green-600">About</a>
+        <a href="services.html" class="hover:text-green-600">Services</a>
+        <a href="mission.html" class="hover:text-green-600">Mission</a>
+        <a href="blog.html" class="hover:text-green-600">Blog</a>
+        <a href="contact.html" class="hover:text-green-600">Contact</a>
+        <a href="faq.html" class="hover:text-green-600">FAQ</a>
+      </nav>
+
+      <nav id="mobile-menu" class="hidden flex-col space-y-2 px-4 pt-2 pb-4 text-sm font-semibold bg-white shadow-md md:hidden">
+        <a href="index.html" class="block hover:text-green-600">Home</a>
+        <a href="about.html" class="block hover:text-green-600">About</a>
+        <a href="services.html" class="block hover:text-green-600">Services</a>
+        <a href="mission.html" class="block hover:text-green-600">Mission</a>
+        <a href="blog.html" class="block hover:text-green-600">Blog</a>
+        <a href="contact.html" class="block hover:text-green-600">Contact</a>
+        <a href="faq.html" class="block hover:text-green-600">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const mobile_menu = document.getElementById('mobile-menu');
+
+    toggle.addEventListener('click', () => {
+      mobile_menu.classList.toggle('hidden');
+    });
+  </script>
+  <!-- End Header -->
+
+  <main>
+    <section class="bg-gradient-to-br from-green-100 to-blue-100 py-16 px-6">
+      <div class="max-w-4xl mx-auto">
+        <p class="text-sm uppercase tracking-wide text-green-800 font-semibold mb-3">Case Study</p>
+        <h1 class="text-4xl font-bold mb-4">
+          Optimizing Agrivoltaic Solar Development with Geospatial Modeling
+        </h1>
+        <p class="text-lg md:text-xl text-gray-700">
+          How geospatial suitability analysis can connect renewable energy planning with transmission grid realities.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-14 px-6 bg-slate-50">
+      <div class="max-w-5xl mx-auto">
+        <article class="text-gray-800 leading-relaxed space-y-10">
+          <p class="text-lg text-slate-700">
+            Agrivoltaic development decisions are strongest when farm suitability and transmission access are evaluated together.
+          </p>
+
+          <div class="grid gap-4 md:grid-cols-3">
+            <div class="rounded-xl bg-green-50 border border-green-200 p-4">
+              <p class="text-xs font-semibold uppercase tracking-wide text-green-800">Industry</p>
+              <p class="mt-1 font-medium text-slate-800">Renewable energy and agricultural land development</p>
+            </div>
+            <div class="rounded-xl bg-blue-50 border border-blue-200 p-4">
+              <p class="text-xs font-semibold uppercase tracking-wide text-blue-800">Core challenge</p>
+              <p class="mt-1 font-medium text-slate-800">Finding farms with both strong solar suitability and practical grid interconnection options</p>
+            </div>
+            <div class="rounded-xl bg-amber-50 border border-amber-200 p-4">
+              <p class="text-xs font-semibold uppercase tracking-wide text-amber-800">Approach</p>
+              <p class="mt-1 font-medium text-slate-800">Geospatial suitability modeling combined with transmission proximity and corridor analysis</p>
+            </div>
+          </div>
+
+          <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-slate-900">The Problem</h2>
+            <p>
+              A renewable energy developer exploring opportunities for agrivoltaic systems (solar installations integrated with agricultural production) needed to evaluate potential sites across a large agricultural region. While many farms had the land area required for solar installations, not all locations were equally viable from an infrastructure or environmental perspective.
+            </p>
+            <p>
+              Successful agrivoltaic projects depend on several spatial factors. Solar radiation levels influence energy production potential, while terrain conditions affect construction feasibility. Just as importantly, projects must be located near transmission infrastructure capable of delivering generated electricity to the grid.
+            </p>
+            <p>
+              In many cases, farms with strong solar potential were located far from existing transmission lines or substations. Connecting these sites to the grid could require costly new infrastructure. At the same time, existing transmission corridors needed ongoing monitoring to ensure that new solar generation could be integrated reliably.
+            </p>
+            <p class="rounded-lg border-l-4 border-slate-400 bg-slate-100 p-4 font-medium text-slate-700">
+              The developer needed a systematic way to evaluate large numbers of potential farm locations, identify the most promising areas for agrivoltaic development, and understand how new solar assets would interact with the surrounding transmission network.
+            </p>
+          </section>
+
+          <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-slate-900">QSC’s Modeling Approach</h2>
+            <p>
+              QSC developed a geospatial modeling framework to evaluate potential agrivoltaic sites and analyze their relationship to the regional transmission infrastructure.
+            </p>
+            <p>
+              The system integrated multiple spatial datasets, including solar radiation estimates, terrain elevation models, land cover data, agricultural land classifications, and the locations of existing transmission lines and substations. These datasets were combined within a geospatial analysis environment that allowed each factor to be evaluated across the landscape.
+            </p>
+            <p>
+              Using these inputs, QSC developed a spatial suitability model to estimate the viability of agrivoltaic development at different farm locations. Areas with strong solar radiation, favorable terrain conditions, and appropriate agricultural land use received higher suitability scores.
+            </p>
+            <p>
+              The model also incorporated proximity to transmission infrastructure. Farms located near existing transmission lines or substations were more favorable for development because they could connect to the grid with lower infrastructure costs.
+            </p>
+            <p>
+              In addition to identifying candidate locations, the system evaluated the surrounding transmission network to understand how new solar assets might interact with existing infrastructure. Spatial analyses helped highlight areas where clusters of new solar installations could place additional demands on transmission capacity.
+            </p>
+            <p>
+              To support operational planning, QSC developed an interactive mapping software that allowed analysts and project planners to explore suitability maps and transmission infrastructure simultaneously. Users could visualize potential agrivoltaic sites, evaluate solar potential, and examine nearby transmission assets within the same system.
+            </p>
+          </section>
+
+          <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-slate-900">Decision Support in Practice</h2>
+            <p>
+              The geospatial modeling system provided the developer with a regional view of where agrivoltaic projects were most likely to succeed.
+            </p>
+            <p>
+              Suitability maps highlighted farms with favorable solar potential and practical grid connectivity, allowing project planners to focus early site evaluations on the most promising areas. Instead of manually evaluating individual properties across the region, planners could identify clusters of suitable locations where agrivoltaic development was likely to be both technically and economically viable.
+            </p>
+            <p>
+              At the same time, the spatial analyses helped the developer understand how new solar installations might interact with the existing transmission network. By mapping proposed development areas alongside transmission infrastructure, planners could identify where upgrades or additional monitoring might be required.
+            </p>
+            <p>
+              The same geospatial tools also supported infrastructure management. Transmission lines serving potential solar development zones could be prioritized for inspection and maintenance, ensuring that the network remained capable of supporting new generation assets.
+            </p>
+            <p>
+              By linking solar development planning with transmission infrastructure analysis, the system helped align renewable energy expansion with grid reliability considerations.
+            </p>
+          </section>
+
+          <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-slate-900">Outcome</h2>
+            <p>
+              The most significant improvement was the ability to evaluate agrivoltaic opportunities across the landscape in a structured and data-driven way.
+            </p>
+            <p>
+              Instead of relying on ad hoc site evaluations, the developer gained a spatial framework for identifying farms with strong solar potential and practical grid connectivity. This allowed early project development efforts to focus on the most viable locations.
+            </p>
+            <p>
+              The integration of transmission infrastructure analysis also improved long-term planning. By understanding how new solar assets might interact with the existing grid, the developer could anticipate infrastructure needs and prioritize maintenance of key transmission corridors.
+            </p>
+            <p class="rounded-lg border-l-4 border-green-500 bg-green-50 p-4 font-medium text-green-900">
+              For the organization, the result was not simply a set of maps. It was a geospatial decision-support system that connected agricultural land use, renewable energy potential, and infrastructure planning to guide the development of new agrivoltaic projects.
+            </p>
+          </section>
+        </article>
+      </div>
+    </section>
+    <section class="bg-green-100 py-14 px-6 text-center">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">Need Geospatial Modeling in Your Workflow?</h2>
+        <p class="text-lg text-slate-700 mb-8">
+          QSC builds geospatial models to optimize spatial decision making. 
+        </p>
+        <a href="contact.html" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-xl shadow">
+          Book a Free 30-Minute Geospatial-AI Strategy Assessment
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-300 py-10 text-sm">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-6">
+      <div>
+        <p class="font-bold text-white mb-2">Quantitative Science Consulting</p>
+        <p>Science-grounded AI for sustainable impact.</p>
+      </div>
+      <div class="flex flex-col md:items-end space-y-2">
+        <a href="mailto:info@qsc.earth" class="hover:underline">info@qsc.earth</a>
+        <a href="https://www.linkedin.com/company/quantitative-science-consulting" class="hover:underline" target="_blank">LinkedIn</a>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> QSC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
