@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLH2Y342RP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-SLH2Y342RP');
+  </script>
+  <!-- End Google tag -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Study: Adaptive Production Scheduling with Reinforcement Learning | QSC</title>
+
+  <!-- Begin Descriptive Content -->
+  <meta name="description" content="Read how QSC supported adaptive production scheduling using reinforcement learning to improve responsiveness under changing manufacturing conditions." />
+  <meta name="keywords" content="case study, reinforcement learning, production scheduling, manufacturing optimization, machine utilization, operations research" />
+  <meta name="author" content="Quantitative Science Consulting" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Case Study: Adaptive Production Scheduling with Reinforcement Learning" />
+  <meta property="og:description" content="A representative QSC case study on learning adaptive scheduling policies for dynamic manufacturing systems." />
+  <meta property="og:url" content="https://qsc.earth/case_study_adaptive_production_scheduling.html" />
+  <meta property="og:image" content="https://qsc.earth/images/logo.webp" />
+  <meta property="og:type" content="article" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Case Study: Adaptive Production Scheduling with Reinforcement Learning" />
+  <meta name="twitter:description" content="How reinforcement learning enabled more adaptive production scheduling under changing operational conditions." />
+  <meta name="twitter:image" content="https://qsc.earth/images/logo.webp" />
+
+  <link rel="canonical" href="https://qsc.earth/case_study_adaptive_production_scheduling.html" />
+  <!-- End Descriptive Content -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="images/logo.webp" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Case Study: Adaptive Production Scheduling with Reinforcement Learning",
+      "description": "A representative QSC engagement applying reinforcement learning to adaptive scheduling in dynamic production environments.",
+      "author": {
+        "@type": "Organization",
+        "name": "Quantitative Science Consulting",
+        "url": "https://qsc.earth"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Quantitative Science Consulting",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://qsc.earth/images/logo.webp"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://qsc.earth/case_study_adaptive_production_scheduling.html"
+      },
+      "inLanguage": "en",
+      "keywords": [
+        "case study",
+        "reinforcement learning",
+        "production scheduling",
+        "manufacturing optimization",
+        "machine utilization"
+      ]
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-3">
+        <img src="images/logo.webp" alt="QSC logo" class="h-10 w-10" />
+        <span class="text-xl font-bold text-gray-800">Quantitative Science Consulting</span>
+      </a>
+
+      <button id="menu-toggle" class="md:hidden text-gray-800 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <nav id="menu" class="hidden md:flex md:space-x-6 text-sm font-semibold">
+        <a href="index.html" class="hover:text-green-600">Home</a>
+        <a href="about.html" class="hover:text-green-600">About</a>
+        <a href="services.html" class="hover:text-green-600">Services</a>
+        <a href="mission.html" class="hover:text-green-600">Mission</a>
+        <a href="blog.html" class="hover:text-green-600">Blog</a>
+        <a href="contact.html" class="hover:text-green-600">Contact</a>
+        <a href="faq.html" class="hover:text-green-600">FAQ</a>
+      </nav>
+
+      <nav id="mobile-menu" class="hidden flex-col space-y-2 px-4 pt-2 pb-4 text-sm font-semibold bg-white shadow-md md:hidden">
+        <a href="index.html" class="block hover:text-green-600">Home</a>
+        <a href="about.html" class="block hover:text-green-600">About</a>
+        <a href="services.html" class="block hover:text-green-600">Services</a>
+        <a href="mission.html" class="block hover:text-green-600">Mission</a>
+        <a href="blog.html" class="block hover:text-green-600">Blog</a>
+        <a href="contact.html" class="block hover:text-green-600">Contact</a>
+        <a href="faq.html" class="block hover:text-green-600">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const mobile_menu = document.getElementById('mobile-menu');
+
+    toggle.addEventListener('click', () => {
+      mobile_menu.classList.toggle('hidden');
+    });
+  </script>
+  <!-- End Header -->
+
+  <main>
+    <section class="bg-gradient-to-br from-green-100 to-blue-100 py-16 px-6">
+      <div class="max-w-4xl mx-auto">
+        <p class="text-sm uppercase tracking-wide text-green-800 font-semibold mb-3">Case Study</p>
+        <h1 class="text-4xl font-bold mb-4">Adaptive Production Scheduling with Reinforcement Learning</h1>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          A representative QSC engagement showing how reinforcement learning can support more adaptive,
+          real-time scheduling decisions in dynamic manufacturing systems.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-14 px-6 bg-white">
+      <div class="max-w-4xl mx-auto">
+        <article class="rounded-2xl border border-slate-200 bg-white p-8 md:p-10 shadow-sm space-y-10">
+          <p class="text-lg text-slate-700">
+            Production teams need scheduling strategies that can keep pace with changing order
+            flows, machine constraints, and day-to-day disruptions.
+          </p>
+
+          <div class="grid gap-4 md:grid-cols-3">
+            <div class="rounded-xl bg-green-50 border border-green-200 p-4">
+              <p class="text-xs font-semibold uppercase tracking-wide text-green-800">Industry</p>
+              <p class="mt-1 font-medium text-slate-800">Discrete manufacturing operations</p>
+            </div>
+            <div class="rounded-xl bg-blue-50 border border-blue-200 p-4">
+              <p class="text-xs font-semibold uppercase tracking-wide text-blue-800">Core challenge</p>
+              <p class="mt-1 font-medium text-slate-800">Real-time scheduling under dynamic shop-floor disruptions</p>
+            </div>
+            <div class="rounded-xl bg-amber-50 border border-amber-200 p-4">
+              <p class="text-xs font-semibold uppercase tracking-wide text-amber-800">Approach</p>
+              <p class="mt-1 font-medium text-slate-800">Reinforcement learning + simulation-based policy optimization</p>
+            </div>
+          </div>
+
+          <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-slate-900">The Problem</h2>
+            <p>
+              Manufacturing environments often involve complex scheduling decisions that must balance competing objectives:
+              production throughput, machine utilization, inventory levels, and delivery deadlines. In many facilities,
+              these decisions are still made using static scheduling rules or manual adjustments by experienced planners.
+            </p>
+            <p>
+              A manufacturing company producing specialized industrial components faced exactly this challenge. Orders
+              arrived continuously from multiple customers, and production required coordinating several machines with
+              different processing times and setup requirements. Small disruptions, such as a machine slowdown, delayed
+              materials, or a sudden increase in demand, would ripple through the schedule and reduce production efficiency.
+            </p>
+            <p>
+              The operations team relied on a set of heuristic rules to prioritize jobs and assign work across machines.
+              These rules had been refined over time and worked reasonably well under stable conditions. However, they
+              struggled when the system became more dynamic. When new orders arrived unexpectedly or production conditions
+              changed, planners often had to manually revise the schedule.
+            </p>
+            <p>
+              The result was a planning process that was reactive rather than adaptive. Schedules were frequently adjusted
+              throughout the day, and decisions were based largely on experience rather than a systematic evaluation of the
+              long-term effects of different choices.
+            </p>
+            <p class="rounded-lg border-l-4 border-slate-400 bg-slate-100 p-4 font-medium text-slate-700">
+              The core challenge was not simply generating a schedule. It was identifying a scheduling strategy that could
+              adapt continuously as production conditions evolved.
+            </p>
+          </section>
+
+          <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-slate-900">QSC’s Modeling Approach</h2>
+            <p>
+              To address this problem, QSC developed a reinforcement learning-based scheduling framework.
+            </p>
+            <p>
+              Reinforcement learning is well suited to operational problems where decisions must be made repeatedly over
+              time. Instead of optimizing a single plan in advance, the method trains an agent to learn which actions lead
+              to better outcomes as it interacts with a simulated version of the production environment.
+            </p>
+            <p>
+              In this case, the environment represented the factory’s production system, including machines, job queues,
+              processing times, and technician assignments. The reinforcement learning agent observed the state of the
+              system, such as which jobs were waiting, which machines were available, and how close orders were to their
+              delivery deadlines.
+            </p>
+            <p>
+              At each step, the agent selected an action, such as assigning a job to a machine or choosing the next
+              production task. After each decision, the system state updated and the agent received a reward based on
+              operational objectives such as reducing delays, improving machine utilization, and minimizing excessive job
+              switching.
+            </p>
+            <p>
+              Through millions of simulated production runs, the model learned scheduling policies that balanced these
+              objectives across many possible operating conditions.
+            </p>
+            <p>
+              Rather than producing a single static schedule, the trained agent effectively learned a decision policy: a
+              set of rules that could adapt scheduling decisions in real time as production conditions changed.
+            </p>
+          </section>
+
+          <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-slate-900">Decision Support in Practice</h2>
+            <p>
+              Once trained, the reinforcement learning model was used as a decision-support tool for production planners.
+            </p>
+            <p>
+              The system evaluated potential scheduling decisions and suggested actions that would improve overall system
+              performance based on the learned policy. Planners could also explore different production scenarios by
+              adjusting factors such as demand levels, machine availability, or order priorities.
+            </p>
+            <p>
+              This allowed the operations team to better understand the downstream effects of scheduling choices. For
+              example, they could see how prioritizing a specific order might affect machine utilization or lead times
+              across the rest of the system.
+            </p>
+            <p>
+              Importantly, the model did not replace human decision-makers. Instead, it provided a structured way to
+              evaluate scheduling options under complex and changing conditions.
+            </p>
+            <p>
+              By combining the learned scheduling policy with the expertise of production planners, the team gained a
+              more consistent and adaptive approach to managing the production schedule.
+            </p>
+          </section>
+
+          <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-slate-900">Outcome</h2>
+            <p>
+              The most significant improvement was the ability to respond more effectively to changing production
+              conditions.
+            </p>
+            <p>
+              Rather than relying solely on static rules, the operations team now had a scheduling framework that could
+              adapt to fluctuations in demand, machine availability, and job arrivals. The reinforcement learning model
+              provided guidance on how to prioritize jobs and allocate machine time while balancing competing operational
+              goals.
+            </p>
+            <p>
+              As a result, planners gained clearer visibility into the tradeoffs involved in scheduling decisions. Instead
+              of reacting to disruptions after they occurred, they could evaluate scheduling strategies in advance and
+              understand how different choices would influence overall system performance.
+            </p>
+            <p>
+              For the organization, the value of the approach was not simply a more advanced optimization technique. It
+              was the ability to support production decisions with a model that continuously learned from simulated
+              operational scenarios and translated those insights into practical scheduling guidance.
+            </p>
+          </section>
+
+          <section class="border-t border-slate-200 pt-6">
+            <p class="text-sm text-slate-600 italic">
+              This case study describes a representative engagement. Specific details have been generalized to protect
+              client confidentiality.
+            </p>
+          </section>
+        </article>
+      </div>
+    </section>
+
+    <section class="bg-green-100 py-14 px-6 text-center">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold mb-4">Need a More Adaptive Production Schedule?</h2>
+        <p class="text-lg mb-6">
+          We help operations teams turn complex scheduling tradeoffs into clear,
+          model-supported decisions.
+        </p>
+        <a href="contact.html" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-xl shadow">
+          Talk With QSC
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-300 py-10 text-sm">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-6">
+      <div>
+        <p class="font-bold text-white mb-2">Quantitative Science Consulting</p>
+        <p>Science-grounded AI for sustainable impact.</p>
+      </div>
+      <div class="flex flex-col md:items-end space-y-2">
+        <a href="mailto:info@qsc.earth" class="hover:underline">info@qsc.earth</a>
+        <a href="https://www.linkedin.com/company/quantitative-science-consulting" class="hover:underline" target="_blank">LinkedIn</a>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> QSC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
