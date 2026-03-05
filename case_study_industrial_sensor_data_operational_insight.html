@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLH2Y342RP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-SLH2Y342RP');
+  </script>
+  <!-- End Google tag -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Study: Integrating Sensor Data for Real-Time Operational Insight | QSC</title>
+
+  <!-- Begin Descriptive Content -->
+  <meta name="description" content="Read how QSC unified fragmented IoT sensor systems into a real-time monitoring platform with anomaly detection, mobile access, and chatbot-based decision support." />
+  <meta name="keywords" content="case study, iot sensors, anomaly detection, operational monitoring, time-series data, industrial analytics" />
+  <meta name="author" content="Quantitative Science Consulting" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Case Study: Integrating Sensor Data for Real-Time Operational Insight" />
+  <meta property="og:description" content="A representative QSC case study on integrating environmental and equipment telemetry into a unified operational monitoring system." />
+  <meta property="og:url" content="https://qsc.earth/case_study_industrial_sensor_data_operational_insight.html" />
+  <meta property="og:image" content="https://qsc.earth/images/logo.webp" />
+  <meta property="og:type" content="article" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Case Study: Integrating Sensor Data for Real-Time Operational Insight" />
+  <meta name="twitter:description" content="How integrated sensor architecture, anomaly detection, and conversational access improved real-time operational visibility." />
+  <meta name="twitter:image" content="https://qsc.earth/images/logo.webp" />
+
+  <link rel="canonical" href="https://qsc.earth/case_study_industrial_sensor_data_operational_insight.html" />
+  <!-- End Descriptive Content -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="images/logo.webp" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Case Study: Integrating Sensor Data for Real-Time Operational Insight",
+      "description": "A representative QSC engagement integrating environmental and equipment sensor data into a unified monitoring system with anomaly detection and conversational analytics.",
+      "author": {
+        "@type": "Organization",
+        "name": "Quantitative Science Consulting",
+        "url": "https://qsc.earth"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Quantitative Science Consulting",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://qsc.earth/images/logo.webp"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://qsc.earth/case_study_industrial_sensor_data_operational_insight.html"
+      },
+      "inLanguage": "en",
+      "keywords": [
+        "case study",
+        "iot sensors",
+        "anomaly detection",
+        "operational monitoring",
+        "time-series data"
+      ]
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-3">
+        <img src="images/logo.webp" alt="QSC logo" class="h-10 w-10" />
+        <span class="text-xl font-bold text-gray-800">Quantitative Science Consulting</span>
+      </a>
+
+      <button id="menu-toggle" class="md:hidden text-gray-800 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <nav id="menu" class="hidden md:flex md:space-x-6 text-sm font-semibold">
+        <a href="index.html" class="hover:text-green-600">Home</a>
+        <a href="about.html" class="hover:text-green-600">About</a>
+        <a href="services.html" class="hover:text-green-600">Services</a>
+        <a href="mission.html" class="hover:text-green-600">Mission</a>
+        <a href="blog.html" class="hover:text-green-600">Blog</a>
+        <a href="contact.html" class="hover:text-green-600">Contact</a>
+        <a href="faq.html" class="hover:text-green-600">FAQ</a>
+      </nav>
+
+      <nav id="mobile-menu" class="hidden flex-col space-y-2 px-4 pt-2 pb-4 text-sm font-semibold bg-white shadow-md md:hidden">
+        <a href="index.html" class="block hover:text-green-600">Home</a>
+        <a href="about.html" class="block hover:text-green-600">About</a>
+        <a href="services.html" class="block hover:text-green-600">Services</a>
+        <a href="mission.html" class="block hover:text-green-600">Mission</a>
+        <a href="blog.html" class="block hover:text-green-600">Blog</a>
+        <a href="contact.html" class="block hover:text-green-600">Contact</a>
+        <a href="faq.html" class="block hover:text-green-600">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const mobile_menu = document.getElementById('mobile-menu');
+
+    toggle.addEventListener('click', () => {
+      mobile_menu.classList.toggle('hidden');
+    });
+  </script>
+  <!-- End Header -->
+
+  <main>
+    <section class="bg-gradient-to-br from-green-100 to-blue-100 py-16 px-6">
+      <div class="max-w-4xl mx-auto">
+        <p class="text-sm uppercase tracking-wide text-green-800 font-semibold mb-3">Case Study</p>
+        <h1 class="text-4xl font-bold mb-4">Integrating Sensor Data for Real-Time Operational Insight</h1>
+        <p class="text-lg text-slate-700 leading-relaxed">
+          QSC integrated fragmented IoT sensor systems for an agricultural food production facility, enabling
+          real-time visibility, anomaly detection, and faster operational decisions through desktop, mobile,
+          and chatbot interfaces.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-14 px-6 bg-slate-50">
+      <div class="max-w-5xl mx-auto">
+        <article class="text-gray-800 leading-relaxed space-y-10">
+          <p class="text-lg text-slate-700">
+          Operations teams need unified software with data collection, real-time views of sensor data, and the ability to detect issues early and respond faster.
+        </p>
+        <div class="grid gap-4 md:grid-cols-3">
+          <div class="rounded-xl bg-green-50 border border-green-200 p-4">
+            <p class="text-xs font-semibold uppercase tracking-wide text-green-800">Industry</p>
+            <p class="mt-1 font-medium text-slate-800">Agricultural food production</p>
+          </div>
+          <div class="rounded-xl bg-blue-50 border border-blue-200 p-4">
+            <p class="text-xs font-semibold uppercase tracking-wide text-blue-800">Core challenge</p>
+            <p class="mt-1 font-medium text-slate-800">Fragmented sensor systems and limited real-time visibility</p>
+          </div>
+          <div class="rounded-xl bg-amber-50 border border-amber-200 p-4">
+            <p class="text-xs font-semibold uppercase tracking-wide text-amber-800">Approach</p>
+            <p class="mt-1 font-medium text-slate-800">Unified data pipeline + anomaly detection + multi-interface access</p>
+          </div>
+        </div>
+
+        <section class="space-y-4">
+          <h2 class="text-2xl font-bold text-slate-900">The Problem</h2>
+          <p>
+            A large agricultural food production facility relied on a network of IoT sensors to monitor environmental conditions,
+            equipment performance, and storage environments across its operations. Temperature and humidity sensors tracked conditions
+            in storage areas and production spaces, while equipment sensors recorded machine performance metrics such as vibration and
+            operating loads.
+          </p>
+          <p>
+            Over time, the organization had deployed many of these sensors to address specific operational needs. However, the
+            resulting data systems had grown fragmented. Environmental data, equipment telemetry, and operational records were stored
+            in separate systems that were difficult to access and analyze together.
+          </p>
+          <p>
+            Operators and managers could access individual sensor feeds, but they lacked a unified view of the facility. Diagnosing
+            operational problems often required manually reviewing multiple dashboards or exporting data from different systems.
+            This made it difficult to detect emerging issues early, particularly when problems involved interactions between equipment
+            performance and environmental conditions.
+          </p>
+          <p>
+            The lack of real-time visibility also slowed operational decision-making. For example, unexpected humidity fluctuations
+            in storage areas could affect product quality, while abnormal equipment behavior might signal the early stages of
+            mechanical failure. Without an integrated monitoring system, identifying these issues required significant manual effort
+            and often occurred after problems had already escalated.
+          </p>
+          <p class="rounded-lg border-l-4 border-slate-400 bg-slate-100 p-4 font-medium text-slate-700">
+            The organization needed a way to bring its sensor data together into a single operational system that could provide
+            real-time monitoring, early anomaly detection, and easy access to information for both facility managers and field technicians.
+          </p>
+        </section>
+
+        <section class="space-y-4">
+          <h2 class="text-2xl font-bold text-slate-900">QSC’s Modeling Approach</h2>
+          <p>
+            QSC designed and implemented a unified data architecture that integrated sensor streams across the facility into a single
+            monitoring platform.
+          </p>
+          <p>
+            The system collected data from temperature, humidity, and equipment sensors throughout the production and storage
+            environment. These data streams were ingested into a centralized data pipeline where they were standardized,
+            timestamped, and stored in a scalable time-series database.
+          </p>
+          <p>
+            With the data architecture in place, QSC developed monitoring models to identify unusual patterns in sensor readings.
+            Instead of relying solely on fixed thresholds, the system incorporated statistical anomaly detection techniques that
+            evaluated how current sensor values compared with expected patterns based on historical data.
+          </p>
+          <p>
+            This approach allowed the monitoring system to detect subtle deviations that might indicate emerging problems, such as
+            gradual shifts in equipment vibration patterns or unexpected environmental fluctuations in specific storage areas.
+          </p>
+          <p>
+            Equally important was the design of the user-facing software. QSC developed a custom desktop application that allowed
+            facility managers to visualize conditions across the entire operation. The interface provided dashboards for environmental
+            conditions, equipment status, and historical trends.
+          </p>
+          <p>
+            To support field operations, a mobile app was developed for technicians working across the facility. The mobile interface
+            provided quick access to sensor readings, alerts, and equipment status while technicians were on the production floor or
+            in storage areas.
+          </p>
+          <p>
+            In addition, QSC implemented a conversational interface that allowed users to interact directly with the monitoring system
+            through a custom chatbot. Users could ask questions such as:
+          </p>
+
+          <ul class="space-y-3">
+            <li class="flex gap-3">
+              <span class="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-green-600"></span>
+              <span>Which storage areas currently have abnormal humidity levels?</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-green-600"></span>
+              <span>How does increased vibration affect the probability of machine failure?</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-green-600"></span>
+              <span>What were the temperature conditions in Storage Area 3 yesterday?</span>
+            </li>
+          </ul>
+
+          <p>
+            The chatbot translated these questions into queries against the underlying data system and returned clear, concise responses.
+            This allowed operators to access information quickly without requiring specialized knowledge of the underlying infrastructure.
+          </p>
+        </section>
+
+        <section class="space-y-4">
+          <h2 class="text-2xl font-bold text-slate-900">Decision Support in Practice</h2>
+          <p>
+            Once deployed, the integrated monitoring system provided a unified operational view of the facility.
+          </p>
+          <p>
+            Managers could monitor environmental conditions across storage and production areas in real time, while equipment telemetry
+            provided continuous visibility into machine performance. When unusual patterns emerged, the anomaly detection system flagged
+            the relevant sensors, highlighted them in dashboards, and sent alerts to relevant personnel.
+          </p>
+          <p>
+            This allowed operators to investigate potential issues earlier and understand how conditions across different parts of the
+            facility were related. For example, if abnormal humidity levels were detected in a storage area, managers could examine
+            recent equipment activity or ventilation conditions that might have contributed to the change.
+          </p>
+          <p>
+            Technicians working on the production floor used the mobile application to review sensor data directly at the point of
+            inspection. Instead of returning to a control room to review system dashboards, they could immediately see the relevant
+            readings for nearby equipment and environmental sensors.
+          </p>
+          <p>
+            The chatbot interface further simplified access to information. Operators could quickly ask questions about current system
+            conditions or recent trends without navigating multiple software tools.
+          </p>
+          <p>
+            Together, these tools transformed the facility’s sensor network from a collection of isolated data streams into a coherent
+            operational monitoring system.
+          </p>
+        </section>
+
+        <section class="space-y-4">
+          <h2 class="text-2xl font-bold text-slate-900">Outcome</h2>
+          <p>
+            The most significant improvement was the ability to see and interpret operational conditions across the facility in real time.
+          </p>
+          <p>
+            By integrating environmental and equipment sensor data into a unified system, the organization gained a clearer understanding
+            of how different parts of the operation interacted. Emerging issues could be identified earlier, and operators could investigate
+            potential causes before problems affected production or product quality.
+          </p>
+          <p>
+            The new system also reduced the time required to access and interpret sensor data. Instead of manually reviewing multiple
+            dashboards or exporting datasets, users could obtain relevant information directly through the desktop application, mobile
+            interface, or chatbot.
+          </p>
+          <p class="rounded-lg border-l-4 border-green-500 bg-green-50 p-4 font-medium text-green-900">
+            For the organization, the value of the system was not simply collecting more data. It was transforming fragmented sensor
+            streams into an integrated operational resource that supported faster and more informed decisions across the facility.
+          </p>
+        </section>
+          <section class="border-t border-slate-200 pt-6">
+            <p class="text-sm text-slate-600 italic">
+              This case study describes a representative engagement. Specific details have been generalized to protect
+              client confidentiality.
+            </p>
+          </section>
+        </article>
+      </div>
+    </section>
+
+    <section class="py-16 px-6 bg-slate-50 border-t border-slate-200">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">Need integrated operational monitoring?</h2>
+        <p class="text-lg text-slate-700 mb-8">
+          QSC helps organizations turn fragmented sensor and operational data into practical decision support systems.
+        </p>
+        <a href="contact.html" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-xl shadow">
+          Book a Free 30-Minute Data &amp; AI Strategy Assessment
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-300 py-10 text-sm">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-6">
+      <div>
+        <p class="font-bold text-white mb-2">Quantitative Science Consulting</p>
+        <p>Science-grounded AI for sustainable impact. </p>
+      </div>
+      <div class="flex flex-col md:items-end space-y-2">
+        <a href="mailto:info@qsc.earth" class="hover:underline">info@qsc.earth</a>
+        <a href="https://www.linkedin.com/company/quantitative-science-consulting" class="hover:underline" target="_blank">LinkedIn</a>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> QSC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
