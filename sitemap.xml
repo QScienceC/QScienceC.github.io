@@ -92,6 +92,13 @@
     <lastmod>2026-03-05</lastmod>
     <priority>0.7</priority>
   </url>
+
+  <url>
+    <loc>https://qsc.earth/case_study_agrivoltaic_geospatial_modeling.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <priority>0.7</priority>
+  </url>
+
   <url>
     <loc>https://qsc.earth/computer_vision.html</loc>
     <lastmod>2026-03-05</lastmod>
@@ -101,7 +108,7 @@
 
   <url>
     <loc>https://qsc.earth/geospatial.html</loc>
-    <lastmod>2026-02-21</lastmod>
+    <lastmod>2026-03-05</lastmod>
     <priority>0.8</priority>
   </url>
 
