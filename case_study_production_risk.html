@@ -158,11 +158,11 @@
           </div>
 
           <section class="space-y-4">
-            <h2 class="text-2xl font-bold text-slate-900">The Planning Problem</h2>
+            <h2 class="text-2xl font-bold text-slate-900">The Problem</h2>
             <p>
-              In this case, a pharmaceutical manufacturer was preparing production plans for a
-              high-value product with long lead times and strict manufacturing constraints.
-              Production occurred in large batches, and changing course once manufacturing began
+              A pharmaceutical manufacturer was preparing production plans for
+              high-value products with long lead times and strict manufacturing constraints.
+              Production occurred in large batches, and changing course
               was costly and slow. At the same time, demand for the product varied significantly
               across regions due to changes in prescribing patterns, supply chain delays, and
               regulatory differences between markets.
@@ -171,21 +171,20 @@
               The company’s operations team relied on traditional demand forecasts to guide
               production planning. These forecasts provided single predicted values for future
               demand, typically based on historical sales trends and recent market data. While the
-              forecasts were often directionally reasonable, they did not provide a clear sense of
+              forecasts were often reasonable, they did not estimate
               the uncertainty surrounding those predictions.
             </p>
             <p>
               This created a difficult situation for planners. A forecast might suggest that demand
-              would increase over the next quarter, but the team had little insight into how
+              would increase over the next quarter, but the team lacked insight into how
               confident they should be in that prediction. If production was increased too
-              aggressively, the company risked producing excess inventory for a product that was
-              expensive to store and had a limited shelf life. If production remained too
-              conservative, shortages could occur, potentially disrupting supply to hospitals and
-              pharmacies.
+              aggressively, the company risked producing excess inventory. With limited shelf life
+              some product was disgarded as waste. If production remained too
+              conservative, shortages could occur, disrupting supply to customers.
             </p>
             <p class="rounded-lg border-l-4 border-slate-400 bg-slate-100 p-4 font-medium text-slate-700">
-              In practice, the challenge was not simply forecasting demand more accurately. The
-              real problem was making production decisions in the presence of uncertainty.
+              The challenge was not simply forecasting demand more accurately. The
+              real problem was a lack of uncertainty estimates in the forecasts.
             </p>
           </section>
 
@@ -196,29 +195,29 @@
               demand outcomes, rather than producing a single point forecast. Using historical
               sales data and market indicators, a probabilistic forecasting framework was developed
               to estimate how demand might evolve over time. Bayesian forecasting techniques were
-              used to incorporate uncertainty directly into the model, producing probability
-              distributions for future demand rather than single predicted values.
+              used to propogate uncertainty from all aspects of the data and model into estimates of 
+              predicted demand.
             </p>
             <p>
-              These forecasts allowed the team to evaluate multiple possible demand scenarios and
+              These forecasts allow the team to evaluate multiple possible demand scenarios and
               quantify the likelihood of each outcome. Instead of asking whether demand next
-              quarter would be, for example, 10,000 units, planners could examine the probability
-              that demand would exceed certain thresholds relevant to production decisions.
+              quarter will be, for example, 10,000 units, planners can examine the probability
+              that demand will exceed certain thresholds relevant to production decisions.
             </p>
             <p>
-              This shift in perspective proved important. Production planning decisions could now
-              be evaluated in terms of risk. For example, the team could estimate the probability
-              that planned production levels would lead to shortages, or alternatively the
-              probability that excess inventory would accumulate if demand fell below expectations.
+              This shift in perspective proved important. Production planning decisions can now
+              be evaluated in terms of risk. For example, the team can estimate the probability
+              that planned production levels will lead to shortages, or alternatively the
+              probability that excess inventory will accumulate if demand falls below expectations.
             </p>
           </section>
 
           <section class="space-y-4">
             <h2 class="text-2xl font-bold text-slate-900">Decision Support in Practice</h2>
             <p>
-              To support these decisions, simple scenario simulations were developed that connected
+              To support these decisions, simple scenario simulations were developed that connect
               demand uncertainty to operational constraints such as batch sizes, manufacturing lead
-              times, and inventory policies. These simulations helped the team explore questions
+              times, and inventory policies. These simulations help the team explore questions
               like:
             </p>
 
@@ -238,13 +237,13 @@
             </ul>
 
             <p>
-              Rather than relying on a single forecast, the operations team could now see how
-              different production strategies performed across a range of plausible demand outcomes.
+              Rather than relying on a single forecast, the operations team can now see how
+              different production strategies perform across a range of plausible demand outcomes.
             </p>
             <p>
-              This approach did not eliminate uncertainty. Demand for products will always involve
-              factors that cannot be predicted precisely. What changed was the ability to reason
-              about that uncertainty in a structured way.
+              This approach does not eliminate uncertainty. Demand for products will always involve
+              factors that cannot be predicted precisely. What changed is the ability to reason
+              about that uncertainty in a scientific way.
             </p>
           </section>
 
@@ -254,16 +253,16 @@
               With probabilistic forecasts and scenario analysis in place, the production planning
               process shifted from attempting to predict the future exactly to managing operational
               risk more explicitly. Decisions about production increases, delays, or inventory
-              buffers could be tied directly to the likelihood of different demand outcomes.
+              buffers can be tied directly to the likelihood of different demand outcomes.
             </p>
             <p>
-              For the operations team, the most valuable outcome was not simply a more
+              For the operations team, the most valuable outcome is not simply a more
               sophisticated model, but clearer visibility into the risks associated with each
-              production decision. Instead of debating whether a forecast was “correct,” planners
-              could focus on how different decisions performed under uncertainty.
+              production decision. Instead of debating whether a forecast is “correct,” planners
+              focus on how different decisions performed under uncertainty.
             </p>
             <p class="rounded-lg border-l-4 border-green-500 bg-green-50 p-4 font-medium text-green-900">
-              This shift, from point forecasts to decision-focused modeling, allowed the team to
+              This shift, from point forecasts to decision-focused modeling, allows the team to
               plan production with greater confidence and fewer surprises as demand evolved.
             </p>
           </section>
