@@ -151,39 +151,37 @@
             </div>
             <div class="rounded-xl bg-amber-50 border border-amber-200 p-4">
               <p class="text-xs font-semibold uppercase tracking-wide text-amber-800">Approach</p>
-              <p class="mt-1 font-medium text-slate-800">Computer vision + desktop and mobile monitoring tools</p>
+              <p class="mt-1 font-medium text-slate-800">Computer vision + software monitoring tools</p>
             </div>
           </div>
 
           <section class="space-y-4">
             <h2 class="text-2xl font-bold text-slate-900">The Problem</h2>
             <p>
-              Managing safety and quality across large construction sites presents a significant operational challenge. Project managers
-              must monitor worker safety practices, track construction progress, and identify potential issues before they cause delays
+              Managing safety and quality across large construction sites is a complex operational challenge. Project managers
+              must monitor worker safety practices, stick to timelines, and identify potential issues before they cause delays
               or hazards. Traditionally, these responsibilities rely heavily on manual site inspections and periodic reporting from
               field teams.
             </p>
             <p>
               A commercial construction company faced these challenges across several active projects. Multiple crews were working
-              simultaneously across large sites, often in areas that were difficult to monitor continuously. While site supervisors
+              simultaneously across large sites in areas that were difficult to monitor continuously. While site supervisors
               and safety officers conducted regular inspections, it was difficult to maintain consistent visibility across the entire
               construction environment.
             </p>
             <p>
               The organization installed fixed cameras around construction sites and occasionally used drones to capture aerial
               imagery. These tools generated valuable visual data, but the images were largely reviewed manually (or often ignored).
-              With thousands of images captured each week, identifying safety risks or progress issues required significant time and
-              effort.
+              With thousands of images captured each week, monitoring progress and safety was infeasible. 
             </p>
             <p>
               In addition, field engineers frequently captured photos using mobile phones during routine inspections. These images
-              documented site conditions and potential problems but were often stored in separate systems or shared informally through
-              messaging platforms. As a result, the organization lacked a unified way to analyze visual information across its
-              projects.
+              documented site conditions and potential problems but were often in separate systems or shared informally through
+              messaging apps. The organization lacked a consistent way to analyze images and video.
             </p>
             <p class="rounded-lg border-l-4 border-slate-400 bg-slate-100 p-4 font-medium text-slate-700">
               The company needed a system that could continuously monitor construction activity, identify potential safety risks, and
-              help project managers understand progress across multiple sites without relying entirely on manual inspection.
+              help project managers track progress without relying entirely on manual inspection.
             </p>
           </section>
 
@@ -193,66 +191,56 @@
               QSC developed a computer vision system designed to analyze images captured throughout the construction workflow.
             </p>
             <p>
-              The system integrated imagery from several sources, including fixed site cameras, drone surveys, and photographs
-              collected by field engineers using mobile devices. These images were routed through a centralized processing pipeline
-              where they could be analyzed consistently and stored in a unified data platform.
+              The system integrates imagery from several sources, including fixed site cameras, drone surveys, and photographs
+              collected by mobile devices. These images are routed through a centralized processing pipeline
+              where they are analyzed consistently and stored properly.
             </p>
             <p>
               Using these image datasets, QSC developed computer vision models capable of detecting key objects and activities
-              relevant to construction operations. Deep learning techniques were used to train models that could identify workers,
+              relevant to construction operations. Deep learning techniques were used to train models that can identify workers,
               equipment, safety gear, and construction materials within images.
             </p>
             <p>
-              Object detection models allowed the system to recognize conditions such as workers entering restricted areas, missing
-              safety equipment, or unusual equipment behavior. At the same time, anomaly detection techniques were used to identify
+              Object detection models allow the system to recognize conditions such as workers entering restricted areas, missing
+              safety equipment, or unusual equipment behavior. Anomaly detection models identify
               unexpected visual patterns that might indicate emerging issues on the construction site.
             </p>
             <p>
-              By analyzing images from fixed cameras and drone flights, the system could also monitor visible changes in construction
-              areas over time. This helped project managers track whether construction activities were progressing as expected and
-              identify areas that required attention.
+              By analyzing images from fixed cameras and drone flights, the system can also monitor visible changes in construction
+              progress over time. This helps project managers track whether construction activities are progressing as expected and
+              identify areas that require attention.
             </p>
             <p>
               In addition to the modeling components, QSC developed software tools to make the system usable for project teams.
             </p>
             <p>
-              A desktop application provided project managers with a centralized dashboard where they could monitor site activity,
-              review flagged images, and explore historical visual data from multiple projects. This allowed teams to investigate
+              A desktop application provides project managers with a centralized dashboard where they monitor site activity,
+              review flagged images, and explore historical visual data from multiple projects. This allows teams to investigate
               potential issues and compare conditions across different areas of a site.
-            </p>
-            <p>
-              A mobile application supported engineers and safety officers working directly in the field. Through the mobile
-              interface, users could capture new images of site conditions and upload them directly into the monitoring system. These
-              images became part of the training dataset and helped improve the computer vision models as new scenarios were
-              encountered.
-            </p>
-            <p>
-              Together, the modeling framework and software tools created a unified visual monitoring system that combined automated
-              analysis with field observations from site personnel.
             </p>
           </section>
 
           <section class="space-y-4">
             <h2 class="text-2xl font-bold text-slate-900">Decision Support in Practice</h2>
             <p>
-              Once deployed, the system provided construction teams with a continuous view of site activity and safety conditions.
+              The system provides construction teams with a continuous view of site activity and safety conditions.
             </p>
             <p>
-              Images captured by fixed cameras and drones were analyzed automatically as they entered the system. When potential
-              safety risks or unusual conditions were detected, the system flagged the relevant images, highlighted them in the
-              monitoring dashboard, and sent alerts to management.
+              Images captured by fixed cameras and drones are analyzed automatically as they enter the system. When potential
+              safety risks or unusual conditions are detected, the system flags the relevant images, highlights them in the
+              monitoring dashboard, and sends alerts to managers.
             </p>
             <p>
-              The system also helped teams track construction progress by identifying changes in materials, equipment placement, and
-              structural development across different areas of the site. By reviewing visual data collected over time, managers could
-              verify whether work was progressing according to schedule and improve timeline planning for future projects.
+              The software also helps teams track construction progress by identifying changes in materials, equipment placement, and
+              structural development across different areas of the site. Managers verify that the project is on schedule and use the 
+              information to improve timeline planning for future projects.
             </p>
             <p>
-              Field engineers and safety officers used the mobile application to capture additional images during inspections. These
-              images provided context for flagged events and helped expand the dataset used to train the computer vision models.
+              Field engineers and safety officers use the mobile application to capture additional images during inspections. These
+              images provided context for flagged events and help expand the dataset used to train the computer vision models.
             </p>
             <p>
-              By combining automated image analysis with on-site observations, the system allowed construction teams to monitor safety
+              By combining automated image analysis with on-site observations, the system allows construction teams to monitor safety
               conditions and project progress more consistently across large and complex worksites.
             </p>
           </section>
@@ -260,27 +248,27 @@
           <section class="space-y-4">
             <h2 class="text-2xl font-bold text-slate-900">Outcome</h2>
             <p>
-              The most significant improvement was the organization’s ability to maintain consistent visibility across its
-              construction sites.
+              The organization gained the ability to monitor processes across construction sites. They have a better understanding
+              of bottlenecks and safety concerns. 
             </p>
             <p>
-              Instead of relying entirely on periodic inspections, the company gained a system that continuously analyzed visual data
-              from cameras, drones, and field observations. Potential safety risks could be identified earlier, and project managers
-              could investigate issues before they escalated into larger problems.
+              Instead of relying entirely on periodic inspections, the company has a system that continuously analyzes visual data
+              from cameras, drones, and field observations. Potential safety risks are identified earlier, and project managers
+              investigate issues before they escalate into larger problems.
             </p>
             <p>
-              The integrated software platform also improved coordination between project managers, safety officers, and field
-              engineers. Images captured across the site were available in a single system, making it easier to review conditions,
+              The integrated software platform improves coordination between project managers, safety officers, and field
+              engineers. Images captured across the site are available in a single system, making it easier to review conditions,
               investigate incidents, and track changes over time.
             </p>
             <p>
-              Equally important, the mobile application allowed field teams to contribute directly to the monitoring system by
-              capturing images during inspections. These observations strengthened the system’s ability to recognize new conditions
-              and provided valuable context for construction managers.
+              Equally important, the mobile application allows crew members to contribute directly to the monitoring system by
+              capturing images during inspections. These observations strengthen the system’s ability to recognize new conditions
+              and provide valuable context for construction managers.
             </p>
             <p class="rounded-lg border-l-4 border-green-500 bg-green-50 p-4 font-medium text-green-900">
-              For the organization, the result was not simply a new inspection tool. It was a unified visual monitoring system that
-              helped teams maintain safer construction sites while improving visibility into project progress.
+              For the organization, the result is not simply a new inspection tool. It is a unified visual monitoring system that
+              helps teams maintain safer construction sites while improving visibility into project progress.
             </p>
           </section>
 
@@ -292,7 +280,13 @@
           </section>
         </article>
       </div>
+      <div class="pt-8 text-center">
+        <a href="case_studies.html" class="inline-flex items-center rounded-lg border border-green-600 px-5 py-2.5 text-sm font-semibold text-green-700 transition hover:bg-green-600 hover:text-white">
+          View All QSC Case Studies
+        </a>
+      </div>
     </section>
+
 
     <section class="py-16 px-6 bg-slate-50 border-t border-slate-200">
       <div class="max-w-4xl mx-auto text-center">

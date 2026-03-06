@@ -127,8 +127,8 @@
         <p class="text-sm uppercase tracking-wide text-green-800 font-semibold mb-3">Case Study</p>
         <h1 class="text-4xl font-bold mb-4">Integrating Sensor Data for Real-Time Operational Insight</h1>
         <p class="text-lg text-slate-700 leading-relaxed">
-          QSC integrated fragmented IoT sensor systems for an agricultural food production facility, enabling
-          real-time visibility, anomaly detection, and faster operational decisions through desktop, mobile,
+          QSC integrated IoT sensor systems for an agricultural food production facility, enabling
+          real-time visibility, AI, and faster operational decisions through desktop, mobile,
           and chatbot interfaces.
         </p>
       </div>
@@ -138,7 +138,7 @@
       <div class="max-w-5xl mx-auto">
         <article class="text-gray-800 leading-relaxed space-y-10">
           <p class="text-lg text-slate-700">
-          Operations teams need unified software with data collection, real-time views of sensor data, and the ability to detect issues early and respond faster.
+          Operations teams need Comprehensive Data Solutions: software with data collection, AI, real-time views of sensor data, and the ability to detect issues early.
         </p>
         <div class="grid gap-4 md:grid-cols-3">
           <div class="rounded-xl bg-green-50 border border-green-200 p-4">
@@ -147,11 +147,11 @@
           </div>
           <div class="rounded-xl bg-blue-50 border border-blue-200 p-4">
             <p class="text-xs font-semibold uppercase tracking-wide text-blue-800">Core challenge</p>
-            <p class="mt-1 font-medium text-slate-800">Fragmented sensor systems and limited real-time visibility</p>
+            <p class="mt-1 font-medium text-slate-800">Lost productivity due to machine downtime</p>
           </div>
           <div class="rounded-xl bg-amber-50 border border-amber-200 p-4">
             <p class="text-xs font-semibold uppercase tracking-wide text-amber-800">Approach</p>
-            <p class="mt-1 font-medium text-slate-800">Unified data pipeline + anomaly detection + multi-interface access</p>
+            <p class="mt-1 font-medium text-slate-800">Unified data pipeline + AI integration</p>
           </div>
         </div>
 
@@ -164,41 +164,37 @@
             operating loads.
           </p>
           <p>
-            Over time, the organization had deployed many of these sensors to address specific operational needs. However, the
-            resulting data systems had grown fragmented. Environmental data, equipment telemetry, and operational records were stored
+            Over time, the organization had deployed many of these sensors to address specific operational needs. Environmental data, equipment telemetry, and operational records were stored
             in separate systems that were difficult to access and analyze together.
           </p>
           <p>
             Operators and managers could access individual sensor feeds, but they lacked a unified view of the facility. Diagnosing
             operational problems often required manually reviewing multiple dashboards or exporting data from different systems.
-            This made it difficult to detect emerging issues early, particularly when problems involved interactions between equipment
-            performance and environmental conditions.
+            This made it difficult to detect emerging issues early. 
           </p>
           <p>
             The lack of real-time visibility also slowed operational decision-making. For example, unexpected humidity fluctuations
             in storage areas could affect product quality, while abnormal equipment behavior might signal the early stages of
-            mechanical failure. Without an integrated monitoring system, identifying these issues required significant manual effort
-            and often occurred after problems had already escalated.
+            mechanical failure. Machines broke down, causing delays and lost revenue. 
           </p>
           <p class="rounded-lg border-l-4 border-slate-400 bg-slate-100 p-4 font-medium text-slate-700">
             The organization needed a way to bring its sensor data together into a single operational system that could provide
-            real-time monitoring, early anomaly detection, and easy access to information for both facility managers and field technicians.
+            real-time monitoring, predict machine failure, and allow easy access to information for facility managers.
           </p>
         </section>
 
         <section class="space-y-4">
           <h2 class="text-2xl font-bold text-slate-900">QSC’s Modeling Approach</h2>
           <p>
-            QSC designed and implemented a unified data architecture that integrated sensor streams across the facility into a single
-            monitoring platform.
+            QSC provided a Comprehensive Data Solution: an integrated system for data collection, AI, and reporting. 
+            
           </p>
           <p>
-            The system collected data from temperature, humidity, and equipment sensors throughout the production and storage
-            environment. These data streams were ingested into a centralized data pipeline where they were standardized,
-            timestamped, and stored in a scalable time-series database.
+            The system collected data from the IoT sensors throughout the production and storage
+            environment. These data streams were ingested into a centralized data pipeline where they were standardized and stored in a scalable database.
           </p>
           <p>
-            With the data architecture in place, QSC developed monitoring models to identify unusual patterns in sensor readings.
+            With the data architecture in place, QSC developed machine learning monitoring models to identify problematic patterns in sensor readings.
             Instead of relying solely on fixed thresholds, the system incorporated statistical anomaly detection techniques that
             evaluated how current sensor values compared with expected patterns based on historical data.
           </p>
@@ -207,24 +203,24 @@
             gradual shifts in equipment vibration patterns or unexpected environmental fluctuations in specific storage areas.
           </p>
           <p>
-            Equally important was the design of the user-facing software. QSC developed a custom desktop application that allowed
-            facility managers to visualize conditions across the entire operation. The interface provided dashboards for environmental
+            QSC also developed a custom desktop application that allowed
+            facility managers to visualize conditions across the entire operation. The interface provides dashboards for environmental
             conditions, equipment status, and historical trends.
           </p>
           <p>
             To support field operations, a mobile app was developed for technicians working across the facility. The mobile interface
-            provided quick access to sensor readings, alerts, and equipment status while technicians were on the production floor or
-            in storage areas.
+            provides quick access to sensor readings, alerts, and equipment status.
           </p>
           <p>
-            In addition, QSC implemented a conversational interface that allowed users to interact directly with the monitoring system
-            through a custom chatbot. Users could ask questions such as:
+            In addition, QSC implemented a chatbot that allowed users to interact directly with the monitoring system. 
+            Users can ask questions such as:
           </p>
 
           <ul class="space-y-3">
             <li class="flex gap-3">
               <span class="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-green-600"></span>
-              <span>Which storage areas currently have abnormal humidity levels?</span>
+              <span>Given the weather forecast, what is the best time of day to service an implement?
+              </span>
             </li>
             <li class="flex gap-3">
               <span class="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-green-600"></span>
@@ -232,39 +228,39 @@
             </li>
             <li class="flex gap-3">
               <span class="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-green-600"></span>
-              <span>What were the temperature conditions in Storage Area 3 yesterday?</span>
+              <span>What were the top three drivers of equipment failure last Winter?</span>
             </li>
           </ul>
 
           <p>
-            The chatbot translated these questions into queries against the underlying data system and returned clear, concise responses.
-            This allowed operators to access information quickly without requiring specialized knowledge of the underlying infrastructure.
+            The chatbot translates these questions into queries against the underlying data system to return clear responses.
+            
           </p>
         </section>
 
         <section class="space-y-4">
           <h2 class="text-2xl font-bold text-slate-900">Decision Support in Practice</h2>
           <p>
-            Once deployed, the integrated monitoring system provided a unified operational view of the facility.
+            The integrated monitoring system provides a unified operational view of the facility.
           </p>
           <p>
-            Managers could monitor environmental conditions across storage and production areas in real time, while equipment telemetry
-            provided continuous visibility into machine performance. When unusual patterns emerged, the anomaly detection system flagged
-            the relevant sensors, highlighted them in dashboards, and sent alerts to relevant personnel.
+            Managers monitor environmental conditions across storage and production areas in real time, while equipment telemetry
+            provides continuous visibility into machine performance. When unusual patterns emerge, the AI system flags
+            the relevant sensors, highlights them in dashboards, and sends alerts to relevant personnel.
           </p>
           <p>
-            This allowed operators to investigate potential issues earlier and understand how conditions across different parts of the
-            facility were related. For example, if abnormal humidity levels were detected in a storage area, managers could examine
-            recent equipment activity or ventilation conditions that might have contributed to the change.
+            This allows operators to investigate potential issues earlier and understand how conditions across different parts of the
+            facility are related. For example, if abnormal humidity levels are detected in a storage area, managers can examine
+            recent equipment activity that might have contributed to the change.
           </p>
           <p>
-            Technicians working on the production floor used the mobile application to review sensor data directly at the point of
-            inspection. Instead of returning to a control room to review system dashboards, they could immediately see the relevant
+            Technicians use the mobile app to review sensor data directly at the point of
+            inspection. Instead of returning to a control room to review system dashboards, they immediately see the relevant
             readings for nearby equipment and environmental sensors.
           </p>
           <p>
-            The chatbot interface further simplified access to information. Operators could quickly ask questions about current system
-            conditions or recent trends without navigating multiple software tools.
+            The chatbot interface further simplifies access to information. Operators can quickly ask questions about current system
+            conditions or recent trends.
           </p>
           <p>
             Together, these tools transformed the facility’s sensor network from a collection of isolated data streams into a coherent
@@ -275,15 +271,16 @@
         <section class="space-y-4">
           <h2 class="text-2xl font-bold text-slate-900">Outcome</h2>
           <p>
-            The most significant improvement was the ability to see and interpret operational conditions across the facility in real time.
+            The most significant improvements are reduced mechanical failure, decreased wasted product,
+            and increased revenue. 
           </p>
           <p>
-            By integrating environmental and equipment sensor data into a unified system, the organization gained a clearer understanding
+            By integrating environmental and equipment sensor data, the organization gained a clearer understanding
             of how different parts of the operation interacted. Emerging issues could be identified earlier, and operators could investigate
             potential causes before problems affected production or product quality.
           </p>
           <p>
-            The new system also reduced the time required to access and interpret sensor data. Instead of manually reviewing multiple
+            The new system also reduced the time required to interpret sensor data. Instead of manually reviewing multiple
             dashboards or exporting datasets, users could obtain relevant information directly through the desktop application, mobile
             interface, or chatbot.
           </p>
@@ -300,13 +297,19 @@
           </section>
         </article>
       </div>
+      <div class="pt-8 text-center">
+        <a href="case_studies.html" class="inline-flex items-center rounded-lg border border-green-600 px-5 py-2.5 text-sm font-semibold text-green-700 transition hover:bg-green-600 hover:text-white">
+          View All QSC Case Studies
+        </a>
+      </div>
     </section>
+
 
     <section class="py-16 px-6 bg-slate-50 border-t border-slate-200">
       <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-3xl font-bold text-slate-900 mb-4">Need integrated operational monitoring?</h2>
         <p class="text-lg text-slate-700 mb-8">
-          QSC helps organizations turn fragmented sensor and operational data into practical decision support systems.
+          QSC provides Comprehensive Data Solutions to turn fragmented data into operational support systems.
         </p>
         <a href="contact.html" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-xl shadow">
           Book a Free 30-Minute Data &amp; AI Strategy Assessment
