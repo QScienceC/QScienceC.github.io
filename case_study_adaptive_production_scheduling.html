@@ -143,15 +143,15 @@
           <div class="grid gap-4 md:grid-cols-3">
             <div class="rounded-xl bg-green-50 border border-green-200 p-4">
               <p class="text-xs font-semibold uppercase tracking-wide text-green-800">Industry</p>
-              <p class="mt-1 font-medium text-slate-800">Discrete manufacturing operations</p>
+              <p class="mt-1 font-medium text-slate-800">Manufacturing operations</p>
             </div>
             <div class="rounded-xl bg-blue-50 border border-blue-200 p-4">
               <p class="text-xs font-semibold uppercase tracking-wide text-blue-800">Core challenge</p>
-              <p class="mt-1 font-medium text-slate-800">Real-time scheduling under dynamic shop-floor disruptions</p>
+              <p class="mt-1 font-medium text-slate-800">Real-time scheduling under dynamic shop-floor conditions</p>
             </div>
             <div class="rounded-xl bg-amber-50 border border-amber-200 p-4">
               <p class="text-xs font-semibold uppercase tracking-wide text-amber-800">Approach</p>
-              <p class="mt-1 font-medium text-slate-800">Reinforcement learning + simulation-based policy optimization</p>
+              <p class="mt-1 font-medium text-slate-800">Reinforcement learning for policy optimization</p>
             </div>
           </div>
 
@@ -160,12 +160,12 @@
             <p>
               Manufacturing environments often involve complex scheduling decisions that must balance competing objectives:
               production throughput, machine utilization, inventory levels, and delivery deadlines. In many facilities,
-              these decisions are still made using static scheduling rules or manual adjustments by experienced planners.
+              decisions are still made using static scheduling rules or manual adjustments by experienced planners.
             </p>
             <p>
-              A manufacturing company producing specialized industrial components faced exactly this challenge. Orders
+              A manufacturing company producing specialized industrial components was overhelmed by this process. Orders
               arrived continuously from multiple customers, and production required coordinating several machines with
-              different processing times and setup requirements. Small disruptions, such as a machine slowdown, delayed
+              different processing times and setup requirements. Small disruptions, such as a machine breakdown, delayed
               materials, or a sudden increase in demand, would ripple through the schedule and reduce production efficiency.
             </p>
             <p>
@@ -188,7 +188,7 @@
           <section class="space-y-4">
             <h2 class="text-2xl font-bold text-slate-900">QSC’s Modeling Approach</h2>
             <p>
-              To address this problem, QSC developed a reinforcement learning-based scheduling framework.
+              To address this problem, QSC developed a reinforcement learning-based scheduling framework that reacts to conditions in real time.
             </p>
             <p>
               Reinforcement learning is well suited to operational problems where decisions must be made repeatedly over
@@ -196,16 +196,16 @@
               to better outcomes as it interacts with a simulated version of the production environment.
             </p>
             <p>
-              In this case, the environment represented the factory’s production system, including machines, job queues,
-              processing times, and technician assignments. The reinforcement learning agent observed the state of the
-              system, such as which jobs were waiting, which machines were available, and how close orders were to their
+              In this case, the environment represents the factory’s production system, including machines, job queues,
+              processing times, and technician assignments. The reinforcement learning agent observes the state of the
+              system, such as which jobs are waiting, which machines are available, and how close orders are to their
               delivery deadlines.
             </p>
             <p>
-              At each step, the agent selected an action, such as assigning a job to a machine or choosing the next
-              production task. After each decision, the system state updated and the agent received a reward based on
-              operational objectives such as reducing delays, improving machine utilization, and minimizing excessive job
-              switching.
+              At each step, the agent selects an action, such as assigning a job to a machine or choosing the next
+              production task. After each decision, the system state updates and the agent receives a reward (or penalty). 
+              Rewards arebased on
+              operational objectives such as reducing delays, improving machine utilization, and meeting product demands.
             </p>
             <p>
               Through millions of simulated production runs, the model learned scheduling policies that balanced these
@@ -213,31 +213,29 @@
             </p>
             <p>
               Rather than producing a single static schedule, the trained agent effectively learned a decision policy: a
-              set of rules that could adapt scheduling decisions in real time as production conditions changed.
+              set of rules that adapt scheduling decisions in real time as production conditions change.
             </p>
           </section>
 
           <section class="space-y-4">
             <h2 class="text-2xl font-bold text-slate-900">Decision Support in Practice</h2>
             <p>
-              Once trained, the reinforcement learning model was used as a decision-support tool for production planners.
+              The reinforcement learning model is used as a decision-support tool for production planners.
             </p>
             <p>
-              The system evaluated potential scheduling decisions and suggested actions that would improve overall system
-              performance based on the learned policy. Planners could also explore different production scenarios by
+              The system evaluates potential scheduling decisions and suggests actions that improve overall system
+              performance based on the learned policy. Planners can also explore different production scenarios by
               adjusting factors such as demand levels, machine availability, or order priorities.
             </p>
             <p>
-              This allowed the operations team to better understand the downstream effects of scheduling choices. For
-              example, they could see how prioritizing a specific order might affect machine utilization or lead times
-              across the rest of the system.
+              This allows the operations team to better understand the downstream effects of scheduling choices. For
+              example, they can see how prioritizing a specific order might affect machine or technician utilization
+              across the system.
             </p>
             <p>
-              Importantly, the model did not replace human decision-makers. Instead, it provided a structured way to
+              The model does not replace human decision-makers; it provides a structured way to
               evaluate scheduling options under complex and changing conditions.
-            </p>
-            <p>
-              By combining the learned scheduling policy with the expertise of production planners, the team gained a
+              By combining the learned scheduling policy with the expertise of production planners, the team has a
               more consistent and adaptive approach to managing the production schedule.
             </p>
           </section>
@@ -245,24 +243,24 @@
           <section class="space-y-4">
             <h2 class="text-2xl font-bold text-slate-900">Outcome</h2>
             <p>
-              The most significant improvement was the ability to respond more effectively to changing production
+              The manufacturer now has the ability to respond more effectively to changing production
               conditions.
             </p>
             <p>
-              Rather than relying solely on static rules, the operations team now had a scheduling framework that could
-              adapt to fluctuations in demand, machine availability, and job arrivals. The reinforcement learning model
-              provided guidance on how to prioritize jobs and allocate machine time while balancing competing operational
+              Rather than relying solely on static rules, the operations team has a scheduling framework that
+              adapts to fluctuations in demand, machine availability, and job arrivals. The reinforcement learning model
+              provides guidance on how to prioritize jobs and allocate machine time while balancing competing operational
               goals.
             </p>
             <p>
-              As a result, planners gained clearer visibility into the tradeoffs involved in scheduling decisions. Instead
-              of reacting to disruptions after they occurred, they could evaluate scheduling strategies in advance and
-              understand how different choices would influence overall system performance.
+              Management has clearer visibility into the tradeoffs involved in scheduling decisions. Instead
+              of reacting to disruptions after they occur, they evaluate scheduling strategies in advance and
+              understand how different choices influence overall system performance.
             </p>
             <p class="rounded-lg border-l-4 border-green-500 bg-green-50 p-4 font-medium text-green-900">
-              For the organization, the value of the approach was not simply a more advanced optimization technique. It
-              was the ability to support production decisions with a model that continuously learned from simulated
-              operational scenarios and translated those insights into practical scheduling guidance.
+              The value of the approach is not simply a more advanced optimization technique. It
+              is the ability to support production decisions with a model that continuously learns from simulated
+              operational scenarios and translates those insights into practical scheduling guidance.
             </p>
           </section>
 
