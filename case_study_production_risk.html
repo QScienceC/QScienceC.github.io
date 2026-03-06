@@ -149,7 +149,7 @@
             </div>
             <div class="rounded-xl bg-blue-50 border border-blue-200 p-4">
               <p class="text-xs font-semibold uppercase tracking-wide text-blue-800">Core challenge</p>
-              <p class="mt-1 font-medium text-slate-800">Production decisions under demand uncertainty</p>
+              <p class="mt-1 font-medium text-slate-800">Production decisions with uncertain demand</p>
             </div>
             <div class="rounded-xl bg-amber-50 border border-amber-200 p-4">
               <p class="text-xs font-semibold uppercase tracking-wide text-amber-800">Approach</p>
@@ -163,9 +163,7 @@
               A pharmaceutical manufacturer was preparing production plans for
               high-value products with long lead times and strict manufacturing constraints.
               Production occurred in large batches, and changing course
-              was costly and slow. At the same time, demand for the product varied significantly
-              across regions due to changes in prescribing patterns, supply chain delays, and
-              regulatory differences between markets.
+              was costly and slow. At the same time, demand for the product varied over time.
             </p>
             <p>
               The company’s operations team relied on traditional demand forecasts to guide
@@ -179,30 +177,30 @@
               would increase over the next quarter, but the team lacked insight into how
               confident they should be in that prediction. If production was increased too
               aggressively, the company risked producing excess inventory. With limited shelf life
-              some product was disgarded as waste. If production remained too
+              some product was disgarded as waste. When production was too
               conservative, shortages could occur, disrupting supply to customers.
             </p>
             <p class="rounded-lg border-l-4 border-slate-400 bg-slate-100 p-4 font-medium text-slate-700">
-              The challenge was not simply forecasting demand more accurately. The
-              real problem was a lack of uncertainty estimates in the forecasts.
+              More accurate forecasts would not solve the problem. 
+              This company also needed to understand the uncertainty in the estimates. 
             </p>
           </section>
 
           <section class="space-y-4">
             <h2 class="text-2xl font-bold text-slate-900">QSC’s Modeling Approach</h2>
             <p>
-              To address this, QSC’s modeling approach focused on estimating the range of plausible
-              demand outcomes, rather than producing a single point forecast. Using historical
-              sales data and market indicators, a probabilistic forecasting framework was developed
-              to estimate how demand might evolve over time. Bayesian forecasting techniques were
+              To address this, QSC’s modeling approach focused on forecasting the range of plausible
+              demand outcomes, rather than producing a single point estimate. Using historical
+              sales data and market indicators, we developed a probabilistic forecasting framework
+              to estimate how demand might evolve over time. Hierarchical Bayesian modeling techniques were
               used to propogate uncertainty from all aspects of the data and model into estimates of 
               predicted demand.
             </p>
             <p>
               These forecasts allow the team to evaluate multiple possible demand scenarios and
               quantify the likelihood of each outcome. Instead of asking whether demand next
-              quarter will be, for example, 10,000 units, planners can examine the probability
-              that demand will exceed certain thresholds relevant to production decisions.
+              quarter will be, for example, 10,000 units, planners can evaluate the distribution 
+              of projected demand.
             </p>
             <p>
               This shift in perspective proved important. Production planning decisions can now
@@ -210,14 +208,17 @@
               that planned production levels will lead to shortages, or alternatively the
               probability that excess inventory will accumulate if demand falls below expectations.
             </p>
+            <p class="rounded-lg border-l-4 border-slate-400 bg-slate-100 p-4 font-medium text-slate-700">
+              Instead of point estimates of future demand, models provide a range of predictions with uncertainty estimates. 
+            </p>
           </section>
 
           <section class="space-y-4">
             <h2 class="text-2xl font-bold text-slate-900">Decision Support in Practice</h2>
             <p>
-              To support these decisions, simple scenario simulations were developed that connect
-              demand uncertainty to operational constraints such as batch sizes, manufacturing lead
-              times, and inventory policies. These simulations help the team explore questions
+              To support production decisions, the software presents the connection between
+              demand uncertainty and operational constraints such as production schedules, 
+              equipment maintenance, and batch testing policies. These simulations help the team explore questions
               like:
             </p>
 
@@ -228,7 +229,7 @@
               </li>
               <li class="flex gap-3">
                 <span class="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-green-600"></span>
-                <span>How sensitive is this risk to changes in production timing?</span>
+                <span>What is the shortage risk if sales increase by 10%?</span>
               </li>
               <li class="flex gap-3">
                 <span class="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-green-600"></span>
@@ -240,7 +241,7 @@
               Rather than relying on a single forecast, the operations team can now see how
               different production strategies perform across a range of plausible demand outcomes.
             </p>
-            <p>
+            <p class="rounded-lg border-l-4 border-slate-400 bg-slate-100 p-4 font-medium text-slate-700">
               This approach does not eliminate uncertainty. Demand for products will always involve
               factors that cannot be predicted precisely. What changed is the ability to reason
               about that uncertainty in a scientific way.
@@ -251,19 +252,17 @@
             <h2 class="text-2xl font-bold text-slate-900">Outcome</h2>
             <p>
               With probabilistic forecasts and scenario analysis in place, the production planning
-              process shifted from attempting to predict the future exactly to managing operational
+              process shifted from attempting precise predictions to managing operational
               risk more explicitly. Decisions about production increases, delays, or inventory
-              buffers can be tied directly to the likelihood of different demand outcomes.
+              buffers can be tied directly to the probability of different demand outcomes.
             </p>
             <p>
-              For the operations team, the most valuable outcome is not simply a more
-              sophisticated model, but clearer visibility into the risks associated with each
-              production decision. Instead of debating whether a forecast is “correct,” planners
-              focus on how different decisions performed under uncertainty.
+              For the operations team, the most valuable outcome is clearer visibility into the risks associated with each
+              production decision. Managers can focus on production plans on minimizing over- or underprediction risk.
             </p>
             <p class="rounded-lg border-l-4 border-green-500 bg-green-50 p-4 font-medium text-green-900">
               This shift, from point forecasts to probabilistic demand modeling, allows the team to
-              plan production with greater confidence and fewer surprises.
+              plan production with greater understanding.
             </p>
           </section>
 
@@ -286,8 +285,7 @@
       <div class="max-w-3xl mx-auto">
         <h2 class="text-3xl font-bold mb-4">Need Better Visibility Into Planning Risk?</h2>
         <p class="text-lg mb-6">
-          We help operations teams build forecasting and decision-support tools designed for
-          uncertainty, not just average outcomes.
+          We help operations teams build forecasting and decision-support tools to help understand uncertainty.
         </p>
         <a href="contact.html" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-xl shadow">
           Book a Free 30-Minute Operational AI Assessment
