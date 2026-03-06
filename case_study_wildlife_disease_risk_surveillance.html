@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLH2Y342RP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-SLH2Y342RP');
+  </script>
+  <!-- End Google tag -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Study: Mapping Wildlife Disease Risk to Guide Surveillance | QSC</title>
+
+  <!-- Begin Descriptive Content -->
+  <meta name="description" content="Read how QSC helped a wildlife agency prioritize disease surveillance across watersheds using probabilistic spatial risk modeling." />
+  <meta name="keywords" content="case study, wildlife disease, spatial risk modeling, epidemiology, surveillance planning, watershed monitoring" />
+  <meta name="author" content="Quantitative Science Consulting" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Case Study: Mapping Wildlife Disease Risk to Guide Surveillance" />
+  <meta property="og:description" content="A representative QSC case study on using spatial disease risk models to target wildlife surveillance where it is most informative." />
+  <meta property="og:url" content="https://qsc.earth/case_study_wildlife_disease_risk_surveillance.html" />
+  <meta property="og:image" content="https://qsc.earth/images/logo.webp" />
+  <meta property="og:type" content="article" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Case Study: Mapping Wildlife Disease Risk to Guide Surveillance" />
+  <meta name="twitter:description" content="How spatial risk mapping helped a wildlife agency target limited disease surveillance resources." />
+  <meta name="twitter:image" content="https://qsc.earth/images/logo.webp" />
+
+  <link rel="canonical" href="https://qsc.earth/case_study_wildlife_disease_risk_surveillance.html" />
+  <!-- End Descriptive Content -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="images/logo.webp" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Case Study: Mapping Wildlife Disease Risk to Guide Surveillance",
+      "description": "A representative QSC engagement in wildlife disease surveillance planning using probabilistic spatial risk modeling.",
+      "author": {
+        "@type": "Organization",
+        "name": "Quantitative Science Consulting",
+        "url": "https://qsc.earth"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Quantitative Science Consulting",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://qsc.earth/images/logo.webp"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://qsc.earth/case_study_wildlife_disease_risk_surveillance.html"
+      },
+      "inLanguage": "en",
+      "keywords": [
+        "case study",
+        "wildlife disease",
+        "spatial epidemiology",
+        "risk mapping",
+        "surveillance planning"
+      ]
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-3">
+        <img src="images/logo.webp" alt="QSC logo" class="h-10 w-10" />
+        <span class="text-xl font-bold text-gray-800">Quantitative Science Consulting</span>
+      </a>
+
+      <button id="menu-toggle" class="md:hidden text-gray-800 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <nav id="menu" class="hidden md:flex md:space-x-6 text-sm font-semibold">
+        <a href="index.html" class="hover:text-green-600">Home</a>
+        <a href="about.html" class="hover:text-green-600">About</a>
+        <a href="services.html" class="hover:text-green-600">Services</a>
+        <a href="mission.html" class="hover:text-green-600">Mission</a>
+        <a href="blog.html" class="hover:text-green-600">Blog</a>
+        <a href="contact.html" class="hover:text-green-600">Contact</a>
+        <a href="faq.html" class="hover:text-green-600">FAQ</a>
+      </nav>
+
+      <nav id="mobile-menu" class="hidden flex-col space-y-2 px-4 pt-2 pb-4 text-sm font-semibold bg-white shadow-md md:hidden">
+        <a href="index.html" class="block hover:text-green-600">Home</a>
+        <a href="about.html" class="block hover:text-green-600">About</a>
+        <a href="services.html" class="block hover:text-green-600">Services</a>
+        <a href="mission.html" class="block hover:text-green-600">Mission</a>
+        <a href="blog.html" class="block hover:text-green-600">Blog</a>
+        <a href="contact.html" class="block hover:text-green-600">Contact</a>
+        <a href="faq.html" class="block hover:text-green-600">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const mobile_menu = document.getElementById('mobile-menu');
+
+    toggle.addEventListener('click', () => {
+      mobile_menu.classList.toggle('hidden');
+    });
+  </script>
+  <!-- End Header -->
+
+  <main>
+    <section class="bg-gradient-to-br from-green-100 to-blue-100 py-16 px-6">
+      <div class="max-w-4xl mx-auto">
+        <p class="text-sm uppercase tracking-wide text-green-800 font-semibold mb-3">Case Study</p>
+        <h1 class="text-4xl font-bold mb-4">Mapping Wildlife Disease Risk to Guide Surveillance</h1>
+        <p class="text-lg md:text-xl text-gray-700">
+          How QSC built spatial risk maps to help a wildlife agency focus limited monitoring resources where disease emergence is most likely.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-14 px-6 bg-slate-50">
+      <div class="max-w-5xl mx-auto">
+        <article class="text-gray-800 leading-relaxed space-y-10">
+          <p class="text-lg text-slate-700">
+            Disease surveillance is strongest when environmental patterns, host movement, and uncertainty in test results are integrated into a single spatial decision framework.
+          </p>
+
+          <div class="grid gap-4 md:grid-cols-3">
+            <div class="rounded-xl bg-green-50 border border-green-200 p-4">
+              <p class="text-xs font-semibold uppercase tracking-wide text-green-800">Industry</p>
+              <p class="mt-1 font-medium text-slate-800">Wildlife disease surveillance and natural resource management</p>
+            </div>
+            <div class="rounded-xl bg-blue-50 border border-blue-200 p-4">
+              <p class="text-xs font-semibold uppercase tracking-wide text-blue-800">Core challenge</p>
+              <p class="mt-1 font-medium text-slate-800">Targeting limited field sampling across multiple watersheds under uncertain disease spread</p>
+            </div>
+            <div class="rounded-xl bg-amber-50 border border-amber-200 p-4">
+              <p class="text-xs font-semibold uppercase tracking-wide text-amber-800">Approach</p>
+              <p class="mt-1 font-medium text-slate-800">Probabilistic spatial disease risk modeling with connectivity and test-error correction</p>
+            </div>
+          </div>
+
+          <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-slate-900">The Problem</h2>
+            <p>
+              It is difficult to predict how wildlife diseases will spread across landscapes. Environmental conditions, host movement patterns, and landscape connectivity all affect how pathogens move through wildlife populations. For managers and conservation agencies, understanding where disease risk is highest is critical for designing effective monitoring programs.
+            </p>
+            <p>
+              A wildlife management agency needed to improve how it monitored a potentially emerging wildlife disease across several watersheds. Field teams collected biological samples and observations from wildlife populations, but funding for monitoring had decreased. Survey teams could only sample a small fraction of the landscape each season.
+            </p>
+            <p>
+              Monitoring efforts were not able to determine the locations where disease emergence was most likely. Managers needed a more systematic way to evaluate disease risk across the landscape so that surveillance efforts could be targeted where they would provide the greatest benefit.
+            </p>
+          </section>
+
+          <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-slate-900">QSC’s Modeling Approach</h2>
+            <p>
+              QSC developed a spatial disease risk modeling framework designed to identify areas where wildlife disease transmission was most likely to occur.
+            </p>
+            <p>
+              The model integrates multiple sources of ecological and environmental data. Wildlife observation records provide information about host species presence and distribution, while historical monitoring data offer insight into previous disease detections. Environmental variables such as temperature, vegetation patterns, and landscape features are also incorporated because these factors can affect both host behavior and pathogen persistence.
+            </p>
+            <p>
+              Landscape connectivity is another important component of the model. Wildlife movement patterns often follow natural corridors such as river systems, forest edges, and habitat transitions. By incorporating spatial relationships between habitats, the model estimates how disease risk propagates across the landscape.
+            </p>
+            <p>
+              Testing error in serosurveillance is another complication. Sometimes an animal has a disease but tests negative. Conversely, some individuals test positive when they do not carry the disease. Both types of error are accounted for in the model.
+            </p>
+            <p>
+              QSC developed a probabilistic spatial model that estimates the relative likelihood of disease presence across the region. Instead of producing a single deterministic prediction, the model generates a continuous risk surface that highlights areas where disease transmission is more likely under current environmental conditions.
+            </p>
+            <p>
+              The modeling approach builds on research published by a QSC scientist in the peer-reviewed literature on wildlife disease risk modeling.
+              <a class="text-green-700 hover:underline" href="https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.5558" target="_blank" rel="noopener noreferrer">Read the publication</a>.
+            </p>
+          </section>
+
+          <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-slate-900">Decision Support in Practice</h2>
+            <p>
+              The model outputs are translated into static risk maps that wildlife managers use to guide surveillance planning.
+            </p>
+            <p>
+              These maps highlight areas where environmental conditions, host presence, and landscape connectivity combine to create elevated disease risk. Managers compare these high-risk areas with their existing monitoring locations to determine the best surveillance strategy.
+            </p>
+            <p>
+              Because the risk maps are developed at the scale of individual watersheds, they allow monitoring programs to adapt their strategies locally. In some watersheds, the model identifies specific habitat corridors where wildlife movement can facilitate disease spread. In others, environmental conditions suggest that disease persistence might be more likely in particular habitat types.
+            </p>
+            <p>
+              This spatial perspective helps agencies deploy their limited monitoring resources more strategically. Field teams focus sampling efforts in locations where disease detection is most informative, rather than distributing surveys evenly across the entire region.
+            </p>
+            <p>
+              The maps also help guide longer-term planning by identifying areas where environmental changes, such as shifts in habitat conditions or wildlife movement patterns, might alter disease risk in the future.
+            </p>
+          </section>
+
+          <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-slate-900">Outcome</h2>
+            <p>
+              The most important outcome of the project is a clearer understanding of how disease risk varies across the landscape.
+            </p>
+            <p>
+              Instead of relying solely on broad monitoring coverage, the wildlife agency uses a spatial framework for prioritizing surveillance efforts within each watershed. Sampling teams focus on areas where disease emergence is most likely while still maintaining baseline monitoring elsewhere.
+            </p>
+            <p>
+              The risk maps also improve communication between scientists and resource managers. Complex modeling results are translated into clear spatial outputs that decision-makers interpret easily when planning monitoring activities.
+            </p>
+            <p class="rounded-lg border-l-4 border-green-500 bg-green-50 p-4 font-medium text-green-900">
+              The result is not simply a new ecological model. It is a practical decision-support tool that connects environmental data, wildlife observations, and landscape structure to guide disease surveillance across a large and ecologically complex region.
+            </p>
+          </section>
+
+          <section class="border-t border-slate-200 pt-6">
+            <p class="text-sm text-slate-600 italic">
+              This case study describes a representative engagement. Specific details have been generalized to protect client confidentiality.
+            </p>
+          </section>
+        </article>
+      </div>
+    </section>
+
+    <section class="bg-green-100 py-14 px-6 text-center">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">Need Better Wildlife Surveillance Prioritization?</h2>
+        <p class="text-lg text-slate-700 mb-8">
+          QSC builds spatial epidemiology models and risk maps that help agencies focus monitoring where it matters most.
+        </p>
+        <a href="contact.html" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-xl shadow">
+          Book a Free 30-Minute Ecology and Epidemiology Strategy Assessment
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-300 py-10 text-sm">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-6">
+      <div>
+        <p class="font-bold text-white mb-2">Quantitative Science Consulting</p>
+        <p>Science-grounded AI for sustainable impact.</p>
+      </div>
+      <div class="flex flex-col md:items-end space-y-2">
+        <a href="mailto:info@qsc.earth" class="hover:underline">info@qsc.earth</a>
+        <a href="https://www.linkedin.com/company/quantitative-science-consulting" class="hover:underline" target="_blank">LinkedIn</a>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> QSC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
