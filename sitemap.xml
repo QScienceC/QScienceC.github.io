@@ -68,6 +68,13 @@
     <priority>0.8</priority>
   </url>
 
+
+  <url>
+    <loc>https://qsc.earth/case_studies.html</loc>
+    <lastmod>2026-03-06</lastmod>
+    <priority>0.7</priority>
+  </url>
+
   <url>
     <loc>https://qsc.earth/case_study_production_risk.html</loc>
     <lastmod>2026-03-04</lastmod>
@@ -96,6 +103,13 @@
   <url>
     <loc>https://qsc.earth/case_study_agrivoltaic_geospatial_modeling.html</loc>
     <lastmod>2026-03-05</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+
+  <url>
+    <loc>https://qsc.earth/case_study_wildlife_disease_risk_surveillance.html</loc>
+    <lastmod>2026-03-06</lastmod>
     <priority>0.7</priority>
   </url>
 
