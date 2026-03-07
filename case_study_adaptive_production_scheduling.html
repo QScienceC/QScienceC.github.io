@@ -133,7 +133,7 @@
     </section>
 
     <section class="py-14 px-6 bg-white">
-      <div class="max-w-5xl mx-auto">
+      <div class="max-w-3xl mx-auto">
         <article class="text-gray-800 leading-relaxed space-y-10">
           <p class="text-lg text-slate-700">
             Production teams need scheduling strategies that can keep pace with changing order
@@ -180,7 +180,7 @@
               long-term effects of different choices.
             </p>
             <p class="rounded-lg border-l-4 border-slate-400 bg-slate-100 p-4 font-medium text-slate-700">
-              The core challenge was not simply generating a schedule. It was identifying a scheduling strategy that could
+              The goal was identifying a scheduling strategy that could
               adapt continuously as production conditions evolved.
             </p>
           </section>
@@ -196,8 +196,8 @@
               to better outcomes as it interacts with a simulated version of the production environment.
             </p>
             <p>
-              In this case, the environment represents the factory’s production system, including machines, job queues,
-              processing times, and technician assignments. The reinforcement learning agent observes the state of the
+              In this case, the environment represents the factory’s production system, including machine maintenance, QAQC,
+              raw material ordering, and technician assignments. The reinforcement learning agent observes the state of the
               system, such as which jobs are waiting, which machines are available, and how close orders are to their
               delivery deadlines.
             </p>
@@ -211,9 +211,9 @@
               Through millions of simulated production runs, the model learned scheduling policies that balanced these
               objectives across many possible operating conditions.
             </p>
-            <p>
-              Rather than producing a single static schedule, the trained agent effectively learned a decision policy: a
-              set of rules that adapt scheduling decisions in real time as production conditions change.
+            <p class="rounded-lg border-l-4 border-slate-400 bg-slate-100 p-4 font-medium text-slate-700">
+              Rather than producing a static schedule, the trained agent effectively learned a decision policy: a
+              set of rules that adapt scheduling decisions in real time as conditions change.
             </p>
           </section>
 
@@ -232,9 +232,7 @@
               example, they can see how prioritizing a specific order might affect machine or technician utilization
               across the system.
             </p>
-            <p>
-              The model does not replace human decision-makers; it provides a structured way to
-              evaluate scheduling options under complex and changing conditions.
+            <p class="rounded-lg border-l-4 border-slate-400 bg-slate-100 p-4 font-medium text-slate-700">
               By combining the learned scheduling policy with the expertise of production planners, the team has a
               more consistent and adaptive approach to managing the production schedule.
             </p>
@@ -258,9 +256,8 @@
               understand how different choices influence overall system performance.
             </p>
             <p class="rounded-lg border-l-4 border-green-500 bg-green-50 p-4 font-medium text-green-900">
-              The value of the approach is not simply a more advanced optimization technique. It
-              is the ability to support production decisions with a model that continuously learns from simulated
-              operational scenarios and translates those insights into practical scheduling guidance.
+              Management gained the ability to support production decisions with a model that continuously learns 
+              and translates insights into practical scheduling guidance.
             </p>
           </section>
 
