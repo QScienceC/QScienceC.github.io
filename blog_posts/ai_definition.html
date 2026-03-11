@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLH2Y342RP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SLH2Y342RP');
+  </script>
+  <!-- End Google tag -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Is Not Just ChatGPT: What Artificial Intelligence Actually Means | QSC</title>
+  <meta name="description" content="A plain-language guide to how AI, machine learning, deep learning, and large language models fit together." />
+  <meta name="keywords" content="artificial intelligence definition, machine learning vs deep learning, large language models, what is AI, QSC blog" />
+  <meta name="author" content="Quantitative Science Consulting" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AI Is Not Just Chatbots: What Artificial Intelligence Actually Means | QSC Blog" />
+  <meta property="og:description" content="Understand how AI, machine learning, deep learning, and LLMs relate—and why chatbots are only one part of AI." />
+  <meta property="og:url" content="https://qsc.earth/blog_posts/ai_definition.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://qsc.earth/images/blog/ai_oval_overlap.webp" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Is Not Just Chatbots: What Artificial Intelligence Actually Means | QSC Blog" />
+  <meta name="twitter:description" content="Understand what AI actually means, from classical machine learning to modern LLMs like ChatGPT." />
+  <meta name="twitter:image" content="https://qsc.earth/images/blog/ai_oval_overlap.webp" />
+
+  <link rel="icon" href="../images/logo.webp" />
+  <link rel="canonical" href="https://qsc.earth/blog_posts/ai_definition.html" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "AI Is Not Just ChatGPT: What Artificial Intelligence Actually Means",
+      "description": "A plain-language guide to how AI, machine learning, deep learning, and large language models fit together.",
+      "image": "https://qsc.earth/images/blog/ai_oval_overlap.webp",
+      "datePublished": "2026-03-11",
+      "author": {
+        "@type": "Organization",
+        "name": "Quantitative Science Consulting",
+        "url": "https://qsc.earth"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Quantitative Science Consulting",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://qsc.earth/images/logo.webp"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://qsc.earth/blog_posts/ai_definition.html"
+      }
+    }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .article_body {
+      background: linear-gradient(to bottom, #f8fafc 0%, #ffffff 18rem);
+    }
+
+    .blog_article p {
+      color: #1f2937;
+      line-height: 1.9;
+    }
+
+    .blog_article h2 {
+      letter-spacing: -0.01em;
+      padding-bottom: 0.45rem;
+      margin-bottom: 0.9rem;
+      border-bottom: 2px solid #dbeafe;
+    }
+
+    .intro_note {
+      background: linear-gradient(135deg, #f5f3ff 0%, #eef2ff 100%);
+      border: 1px solid #c4b5fd;
+      border-radius: 1rem;
+      padding: 1.5rem;
+    }
+
+
+    .figure_panel {
+      background-color: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.9rem;
+      padding: 1rem;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+    }
+
+    .closing_panel {
+      background: #1f2937;
+      color: #f9fafb;
+    }
+
+    .blog_article .closing_panel p {
+      color: #f9fafb;
+    }
+  </style>
+</head>
+<body class="article_body text-gray-800 font-sans">
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="../index.html" class="flex items-center space-x-3">
+        <img src="../images/logo.webp" alt="QSC logo" class="h-10 w-10" />
+        <span class="text-xl font-bold text-gray-800">Quantitative Science Consulting</span>
+      </a>
+
+      <button id="menu-toggle" class="md:hidden text-gray-800 focus:outline-none" aria-label="Toggle menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <nav id="menu" class="hidden md:flex md:space-x-6 text-sm font-semibold">
+        <a href="../index.html" class="hover:text-green-600">Home</a>
+        <a href="../about.html" class="hover:text-green-600">About</a>
+        <a href="../services.html" class="hover:text-green-600">Services</a>
+        <a href="../mission.html" class="hover:text-green-600">Mission</a>
+        <a href="../blog.html" class="hover:text-green-600">Blog</a>
+        <a href="../contact.html" class="hover:text-green-600">Contact</a>
+        <a href="../faq.html" class="hover:text-green-600">FAQ</a>
+      </nav>
+    </div>
+
+    <nav id="mobile-menu" class="hidden flex-col space-y-2 px-4 pt-2 pb-4 text-sm font-semibold bg-white shadow-md md:hidden">
+      <a href="../index.html" class="block hover:text-green-600">Home</a>
+      <a href="../about.html" class="block hover:text-green-600">About</a>
+      <a href="../services.html" class="block hover:text-green-600">Services</a>
+      <a href="../mission.html" class="block hover:text-green-600">Mission</a>
+      <a href="../blog.html" class="block hover:text-green-600">Blog</a>
+      <a href="../contact.html" class="block hover:text-green-600">Contact</a>
+      <a href="../faq.html" class="block hover:text-green-600">FAQ</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const mobile_menu = document.getElementById('mobile-menu');
+
+    toggle.addEventListener('click', () => {
+      mobile_menu.classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-green-100 to-blue-100 py-20 px-6 text-center">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+        AI Is Not Just Chatbots
+      </h1>
+      <p class="text-lg md:text-xl mb-2">What Artificial Intelligence Actually Means</p>
+      <p class="text-md text-gray-600">Mikey Tabak, PhD &bull; March 2026</p>
+    </div>
+  </section>
+
+  <!-- Blog Content -->
+  <main class="blog_article max-w-4xl mx-auto px-6 py-14 md:py-16 space-y-10 text-lg leading-relaxed">
+    <section class="intro_note space-y-5">
+      <p>
+        In the past few years, artificial intelligence has become almost synonymous with chatbots.
+        When people hear the term "AI," they often think of systems like ChatGPT that can write essays,
+        answer questions, or generate code.
+      </p>
+      <p>
+        But chatbots are only one small piece of a much larger field. Artificial intelligence has been
+        developing for decades, and many of the systems that fall under the umbrella of AI look very
+        different from conversational tools. Understanding what AI really means requires stepping back
+        and looking at how these technologies relate to one another.
+      </p>
+    </section>
+
+    <figure class="figure_panel">
+      <img
+        src="../images/blog/ai_oval_overlap.webp"
+        alt="Nested ovals showing that large language models are part of deep learning, deep learning is part of machine learning, and machine learning is part of artificial intelligence."
+        class="w-full h-auto rounded-lg"
+      />
+      <figcaption class="text-sm text-gray-600 mt-3">
+        Figure 1. Large Language Models are a subset of Deep Learning, which is a subset
+        of Machine Learning, which itself is part of the broader field of Artificial Intelligence.
+      </figcaption>
+    </figure>
+
+    <section class="space-y-5">
+      <h2 class="text-3xl font-bold text-gray-900">What Artificial Intelligence Really Means</h2>
+      <p>
+        Artificial intelligence refers to computer systems designed to perform tasks that normally require
+        human intelligence. These tasks might include recognizing patterns,
+        understanding language, or making simple calculations. The key idea is that computers are performing work
+        that humans historically had to do themselves.
+      </p>
+      <p>
+        For example, imagine calculating the average of a set of numbers. Before computers, someone would
+        need to add the numbers together and divide by the total count. Today, spreadsheet software like
+        Excel performs the calculation instantly.
+      </p>
+      <p>
+        While you might not think of this as AI, it illustrates the basic concept: computers performing
+        cognitive tasks that humans once carried out manually. These systems have become much more
+        sophisticated. Instead of simply following rigid rules written by programmers, computers can learn
+        patterns directly from data. This is what we refer to as machine learning.
+      </p>
+    </section>
+
+    <section class="space-y-5">
+      <h2 class="text-3xl font-bold text-gray-900">Machine Learning: Learning From Data</h2>
+      <p>
+        Machine learning is a subset of artificial intelligence where computers learn patterns from
+        data rather than relying solely on explicit rules. Instead of telling the computer exactly what
+        steps to follow, we provide data and allow the system to learn relationships within that data.
+      </p>
+      <p>
+        A classic example is linear regression, one of the simplest machine learning models. Suppose we
+        want to predict home electricity usage based on square footage. By analyzing historical data,
+        houses with known sizes and electricity consumption, a linear regression model can learn a
+        relationship between the two variables and use it to predict the electricity consumption of a
+        new house.
+      </p>
+      <p>
+        The programmer does not specify the exact relationship between size and electricity use.
+        The model learns the rule from the data itself. This means that if you have ever used a computer
+        to fit a line to data points, you have built a simple machine learning model. Congratulations!
+      </p>
+      <p>
+        Machine learning includes many different types of models, such as decision trees, random forests,
+        and support vector machines. While they vary in complexity, they all share the same basic idea:
+        learning patterns from data to make predictions or decisions.
+      </p>
+      <p>
+        As datasets grew larger and computing power increased, researchers began developing models capable
+        of learning far more complex relationships. This led to the rise of artificial neural networks
+        and deep learning.
+      </p>
+    </section>
+
+    <section class="space-y-5">
+      <h2 class="text-3xl font-bold text-gray-900">Deep Learning and Neural Networks</h2>
+      <p>
+        Artificial neural networks are loosely inspired by the structure of the human brain; layers of
+        interconnected "neurons" transform input data into increasingly complex representations.
+      </p>
+      <p>
+        For example, consider a neural network designed to recognize images. The first layer might detect
+        simple features such as edges or colors. Later layers combine those features to identify shapes,
+        objects, and eventually entire scenes.
+      </p>
+      <p>
+        When neural networks contain many layers, the approach is known as deep learning. Deep learning
+        models are powerful because they can approximate extremely complex relationships in data. Instead
+        of manually designing features for a model to use, deep learning systems can automatically learn
+        useful representations from raw inputs such as images, audio, or text.
+      </p>
+      <p>
+        Deep learning has driven many of the major breakthroughs in AI over the past decade, including
+        image recognition, speech recognition, and machine translation. One application of deep learning
+        that has mistakenly become synonymous with AI is the Large Language Model.
+      </p>
+    </section>
+
+    <section class="space-y-5">
+      <h2 class="text-3xl font-bold text-gray-900">Large Language Models and Chatbots</h2>
+      <p>
+        Large Language Models (LLMs) are a specific type of deep learning model designed to work with
+        human language. These models are trained on enormous collections of text—books, articles,
+        websites, and other written material.
+      </p>
+      <p>
+        During training, the model learns to predict the next word in a sequence of text. Although this
+        might sound simple, the process allows the system to capture complex patterns in language,
+        including grammar, style, and factual relationships.
+      </p>
+      <p>
+        For example, if the model sees the phrase "The capital of Iran is..." it has learned from
+        training data that the next word is likely "Tehran." Because the model predicts the most likely
+        next word rather than being programmed with factual knowledge, it can produce incorrect answers.
+      </p>
+      <p>
+        By repeating this prediction process across billions of examples, LLMs develop an ability to
+        generate coherent sentences, answer questions, summarize documents, and assist with many
+        writing-related tasks.
+      </p>
+      <p>
+        However, it is important to remember that LLMs are just one specialized application of deep
+        learning, which itself is just one branch of machine learning within the broader field of
+        artificial intelligence.
+      </p>
+    </section>
+
+    <section class="space-y-5">
+      <h2 class="text-3xl font-bold text-gray-900">Why This Distinction Matters</h2>
+      <p>
+        Because chatbots have recently become so visible, many people assume that they represent the
+        entirety of AI. In reality, many of the most important AI systems in the world have nothing to
+        do with conversational interfaces.
+      </p>
+      <p>
+        Machine learning models help detect fraud in financial transactions, optimize supply chains,
+        forecast weather, predict ecological effects of climate change, and manage industrial processes.
+        In many of these cases, the underlying models may be relatively simple compared to modern deep
+        learning systems.
+      </p>
+      <p>
+        Choosing the right approach depends on the problem being solved. Sometimes a straightforward
+        statistical model works best. Other problems may require complex neural networks or language
+        models.
+      </p>
+    </section>
+
+    <section class="closing_panel rounded-2xl p-7 md:p-9 space-y-5">
+      <h2 class="text-3xl font-bold text-white border-0 pb-0 mb-0">The Bigger Picture</h2>
+      <p>
+        Artificial intelligence did not suddenly appear with modern chatbots. It has been evolving for
+        decades through advances in algorithms, computing power, and data availability. Large Language
+        Models are an impressive milestone in this progression, but they represent only one part of a
+        much broader field.
+      </p>
+      <p>
+        Using the term “AI” to refer to chatbots is not incorrect, but it is imprecise. 
+        Being more specific about machine learning, deep learning, or language models helps keep the conversation clear.      </p>
+    </section>
+
+
+  </main>
+  <!-- CTA -->
+    <section class="bg-green-100 py-16 px-6 text-center">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold mb-4">Interested in using AI to achieve your goals?</h2>
+        <p class="text-lg mb-6">
+        Partner with QSC and unlock the full potential of your data.
+        </p>
+        <a href="../contact.html" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-xl shadow">
+          Book a Free 30-Minute Operational AI Assessment
+        </a>
+      </div>
+    </section>
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-300 py-10 text-sm">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-6">
+      <div>
+        <p class="font-bold text-white mb-2">Quantitative Science Consulting</p>
+        <p>Science-grounded AI for sustainable impact.</p>
+      </div>
+      <div class="flex flex-col md:items-end space-y-2">
+        <a href="mailto:info@qsc.earth" class="hover:underline">info@qsc.earth</a>
+        <a href="https://www.linkedin.com/company/quantitative-science-consulting" class="hover:underline" target="_blank">LinkedIn</a>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> QSC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
