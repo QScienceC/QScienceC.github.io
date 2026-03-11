@@ -23,7 +23,7 @@ def convert_png_to_webp(png_path, webp_path, quality=80):
         print(f"An error occurred during conversion: {e}")
 
 # usage:
-input_png_file = './images/blog/data_storage.png'  
-output_webp_file = './images/blog/data_storage.webp'
+input_png_file = './images/blog/ai_oval_overlap.png'  
+output_webp_file = './images/blog/ai_oval_overlap.webp'
 
 convert_png_to_webp(input_png_file, output_webp_file)
