@@ -143,6 +143,11 @@
     <priority>0.6</priority>
   </url>
     <url>
+    <loc>https://qsc.earth/blog_posts/ai_definition.html</loc>
+      <lastmod>2026-03-11</lastmod>
+      <priority>0.7</priority>
+    </url>
+    <url>
     <loc>https://qsc.earth/blog_posts/202603_data_storage.html</loc>
       <lastmod>2026-02-25</lastmod>
       <priority>0.7</priority>
