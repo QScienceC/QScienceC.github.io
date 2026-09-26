@@ -119,6 +119,12 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://qsc.earth/WildObserve/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+
 
   <url>
     <loc>https://qsc.earth/geospatial.html</loc>
