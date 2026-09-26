@@ -22,7 +22,11 @@
   <link rel="icon" href="../images/logo.webp" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    .hero-wildobserve { background: linear-gradient(120deg, #0c261e 0%, #164c38 100%); }
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in { animation: fade-in 1s ease-out both; }
     .tier-card { min-height: 100%; }
   </style>
 </head>
@@ -60,11 +64,11 @@
   </header>
 
   <main>
-    <section class="hero-wildobserve px-6 py-20 text-white sm:py-28">
-      <div class="mx-auto max-w-5xl">
-        <p class="mb-5 inline-flex rounded-full border border-emerald-100/30 bg-emerald-950/30 px-4 py-1.5 text-sm font-semibold tracking-wide text-emerald-50">WildObserve™</p>
-        <h1 class="max-w-3xl text-4xl font-semibold tracking-tight sm:text-6xl">The smarter way to work through camera-trap images.</h1>
-        <p class="mt-6 max-w-2xl text-lg leading-8 text-emerald-50 sm:text-xl">Start labeling. WildObserve™ learns as you go and pre-labels your images.</p>
+    <section class="animate-fade-in bg-gradient-to-br from-green-100 to-blue-100 px-6 py-20 text-center">
+      <div class="mx-auto max-w-4xl">
+        <p class="mb-3 text-sm font-semibold text-green-700">WildObserve™</p>
+        <h1 class="mb-6 text-4xl font-bold leading-tight text-gray-900 md:text-5xl">The smarter way to work through camera-trap images.</h1>
+        <p class="text-lg text-gray-700 md:text-xl">Start labeling. WildObserve™ learns as you go and pre-labels your images.</p>
       </div>
     </section>
 
