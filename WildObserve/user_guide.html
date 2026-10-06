@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLH2Y342RP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SLH2Y342RP');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Guide | WildObserve™</title>
+  <meta name="description" content="How to use WildObserve™: install it, set up a project, process camera-trap images, review and label them with AI suggestions, and export your data." />
+  <meta property="og:title" content="User Guide | WildObserve™" />
+  <meta property="og:description" content="Install WildObserve™, set up a project, process and review camera-trap images, and export your data." />
+  <meta property="og:url" content="https://qsc.earth/WildObserve/user_guide.html" />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://qsc.earth/WildObserve/user_guide.html" />
+  <link rel="icon" href="../images/logo.webp" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    h2[id], h3[id] { scroll-margin-top: 5.5rem; }
+    kbd { display: inline-block; min-width: 1.6em; padding: 0.05rem 0.4rem; border: 1px solid #cbd5e1; border-bottom-width: 2px; border-radius: 0.35rem; background: #fff; font: 600 0.8rem/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; text-align: center; color: #0f172a; }
+  </style>
+</head>
+<body class="bg-stone-50 font-sans text-slate-800 antialiased">
+  <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/95 shadow-sm backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
+      <a href="../index.html" class="flex items-center gap-3">
+        <img src="../images/logo.webp" alt="QSC logo" class="h-10 w-10" />
+        <span class="text-base font-bold tracking-tight text-slate-800 sm:text-xl">Quantitative Science Consulting</span>
+      </a>
+      <button id="menu-toggle" class="rounded p-2 text-slate-700 md:hidden" aria-label="Open navigation" aria-expanded="false">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <nav class="hidden items-center gap-6 text-sm font-semibold md:flex" aria-label="Main navigation">
+        <a href="../index.html" class="hover:text-emerald-700">Home</a>
+        <a href="../about.html" class="hover:text-emerald-700">About</a>
+        <a href="../services.html" class="hover:text-emerald-700">Services</a>
+        <a href="../mission.html" class="hover:text-emerald-700">Mission</a>
+        <a href="../blog.html" class="hover:text-emerald-700">Blog</a>
+        <a href="../contact.html" class="hover:text-emerald-700">Contact</a>
+      </nav>
+    </div>
+    <nav id="mobile-menu" class="hidden border-t border-slate-100 px-6 py-4 text-sm font-semibold md:hidden" aria-label="Mobile navigation">
+      <div class="flex flex-col gap-3">
+        <a href="../index.html" class="hover:text-emerald-700">Home</a>
+        <a href="../about.html" class="hover:text-emerald-700">About</a>
+        <a href="../services.html" class="hover:text-emerald-700">Services</a>
+        <a href="../mission.html" class="hover:text-emerald-700">Mission</a>
+        <a href="../blog.html" class="hover:text-emerald-700">Blog</a>
+        <a href="../contact.html" class="hover:text-emerald-700">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="bg-gradient-to-br from-green-100 to-blue-100 px-6 py-14 text-center">
+      <div class="mx-auto max-w-3xl">
+        <p class="mb-3 text-sm font-semibold text-green-700"><a href="./" class="hover:underline">WildObserve™</a></p>
+        <h1 class="text-4xl font-bold leading-tight text-gray-900 md:text-5xl">User Guide</h1>
+      </div>
+    </section>
+
+    <article class="mx-auto max-w-3xl px-6 py-14 leading-7 text-slate-700">
+      <aside class="rounded-2xl border border-sky-100 bg-sky-50 px-6 py-5">
+        <h2 class="text-lg font-semibold text-sky-950">Quick start</h2>
+        <ol class="mt-3 list-decimal space-y-1 pl-6 text-sky-950/80">
+          <li><a href="#install" class="underline">Install WildObserve™</a> and create your account.</li>
+          <li><a href="#projects" class="underline">Make a project</a> and add the folders that hold your camera-trap images.</li>
+          <li>Click <b>Process</b>, and the AI <a href="#processing" class="underline">finds animals, people, and vehicles</a>, and suggests species.</li>
+          <li><a href="#reviewing" class="underline">Review each image</a>: confirm or correct the boxes and species, then <b>Save &amp; next</b>.</li>
+          <li><a href="#exporting" class="underline">Export</a> your reviewed data for analysis or sharing.</li>
+        </ol>
+        <p class="mt-3 text-sky-950/80">Everything happens on your computer. Your images, their metadata, and your annotations stay there.</p>
+      </aside>
+
+      <nav class="mt-8 rounded-2xl border border-slate-200 bg-white px-6 py-5" aria-label="Contents">
+        <h2 class="text-lg font-semibold text-slate-900">Contents</h2>
+        <ol class="mt-3 grid list-decimal gap-x-8 gap-y-1 pl-6 text-sm sm:grid-cols-2">
+          <li><a href="#install" class="text-emerald-700 hover:underline">Installing and signing in</a></li>
+          <li><a href="#projects" class="text-emerald-700 hover:underline">Projects and image folders</a></li>
+          <li><a href="#processing" class="text-emerald-700 hover:underline">Processing images</a></li>
+          <li><a href="#deployments" class="text-emerald-700 hover:underline">Deployments and capture events</a></li>
+          <li><a href="#reviewing" class="text-emerald-700 hover:underline">Reviewing images</a></li>
+          <li><a href="#faster" class="text-emerald-700 hover:underline">Reviewing faster</a></li>
+          <li><a href="#fixed-objects" class="text-emerald-700 hover:underline">Fixed objects</a></li>
+          <li><a href="#dashboard" class="text-emerald-700 hover:underline">Dashboard and timed sessions</a></li>
+          <li><a href="#models" class="text-emerald-700 hover:underline">The AI models</a></li>
+          <li><a href="#exporting" class="text-emerald-700 hover:underline">Exporting your data</a></li>
+          <li><a href="#background" class="text-emerald-700 hover:underline">Watched folders, rules, and alerts</a></li>
+          <li><a href="#people" class="text-emerald-700 hover:underline">People, licenses, and settings</a></li>
+          <li><a href="#shortcuts" class="text-emerald-700 hover:underline">Keyboard shortcuts</a></li>
+          <li><a href="#troubleshooting" class="text-emerald-700 hover:underline">Troubleshooting</a></li>
+        </ol>
+      </nav>
+
+      <p class="mt-8">Some features come with a paid plan, and are marked here with the plans that include them. Everything else is in the free Community plan. See <a href="plans.html" class="font-semibold text-emerald-700 underline">Plans</a> for what each includes.</p>
+
+      <!-- 1 -->
+      <h2 id="install" class="mt-12 text-2xl font-semibold text-slate-900">1. Installing and signing in</h2>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">What you need</h3>
+      <p class="mt-4">A Mac with Apple silicon (M1 or later) and macOS 14 or later. Windows and Linux versions are coming. WildObserve™ processes any number of images on every plan; how fast depends on your computer.</p>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">Installing</h3>
+      <ol class="mt-4 list-decimal space-y-2 pl-6">
+        <li>Download WildObserve™ from the <a href="./" class="text-emerald-700 underline">WildObserve™ page</a> (<b>Download for Mac</b>).</li>
+        <li>Open the downloaded <code class="rounded bg-slate-100 px-1">WildObserve.dmg</code>, and drag WildObserve to your Applications folder.</li>
+        <li>Open WildObserve from Applications. The first launch takes longer while it prepares the AI models for your Mac.</li>
+      </ol>
+      <p class="mt-4">To update, WildObserve™ tells you when a new version is out (in About). Download it the same way, and drag it to Applications to replace the old one. Your accounts and projects are kept. If macOS says WildObserve is in use, quit it first: see <a href="#troubleshooting" class="text-emerald-700 underline">Troubleshooting</a>.</p>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">Your account</h3>
+      <p class="mt-4">The first time you open WildObserve™, you create the administrator account: your name, your email address, and a password, then <b>Create account and sign in</b>. Or choose <b>Set up with Google</b> to use your Google account instead. The administrator can then add the other people who use WildObserve™ on that computer (<a href="#people" class="text-emerald-700 underline">People</a>).</p>
+      <p class="mt-4">After that, sign in with your email address and password, or with <b>Sign in with Google</b>. Tick <b>Stay signed in on this computer</b> to skip signing in next time. If you forget your password, click <b>Forgot your password?</b> on the sign-in screen.</p>
+
+      <!-- 2 -->
+      <h2 id="projects" class="mt-12 text-2xl font-semibold text-slate-900">2. Projects and image folders</h2>
+      <p class="mt-4">A project is a folder that keeps the reviews, results, and settings for a set of camera-trap images, a survey or a study, say. Your images stay where they are: WildObserve™ reads them in place, and never copies, moves, or changes them.</p>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">Making a project</h3>
+      <ol class="mt-4 list-decimal space-y-2 pl-6">
+        <li>In the menu bar, choose <b>Project &gt; Projects…</b>, then <b>New project…</b> (the first time, this is where WildObserve™ starts).</li>
+        <li>Give it a name, and choose where to keep it (<b>Keep it in</b>).</li>
+        <li>Under <b>Image folders</b>, click <b>Add a folder…</b> and choose a folder of images. Subfolders are included, and each folder of images becomes a <a href="#deployments" class="text-emerald-700 underline">deployment</a>. You can add more folders later.</li>
+        <li>Click <b>Make project</b>. WildObserve™ finds the images, reads their capture times and camera details, and groups them into capture events.</li>
+      </ol>
+      <p class="mt-4">The window's header shows the project's name and how many images it has, how many are processed, and how many are reviewed.</p>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">Switching projects</h3>
+      <p class="mt-4"><b>Project &gt; Projects…</b> lists your projects. Click <b>Open</b> to switch to one. <b>Open a project folder…</b> opens a project that isn't on the list, such as one copied from another computer. <b>Remove from list</b> takes a project off the list; its folder, and everything in it, stays.</p>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">Image folders</h3>
+      <p class="mt-4">Click <b>Images…</b> in the header to manage the project's folders:</p>
+      <ul class="mt-4 list-disc space-y-2 pl-6">
+        <li><b>Add a folder…</b> adds another folder of images.</li>
+        <li><b>Look for new images</b> adds images put in a folder since it was added. (On the Lab and Organization plans, a folder can be <a href="#background" class="text-emerald-700 underline">watched</a> instead, so new images are added by themselves.)</li>
+        <li><b>Deployments…</b> (beside a folder with subfolders) says how its subfolders are arranged: which level holds one camera's time at one place, and which levels name the places and cameras. Memory cards in folders below a deployment join it. Click <b>Apply</b>.</li>
+        <li><b>Moved?</b> appears when a folder can't be found, because it was moved or its drive isn't connected. Connect the drive, or click <b>Find it…</b> and point it at where the folder is now.</li>
+      </ul>
+      <p class="mt-4">If a folder is in iCloud Drive or another cloud service, make it available offline first: images that are only online download as WildObserve reads them, which is slow.</p>
+      <p class="mt-4"><b>Copies of an image</b> (the same file in two folders) are noticed and processed, reviewed, and exported once. They're listed under <b>Duplicates</b>. For images processed before WildObserve checked for copies, click <b>Find duplicates among … images processed earlier</b> in <b>Images…</b>.</p>
+
+      <!-- 3 -->
+      <h2 id="processing" class="mt-12 text-2xl font-semibold text-slate-900">3. Processing images</h2>
+      <p class="mt-4">Click <b>Process … images</b> in the header. For each image, WildObserve™:</p>
+      <ul class="mt-4 list-disc space-y-2 pl-6">
+        <li>finds animals, people, and vehicles with <b>MegaDetector</b>, and draws a box around each, with a score for how sure it is;</li>
+        <li>suggests a species for each animal with <b>SpeciesNet</b>, and with your <a href="#models" class="text-emerald-700 underline">Project Model</a> once it has learned from your labels.</li>
+      </ul>
+      <p class="mt-4">The header shows progress and the time left. <b>Pause</b> stops after the current image. Click the button again, now or after reopening WildObserve™, to carry on where it stopped. While images are processed, your Mac doesn't go to sleep. You can review while processing continues.</p>
+      <p class="mt-4">Processing uses your Mac's own AI hardware. Nothing is sent anywhere.</p>
+
+      <!-- 4 -->
+      <h2 id="deployments" class="mt-12 text-2xl font-semibold text-slate-900">4. Deployments and capture events</h2>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">Deployments</h3>
+      <p class="mt-4">A deployment is a camera at one place for a while: usually one folder of images, or one memory card. Click <b>Deployments…</b> in the header to see them, and for each:</p>
+      <ul class="mt-4 list-disc space-y-2 pl-6">
+        <li><b>Name</b> and <b>Place</b>: deployments at the same place, such as a camera's successive memory cards, share a place name.</li>
+        <li><b>Latitude</b> and <b>Longitude</b>, in decimal degrees. <b>Use the images' GPS</b> fills them in from the images, where the camera recorded them. Some exports need them.</li>
+        <li><b>Camera clock</b>: the offset from UTC the camera's clock was set to. If a camera was set to the wrong time, click its clock to correct it: WildObserve shows what the first image says, you enter when it was really taken, and all of the deployment's images shift by the difference. <b>Clock was right</b> undoes a correction.</li>
+        <li><b>Camera</b>: the camera's model and serial number, from the images.</li>
+      </ul>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">Capture events</h3>
+      <p class="mt-4">A camera usually takes several pictures each time it's triggered. WildObserve™ groups a deployment's images taken close together into a <b>capture event</b>: by default, those no more than 60 seconds apart. Change the gap at the top of <b>Deployments…</b>.</p>
+      <p class="mt-4">Under the image you're reviewing, the capture event's bar says which event it is and what's been seen in it, and the <b>filmstrip</b> shows its pictures, with their boxes. Click a frame, or press <kbd>[</kbd> and <kbd>]</kbd>, to open the frame beside it. A frame that isn't in the list you're working through opens too; <kbd>←</kbd> goes back to the list. If WildObserve grouped pictures wrongly, <b>Split here</b> starts a new event at this image, and <b>Join with previous</b> joins this event to the one before.</p>
+      <p class="mt-4">Capture times come from the images' EXIF data. Images without one use the file's date instead, which copying, downloading, or syncing the files can change. If capture events look far too big, see <a href="#troubleshooting" class="text-emerald-700 underline">Troubleshooting</a>.</p>
+
+      <!-- 5 -->
+      <h2 id="reviewing" class="mt-12 text-2xl font-semibold text-slate-900">5. Reviewing images</h2>
+      <p class="mt-4">The review screen has the <b>filter panel</b> on the left (the lists, the filters, and the images in the list), the image in the middle with its boxes and species, and the capture event's bar and filmstrip below it. To give the image more room, hide the filter panel with <b>‹</b> at its top right (<b>›</b> brings it back), and the capture event's panel with <b>^</b> at its right end.</p>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">Lists</h3>
+      <p class="mt-4">Each list button shows a set of images. Click a list to turn it on, and again to turn it off. With several on, you see the images that are in all of them: <b>Reviewed</b> with <b>Uncertain</b> shows the reviewed images marked uncertain. Lists no image can be in together (<b>To review</b> and <b>Reviewed</b>, say) don't stay on together. With none on, you see every image.</p>
+      <div class="mt-4 overflow-x-auto">
+        <table class="w-full text-left text-sm">
+          <thead class="border-b border-slate-300 text-slate-900">
+            <tr><th class="py-2 pr-4 font-semibold">List</th><th class="py-2 font-semibold">What it holds</th></tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 align-top">
+            <tr><td class="py-2 pr-4 font-medium">To review</td><td class="py-2">Every image not reviewed yet.</td></tr>
+            <tr><td class="py-2 pr-4 font-medium">Has detections</td><td class="py-2">Images to review with a box at the threshold.</td></tr>
+            <tr><td class="py-2 pr-4 font-medium">Likely empty</td><td class="py-2">Images to review with no box at the threshold. You can <a href="#mark-empty" class="text-emerald-700 underline">mark them empty together</a>.</td></tr>
+            <tr><td class="py-2 pr-4 font-medium">People &amp; vehicles</td><td class="py-2">Images to review with a person or vehicle.</td></tr>
+            <tr><td class="py-2 pr-4 font-medium">Close calls</td><td class="py-2">Images whose species suggestions are least sure, closest call first.</td></tr>
+            <tr><td class="py-2 pr-4 font-medium">New species?</td><td class="py-2">Images where SpeciesNet names an animal not labeled in this project yet.</td></tr>
+            <tr><td class="py-2 pr-4 font-medium">Flagged</td><td class="py-2">Images the production rules flagged, each with why (<a href="#rules" class="text-emerald-700 underline">Rules</a>).</td></tr>
+            <tr><td class="py-2 pr-4 font-medium">Reviewed</td><td class="py-2">Images reviewed already.</td></tr>
+            <tr><td class="py-2 pr-4 font-medium">Saved by rules</td><td class="py-2">Images the production rules saved by themselves.</td></tr>
+            <tr><td class="py-2 pr-4 font-medium">Uncertain</td><td class="py-2">Images a reviewer marked uncertain.</td></tr>
+            <tr><td class="py-2 pr-4 font-medium">Duplicates</td><td class="py-2">Copies of images added earlier (shown only when there are some).</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-4">Under the lists, <b>filters</b> narrow any list to a place or camera, to dates (<b>From</b> and <b>To</b>, by the camera's corrected clock), or to a species. <b>Show boxes scoring ≥ …%</b> sets the threshold: boxes the detector is less sure of than that are hidden (50% to start).</p>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">Boxes</h3>
+      <ul class="mt-4 list-disc space-y-2 pl-6">
+        <li><b>Select a box</b> by clicking it. An image with one animal box opens with it selected already.</li>
+        <li><b>Draw a box</b> by dragging on the image. It gets the class chosen with the buttons <b>1 · animal</b>, <b>2 · person</b>, and <b>3 · vehicle</b> (keys <kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd>). With a box selected, those buttons change its class.</li>
+        <li><b>Move a box</b> by dragging it, and <b>resize</b> it by dragging a corner of the selected box.</li>
+        <li><b>Delete box</b> (<kbd>Delete</kbd>) removes the selected box. <b>Delete all boxes</b> (<kbd>B</kbd> or <kbd>0</kbd>) leaves the image empty.</li>
+        <li><b>Undo edits</b> (<kbd>Esc</kbd>) puts the image back as it was. (With a box selected, the first <kbd>Esc</kbd> just deselects it.)</li>
+        <li><b>Zoom</b> with the zoom buttons, <kbd>+</kbd> and <kbd>-</kbd>, a pinch, or Ctrl- or ⌘-scrolling. Zoomed in, scroll or hold the space bar and drag to move around. <b>Fit</b> shows the whole image.</li>
+      </ul>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">Species</h3>
+      <p class="mt-4">Select an animal box to see its <b>species suggestions</b> under the image, each with a score. Click one to use it. A tag says where it came from:</p>
+      <ul class="mt-4 list-disc space-y-2 pl-6">
+        <li>no tag: <b>SpeciesNet</b>, a general model that knows about 2,500 species and groups of species;</li>
+        <li><b>project</b>: your <a href="#models" class="text-emerald-700 underline">Project Model</a>, which learns this project's species from your labels;</li>
+        <li><b>production</b>: this project's <a href="#models" class="text-emerald-700 underline">production model</a>, if it has one.</li>
+      </ul>
+      <p class="mt-4">When the models are sure, WildObserve™ fills in the species for you, to confirm or change. When your Project Model and SpeciesNet disagree, it fills in nothing and asks you to pick. You can also type a species in the species field, from the project's <a href="#species-list" class="text-emerald-700 underline">species list</a>. <b>Apply to all animals</b> gives every animal in the image the selected box's species, for a herd, say.</p>
+      <p class="mt-4">With a box selected, you can also record its <b>count</b> (one box can stand for a group), <b>sex</b>, <b>life stage</b>, and <b>behavior</b>. <b>Notes</b> are about the whole image. All of them are exported.</p>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">Saving</h3>
+      <p class="mt-4"><b>Save &amp; next</b> (<kbd>Enter</kbd>) saves the image as reviewed and opens the next one. On an image reviewed already, it's <b>Confirm &amp; next</b>. <kbd>←</kbd> and <kbd>→</kbd> move between images. If you edited the image, moving on saves it, as Save &amp; next does; if you didn't, it stays as it was. Tick <b>Uncertain</b> (<kbd>U</kbd>) when you're not sure: the image is saved, listed under Uncertain, and left out of your Project Model's training.</p>
+
+      <!-- 6 -->
+      <h2 id="faster" class="mt-12 text-2xl font-semibold text-slate-900">6. Reviewing faster</h2>
+
+      <h3 id="species-list" class="mt-8 text-lg font-semibold text-slate-900">Species keys</h3>
+      <p class="mt-4">Click <b>Species list</b> in the header for the species offered when you label boxes. Give the common ones a key: in the review, pressing it names the selected box, or with none selected, every animal box in the image. The keys show under the image as a reminder. <b>Import a list</b> adds species from a CSV file, one per line: its name, then optionally its scientific name and key, for example <code class="rounded bg-slate-100 px-1">Raccoon,Procyon lotor,R</code>.</p>
+
+      <h3 id="mark-empty" class="mt-8 text-lg font-semibold text-slate-900">Marking empty images together</h3>
+      <p class="mt-4">Turn on <b>Likely empty</b>, then click <b>Mark … as empty…</b>. WildObserve™ says what it will save, and how sure it is: how many images the detector found nothing in, and the highest score among the rest. Click <b>Mark them empty</b>. With <b>Skip bursts with boxes</b> ticked, images in a capture event where another picture has a box are left for you to check, since the animal may be in them too, missed. <b>Undo</b> puts the images back to review.</p>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">Naming whole capture events</h3>
+      <p class="mt-4">When you can see that a run of pictures shows one species, tick their images in the list (Shift-click ticks a run), type the species, and click <b>Name their events…</b>. WildObserve™ says what it will do: how many animal boxes it will name, in how many images and capture events. It leaves alone images with no animal box (to review one by one, since the animal may be there, missed) and images reviewed already, and it lists any species the suggestions prefer instead. Confirm, and the images are saved as reviewed. <b>Undo</b> puts them back.</p>
+
+      <!-- 7 -->
+      <h2 id="fixed-objects" class="mt-12 text-2xl font-semibold text-slate-900">7. Fixed objects</h2>
+      <p class="mt-4">A rock, a stump, or a branch can look like an animal to the detector, picture after picture. WildObserve™ finds the places where it keeps finding a box at one camera, in 5 capture events or more on 2 days or more, and asks you about them in <b>Deployments… &gt; Fixed objects…</b>. Say which are fixed objects: their boxes are then hidden, in the images to review and in those still to come from that camera, so those images can be marked empty. Nothing is hidden until someone says so, since an animal resting in one place can look the same.</p>
+      <p class="mt-4">To mark one yourself, select its box in an image and click <b>Fixed object</b>. The note under the image says how many boxes at that place are hidden, with <b>Undo</b>. An image with hidden boxes says so above it; click that to see them. Change your mind any time in <b>Fixed objects…</b>.</p>
+
+      <!-- 8 -->
+      <h2 id="dashboard" class="mt-12 text-2xl font-semibold text-slate-900">8. Dashboard and timed sessions</h2>
+      <p class="mt-4">Click <b>Dashboard</b> in the header for the project's progress: what the images hold, the species found on reviewed images (with their images, boxes, capture events, and deployments), and each deployment's progress. Click a species to list its images.</p>
+      <p class="mt-4">To time yourself reviewing, click <b>Start a timed session</b>, review as you usually do, and stop it when you're done. The session's clock is in the header, with <b>Pause</b>, <b>Resume</b>, and <b>Stop</b>. The Dashboard lists each session with how many capture events you reviewed, and how many an hour.</p>
+
+      <!-- 9 -->
+      <h2 id="models" class="mt-12 text-2xl font-semibold text-slate-900">9. The AI models</h2>
+      <p class="mt-4">WildObserve™ uses three kinds of model to suggest species, plus MegaDetector to find animals, people, and vehicles in the first place.</p>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">SpeciesNet</h3>
+      <p class="mt-4">A general species model from Google, the same for everyone, on every plan. Its suggestions have no tag.</p>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">Your Project Model <span class="ml-2 rounded-full bg-emerald-100 px-2 py-0.5 align-middle text-xs font-semibold text-emerald-800">Researcher, Lab, and Organization</span></h3>
+      <p class="mt-4">Each project's own model, trained on your computer from the boxes you label in that project. It starts once you've labeled a few examples each of two species, and retrains by itself as you review, so it keeps learning your species, cameras, and places. Its suggestions are tagged <b>project</b>. Images marked uncertain, and saves made by the production rules, aren't used to train it.</p>
+      <p class="mt-4">In <b>Project &gt; Models…</b>, <b>Your Project Model</b> shows what it knows. <b>Improve now</b> retrains it at once. <b>Versions…</b> lists every version it trained, with how well each did on labels held out from its training, which species it finds, and which it mixes up. <b>Use this version</b> goes back to an earlier one, and <b>Use the newest</b> returns to letting it update. <b>Export your Project Model</b> saves it as a model package.</p>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">Production models <span class="ml-2 rounded-full bg-emerald-100 px-2 py-0.5 align-middle text-xs font-semibold text-emerald-800">Lab and Organization</span></h3>
+      <p class="mt-4">A production model is the model a project relies on when no one is reviewing: the <a href="#rules" class="text-emerald-700 underline">production rules</a>, notifications, and email alerts go by it. Unlike your Project Model, it changes only when an administrator chooses another. Its suggestions are tagged <b>production</b>.</p>
+      <p class="mt-4">It can be the project's own Project Model, or a model imported as a model package. We can train one for you from your complete set of labeled images, tested on cameras it never saw and calibrated so its scores mean what they say (see <a href="plans.html" class="text-emerald-700 underline">Plans</a>). To use one:</p>
+      <ol class="mt-4 list-decimal space-y-2 pl-6">
+        <li>In <b>Project &gt; Models…</b>, under <b>Model store</b>, click <b>Import a model package…</b> and choose the package (a zip file). WildObserve™ checks it before adding it. Imported models are available to every project on the computer.</li>
+        <li>Under <b>This project's production model</b>, choose it, say why, and click <b>Use it</b>. Each change is logged with who made it and why.</li>
+      </ol>
+
+      <!-- 10 -->
+      <h2 id="exporting" class="mt-12 text-2xl font-semibold text-slate-900">10. Exporting your data</h2>
+      <p class="mt-4">Click <b>Export…</b> in the header. An export holds every reviewed image: its boxes and species, who reviewed it, and whether each box came from the detector or a person. You can also include images not reviewed yet, with the models' predictions only, and images marked uncertain. The formats:</p>
+      <ul class="mt-4 list-disc space-y-2 pl-6">
+        <li><b>CSV spreadsheet</b>: one row per box, for Excel, R, or Python.</li>
+        <li><b>COCO Camera Traps (JSON)</b>: the format LILA BC and MegaDetector's tools use.</li>
+        <li><b>COCO (JSON)</b>: standard COCO, for training and evaluating detectors.</li>
+        <li><b>MegaDetector results (JSON)</b>, and <b>YOLO labels (zip)</b>.</li>
+        <li><b>Camtrap DP (zip)</b>: the camera-trap data standard GBIF and other platforms read. It needs each camera's location.</li>
+        <li><b>Wildlife Insights bulk upload (zip)</b>: the CSV files Wildlife Insights' bulk upload takes. It needs each camera's location.</li>
+        <li><b>JSON with full provenance</b>: how each record came to be, for a methods section, an audit, or a later re-analysis: what the models said beside what reviewers saved, and every save.</li>
+      </ul>
+      <p class="mt-4">Formats that need locations offer <b>Edit deployments…</b> to fill them in. Exports are files on your computer; where they go next is up to you.</p>
+
+      <!-- 11 -->
+      <h2 id="background" class="mt-12 text-2xl font-semibold text-slate-900">11. Watched folders, rules, and alerts <span class="ml-2 rounded-full bg-emerald-100 px-2 py-0.5 align-middle text-xs font-semibold text-emerald-800">Lab and Organization</span></h2>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">Watched folders</h3>
+      <p class="mt-4">In <b>Images…</b>, tick <b>Watch for new images</b> under a folder, a folder your camera images sync or copy into, say. Its new images are then added and processed as they arrive, and the folder shows when WildObserve™ last looked. A project with watched folders keeps watching while another project is open.</p>
+      <p class="mt-4">Closing the window while a folder is watched, or while images are being added or processed, keeps WildObserve™ working in the background, with an icon in the menu bar. Its menu says what WildObserve is doing, opens the window again, or quits. Once the work is done and nothing is watched, it quits by itself. To keep watching after your Mac restarts, turn on <b>Open WildObserve when you log in</b> in About.</p>
+
+      <h3 id="rules" class="mt-8 text-lg font-semibold text-slate-900">Production rules</h3>
+      <p class="mt-4">Click <b>Rules…</b> in the header for what WildObserve™ decides by itself once images are processed, as they arrive in watched folders too. An administrator sets them for each project.</p>
+      <ul class="mt-4 list-disc space-y-2 pl-6">
+        <li><b>Save reviews by themselves</b>, off unless you turn them on: save confident blanks as empty (no box above a score you choose, unless another picture in its capture event has a box), and with a production model, save the species it's confident of. These saves are listed under <b>Saved by rules</b>, credited to "production-rules", and kept out of your Project Model's training. Put them back to review there, or save one to make it yours.</li>
+        <li><b>Flag for a person to look at</b>: a person in the image, a species not on the project's species list, an animal no species stands out for, and <b>species of concern</b>, which you list. Flagged images are in the Flagged list, each with why.</li>
+      </ul>
+      <p class="mt-4">Changing the rules looks again at the images still to review.</p>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">Notifications</h3>
+      <p class="mt-4">With <b>Notify me when one turns up</b> ticked in Rules, a species of concern in an image a watched folder brought in the last day raises a Mac notification, once per capture event. Clicking it opens WildObserve at that image, switching to its project if another is open. The first time, macOS asks whether WildObserve may send notifications; you can change that later in System Settings &gt; Notifications. Notifications never leave your computer.</p>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">Email alerts</h3>
+      <p class="mt-4">Email alerts tell people away from the computer when a species of concern turns up in a watched folder. They go through your own mail server, never ours. Set them up in <b>Rules… &gt; Alerts by email…</b>:</p>
+      <ol class="mt-4 list-decimal space-y-2 pl-6">
+        <li><b>Mail server</b>, once for every project on the computer. <b>Fill in for</b> sets the server, port, and security for Gmail, iCloud Mail, Yahoo Mail, or Fastmail. Enter your <b>mail account's</b> user name (usually its email address) and password. Most mail accounts need an <b>app password</b> for this, made in the account's security settings: in Gmail, turn on 2-Step Verification, then make one under App passwords (<a href="https://support.google.com/mail/answer/185833" class="text-emerald-700 underline">Google's help</a>). Outlook.com doesn't allow it, and Microsoft 365 only where your IT turns on SMTP sign-in; a mail-sending service such as Amazon SES works too. Click <b>Save mail server</b>. The password is kept in your Mac's Keychain.</li>
+        <li><b>This project</b>: list the addresses alerts go to, and turn on <b>Send alerts for this project</b>. Optionally, <b>Attach the image</b>: a smaller copy with a box around what was found, and none of the original's metadata. You can also set how long to wait before another alert about the same species at the same deployment.</li>
+        <li><b>Send a test</b> to check it all works.</li>
+      </ol>
+      <p class="mt-4">An alert goes for images a watched folder brings after alerts are turned on, once per capture event. Adding an archive, or changing the rules, never sets off alerts about old images. <b>Lately</b> lists the alerts sent, held back, or not sent, with why. What alerts contain is in the <a href="privacy.html#email-alerts" class="text-emerald-700 underline">Privacy Policy</a>.</p>
+
+      <!-- 12 -->
+      <h2 id="people" class="mt-12 text-2xl font-semibold text-slate-900">12. People, licenses, and settings</h2>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">People</h3>
+      <p class="mt-4">Click your name at the top right for your account: <b>Change password</b> and <b>Sign out</b>. Administrators also find <b>People</b> there: everyone who uses WildObserve™ on this computer. <b>Add a person</b> with their email address, name, and a password, as a reviewer or an administrator. Reviewers review images; administrators can also manage people, the rules, alerts, and the models a project uses. A turned-off account can't sign in, and its reviews keep its name.</p>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">Licenses</h3>
+      <p class="mt-4">The free Community plan needs no license. For a paid plan, choose <b>WildObserve &gt; License…</b> in the menu bar and enter your license key under <b>Activate with a license key</b>. On a computer that can't go online, choose the license file you received instead (<b>Choose license file…</b>; its name ends in <code class="rounded bg-slate-100 px-1">.wolicense</code>).</p>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">About</h3>
+      <p class="mt-4"><b>WildObserve &gt; About WildObserve</b> has:</p>
+      <ul class="mt-4 list-disc space-y-2 pl-6">
+        <li><b>Updates</b>: whether a newer version is out. Untick <b>Go online to check for updates and activate licenses</b> to keep WildObserve™ offline; email alerts stop too. Everything else works offline.</li>
+        <li><b>Working in the background</b>: <b>Open WildObserve when you log in</b>.</li>
+        <li><b>Diagnostic report</b>: <b>Save diagnostic report</b> saves a zip of WildObserve's log and a description of your computer and settings, with no images, species, or reviews. WildObserve doesn't send it anywhere; email it to us with your question.</li>
+        <li>The AI models and open-source software WildObserve™ is built with, and their licenses.</li>
+      </ul>
+
+      <!-- 13 -->
+      <h2 id="shortcuts" class="mt-12 text-2xl font-semibold text-slate-900">13. Keyboard shortcuts</h2>
+      <p class="mt-4">In the review, when you're not typing in a field:</p>
+      <div class="mt-4 overflow-x-auto">
+        <table class="w-full text-left text-sm">
+          <thead class="border-b border-slate-300 text-slate-900">
+            <tr><th class="py-2 pr-4 font-semibold">Key</th><th class="py-2 font-semibold">Does</th></tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 align-top">
+            <tr><td class="py-2 pr-4 whitespace-nowrap"><kbd>Enter</kbd></td><td class="py-2">Save &amp; next</td></tr>
+            <tr><td class="py-2 pr-4 whitespace-nowrap"><kbd>←</kbd> <kbd>→</kbd></td><td class="py-2">Previous and next image</td></tr>
+            <tr><td class="py-2 pr-4 whitespace-nowrap"><kbd>[</kbd> <kbd>]</kbd></td><td class="py-2">Previous and next frame of the capture event</td></tr>
+            <tr><td class="py-2 pr-4 whitespace-nowrap"><kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd></td><td class="py-2">Animal, person, or vehicle: the selected box's class, or the next box you draw</td></tr>
+            <tr><td class="py-2 pr-4 whitespace-nowrap">Species keys</td><td class="py-2">Name the selected box, or every animal box, that species (set in Species list)</td></tr>
+            <tr><td class="py-2 pr-4 whitespace-nowrap"><kbd>B</kbd> or <kbd>0</kbd></td><td class="py-2">Empty: remove all boxes</td></tr>
+            <tr><td class="py-2 pr-4 whitespace-nowrap"><kbd>Delete</kbd></td><td class="py-2">Delete the selected box</td></tr>
+            <tr><td class="py-2 pr-4 whitespace-nowrap"><kbd>U</kbd></td><td class="py-2">Uncertain, on or off</td></tr>
+            <tr><td class="py-2 pr-4 whitespace-nowrap"><kbd>Esc</kbd></td><td class="py-2">Deselect the box; with none selected, undo edits</td></tr>
+            <tr><td class="py-2 pr-4 whitespace-nowrap"><kbd>+</kbd> <kbd>-</kbd></td><td class="py-2">Zoom in and out (also a pinch, or Ctrl- or ⌘-scroll)</td></tr>
+            <tr><td class="py-2 pr-4 whitespace-nowrap"><kbd>Space</kbd> + drag</td><td class="py-2">Move around a zoomed-in image</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 14 -->
+      <h2 id="troubleshooting" class="mt-12 text-2xl font-semibold text-slate-900">14. Troubleshooting</h2>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">macOS says WildObserve is in use when I try to replace or delete it</h3>
+      <p class="mt-4">It's still running, probably in the background for a watched folder. Click the WildObserve icon in the menu bar and choose <b>Quit</b>, or press ⌘Q with its window in front. Then replace it. If you have several WildObserve disk images open, eject the old ones first, so you drag the new version.</p>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">A folder says "Not found"</h3>
+      <p class="mt-4">Its drive isn't connected, or the folder was moved or renamed. Connect the drive, or in <b>Images…</b>, click <b>Moved?</b> and <b>Find it…</b> to point WildObserve™ at where it is now. Your reviews are kept.</p>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">Moving a project to another Mac</h3>
+      <p class="mt-4">Copy the project's folder, and your image folders, to the other Mac. There, choose <b>Project &gt; Projects… &gt; Open a project folder…</b> and open the copy. Then in <b>Images…</b>, use <b>Moved?</b> to point each image folder at its new place.</p>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">Capture events are far too big</h3>
+      <p class="mt-4">Images with no capture time in their EXIF data use the file's date instead, and copying, downloading, or syncing files often gives many of them the same date, so they chain into one huge event. WildObserve™ warns about this when you name capture events. Check <b>Deployments…</b>: the event gap, and each camera's clock.</p>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">The test email fails</h3>
+      <p class="mt-4">The user name and password are your mail account's, not WildObserve's, and most accounts need an app password rather than your usual one (see <a href="#background" class="text-emerald-700 underline">Email alerts</a>). If the server says it didn't accept them, make a new app password and try again. Check the port and security too: 465 with SSL/TLS, or 587 with STARTTLS.</p>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">Notifications don't appear</h3>
+      <p class="mt-4">In System Settings &gt; Notifications &gt; WildObserve, allow notifications. Notifications come only for species of concern in images a watched folder brought in the last day, once per capture event.</p>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">No administrator can sign in</h3>
+      <p class="mt-4">First try <b>Forgot your password?</b> on the sign-in screen. If that doesn't work, quit WildObserve, open Terminal, and run the command below with the administrator's email address. It asks for a new password.</p>
+      <pre class="mt-4 overflow-x-auto rounded-xl bg-slate-900 px-4 py-3 text-sm text-slate-100"><code>/Applications/WildObserve.app/Contents/MacOS/WildObserve --reset-password you@example.org</code></pre>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">Getting help</h3>
+      <p class="mt-4">In <b>WildObserve &gt; About WildObserve</b>, click <b>Save diagnostic report</b>, and email it to <a href="mailto:info@qsc.earth" class="font-semibold text-emerald-700 underline">info@qsc.earth</a> with a description of the problem.</p>
+
+      <h2 class="mt-12 text-2xl font-semibold text-slate-900">Your privacy</h2>
+      <p class="mt-4">WildObserve™ runs on your computer. Your images, their metadata, and your annotations stay there, and we never receive them. It goes online only to check for updates, activate a license, sign you in with Google if you choose to, and send email alerts if you opt in. The <a href="privacy.html" class="text-emerald-700 underline">Privacy Policy</a> has the details.</p>
+
+      <p class="mt-10 text-sm text-slate-500">See also <a href="plans.html" class="text-emerald-700 underline">Plans</a>, the <a href="terms.html" class="text-emerald-700 underline">Terms of Service</a>, and the <a href="privacy.html" class="text-emerald-700 underline">Privacy Policy</a>.</p>
+    </article>
+  </main>
+
+  <footer class="bg-slate-900 px-6 py-9 text-sm text-slate-300">
+    <div class="mx-auto flex max-w-6xl flex-col justify-between gap-4 sm:flex-row sm:items-end">
+      <div>
+        <p class="font-bold text-white">Quantitative Science Consulting</p>
+        <p class="mt-1">Science-grounded AI for sustainable impact.</p>
+      </div>
+      <div class="sm:text-right">
+        <p><a href="plans.html" class="hover:text-white hover:underline">Plans</a> · <a href="user_guide.html" class="hover:text-white hover:underline">User guide</a> · <a href="privacy.html" class="hover:text-white hover:underline">Privacy</a> · <a href="terms.html" class="hover:text-white hover:underline">Terms</a></p>
+        <p class="mt-1">&copy; <script>document.write(new Date().getFullYear())</script> QSC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    toggle.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('hidden') === false;
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+  </script>
+</body>
+</html>
