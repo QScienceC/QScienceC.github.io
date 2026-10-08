@@ -99,14 +99,14 @@
         <p class="mt-4 text-lg leading-7 text-emerald-950/80">Choose your operating system to get WildObserve™ running on your computer.</p>
 
         <div class="mx-auto mt-8 grid max-w-3xl items-start gap-4 sm:grid-cols-3">
-          <a href="https://github.com/mikeyEcology/wildobserve-releases/releases/latest/download/WildObserve.dmg" class="rounded-xl bg-emerald-700 px-5 py-4 font-semibold text-white shadow-sm transition hover:bg-emerald-800 focus:outline-none focus:ring-2 focus:ring-emerald-700 focus:ring-offset-2 focus:ring-offset-emerald-50">
+          <a href="https://github.com/mikeyEcology/wildobserve-releases/releases/latest/download/WildObserve.dmg" data-release-asset="WildObserve.dmg" class="rounded-xl bg-emerald-700 px-5 py-4 font-semibold text-white shadow-sm transition hover:bg-emerald-800 focus:outline-none focus:ring-2 focus:ring-emerald-700 focus:ring-offset-2 focus:ring-offset-emerald-50">
             Download for Mac
           </a>
           <button type="button" disabled class="cursor-not-allowed rounded-xl border border-slate-200 bg-white px-5 py-4 font-semibold text-slate-500 shadow-sm">
             <span class="block">Download for Windows</span>
             <span class="mt-1 block text-sm font-normal text-slate-400">Coming in October 2026</span>
           </button>
-          <a href="https://github.com/mikeyEcology/wildobserve-releases/releases/latest/download/WildObserve-amd64.deb" class="rounded-xl bg-emerald-700 px-5 py-4 font-semibold text-white shadow-sm transition hover:bg-emerald-800 focus:outline-none focus:ring-2 focus:ring-emerald-700 focus:ring-offset-2 focus:ring-offset-emerald-50">
+          <a href="https://github.com/mikeyEcology/wildobserve-releases/releases/latest/download/WildObserve-amd64.deb" data-release-asset="WildObserve-amd64.deb" class="rounded-xl bg-emerald-700 px-5 py-4 font-semibold text-white shadow-sm transition hover:bg-emerald-800 focus:outline-none focus:ring-2 focus:ring-emerald-700 focus:ring-offset-2 focus:ring-offset-emerald-50">
             Download for Linux
           </a>
         </div>
@@ -175,6 +175,66 @@
       const isOpen = mobileMenu.classList.toggle('hidden') === false;
       toggle.setAttribute('aria-expanded', isOpen);
     });
+  </script>
+  <script>
+    // Each download button gets its file from the newest release that has it, so a system
+    // whose newest build is in an older release still downloads. (GitHub's latest/download
+    // link only looks in the newest release.) A click before GitHub answers waits for it, for
+    // a few seconds at most. If GitHub doesn't answer, the links stay as they are.
+    const RELEASES = 'https://api.github.com/repos/mikeyEcology/wildobserve-releases/releases';
+    const PAGE = 100; // GitHub's most per page
+    const downloadLinks = [...document.querySelectorAll('a[data-release-asset]')];
+    const version = (tag) => (tag.match(/\d+/g) || []).map(Number);
+    const newer = (a, b) => {
+      const [x, y] = [version(a.tag_name), version(b.tag_name)];
+      for (let i = 0; i < Math.max(x.length, y.length); i++) {
+        if ((x[i] || 0) !== (y[i] || 0)) return (y[i] || 0) - (x[i] || 0);
+      }
+      return 0;
+    };
+    const findDownloads = async () => {
+      const missing = new Set(downloadLinks.map((link) => link.dataset.releaseAsset));
+      const published = [];
+      // GitHub lists the newest releases first: read further pages only while a file hasn't turned up.
+      for (let page = 1; missing.size > 0; page++) {
+        let batch;
+        try {
+          const response = await fetch(`${RELEASES}?per_page=${PAGE}&page=${page}`);
+          if (!response.ok) break;
+          batch = await response.json();
+        } catch {
+          break;
+        }
+        for (const release of batch) {
+          if (release.draft || release.prerelease) continue;
+          published.push(release);
+          release.assets.forEach((file) => missing.delete(file.name));
+        }
+        if (batch.length < PAGE) break;
+      }
+      published.sort(newer);
+      for (const link of downloadLinks) {
+        for (const release of published) {
+          const file = release.assets.find((asset) => asset.name === link.dataset.releaseAsset);
+          if (file) {
+            link.href = file.browser_download_url;
+            break;
+          }
+        }
+      }
+    };
+    const downloadsFound = findDownloads().catch(() => {});
+    let downloadsSettled = false;
+    downloadsFound.then(() => (downloadsSettled = true));
+    const waitAtMost = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+    downloadLinks.forEach((link) =>
+      link.addEventListener('click', (event) => {
+        // A click to open in a new tab or window goes ahead, with the link as it is.
+        if (downloadsSettled || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        Promise.race([downloadsFound, waitAtMost(3000)]).then(() => window.location.assign(link.href));
+      })
+    );
   </script>
 </body>
 </html>
