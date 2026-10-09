@@ -91,6 +91,7 @@
           <li><a href="#faster" class="text-emerald-700 hover:underline">Reviewing faster</a></li>
           <li><a href="#fixed-objects" class="text-emerald-700 hover:underline">Fixed objects</a></li>
           <li><a href="#dashboard" class="text-emerald-700 hover:underline">Dashboard and timed sessions</a></li>
+          <li><a href="#occupancy" class="text-emerald-700 hover:underline">Occupancy and abundance</a></li>
           <li><a href="#models" class="text-emerald-700 hover:underline">The AI models</a></li>
           <li><a href="#exporting" class="text-emerald-700 hover:underline">Exporting your data</a></li>
           <li><a href="#background" class="text-emerald-700 hover:underline">Watched folders, rules, and alerts</a></li>
@@ -193,6 +194,7 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
         <li><b>Name</b> and <b>Place</b>: deployments at the same place, such as a camera's successive memory cards, share a place name.</li>
         <li><b>Latitude</b> and <b>Longitude</b>, in decimal degrees. <b>Use the images' GPS</b> fills them in from the images, where the camera recorded them. Some exports need them.</li>
         <li><b>Camera clock</b>: the offset from UTC the camera's clock was set to. If a camera was set to the wrong time, click its clock to correct it: WildObserve shows what the first image says, you enter when it was really taken, and all of the deployment's images shift by the difference. <b>Clock was right</b> undoes a correction.</li>
+        <li><b>Set up, taken down</b> (optional): when the camera was put out and collected. <a href="#occupancy" class="text-emerald-700 underline">Occupancy</a> counts the days it ran before its first image and after its last. Left blank, the first and last image stand in.</li>
         <li><b>Camera</b>: the camera's model and serial number, from the images.</li>
       </ul>
 
@@ -271,11 +273,61 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
 
       <!-- 8 -->
       <h2 id="dashboard" class="mt-12 text-2xl font-semibold text-slate-900">8. Dashboard and timed sessions</h2>
-      <p class="mt-4">Click <b>Dashboard</b> in the header for the project's progress: what the images hold, the species found on reviewed images (with their images, boxes, capture events, and deployments), and each deployment's progress. Click a species to list its images.</p>
+      <p class="mt-4">Click <b>Dashboard</b> in the header for the project's progress: what the images hold, the species found on reviewed images (with their images, boxes, capture events, and deployments), and each deployment's progress. Click a species to list its images. <b>Occupancy…</b> opens <a href="#occupancy" class="text-emerald-700 underline">occupancy and abundance</a>.</p>
       <p class="mt-4">To time yourself reviewing, click <b>Start a timed session</b>, review as you usually do, and stop it when you're done. The session's clock is in the header, with <b>Pause</b>, <b>Resume</b>, and <b>Stop</b>. The Dashboard lists each session with how many capture events you reviewed, and how many an hour.</p>
 
       <!-- 9 -->
-      <h2 id="models" class="mt-12 text-2xl font-semibold text-slate-900">9. The AI models</h2>
+      <h2 id="occupancy" class="mt-12 text-2xl font-semibold text-slate-900">9. Occupancy and abundance</h2>
+      <p class="mt-4">From your reviewed images, WildObserve™ estimates each species' <b>occupancy</b>: the share of sites it uses, allowing for the times it was there but no camera saw it (MacKenzie et al. 2002). It also estimates <b>abundance</b> with the Royle–Nichols model (Royle &amp; Nichols 2003): the average number of animals per site that could be seen, a relative index that rests on the model's assumptions. The models are fitted on your computer, the way R's unmarked package fits them (Fiske &amp; Chandler 2011). Click <b>Dashboard</b>, then <b>Occupancy…</b>. It's in every plan.</p>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">What it needs</h3>
+      <ul class="mt-4 list-disc space-y-2 pl-6">
+        <li><b>Capture times</b>, from the images, so each detection falls in the right week.</li>
+        <li><b>Many places.</b> Occupancy compares sites, so it needs dozens of them, ideally. The panel warns when there are few.</li>
+        <li><b>Repeat visits.</b> Each site's days are split into occasions, a week each by default. A species missed one week and seen another tells the model how often it's missed.</li>
+        <li><b>When cameras ran.</b> Give each camera's set-up and take-down times in <a href="#deployments" class="text-emerald-700 underline">Deployments</a>, if you know them. Otherwise its first and last image stand in.</li>
+      </ul>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">Settings</h3>
+      <ul class="mt-4 list-disc space-y-2 pl-6">
+        <li><b>Sites</b>: places (deployments that share a place name pool together), or single deployments.</li>
+        <li><b>Days per occasion</b>, and whether <b>occasions start on</b> each site's first day or the survey's.</li>
+        <li><b>Also images not reviewed yet</b>: a species counts as seen on an image no one has reviewed where it's the top suggestion, scoring at least the number you give. Suggestions make mistakes, so two more estimates come with it to compare: occupancy from <b>reviewed only</b> images, and occupancy <b>allowing for false positives</b> (Miller et al. 2011), which goes by what your reviews confirm.</li>
+        <li><b>Only species on the Species list</b>, on by default when suggestions count. SpeciesNet's names include wider groups (Canine family), people (Human), and species from other places, and each would count as a species of its own. With this on, a suggestion counts only if it names a species on your <a href="#species-list" class="text-emerald-700 underline">Species list</a>, and a warning lists the names left out. To include one, add it to the Species list, spelled as the suggestion spells it.</li>
+        <li><b>Include images marked uncertain</b>.</li>
+      </ul>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">The results</h3>
+      <p class="mt-4">Under <b>Table</b>, a row per species: the sites it was seen at, its <b>Occupancy</b>, the chance of seeing it in an occasion at a site it uses (<b>Seen in 7 days</b>, for week-long occasions), and <b>Animals per site</b>. Each comes with its 95% interval (lower and upper). The <b>Notes</b> column says when to be careful: a species seen at very few sites, a model that didn't settle, or an estimate at its limit. Warnings above the table are about the whole survey. Under <b>Plots</b>, choose one of six:</p>
+      <ul class="mt-4 list-disc space-y-2 pl-6">
+        <li><b>Occupancy by species</b>: each estimate with its interval, beside the share of sites the species was seen at. The gap between them is how much missed detections matter.</li>
+        <li><b>Response to a covariate</b>: how a species' occupancy, or its detection, changes with a site covariate you choose.</li>
+        <li><b>Covariate effects</b>: every covariate's effect for one species, or one covariate's across species.</li>
+        <li><b>Effort needed</b>: how many camera-days give a 95% chance of seeing a species at least once where it is. Useful for planning the next season.</li>
+        <li><b>Camera operation</b>: when each camera ran, and the days a species was seen.</li>
+        <li><b>Chance each site is occupied</b>, for every species and site, given what was seen there.</li>
+      </ul>
+      <p class="mt-4">Hover over a plot for its numbers. <b>Save as SVG…</b> and <b>Save as PNG…</b> save it, for a report or a paper.</p>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">Site covariates</h3>
+      <p class="mt-4">Occupancy and detection can depend on what you know about each place: its habitat, elevation, or distance to water, or whether the camera faces a trail. Click <b>Site covariates…</b>, then <b>Save as CSV…</b> for a file listing every place. Add a column for each covariate in Excel or Numbers, save it as CSV, and click <b>Import a CSV file…</b>. A column of numbers is numeric; any other column is a category. Then tick the covariates that occupancy and detection depend on. Each species gets an effect for each, with its interval, on the logit scale: per standard deviation for a number, and beside the first level for a category. With few sites, use few covariates: with many at once, chance effects can look real.</p>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">Saving the results</h3>
+      <ul class="mt-4 list-disc space-y-2 pl-6">
+        <li><b>Save estimates as CSV…</b>: the species table, a row per species, with a column for every estimate and interval.</li>
+        <li><b>Export Estimate Tables (zip)…</b>: the same table, the detection tables behind it (sites, occasions, camera-days, detections, and counts), and a script that fits the same models in R with the unmarked package. It's also in <b>Export…</b>, as <b>Occupancy tables (zip)</b>.</li>
+      </ul>
+
+      <h3 class="mt-8 text-lg font-semibold text-slate-900">References</h3>
+      <ul class="mt-4 list-disc space-y-2 pl-6 text-sm">
+        <li>MacKenzie, D. I., Nichols, J. D., Lachman, G. B., Droege, S., Royle, J. A., &amp; Langtimm, C. A. (2002). Estimating site occupancy rates when detection probabilities are less than one. <i>Ecology</i>, 83(8), 2248–2255. <a href="https://doi.org/10.1890/0012-9658(2002)083[2248:ESORWD]2.0.CO;2" class="text-emerald-700 underline" style="overflow-wrap:anywhere">doi.org/10.1890/0012-9658(2002)083[2248:ESORWD]2.0.CO;2</a></li>
+        <li>Royle, J. A., &amp; Nichols, J. D. (2003). Estimating abundance from repeated presence–absence data or point counts. <i>Ecology</i>, 84(3), 777–790. <a href="https://doi.org/10.1890/0012-9658(2003)084[0777:EAFRPA]2.0.CO;2" class="text-emerald-700 underline" style="overflow-wrap:anywhere">doi.org/10.1890/0012-9658(2003)084[0777:EAFRPA]2.0.CO;2</a></li>
+        <li>Miller, D. A., Nichols, J. D., McClintock, B. T., Grant, E. H. C., Bailey, L. L., &amp; Weir, L. A. (2011). Improving occupancy estimation when two types of observational error occur: non-detection and species misidentification. <i>Ecology</i>, 92(7), 1422–1428. <a href="https://doi.org/10.1890/10-1396.1" class="text-emerald-700 underline" style="overflow-wrap:anywhere">doi.org/10.1890/10-1396.1</a></li>
+        <li>Fiske, I., &amp; Chandler, R. (2011). unmarked: An R package for fitting hierarchical models of wildlife occurrence and abundance. <i>Journal of Statistical Software</i>, 43(10). <a href="https://doi.org/10.18637/jss.v043.i10" class="text-emerald-700 underline" style="overflow-wrap:anywhere">doi.org/10.18637/jss.v043.i10</a></li>
+      </ul>
+
+      <!-- 10 -->
+      <h2 id="models" class="mt-12 text-2xl font-semibold text-slate-900">10. The AI models</h2>
       <p class="mt-4">WildObserve™ uses three kinds of model to suggest species, plus MegaDetector to find animals, people, and vehicles in the first place.</p>
 
       <h3 class="mt-8 text-lg font-semibold text-slate-900">SpeciesNet</h3>
@@ -293,8 +345,8 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
         <li>Under <b>This project's production model</b>, choose it, say why, and click <b>Use it</b>. Each change is logged with who made it and why.</li>
       </ol>
 
-      <!-- 10 -->
-      <h2 id="exporting" class="mt-12 text-2xl font-semibold text-slate-900">10. Exporting your data</h2>
+      <!-- 11 -->
+      <h2 id="exporting" class="mt-12 text-2xl font-semibold text-slate-900">11. Exporting your data</h2>
       <p class="mt-4">Click <b>Export…</b> in the header. An export holds every reviewed image: its boxes and species, who reviewed it, and whether each box came from the detector or a person. You can also include images not reviewed yet, with the models' predictions only, and images marked uncertain. The formats:</p>
       <ul class="mt-4 list-disc space-y-2 pl-6">
         <li><b>CSV spreadsheet</b>: one row per box, for Excel, R, or Python.</li>
@@ -303,12 +355,13 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
         <li><b>MegaDetector results (JSON)</b>, and <b>YOLO labels (zip)</b>.</li>
         <li><b>Camtrap DP (zip)</b>: the camera-trap data standard GBIF and other platforms read. It needs each camera's location.</li>
         <li><b>Wildlife Insights bulk upload (zip)</b>: the CSV files Wildlife Insights' bulk upload takes. It needs each camera's location.</li>
+        <li><b>Occupancy tables (zip)</b>: the tables and script for R from <a href="#occupancy" class="text-emerald-700 underline">Occupancy and abundance</a>.</li>
         <li><b>JSON with full provenance</b>: how each record came to be, for a methods section, an audit, or a later re-analysis: what the models said beside what reviewers saved, and every save.</li>
       </ul>
       <p class="mt-4">Formats that need locations offer <b>Edit deployments…</b> to fill them in. Exports are files on your computer; where they go next is up to you.</p>
 
-      <!-- 11 -->
-      <h2 id="background" class="mt-12 text-2xl font-semibold text-slate-900">11. Watched folders, rules, and alerts <span class="ml-2 rounded-full bg-emerald-100 px-2 py-0.5 align-middle text-xs font-semibold text-emerald-800">Lab and Organization</span></h2>
+      <!-- 12 -->
+      <h2 id="background" class="mt-12 text-2xl font-semibold text-slate-900">12. Watched folders, rules, and alerts <span class="ml-2 rounded-full bg-emerald-100 px-2 py-0.5 align-middle text-xs font-semibold text-emerald-800">Lab and Organization</span></h2>
 
       <h3 class="mt-8 text-lg font-semibold text-slate-900">Watched folders</h3>
       <p class="mt-4">In <b>Images…</b>, tick <b>Watch for new images</b> under a folder, a folder your camera images sync or copy into, say. Its new images are then added and processed as they arrive, and the folder shows when WildObserve™ last looked. A project with watched folders keeps watching while another project is open.</p>
@@ -335,8 +388,8 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
       </ol>
       <p class="mt-4">An alert goes for images a watched folder brings after alerts are turned on, once per capture event. Adding an archive, or changing the rules, never sets off alerts about old images. <b>Lately</b> lists the alerts sent, held back, or not sent, with why. What alerts contain is in the <a href="privacy.html#email-alerts" class="text-emerald-700 underline">Privacy Policy</a>.</p>
 
-      <!-- 12 -->
-      <h2 id="people" class="mt-12 text-2xl font-semibold text-slate-900">12. People, licenses, and settings</h2>
+      <!-- 13 -->
+      <h2 id="people" class="mt-12 text-2xl font-semibold text-slate-900">13. People, licenses, and settings</h2>
 
       <h3 class="mt-8 text-lg font-semibold text-slate-900">People</h3>
       <p class="mt-4">Click your name at the top right for your account: <b>Change password</b> and <b>Sign out</b>. Administrators also find <b>People</b> there: everyone who uses WildObserve™ on this computer. <b>Add a person</b> with their email address, name, and a password, as a reviewer or an administrator. Reviewers review images; administrators can also manage people, the rules, alerts, and the models a project uses. A turned-off account can't sign in, and its reviews keep its name.</p>
@@ -353,8 +406,8 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
         <li>The AI models and open-source software WildObserve™ is built with, and their licenses.</li>
       </ul>
 
-      <!-- 13 -->
-      <h2 id="shortcuts" class="mt-12 text-2xl font-semibold text-slate-900">13. Keyboard shortcuts</h2>
+      <!-- 14 -->
+      <h2 id="shortcuts" class="mt-12 text-2xl font-semibold text-slate-900">14. Keyboard shortcuts</h2>
       <p class="mt-4">In the review, when you're not typing in a field:</p>
       <div class="mt-4 overflow-x-auto">
         <table class="w-full text-left text-sm">
@@ -377,8 +430,8 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
         </table>
       </div>
 
-      <!-- 14 -->
-      <h2 id="troubleshooting" class="mt-12 text-2xl font-semibold text-slate-900">14. Troubleshooting</h2>
+      <!-- 15 -->
+      <h2 id="troubleshooting" class="mt-12 text-2xl font-semibold text-slate-900">15. Troubleshooting</h2>
 
       <h3 class="mt-8 text-lg font-semibold text-slate-900">macOS says WildObserve is in use when I try to replace or delete it</h3>
       <p class="mt-4">It's still running, probably in the background for a watched folder. Click the WildObserve icon in the menu bar and choose <b>Quit</b>, or press ⌘Q with its window in front. Then replace it. If you have several WildObserve disk images open, eject the old ones first, so you drag the new version.</p>
