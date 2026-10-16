@@ -1,0 +1,27 @@
+1
+00:00:00,500 --> 00:00:06,000
+Your project lists every image in its folders.
+Nothing has been looked at yet.
+
+2
+00:00:06,000 --> 00:00:08,000
+To start, click Process.
+
+3
+00:00:08,000 --> 00:00:17,000
+WildObserve loads its AI models.
+The first time, this can take a little while.
+
+4
+00:00:17,000 --> 00:00:27,500
+The models run on your own computer,
+so your images never leave it.
+
+5
+00:00:27,500 --> 00:00:30,000
+WildObserve now looks for animals, people, and vehicles
+in every image.
+
+6
+00:00:30,000 --> 00:00:32,500
+It shows how long is left, and you can pause it at any time.

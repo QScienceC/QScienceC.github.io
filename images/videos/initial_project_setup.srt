@@ -1,0 +1,36 @@
+1
+00:00:00,500 --> 00:00:05,000
+The first time you open WildObserve,
+it asks you to create the administrator account.
+
+2
+00:00:05,000 --> 00:00:11,500
+You can set it up with your Google account,
+or with your name, email, and a password.
+
+3
+00:00:11,800 --> 00:00:18,800
+Here we click Set up with Google and finish in the web browser.
+WildObserve carries on by itself.
+
+4
+00:00:19,000 --> 00:00:24,000
+Once you're signed in, make your first project.
+
+5
+00:00:24,000 --> 00:00:30,800
+Click Add a folder... and choose the folder
+that holds your camera-trap images.
+
+6
+00:00:30,800 --> 00:00:38,500
+Subfolders are included, and each folder of images is a deployment.
+Your images stay where they are: WildObserve doesn't copy them.
+
+7
+00:00:38,500 --> 00:00:42,000
+Give the project a name, then click Make project.
+
+8
+00:00:42,000 --> 00:00:43,500
+The project opens and finds your images.
