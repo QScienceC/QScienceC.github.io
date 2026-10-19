@@ -210,6 +210,10 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
       <p class="mt-4">Under the image you're reviewing, the capture event's bar says which event it is and what's been seen in it, and the <b>filmstrip</b> shows its pictures, with their boxes. Click a frame, or press <kbd>[</kbd> and <kbd>]</kbd>, to open the frame beside it. A frame that isn't in the list you're working through opens too; <kbd>←</kbd> goes back to the list. If WildObserve grouped pictures wrongly, <b>Split here</b> starts a new event at this image, and <b>Join with previous</b> joins this event to the one before.</p>
       <p class="mt-4">Capture times come from the images' EXIF data. Images without one use the file's date instead, which copying, downloading, or syncing the files can change. If capture events look far too big, see <a href="#troubleshooting" class="text-emerald-700 underline">Troubleshooting</a>.</p>
 
+      <h3 id="independent-records" class="mt-8 text-lg font-semibold text-slate-900">Independent records</h3>
+      <p class="mt-4">Studies of relative abundance and activity patterns count <b>independent records</b>, not pictures, so that an animal that stays in front of a camera, or keeps coming back to it, counts once. WildObserve™ groups a species' sightings at a deployment into one record while they're no more than 30 minutes apart, by default. Each sighting is compared with the species' previous one at that deployment (the rule camtrapR calls "lastRecord"), so a record lasts as long as the species keeps being seen, and a new one starts once 30 minutes pass without it. Change the interval at the top of <b>Deployments…</b>, under the event gap.</p>
+      <p class="mt-4">Records come from reviewed images. The <a href="#dashboard" class="text-emerald-700 underline">Dashboard</a> counts each species' records, and the <a href="#exporting" class="text-emerald-700 underline">CSV export</a> gives each box its record's number. Records aren't stored, so a new interval changes them at once.</p>
+
       <!-- 5 -->
       <h2 id="reviewing" class="mt-12 text-2xl font-semibold text-slate-900">5. Reviewing images</h2>
       <p class="mt-4">The review screen has the <b>filter panel</b> on the left (the lists, the filters, and the images in the list), the image in the middle with its boxes and species, and the capture event's bar and filmstrip below it. To give the image more room, hide the filter panel with <b>‹</b> at its top right (<b>›</b> brings it back), and the capture event's panel with <b>^</b> at its right end.</p>
@@ -280,7 +284,7 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
 
       <!-- 8 -->
       <h2 id="dashboard" class="mt-12 text-2xl font-semibold text-slate-900">8. Dashboard and timed sessions</h2>
-      <p class="mt-4">Click <b>Dashboard</b> in the header for the project's progress: what the images hold, the species found on reviewed images (with their images, boxes, capture events, and deployments), and each deployment's progress. Click a species to list its images. <b>Occupancy…</b> opens <a href="#occupancy" class="text-emerald-700 underline">occupancy and abundance</a>.</p>
+      <p class="mt-4">Click <b>Dashboard</b> in the header for the project's progress: what the images hold, the species found on reviewed images (with their images, boxes, capture events, <a href="#independent-records" class="text-emerald-700 underline">independent records</a>, and deployments), and each deployment's progress. Click a species to list its images. <b>Occupancy…</b> opens <a href="#occupancy" class="text-emerald-700 underline">occupancy and abundance</a>.</p>
       <p class="mt-4">To time yourself reviewing, click <b>Start a timed session</b>, review as you usually do, and stop it when you're done. The session's clock is in the header, with <b>Pause</b>, <b>Resume</b>, and <b>Stop</b>. The Dashboard lists each session with how many capture events you reviewed, and how many an hour.</p>
 
       <!-- 9 -->
@@ -356,7 +360,7 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
       <h2 id="exporting" class="mt-12 text-2xl font-semibold text-slate-900">11. Exporting your data</h2>
       <p class="mt-4">Click <b>Export…</b> in the header. An export holds every reviewed image: its boxes and species, who reviewed it, and whether each box came from the detector or a person. You can also include images not reviewed yet, with the models' predictions only, and images marked uncertain. The formats:</p>
       <ul class="mt-4 list-disc space-y-2 pl-6">
-        <li><b>CSV spreadsheet</b>: one row per box, for Excel, R, or Python.</li>
+        <li><b>CSV spreadsheet</b>: one row per box, for Excel, R, or Python. Its last columns give each image's deployment and when it was taken, each box's <a href="#independent-records" class="text-emerald-700 underline">independent record</a> (a number shared by every box of one record), and the independence interval that made them. The Export dialog shows the interval, with <b>Change the interval…</b>.</li>
         <li><b>COCO Camera Traps (JSON)</b>: the format LILA BC and MegaDetector's tools use.</li>
         <li><b>COCO (JSON)</b>: standard COCO, for training and evaluating detectors.</li>
         <li><b>MegaDetector results (JSON)</b>, and <b>YOLO labels (zip)</b>.</li>
