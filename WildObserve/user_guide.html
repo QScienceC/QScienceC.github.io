@@ -38,10 +38,11 @@
           <path d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
-      <nav class="hidden items-center gap-6 text-sm font-semibold md:flex" aria-label="Main navigation">
+      <nav class="hidden items-center gap-4 lg:gap-6 text-sm font-semibold md:flex" aria-label="Main navigation">
         <a href="../index.html" class="hover:text-emerald-700">Home</a>
         <a href="../about.html" class="hover:text-emerald-700">About</a>
         <a href="../services.html" class="hover:text-emerald-700">Services</a>
+        <a href="index.html" class="rounded-full border border-emerald-600 px-3 py-1 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-800">WildObserve</a>
         <a href="../mission.html" class="hover:text-emerald-700">Mission</a>
         <a href="../blog.html" class="hover:text-emerald-700">Blog</a>
         <a href="../contact.html" class="hover:text-emerald-700">Contact</a>
@@ -52,6 +53,7 @@
         <a href="../index.html" class="hover:text-emerald-700">Home</a>
         <a href="../about.html" class="hover:text-emerald-700">About</a>
         <a href="../services.html" class="hover:text-emerald-700">Services</a>
+        <a href="index.html" class="text-emerald-700 hover:text-emerald-800">WildObserve</a>
         <a href="../mission.html" class="hover:text-emerald-700">Mission</a>
         <a href="../blog.html" class="hover:text-emerald-700">Blog</a>
         <a href="../contact.html" class="hover:text-emerald-700">Contact</a>
@@ -211,6 +213,9 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
       <p class="mt-4">Capture times come from the images' EXIF data. Images without one use the file's date instead, which copying, downloading, or syncing the files can change. If capture events look far too big, see <a href="#troubleshooting" class="text-emerald-700 underline">Troubleshooting</a>.</p>
 
       <h3 id="independent-records" class="mt-8 text-lg font-semibold text-slate-900">Independent records</h3>
+      <video class="mt-4 h-auto w-full rounded-2xl border border-slate-200" width="1920" height="1080" controls preload="metadata" playsinline poster="../images/videos/independent_records.jpg" aria-label="Video: independent records, and exporting them">
+        <source src="../images/videos/independent_records.mp4" type="video/mp4" />
+      </video>
       <p class="mt-4">Studies of relative abundance and activity patterns count <b>independent records</b>, not pictures, so that an animal that stays in front of a camera, or keeps coming back to it, counts once. WildObserve™ groups a species' sightings at a deployment into one record while they're no more than 30 minutes apart, by default. Each sighting is compared with the species' previous one at that deployment (the rule camtrapR calls "lastRecord"), so a record lasts as long as the species keeps being seen, and a new one starts once 30 minutes pass without it. Change the interval at the top of <b>Deployments…</b>, under the event gap.</p>
       <p class="mt-4">Records come from reviewed images. The <a href="#dashboard" class="text-emerald-700 underline">Dashboard</a> counts each species' records, and the <a href="#exporting" class="text-emerald-700 underline">CSV export</a> gives each box its record's number. Records aren't stored, so a new interval changes them at once.</p>
 

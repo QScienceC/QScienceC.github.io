@@ -1,0 +1,99 @@
+1
+00:00:00,370 --> 00:00:10,290
+This video is about independent records: how WildObserve counts each visit by an animal once, where you'll find those counts, and how to export them.
+
+2
+00:00:11,460 --> 00:00:16,700
+A camera trap takes a burst of pictures each time an animal passes.
+
+3
+00:00:16,700 --> 00:00:27,120
+An animal that stays in front of the camera, or comes back a few minutes later, fills many pictures, so counting just pictures would count this one deer many times.
+
+4
+00:00:28,290 --> 00:00:33,110
+That's why camera-trap studies count independent records instead.
+
+5
+00:00:33,110 --> 00:00:34,510
+You'll find them in the Dashboard.
+
+6
+00:00:35,957 --> 00:00:47,157
+For each species, the Species table shows its images, its capture events, which are bursts of pictures taken together, and its independent records.
+
+7
+00:00:47,157 --> 00:00:51,517
+Here, hundreds of pictures of mule deer are from only a handful of visits.
+
+8
+00:00:52,311 --> 00:00:59,011
+A species' sightings at one camera count as one record while they're within the same interval.
+
+9
+00:00:59,011 --> 00:01:03,651
+In WildObserve, 30 minutes is the default interval.
+
+10
+00:01:03,651 --> 00:01:14,311
+Each sighting is compared with the one before it, so an animal that stays for an hour is still one visit, and a new record starts once it's been gone for 30 minutes.
+
+11
+00:01:15,481 --> 00:01:19,001
+Studies use different intervals, and you can change it.
+
+12
+00:01:19,001 --> 00:01:22,221
+Close the Dashboard and open Deployments.
+
+13
+00:01:22,221 --> 00:01:26,361
+The interval is near the top, under the gap for capture events.
+
+14
+00:01:26,361 --> 00:01:29,941
+Type the new interval, here 10 minutes, and click Save.
+
+15
+00:01:31,111 --> 00:01:35,891
+Records aren't stored, so they're counted again right away.
+
+16
+00:01:35,891 --> 00:01:41,311
+Back in the Dashboard, rabbits, which come and go, now have more records than before.
+
+17
+00:01:42,481 --> 00:01:49,061
+To use the records in R or a spreadsheet, close the Dashboard and click Export.
+
+18
+00:01:49,061 --> 00:01:51,821
+Choose CSV spreadsheet.
+
+19
+00:01:51,821 --> 00:01:55,481
+The screen says which interval the records use.
+
+20
+00:01:55,481 --> 00:01:57,241
+Then click Export to save the file.
+
+21
+00:01:58,411 --> 00:02:01,051
+The file has one row per box.
+
+22
+00:02:01,051 --> 00:02:09,211
+Its last columns give each image's deployment and when it was taken, and each box's independent record.
+
+23
+00:02:09,211 --> 00:02:17,171
+Every box from one visit shares a number, so to count a species' records at a camera, count its different records.
+
+24
+00:02:18,341 --> 00:02:21,601
+The other export formats are in the same list.
+
+25
+00:02:21,601 --> 00:02:27,161
+You can find more videos, and the user guide, at QSC.earth/WildObserve.
