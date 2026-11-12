@@ -11,16 +11,16 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WildObserve™ | Local camera-trap computer vision</title>
-  <meta name="description" content="WildObserve™ learns as you label camera-trap images, helping pre-label what comes next while your work stays local." />
-  <meta property="og:title" content="WildObserve™ | Local camera-trap computer vision" />
-  <meta property="og:description" content="Label camera-trap images and let WildObserve™ help with what comes next." />
+  <title>WildObserve™ | Camera-trap software that learns as you label</title>
+  <meta name="description" content="Free desktop camera-trap software for Mac, Windows, and Linux. AI finds animals, suggests species, and learns from your labels. Images stay on your computer." />
+  <meta property="og:title" content="WildObserve™ | Camera-trap software that learns as you label" />
+  <meta property="og:description" content="Free desktop camera-trap software for Mac, Windows, and Linux. AI finds animals, suggests species, and learns from your labels. Images stay on your computer." />
   <meta property="og:url" content="https://www.qsc.earth/WildObserve/" />
   <meta property="og:image" content="https://www.qsc.earth/images/wildobserve_social.jpg" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="WildObserve™ | Local camera-trap computer vision" />
-  <meta name="twitter:description" content="Label camera-trap images and let WildObserve™ help with what comes next." />
+  <meta name="twitter:title" content="WildObserve™ | Camera-trap software that learns as you label" />
+  <meta name="twitter:description" content="Free desktop camera-trap software for Mac, Windows, and Linux. AI finds animals, suggests species, and learns from your labels. Images stay on your computer." />
   <meta name="twitter:image" content="https://www.qsc.earth/images/wildobserve_social.jpg" />
   <link rel="canonical" href="https://www.qsc.earth/WildObserve/" />
   <link rel="icon" href="../images/logo.webp" />
@@ -34,7 +34,7 @@
         "@id": "https://www.qsc.earth/WildObserve/#software",
         "name": "WildObserve",
         "url": "https://www.qsc.earth/WildObserve/",
-        "description": "WildObserve is a desktop app that turns folders of camera-trap images into reviewed data that's ready for analysis. It finds animals, people, and vehicles, suggests species with SpeciesNet and with a Project Model that learns from your labels on your own computer, estimates occupancy and abundance, and exports your data. Images and their metadata don't leave your computer.",
+        "description": "WildObserve is a desktop app that turns folders of camera-trap images into reviewed data that's ready for analysis. It finds animals, people, and vehicles with MegaDetector, suggests species with SpeciesNet and with a Project Model that learns from your labels on your own computer, estimates occupancy and abundance, and exports your data. Images and their metadata don't leave your computer.",
         "applicationCategory": "MultimediaApplication",
         "applicationSubCategory": "Camera-trap image analysis",
         "operatingSystem": "macOS, Windows, Linux",
@@ -44,11 +44,12 @@
           "https://github.com/mikeyEcology/wildobserve-releases/releases/latest/download/WildObserve-amd64.deb"
         ],
         "featureList": [
-          "Marks animals, people, and vehicles, and flags images that look empty",
+          "Marks animals, people, and vehicles with MegaDetector, and flags images that look empty",
           "Suggests species with SpeciesNet, then with a Project Model that learns from your labels",
           "Groups images into capture events so a whole sequence can be named at once",
           "Filters by site, camera, date, or species, and records counts, sex, life stage, and behavior",
           "Estimates site occupancy and abundance while accounting for detection probability, with site covariates",
+          "Picks which images to review for occupancy estimates, and says when enough have been reviewed",
           "Watches folders for new images and sends email alerts when chosen species show up",
           "Exports to CSV, Camtrap DP, Wildlife Insights, COCO, YOLO, and MegaDetector formats",
           "Images and their metadata stay on your computer"
@@ -94,6 +95,26 @@
         ],
         "creator": { "@id": "https://www.qsc.earth/about.html#mikey-tabak" },
         "publisher": { "@id": "https://www.qsc.earth/#organization" },
+        "subjectOf": [
+          {
+            "@type": "ScholarlyArticle",
+            "headline": "WildObserve: Camera-trap software that learns species labels during review and estimates occupancy and abundance",
+            "url": "https://doi.org/10.64898/2026.10.06.757089",
+            "sameAs": "https://www.biorxiv.org/content/10.64898/2026.10.06.757089",
+            "author": { "@id": "https://www.qsc.earth/about.html#mikey-tabak" },
+            "publisher": { "@type": "Organization", "name": "bioRxiv" },
+            "isPartOf": { "@type": "Periodical", "name": "bioRxiv" }
+          },
+          {
+            "@type": "ScholarlyArticle",
+            "headline": "Which camera-trap images to review? Estimating occupancy from a small part of a survey",
+            "url": "https://doi.org/10.32942/X20M63",
+            "sameAs": "https://ecoevorxiv.org/repository/view/16023/",
+            "author": { "@id": "https://www.qsc.earth/about.html#mikey-tabak" },
+            "publisher": { "@type": "Organization", "name": "EcoEvoRxiv" },
+            "isPartOf": { "@type": "Periodical", "name": "EcoEvoRxiv" }
+          }
+        ],
         "sameAs": [
           "https://apps.microsoft.com/detail/9nlwg3wvnzbk",
           "https://www.youtube.com/@WildObserve-QSC"
@@ -133,6 +154,120 @@
           { "@type": "ListItem", "position": 1, "name": "QSC", "item": "https://www.qsc.earth/" },
           { "@type": "ListItem", "position": 2, "name": "WildObserve", "item": "https://www.qsc.earth/WildObserve/" }
         ]
+      },
+      {
+        "@type": "VideoObject",
+        "@id": "https://www.qsc.earth/WildObserve/#video",
+        "name": "WildObserve: Reviewing camera-trap images while your Project Model learns",
+        "description": "Review camera-trap images in WildObserve while your Project Model trains in the background, on your own computer. It learns your species, your cameras, and the names you use, and its suggestions get better as you go.",
+        "thumbnailUrl": [
+          "https://www.qsc.earth/images/videos/reviewing.jpg",
+          "https://i.ytimg.com/vi/ltTtMig2bkM/maxresdefault.jpg"
+        ],
+        "uploadDate": "2026-10-23T04:43:36-07:00",
+        "duration": "PT2M18S",
+        "embedUrl": "https://www.youtube.com/embed/ltTtMig2bkM",
+        "sameAs": "https://www.youtube.com/watch?v=ltTtMig2bkM",
+        "inLanguage": "en",
+        "about": { "@id": "https://www.qsc.earth/WildObserve/#software" },
+        "publisher": { "@id": "https://www.qsc.earth/#organization" }
+      }
+    ]
+  }
+  </script>
+  <!-- The FAQ section on this page, as structured data: change both together. See CLAUDE.md. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is WildObserve™ free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The Community plan is free for non-commercial use. It includes AI-assisted labeling and review, occupancy and abundance estimates, export, unlimited image processing, and a Project Model in up to 3 projects. Paid annual plans add Project Models in any number of projects, work across several computers, and commercial use. See Plans."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do my images leave my computer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. WildObserve™ processes everything on your computer. Your images, their metadata, and your annotations stay there, and we never receive them. The app goes online only to check for updates, activate a license, sign you in with Google if you choose to, and send email alerts if you turn them on. See the Privacy Policy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What computers does it run on?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Macs with Apple silicon (M1 or later) and macOS 14 or later; Windows 10 or later, from the Microsoft Store; and Linux (Ubuntu 22.04 or later, on a 64-bit Intel or AMD processor). Every plan processes any number of images; how fast depends on your computer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to write code, or have a graphics card (GPU)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. WildObserve™ is a desktop app, so there's no code to write, and it doesn't need a separate graphics card: in tests, it processed 8.1 images a second on an Apple M1 Pro laptop (Tabak 2026, bioRxiv). On Linux, it uses an NVIDIA graphics card if one is set up, and the processor otherwise."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What species can it identify?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Any species you label. After MegaDetector finds the animals, species suggestions start from SpeciesNet, a general species model from Google. Your Project Model then learns your project's own species, and the names you use, as you label them, including species SpeciesNet doesn't know."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How accurate are the species suggestions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It depends on your images, and the suggestions improve as you review. On a dataset released after SpeciesNet was trained, the Project Model passed SpeciesNet's accuracy with ten labels per species (balanced accuracy 0.783 against 0.751; Tabak 2026, bioRxiv). In the app, Project > Models… shows how well each version of your Project Model did on labels held out from its training."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is it different from running MegaDetector and SpeciesNet myself?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "WildObserve™ runs both for you, with no code, and adds what comes after: a review screen that groups images into capture events, a Project Model that learns your species as you review, occupancy and abundance estimates, and exports in the formats you need."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can it estimate occupancy and abundance?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, on every plan. From your reviewed images, it estimates each species' occupancy, allowing for missed detections, and its abundance with the Royle–Nichols model, with site covariates, plots, and tables and a script for R. Its For occupancy list picks which images to review: reviewing about 20% of them this way gives occupancy estimates nearly the same as reviewing all of them (Tabak 2026, EcoEvoRxiv). See the user guide."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What formats can I export?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CSV (for Excel, R, or Python), Camtrap DP (for GBIF), Wildlife Insights bulk upload, COCO and COCO Camera Traps, YOLO, MegaDetector results, occupancy tables for R, and JSON with full provenance: what the models suggested beside what reviewers saved."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it work offline?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Everything works offline except checking for updates, activating a license, Sign in with Google, and email alerts. A computer that can't go online can use a license file instead, and if you sign in with Google, you can set a password to sign in without the internet."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can several people review the same project?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. On every plan, each person who reviews on a computer gets their own account, and every record says who confirmed it. With a Lab or Organization plan, projects can also be shared across computers."
+        }
       }
     ]
   }
@@ -145,6 +280,9 @@
     }
     .animate-fade-in { animation: fade-in 1s ease-out both; }
     .tier-card { min-height: 100%; }
+    #faq summary::-webkit-details-marker { display: none; }
+    html { scroll-behavior: smooth; }
+    #video, #faq { scroll-margin-top: 5rem; } /* below the sticky header when a link jumps here */
   </style>
 </head>
 <body class="bg-stone-50 font-sans text-slate-800 antialiased">
@@ -188,7 +326,8 @@
         <p class="mb-3 text-sm font-semibold text-green-700">WildObserve™</p>
         <h1 class="mb-6 text-4xl font-bold leading-tight text-gray-900 md:text-5xl">The smarter way to work through camera-trap images.</h1>
         <p class="text-lg text-gray-700 md:text-xl">Start labeling. WildObserve™ learns as you go and pre-labels your images.</p>
-        <a href="https://www.youtube.com/watch?v=ltTtMig2bkM" class="mt-8 inline-flex items-center gap-2 font-semibold text-emerald-700 hover:text-emerald-800 hover:underline">
+        <p class="mt-3 text-base font-semibold text-emerald-800 md:text-lg">Free for Mac, Windows, and Linux. Your images stay on your computer.</p>
+        <a href="#video" class="mt-8 inline-flex items-center gap-2 font-semibold text-emerald-700 hover:text-emerald-800 hover:underline">
           <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path fill-rule="evenodd" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm-2 6.5v7l6-3.5-6-3.5Z" />
           </svg>
@@ -248,7 +387,7 @@
         <ul class="mx-auto mt-10 max-w-4xl space-y-6">
           <li class="flex gap-4">
             <span aria-hidden="true" class="mt-1 text-2xl leading-6 text-emerald-700">•</span>
-            <div><h3 class="text-lg font-semibold text-slate-900">Finds what’s in each image</h3><p class="mt-1 leading-7 text-slate-600">It marks animals, people, and vehicles, and flags images that look empty.</p></div>
+            <div><h3 class="text-lg font-semibold text-slate-900">Finds what’s in each image</h3><p class="mt-1 leading-7 text-slate-600">Using MegaDetector, it marks animals, people, and vehicles, and flags images that look empty.</p></div>
           </li>
           <li class="flex gap-4">
             <span aria-hidden="true" class="mt-1 text-2xl leading-6 text-emerald-700">•</span>
@@ -264,6 +403,12 @@
           </li>
           <li class="flex gap-4">
             <span aria-hidden="true" class="mt-1 text-2xl leading-6 text-emerald-700">•</span>
+            <div><h3 class="text-lg font-semibold text-slate-900">Tells you which images to review</h3><p class="mt-1 leading-7 text-slate-600">You don't need to review every image to estimate occupancy. WildObserve™ picks two capture events per camera, then the most confident suggestion for each species, site, and week not yet confirmed, and tells you when you've reviewed enough.
+              Reviewing about 20% of your images this way gives occupancy estimates nearly the same as reviewing all of them (<a href="https://doi.org/10.32942/X20M63" class="font-medium text-emerald-700 hover:text-emerald-800 hover:underline">Tabak 2026, EcoEvoRxiv</a>). 
+            </p></div>
+          </li>
+          <li class="flex gap-4">
+            <span aria-hidden="true" class="mt-1 text-2xl leading-6 text-emerald-700">•</span>
             <div><h3 class="text-lg font-semibold text-slate-900">Watches for new images</h3><p class="mt-1 leading-7 text-slate-600">Point it at a folder and it processes new images as they arrive. It can also send email alerts when a species you care about shows up.</p></div>
           </li>
           <li class="flex gap-4">
@@ -271,6 +416,84 @@
             <div><h3 class="text-lg font-semibold text-slate-900">Exports your data</h3><p class="mt-1 leading-7 text-slate-600">It exports to CSV, Camtrap DP, Wildlife Insights, COCO, YOLO, and MegaDetector formats.</p></div>
           </li>
         </ul>
+
+        <!-- The preprints are also in the "subjectOf" structured data above. Update both places if one is revised or published in a journal. See CLAUDE.md. -->
+        <p class="mx-auto mt-10 max-w-4xl border-t border-slate-200 pt-6 text-sm leading-6 text-slate-500">The methods and tests behind WildObserve™ are described in two preprints: <a href="https://doi.org/10.64898/2026.10.06.757089" class="font-medium text-emerald-700 hover:text-emerald-800 hover:underline">WildObserve: Camera-trap software that learns species labels during review and estimates occupancy and abundance</a> (Tabak 2026, <i>bioRxiv</i>) and <a href="https://doi.org/10.32942/X20M63" class="font-medium text-emerald-700 hover:text-emerald-800 hover:underline">Which camera-trap images to review? Estimating occupancy from a small part of a survey</a> (Tabak 2026, <i>EcoEvoRxiv</i>).</p>
+      </div>
+    </section>
+
+    <!-- "Watch it in action" at the top jumps here. The video is also in the "VideoObject" structured data in <head>. If it's replaced, update the link, data-youtube-id, the poster image, the caption, and that structured data. See CLAUDE.md. -->
+    <section id="video" class="px-6 pt-16 sm:pt-20">
+      <div class="mx-auto max-w-4xl text-center">
+        <p class="text-sm font-bold uppercase tracking-[.16em] text-emerald-700">Watch it in action</p>
+        <h2 class="mt-3 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">Review images while your Project Model learns.</h2>
+        <div class="relative mx-auto mt-10 aspect-video max-w-3xl overflow-hidden rounded-2xl bg-slate-900 shadow-xl ring-1 ring-slate-900/10">
+          <a href="https://www.youtube.com/watch?v=ltTtMig2bkM" data-youtube-id="ltTtMig2bkM" class="group block h-full w-full" aria-label="Play the video: Reviewing camera-trap images while your Project Model learns">
+            <img src="../images/videos/reviewing.jpg" width="1280" height="720" loading="lazy" alt="WildObserve's review screen: a bobcat in a camera-trap image, boxed, with the suggestion Bobcat 99% from the Project Model" class="h-full w-full object-cover" />
+            <span class="absolute inset-0 flex items-center justify-center bg-slate-900/10 transition group-hover:bg-slate-900/0">
+              <span class="flex h-16 w-16 items-center justify-center rounded-full bg-white/95 text-emerald-700 shadow-lg transition group-hover:scale-105">
+                <svg class="ml-1 h-7 w-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
+              </span>
+            </span>
+          </a>
+        </div>
+        <p class="mt-3 text-sm text-slate-600">2:18. More short videos are in the <a href="user_guide.html" class="font-medium text-emerald-700 hover:text-emerald-800 hover:underline">user guide</a>.</p>
+      </div>
+    </section>
+
+    <!-- Each question and answer here is repeated in the FAQPage structured data in <head>. Change both together. See CLAUDE.md. -->
+    <section id="faq" class="px-6 py-16 sm:py-20">
+      <div class="mx-auto max-w-3xl">
+        <div class="text-center">
+          <p class="text-sm font-bold uppercase tracking-[.16em] text-emerald-700">FAQ</p>
+          <h2 class="mt-3 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">Frequently asked questions</h2>
+        </div>
+        <div class="mt-10 divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white shadow-sm">
+          <details class="group px-5 py-4 sm:px-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4"><h3 class="text-base font-semibold text-slate-900 sm:text-lg">Is WildObserve™ free?</h3><span aria-hidden="true" class="text-2xl leading-none text-emerald-700 transition group-open:rotate-45">+</span></summary>
+            <p class="mt-3 leading-7 text-slate-600">Yes. The Community plan is free for non-commercial use. It includes AI-assisted labeling and review, occupancy and abundance estimates, export, unlimited image processing, and a Project Model in up to 3 projects. Paid annual plans add Project Models in any number of projects, work across several computers, and commercial use. See <a href="plans.html" class="font-medium text-emerald-700 hover:text-emerald-800 hover:underline">Plans</a>.</p>
+          </details>
+          <details class="group px-5 py-4 sm:px-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4"><h3 class="text-base font-semibold text-slate-900 sm:text-lg">Do my images leave my computer?</h3><span aria-hidden="true" class="text-2xl leading-none text-emerald-700 transition group-open:rotate-45">+</span></summary>
+            <p class="mt-3 leading-7 text-slate-600">No. WildObserve™ processes everything on your computer. Your images, their metadata, and your annotations stay there, and we never receive them. The app goes online only to check for updates, activate a license, sign you in with Google if you choose to, and send email alerts if you turn them on. See the <a href="privacy.html" class="font-medium text-emerald-700 hover:text-emerald-800 hover:underline">Privacy Policy</a>.</p>
+          </details>
+          <details class="group px-5 py-4 sm:px-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4"><h3 class="text-base font-semibold text-slate-900 sm:text-lg">What computers does it run on?</h3><span aria-hidden="true" class="text-2xl leading-none text-emerald-700 transition group-open:rotate-45">+</span></summary>
+            <p class="mt-3 leading-7 text-slate-600">Macs with Apple silicon (M1 or later) and macOS 14 or later; Windows 10 or later, from the Microsoft Store; and Linux (Ubuntu 22.04 or later, on a 64-bit Intel or AMD processor). Every plan processes any number of images; how fast depends on your computer.</p>
+          </details>
+          <details class="group px-5 py-4 sm:px-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4"><h3 class="text-base font-semibold text-slate-900 sm:text-lg">Do I need to write code, or have a graphics card (GPU)?</h3><span aria-hidden="true" class="text-2xl leading-none text-emerald-700 transition group-open:rotate-45">+</span></summary>
+            <p class="mt-3 leading-7 text-slate-600">No. WildObserve™ is a desktop app, so there's no code to write, and it doesn't need a separate graphics card: in tests, it processed 8.1 images a second on an Apple M1 Pro laptop (<a href="https://doi.org/10.64898/2026.10.06.757089" class="font-medium text-emerald-700 hover:text-emerald-800 hover:underline">Tabak 2026, bioRxiv</a>). On Linux, it uses an NVIDIA graphics card if one is set up, and the processor otherwise.</p>
+          </details>
+          <details class="group px-5 py-4 sm:px-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4"><h3 class="text-base font-semibold text-slate-900 sm:text-lg">What species can it identify?</h3><span aria-hidden="true" class="text-2xl leading-none text-emerald-700 transition group-open:rotate-45">+</span></summary>
+            <p class="mt-3 leading-7 text-slate-600">Any species you label. After MegaDetector finds the animals, species suggestions start from SpeciesNet, a general species model from Google. Your Project Model then learns your project's own species, and the names you use, as you label them, including species SpeciesNet doesn't know.</p>
+          </details>
+          <details class="group px-5 py-4 sm:px-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4"><h3 class="text-base font-semibold text-slate-900 sm:text-lg">How accurate are the species suggestions?</h3><span aria-hidden="true" class="text-2xl leading-none text-emerald-700 transition group-open:rotate-45">+</span></summary>
+            <p class="mt-3 leading-7 text-slate-600">It depends on your images, and the suggestions improve as you review. On a dataset released after SpeciesNet was trained, the Project Model passed SpeciesNet's accuracy with ten labels per species (balanced accuracy 0.783 against 0.751; <a href="https://doi.org/10.64898/2026.10.06.757089" class="font-medium text-emerald-700 hover:text-emerald-800 hover:underline">Tabak 2026, bioRxiv</a>). In the app, Project &gt; Models… shows how well each version of your Project Model did on labels held out from its training.</p>
+          </details>
+          <details class="group px-5 py-4 sm:px-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4"><h3 class="text-base font-semibold text-slate-900 sm:text-lg">How is it different from running MegaDetector and SpeciesNet myself?</h3><span aria-hidden="true" class="text-2xl leading-none text-emerald-700 transition group-open:rotate-45">+</span></summary>
+            <p class="mt-3 leading-7 text-slate-600">WildObserve™ runs both for you, with no code, and adds what comes after: a review screen that groups images into capture events, a Project Model that learns your species as you review, occupancy and abundance estimates, and exports in the formats you need.</p>
+          </details>
+          <details class="group px-5 py-4 sm:px-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4"><h3 class="text-base font-semibold text-slate-900 sm:text-lg">Can it estimate occupancy and abundance?</h3><span aria-hidden="true" class="text-2xl leading-none text-emerald-700 transition group-open:rotate-45">+</span></summary>
+            <p class="mt-3 leading-7 text-slate-600">Yes, on every plan. From your reviewed images, it estimates each species' occupancy, allowing for missed detections, and its abundance with the Royle–Nichols model, with site covariates, plots, and tables and a script for R. Its For occupancy list picks which images to review: reviewing about 20% of them this way gives occupancy estimates nearly the same as reviewing all of them (<a href="https://doi.org/10.32942/X20M63" class="font-medium text-emerald-700 hover:text-emerald-800 hover:underline">Tabak 2026, EcoEvoRxiv</a>). See the <a href="user_guide.html#occupancy" class="font-medium text-emerald-700 hover:text-emerald-800 hover:underline">user guide</a>.</p>
+          </details>
+          <details class="group px-5 py-4 sm:px-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4"><h3 class="text-base font-semibold text-slate-900 sm:text-lg">What formats can I export?</h3><span aria-hidden="true" class="text-2xl leading-none text-emerald-700 transition group-open:rotate-45">+</span></summary>
+            <p class="mt-3 leading-7 text-slate-600">CSV (for Excel, R, or Python), Camtrap DP (for GBIF), Wildlife Insights bulk upload, COCO and COCO Camera Traps, YOLO, MegaDetector results, occupancy tables for R, and JSON with full provenance: what the models suggested beside what reviewers saved.</p>
+          </details>
+          <details class="group px-5 py-4 sm:px-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4"><h3 class="text-base font-semibold text-slate-900 sm:text-lg">Does it work offline?</h3><span aria-hidden="true" class="text-2xl leading-none text-emerald-700 transition group-open:rotate-45">+</span></summary>
+            <p class="mt-3 leading-7 text-slate-600">Yes. Everything works offline except checking for updates, activating a license, Sign in with Google, and email alerts. A computer that can't go online can use a license file instead, and if you sign in with Google, you can set a password to sign in without the internet.</p>
+          </details>
+          <details class="group px-5 py-4 sm:px-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4"><h3 class="text-base font-semibold text-slate-900 sm:text-lg">Can several people review the same project?</h3><span aria-hidden="true" class="text-2xl leading-none text-emerald-700 transition group-open:rotate-45">+</span></summary>
+            <p class="mt-3 leading-7 text-slate-600">Yes. On every plan, each person who reviews on a computer gets their own account, and every record says who confirmed it. With a Lab or Organization plan, projects can also be shared across computers.</p>
+          </details>
+        </div>
       </div>
     </section>
 
@@ -290,12 +513,31 @@
         <p class="mt-1">Science-grounded AI for sustainable impact.</p>
       </div>
       <div class="sm:text-right">
-        <p><a href="plans.html" class="hover:text-white hover:underline">Plans</a> · <a href="user_guide.html" class="hover:text-white hover:underline">User guide</a> · <a href="privacy.html" class="hover:text-white hover:underline">Privacy</a> · <a href="terms.html" class="hover:text-white hover:underline">Terms</a></p>
+        <p><a href="plans.html" class="hover:text-white hover:underline">Plans</a> · <a href="user_guide.html" class="hover:text-white hover:underline">User guide</a> · <a href="./#faq" class="hover:text-white hover:underline">FAQ</a> · <a href="privacy.html" class="hover:text-white hover:underline">Privacy</a> · <a href="terms.html" class="hover:text-white hover:underline">Terms</a></p>
         <p class="mt-1">&copy; <script>document.write(new Date().getFullYear())</script> QSC. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
+  <script>
+    // The video: nothing loads from YouTube until someone clicks it; then YouTube's player (its
+    // privacy-enhanced mode) takes the poster's place. Without JavaScript, the link opens YouTube.
+    document.querySelectorAll('a[data-youtube-id]').forEach((link) =>
+      link.addEventListener('click', (event) => {
+        if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        const frame = document.createElement('iframe');
+        frame.src = `https://www.youtube-nocookie.com/embed/${link.dataset.youtubeId}?autoplay=1&rel=0`;
+        frame.title = link.getAttribute('aria-label').replace('Play the video: ', '');
+        frame.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+        frame.allowFullscreen = true;
+        frame.referrerPolicy = 'strict-origin-when-cross-origin';
+        frame.className = 'absolute inset-0 h-full w-full';
+        link.replaceWith(frame);
+        frame.focus();
+      })
+    );
+  </script>
   <script>
     const toggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');

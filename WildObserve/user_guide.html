@@ -194,7 +194,7 @@
 
       <p class="mt-8">Some features come with a paid plan, and are marked here with the plans that include them. Everything else is in the free Community plan. See <a href="plans.html" class="font-semibold text-emerald-700 underline">Plans</a> for what each includes.</p>
       <p class="mt-4">Short videos of the main steps are also on YouTube, in the <a href="https://www.youtube.com/playlist?list=PLSHbm1lb9jpg" class="font-semibold text-emerald-700 underline">WildObserve Instructions</a> playlist.</p>
-      <p class="mt-4">This guide names the Mac's menus. On Linux, the same items are in the window: <b>Projects…</b> at the top left, <b>Models…</b> with the buttons in the header, <b>About</b> at the top right, and <b>License</b> in the menu under your name.</p>
+      <p class="mt-4">This guide names the Mac's menus. On Windows and Linux, the same items are in the window: <b>Projects…</b> at the top left, <b>Models…</b> with the buttons in the header, <b>About</b> at the top right, and <b>License</b> in the menu under your name.</p>
 
       <!-- 1 -->
       <h2 id="install" class="mt-12 text-2xl font-semibold text-slate-900">1. Installing and signing in</h2>
@@ -202,9 +202,10 @@
       <h3 class="mt-8 text-lg font-semibold text-slate-900">What you need</h3>
       <ul class="mt-4 list-disc space-y-2 pl-6">
         <li><b>Mac:</b> Apple silicon (M1 or later) and macOS 14 or later.</li>
+        <li><b>Windows:</b> Windows 10 or later, on a 64-bit Intel or AMD processor, from the Microsoft Store. WildObserve™ processes images on the processor.</li>
         <li><b>Linux:</b> Ubuntu 22.04 or later, on a 64-bit Intel or AMD processor (x86_64). WildObserve™ uses an NVIDIA graphics card if the computer has one and it's <a href="#nvidia" class="text-emerald-700 underline">set up</a>, and the processor otherwise, which is slower.</li>
       </ul>
-      <p class="mt-4">A Windows version is coming. WildObserve™ processes any number of images on every plan; how fast depends on your computer.</p>
+      <p class="mt-4">WildObserve™ processes any number of images on every plan; how fast depends on your computer.</p>
 
       <h3 class="mt-8 text-lg font-semibold text-slate-900">Installing on a Mac</h3>
       <ol class="mt-4 list-decimal space-y-2 pl-6">
@@ -213,6 +214,13 @@
         <li>Open WildObserve from Applications. The first launch takes longer while it prepares the AI models for your Mac.</li>
       </ol>
       <p class="mt-4">To update, WildObserve™ tells you when a new version is out (in About). Download it the same way, and drag it to Applications to replace the old one. Your accounts and projects are kept. If macOS says WildObserve is in use, quit it first: see <a href="#troubleshooting" class="text-emerald-700 underline">Troubleshooting</a>.</p>
+
+      <h3 id="windows" class="mt-8 text-lg font-semibold text-slate-900">Installing on Windows</h3>
+      <ol class="mt-4 list-decimal space-y-2 pl-6">
+        <li>Install WildObserve™ from the <a href="https://apps.microsoft.com/detail/9nlwg3wvnzbk?hl=en-US&amp;gl=US" class="text-emerald-700 underline">Microsoft Store</a>.</li>
+        <li>Open WildObserve from the Start menu.</li>
+      </ol>
+      <p class="mt-4">The Microsoft Store keeps WildObserve™ up to date. Your accounts, license, and list of projects are kept in the <code class="rounded bg-slate-100 px-1">WildObserve</code> folder in your user folder, so they stay even if you uninstall the app.</p>
 
       <h3 class="mt-8 text-lg font-semibold text-slate-900">Installing on Linux</h3>
       <ol class="mt-4 list-decimal space-y-2 pl-6">
@@ -248,7 +256,7 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
 
       <h3 class="mt-8 text-lg font-semibold text-slate-900">Making a project</h3>
       <ol class="mt-4 list-decimal space-y-2 pl-6">
-        <li>In the menu bar, choose <b>Project &gt; Projects…</b> (on Linux, click <b>Projects…</b> at the top left), then <b>New project…</b> (the first time, this is where WildObserve™ starts).</li>
+        <li>In the menu bar, choose <b>Project &gt; Projects…</b> (on Windows and Linux, click <b>Projects…</b> at the top left), then <b>New project…</b> (the first time, this is where WildObserve™ starts).</li>
         <li>Give it a name, and choose where to keep it (<b>Keep it in</b>).</li>
         <li>Under <b>Image folders</b>, click <b>Add a folder…</b> and choose a folder of images. Subfolders are included, and each folder of images becomes a <a href="#deployments" class="text-emerald-700 underline">deployment</a>. You can add more folders later.</li>
         <li>Click <b>Make project</b>. WildObserve™ finds the images, reads their capture times and camera details, and groups them into capture events.</li>
@@ -267,7 +275,7 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
         <li><b>Moved?</b> appears when a folder can't be found, because it was moved or its drive isn't connected. Connect the drive, or click <b>Find it…</b> and point it at where the folder is now.</li>
       </ul>
       <p class="mt-4">If a folder is in iCloud Drive or another cloud service, make it available offline first: images that are only online download as WildObserve reads them, which is slow.</p>
-      <p class="mt-4"><b>Copies of an image</b> (the same file in two folders) are noticed and processed, reviewed, and exported once. They're listed under <b>Duplicates</b>. For images processed before WildObserve checked for copies, click <b>Find duplicates among … images processed earlier</b> in <b>Images…</b>.</p>
+      <p class="mt-4"><b>Copies of an image</b> (the same file in two folders) are noticed and processed, reviewed, and exported once. They're in the <b>Duplicates</b> list, in the <b>Show</b> menu. For images processed before WildObserve checked for copies, click <b>Find duplicates among … images processed earlier</b> in <b>Images…</b>.</p>
 
       <!-- 3 -->
       <h2 id="processing" class="mt-12 text-2xl font-semibold text-slate-900">3. Processing images</h2>
@@ -280,8 +288,8 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
         <li>suggests a species for each animal with <b>SpeciesNet</b>, and with your <a href="#models" class="text-emerald-700 underline">Project Model</a> once it has learned from your labels.</li>
       </ul>
       <p class="mt-4">The header shows progress and the time left. <b>Pause</b> stops after the current image. Click the button again, now or after reopening WildObserve™, to carry on where it stopped. You can review while processing continues.</p>
-      <p class="mt-4">While images are processed, a Mac doesn't go to sleep. On Linux, closing the window quits WildObserve and stops processing until you open it again, and the computer can still go to sleep, so for a long run turn off <b>Automatic Suspend</b> in Settings &gt; Power.</p>
-      <p class="mt-4">Processing uses your computer's own hardware: a Mac's AI hardware, or on Linux an <a href="#nvidia" class="text-emerald-700 underline">NVIDIA graphics card</a> or the processor. Nothing is sent anywhere.</p>
+      <p class="mt-4">While images are processed, a Mac doesn't go to sleep. On Windows and Linux, closing the window quits WildObserve and stops processing until you open it again, and the computer can still go to sleep. For a long run, turn sleep off: in Windows' power settings, or on Linux, <b>Automatic Suspend</b> in Settings &gt; Power.</p>
+      <p class="mt-4">Processing uses your computer's own hardware: a Mac's AI hardware, the processor on Windows, or on Linux an <a href="#nvidia" class="text-emerald-700 underline">NVIDIA graphics card</a> or the processor. Nothing is sent anywhere.</p>
 
       <!-- 4 -->
       <h2 id="deployments" class="mt-12 text-2xl font-semibold text-slate-900">4. Deployments and capture events</h2>
@@ -310,10 +318,10 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
 
       <!-- 5 -->
       <h2 id="reviewing" class="mt-12 text-2xl font-semibold text-slate-900">5. Reviewing images</h2>
-      <p class="mt-4">The review screen has the <b>filter panel</b> on the left (the lists, the filters, and the images in the list), the image in the middle with its boxes and species, and the capture event's bar and filmstrip below it. To give the image more room, hide the filter panel with <b>‹</b> at its top right (<b>›</b> brings it back), and the capture event's panel with <b>^</b> at its right end.</p>
+      <p class="mt-4">The review screen has the <b>filter panel</b> on the left (the <b>Show</b> menu of lists, the filters, and the images in the list), the image in the middle with its boxes and species, and the capture event's bar and filmstrip below it. To give the image more room, hide the filter panel with <b>‹</b> at its top right (<b>›</b> brings it back), and the capture event's panel with <b>^</b> at its right end.</p>
 
       <h3 class="mt-8 text-lg font-semibold text-slate-900">Lists</h3>
-      <p class="mt-4">Each list button shows a set of images. Click a list to turn it on, and again to turn it off. With several on, you see the images that are in all of them: <b>Reviewed</b> with <b>Uncertain</b> shows the reviewed images marked uncertain. Lists no image can be in together (<b>To review</b> and <b>Reviewed</b>, say) don't stay on together. With none on, you see every image.</p>
+      <p class="mt-4">Each list shows a set of images. The lists are in the <b>Show</b> menu at the top of the filter panel; its button names the lists that are on, or <b>All images</b> when none is. Click it, then tick a list to turn it on, or untick it to turn it off. Each list says in a few words what it holds; hover over it for more. The menu groups them under <b>To review</b> and <b>Reviewed</b>, with <b>Uncertain</b> (and <b>Duplicates</b>, when there are copies) at the end. With several on, you see the images that are in all of them: <b>Reviewed</b> with <b>Uncertain</b> shows the reviewed images marked uncertain. A list that can't go with those on (<b>To review</b> and <b>Reviewed</b>, say) is dimmed, and ticking it turns those off. <b>All images</b> unticks every list, so you see every image.</p>
       <div class="mt-4 overflow-x-auto">
         <table class="w-full text-left text-sm">
           <thead class="border-b border-slate-300 text-slate-900">
@@ -326,6 +334,7 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
             <tr><td class="py-2 pr-4 font-medium">People &amp; vehicles</td><td class="py-2">Images to review with a person or vehicle.</td></tr>
             <tr><td class="py-2 pr-4 font-medium">Close calls</td><td class="py-2">Images whose species suggestions are least sure, closest call first.</td></tr>
             <tr><td class="py-2 pr-4 font-medium">New species?</td><td class="py-2">Images where SpeciesNet names an animal not labeled in this project yet.</td></tr>
+            <tr><td class="py-2 pr-4 font-medium">For occupancy</td><td class="py-2">Images to review for an occupancy survey, a capture event at a time, in the order that confirms the most detections for the least review (<a href="#for-occupancy" class="text-emerald-700 underline">Which images to review</a>).</td></tr>
             <tr><td class="py-2 pr-4 font-medium">Flagged</td><td class="py-2">Images the production rules flagged, each with why (<a href="#rules" class="text-emerald-700 underline">Rules</a>).</td></tr>
             <tr><td class="py-2 pr-4 font-medium">Reviewed</td><td class="py-2">Images reviewed already.</td></tr>
             <tr><td class="py-2 pr-4 font-medium">Saved by rules</td><td class="py-2">Images the production rules saved by themselves.</td></tr>
@@ -334,7 +343,7 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
           </tbody>
         </table>
       </div>
-      <p class="mt-4">Under the lists, <b>filters</b> narrow any list to a place or camera, to dates (<b>From</b> and <b>To</b>, by the camera's corrected clock), or to a species. <b>Show boxes scoring ≥ …%</b> sets the threshold: boxes the detector is less sure of than that are hidden (50% to start).</p>
+      <p class="mt-4">Under the <b>Show</b> button, <b>filters</b> narrow any list to a place or camera, to dates (<b>From</b> and <b>To</b>, by the camera's corrected clock), or to a species. <b>Show boxes scoring ≥ …%</b> sets the threshold: boxes the detector is less sure of than that are hidden (50% to start).</p>
 
       <h3 class="mt-8 text-lg font-semibold text-slate-900">Boxes</h3>
       <ul class="mt-4 list-disc space-y-2 pl-6">
@@ -366,7 +375,7 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
       <p class="mt-4">Click <b>Species list</b> in the header for the species offered when you label boxes. Give the common ones a key: in the review, pressing it names the selected box, or with none selected, every animal box in the image. The keys show under the image as a reminder. <b>Import a list</b> adds species from a CSV file, one per line: its name, then optionally its scientific name and key, for example <code class="rounded bg-slate-100 px-1">Raccoon,Procyon lotor,R</code>.</p>
 
       <h3 id="mark-empty" class="mt-8 text-lg font-semibold text-slate-900">Marking empty images together</h3>
-      <p class="mt-4">Turn on <b>Likely empty</b>, then click <b>Mark … as empty…</b>. WildObserve™ says what it will save, and how sure it is: how many images the detector found nothing in, and the highest score among the rest. Click <b>Mark them empty</b>. With <b>Skip bursts with boxes</b> ticked, images in a capture event where another picture has a box are left for you to check, since the animal may be in them too, missed. <b>Undo</b> puts the images back to review.</p>
+      <p class="mt-4">In the <b>Show</b> menu, tick <b>Likely empty</b>, then click <b>Mark … as empty…</b>. WildObserve™ says what it will save, and how sure it is: how many images the detector found nothing in, and the highest score among the rest. Click <b>Mark them empty</b>. With <b>Skip bursts with boxes</b> ticked, images in a capture event where another picture has a box are left for you to check, since the animal may be in them too, missed. <b>Undo</b> puts the images back to review.</p>
 
       <h3 class="mt-8 text-lg font-semibold text-slate-900">Naming whole capture events</h3>
       <p class="mt-4">When you can see that a run of pictures shows one species, tick their images in the list (Shift-click ticks a run), type the species, and click <b>Name their events…</b>. WildObserve™ says what it will do: how many animal boxes it will name, in how many images and capture events. It leaves alone images with no animal box (to review one by one, since the animal may be there, missed) and images reviewed already, and it lists any species the suggestions prefer instead. Confirm, and the images are saved as reviewed. <b>Undo</b> puts them back.</p>
@@ -401,6 +410,16 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
         <li><b>Only species on the Species list</b>, on by default when suggestions count. SpeciesNet's names include wider groups (Canine family), people (Human), and species from other places, and each would count as a species of its own. With this on, a suggestion counts only if it names a species on your <a href="#species-list" class="text-emerald-700 underline">Species list</a>, and a warning lists the names left out. To include one, add it to the Species list, spelled as the suggestion spells it.</li>
         <li><b>Include images marked uncertain</b>.</li>
       </ul>
+
+      <h3 id="for-occupancy" class="mt-8 text-lg font-semibold text-slate-900">Which images to review: the For occupancy list</h3>
+      <p class="mt-4">You don't need to review every image to estimate occupancy. The models use whether each species was seen at each site in each occasion, not how many images show it. With week-long occasions, that's a <b>species-site-week</b> (the app says species-site-occasion for other lengths). The <b>For occupancy</b> list offers capture events to review in the order that confirms the most species-site-weeks for the least review. In tests on four surveys, reviewing from it until it said to stop took 15–27% of the images, and occupancy from the reviewed images came within 0.04 of a full review's on average (<a href="https://doi.org/10.32942/X20M63" class="text-emerald-700 underline">Tabak 2026</a>). It's in every plan.</p>
+      <p class="mt-4">In the review screen, open the <b>Show</b> menu and tick <b>For occupancy</b>. The list goes in two steps, and the panel under it says which step it's on and what's left:</p>
+      <ol class="mt-4 list-decimal space-y-2 pl-6">
+        <li><b>Two capture events with animals from each site</b>, one site at a time, so your Project Model learns the common species from every site. Capture events reviewed already, from any list, count.</li>
+        <li><b>For each species-site-week that the suggestions show but no review has confirmed, the capture event with the surest suggestion.</b> Suggestions count as they do in the Occupancy panel: an animal's top suggestion (your Project Model's once it has trained, SpeciesNet's before that), scoring at least the number given for <b>Also images not reviewed yet</b> (0.9 unless you change it), and naming a species on your Species list unless the panel counts every name. If a capture event doesn't show its species, the next surest one for that species-site-week comes up.</li>
+      </ol>
+      <p class="mt-4">The list is made again each time it loads, and when you reach its end, so it follows your latest reviews and your Project Model as it last retrained. <b>Make again</b> remakes it now. <b>Settings…</b> opens the Occupancy panel, whose sites, occasions, and suggestion settings the list uses.</p>
+      <p class="mt-4"><b>When to stop.</b> The panel shows how many of the capture events you've reviewed from the list (the last 50, once there are that many) confirmed a new species-site-week. Once you've reviewed 50 and fewer than 1 in 5 of the last 50 did, it says you can stop. It also says <b>Done</b> when your reviews confirm every species-site-week the suggestions show. Then estimate occupancy from your reviewed images, with <b>Also images not reviewed yet</b> off, as the tests did.</p>
 
       <h3 class="mt-8 text-lg font-semibold text-slate-900">The results</h3>
       <p class="mt-4">Under <b>Table</b>, a row per species: the sites it was seen at, its <b>Occupancy</b>, the chance of seeing it in an occasion at a site it uses (<b>Seen in 7 days</b>, for week-long occasions), and <b>Animals per site</b>. Each comes with its 95% interval (lower and upper). The <b>Notes</b> column says when to be careful: a species seen at very few sites, a model that didn't settle, or an estimate at its limit. Warnings above the table are about the whole survey. Under <b>Plots</b>, choose one of six:</p>
@@ -473,7 +492,7 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
       <h3 class="mt-8 text-lg font-semibold text-slate-900">Watched folders</h3>
       <p class="mt-4">In <b>Images…</b>, tick <b>Watch for new images</b> under a folder, a folder your camera images sync or copy into, say. Its new images are then added and processed as they arrive, and the folder shows when WildObserve™ last looked. A project with watched folders keeps watching while another project is open.</p>
       <p class="mt-4">On a Mac, closing the window while a folder is watched, or while images are being added or processed, keeps WildObserve™ working in the background, with an icon in the menu bar. Its menu says what WildObserve is doing, opens the window again, or quits. Once the work is done and nothing is watched, it quits by itself. To keep watching after your Mac restarts, turn on <b>Open WildObserve when you log in</b> in About.</p>
-      <p class="mt-4">On Linux, folders are watched while WildObserve™ is open. Closing the window quits it; when you open it again, it adds whatever arrived in the meantime.</p>
+      <p class="mt-4">On Windows and Linux, folders are watched while WildObserve™ is open. Closing the window quits it; when you open it again, it adds whatever arrived in the meantime.</p>
 
       <h3 id="rules" class="mt-8 text-lg font-semibold text-slate-900">Production rules</h3>
       <p class="mt-4">Click <b>Rules…</b> in the header for what WildObserve™ decides by itself once images are processed, as they arrive in watched folders too. An administrator sets them for each project.</p>
@@ -489,7 +508,7 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
       <h3 class="mt-8 text-lg font-semibold text-slate-900">Email alerts</h3>
       <p class="mt-4">Email alerts tell people away from the computer when a species of concern turns up in a watched folder. They go through your own mail server, never ours. Set them up in <b>Rules… &gt; Alerts by email…</b>:</p>
       <ol class="mt-4 list-decimal space-y-2 pl-6">
-        <li><b>Mail server</b>, once for every project on the computer. <b>Fill in for</b> sets the server, port, and security for Gmail, iCloud Mail, Yahoo Mail, or Fastmail. Enter your <b>mail account's</b> user name (usually its email address) and password. Most mail accounts need an <b>app password</b> for this, made in the account's security settings: in Gmail, turn on 2-Step Verification, then make one under App passwords (<a href="https://support.google.com/mail/answer/185833" class="text-emerald-700 underline">Google's help</a>). Outlook.com doesn't allow it, and Microsoft 365 only where your IT turns on SMTP sign-in; a mail-sending service such as Amazon SES works too. Click <b>Save mail server</b>. The password is kept in your Mac's Keychain, or on Linux in a file only your user account can read.</li>
+        <li><b>Mail server</b>, once for every project on the computer. <b>Fill in for</b> sets the server, port, and security for Gmail, iCloud Mail, Yahoo Mail, or Fastmail. Enter your <b>mail account's</b> user name (usually its email address) and password. Most mail accounts need an <b>app password</b> for this, made in the account's security settings: in Gmail, turn on 2-Step Verification, then make one under App passwords (<a href="https://support.google.com/mail/answer/185833" class="text-emerald-700 underline">Google's help</a>). Outlook.com doesn't allow it, and Microsoft 365 only where your IT turns on SMTP sign-in; a mail-sending service such as Amazon SES works too. Click <b>Save mail server</b>. The password is kept in your Mac's Keychain, or on Windows and Linux in a file only your user account can read.</li>
         <li><b>This project</b>: list the addresses alerts go to, and turn on <b>Send alerts for this project</b>. Optionally, <b>Attach the image</b>: a smaller copy with a box around what was found, and none of the original's metadata. You can also set how long to wait before another alert about the same species at the same deployment.</li>
         <li><b>Send a test</b> to check it all works.</li>
       </ol>
@@ -505,10 +524,10 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
       <p class="mt-4">Click your name at the top right for your account: <b>Change password</b> and <b>Sign out</b>. Administrators also find <b>People</b> there: everyone who uses WildObserve™ on this computer. <b>Add a person</b> with their email address, name, and a password, as a reviewer or an administrator. Reviewers review images; administrators can also manage people, the rules, alerts, and the models a project uses. A turned-off account can't sign in, and its reviews keep its name.</p>
 
       <h3 class="mt-8 text-lg font-semibold text-slate-900">Licenses</h3>
-      <p class="mt-4">The free Community plan needs no license. For a paid plan, choose <b>WildObserve &gt; License…</b> in the menu bar (on Linux, <b>License</b> in the menu under your name) and enter your license key under <b>Activate with a license key</b>. On a computer that can't go online, choose the license file you received instead (<b>Choose license file…</b>; its name ends in <code class="rounded bg-slate-100 px-1">.wolicense</code>).</p>
+      <p class="mt-4">The free Community plan needs no license. For a paid plan, choose <b>WildObserve &gt; License…</b> in the menu bar (on Windows and Linux, <b>License</b> in the menu under your name) and enter your license key under <b>Activate with a license key</b>. On a computer that can't go online, choose the license file you received instead (<b>Choose license file…</b>; its name ends in <code class="rounded bg-slate-100 px-1">.wolicense</code>).</p>
 
       <h3 class="mt-8 text-lg font-semibold text-slate-900">About</h3>
-      <p class="mt-4"><b>WildObserve &gt; About WildObserve</b> (on Linux, <b>About</b> at the top right) has:</p>
+      <p class="mt-4"><b>WildObserve &gt; About WildObserve</b> (on Windows and Linux, <b>About</b> at the top right) has:</p>
       <ul class="mt-4 list-disc space-y-2 pl-6">
         <li><b>Updates</b>: whether a newer version is out. Untick <b>Go online to check for updates and activate licenses</b> to keep WildObserve™ offline; email alerts stop too. Everything else works offline.</li>
         <li><b>Working in the background</b> (Mac): <b>Open WildObserve when you log in</b>.</li>
@@ -550,7 +569,7 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
       <p class="mt-4">Its drive isn't connected, or the folder was moved or renamed. Connect the drive, or in <b>Images…</b>, click <b>Moved?</b> and <b>Find it…</b> to point WildObserve™ at where it is now. Your reviews are kept.</p>
 
       <h3 class="mt-8 text-lg font-semibold text-slate-900">Moving a project to another computer</h3>
-      <p class="mt-4">Copy the project's folder, and your image folders, to the other computer. There, choose <b>Project &gt; Projects… &gt; Open a project folder…</b> (on Linux, <b>Projects…</b> at the top left) and open the copy. Then in <b>Images…</b>, use <b>Moved?</b> to point each image folder at its new place.</p>
+      <p class="mt-4">Copy the project's folder, and your image folders, to the other computer. There, choose <b>Project &gt; Projects… &gt; Open a project folder…</b> (on Windows and Linux, <b>Projects…</b> at the top left) and open the copy. Then in <b>Images…</b>, use <b>Moved?</b> to point each image folder at its new place.</p>
 
       <h3 class="mt-8 text-lg font-semibold text-slate-900">Capture events are far too big</h3>
       <p class="mt-4">Images with no capture time in their EXIF data use the file's date instead, and copying, downloading, or syncing files often gives many of them the same date, so they chain into one huge event. WildObserve™ warns about this when you name capture events. Check <b>Deployments…</b>: the event gap, and each camera's clock.</p>
@@ -566,9 +585,10 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
       <pre class="mt-4 overflow-x-auto rounded-xl bg-slate-900 px-4 py-3 text-sm text-slate-100"><code>/Applications/WildObserve.app/Contents/MacOS/WildObserve --reset-password you@example.org</code></pre>
       <p class="mt-4">On Linux, close WildObserve and run this in a terminal instead:</p>
       <pre class="mt-4 overflow-x-auto rounded-xl bg-slate-900 px-4 py-3 text-sm text-slate-100"><code>wildobserve --reset-password you@example.org</code></pre>
+      <p class="mt-4">On Windows, close WildObserve and open <b>WildObserve Password Reset</b> from the Start menu instead. It asks for the account's email address and a new password.</p>
 
       <h3 class="mt-8 text-lg font-semibold text-slate-900">Getting help</h3>
-      <p class="mt-4">In <b>WildObserve &gt; About WildObserve</b> (on Linux, <b>About</b>), click <b>Save diagnostic report</b>, and email it to <a href="mailto:info@qsc.earth" class="font-semibold text-emerald-700 underline">info@qsc.earth</a> with a description of the problem.</p>
+      <p class="mt-4">In <b>WildObserve &gt; About WildObserve</b> (on Windows and Linux, <b>About</b>), click <b>Save diagnostic report</b>, and email it to <a href="mailto:info@qsc.earth" class="font-semibold text-emerald-700 underline">info@qsc.earth</a> with a description of the problem.</p>
 
       <h2 class="mt-12 text-2xl font-semibold text-slate-900">Your privacy</h2>
       <p class="mt-4">WildObserve™ runs on your computer. Your images, their metadata, and your annotations stay there, and we never receive them. It goes online only to check for updates, activate a license, sign you in with Google if you choose to, and send email alerts if you opt in. The <a href="privacy.html" class="text-emerald-700 underline">Privacy Policy</a> has the details.</p>
@@ -584,7 +604,7 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
         <p class="mt-1">Science-grounded AI for sustainable impact.</p>
       </div>
       <div class="sm:text-right">
-        <p><a href="plans.html" class="hover:text-white hover:underline">Plans</a> · <a href="user_guide.html" class="hover:text-white hover:underline">User guide</a> · <a href="privacy.html" class="hover:text-white hover:underline">Privacy</a> · <a href="terms.html" class="hover:text-white hover:underline">Terms</a></p>
+        <p><a href="plans.html" class="hover:text-white hover:underline">Plans</a> · <a href="user_guide.html" class="hover:text-white hover:underline">User guide</a> · <a href="./#faq" class="hover:text-white hover:underline">FAQ</a> · <a href="privacy.html" class="hover:text-white hover:underline">Privacy</a> · <a href="terms.html" class="hover:text-white hover:underline">Terms</a></p>
         <p class="mt-1">&copy; <script>document.write(new Date().getFullYear())</script> QSC. All rights reserved.</p>
       </div>
     </div>
