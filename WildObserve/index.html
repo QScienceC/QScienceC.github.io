@@ -158,6 +158,103 @@
     ]
   }
   </script>
+  <!-- The FAQ section on this page, as structured data: change both together. See CLAUDE.md. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is WildObserve™ free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The Community plan is free for non-commercial use. It includes AI-assisted labeling and review, occupancy and abundance estimates, export, unlimited image processing, and a Project Model in up to 3 projects. Paid annual plans add Project Models in any number of projects, work across several computers, and commercial use. See Plans."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do my images leave my computer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. WildObserve™ processes everything on your computer. Your images, their metadata, and your annotations stay there, and we never receive them. The app goes online only to check for updates, activate a license, sign you in with Google if you choose to, and send email alerts if you turn them on. See the Privacy Policy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What computers does it run on?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Macs with Apple silicon (M1 or later) and macOS 14 or later; Windows 10 or later, from the Microsoft Store; and Linux (Ubuntu 22.04 or later, on a 64-bit Intel or AMD processor). Every plan processes any number of images; how fast depends on your computer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to write code, or have a graphics card (GPU)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. WildObserve™ is a desktop app, so there's no code to write, and it doesn't need a separate graphics card: in tests, it processed 8.1 images a second on an Apple M1 Pro laptop (Tabak 2026, bioRxiv). On Linux, it uses an NVIDIA graphics card if one is set up, and the processor otherwise."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What species can it identify?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Any species you label. After MegaDetector finds the animals, species suggestions start from SpeciesNet, a general species model from Google. Your Project Model then learns your project's own species, and the names you use, as you label them, including species SpeciesNet doesn't know."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How accurate are the species suggestions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It depends on your images, and the suggestions improve as you review. On a dataset released after SpeciesNet was trained, the Project Model passed SpeciesNet's accuracy with ten labels per species (balanced accuracy 0.783 against 0.751; Tabak 2026, bioRxiv). In the app, Project > Models… shows how well each version of your Project Model did on labels held out from its training."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is it different from running MegaDetector and SpeciesNet myself?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "WildObserve™ runs both for you, with no code, and adds what comes after: a review screen that groups images into capture events, a Project Model that learns your species as you review, occupancy and abundance estimates, and exports in the formats you need."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can it estimate occupancy and abundance?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, on every plan. From your reviewed images, it estimates each species' occupancy, allowing for missed detections, and its abundance with the Royle–Nichols model, with site covariates, plots, and tables and a script for R. Its For occupancy list picks which images to review: reviewing about 20% of them this way gives occupancy estimates nearly the same as reviewing all of them (Tabak 2026, EcoEvoRxiv). See the user guide."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What formats can I export?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CSV (for Excel, R, or Python), Camtrap DP (for GBIF), Wildlife Insights bulk upload, COCO and COCO Camera Traps, YOLO, MegaDetector results, occupancy tables for R, and JSON with full provenance: what the models suggested beside what reviewers saved."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it work offline?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Everything works offline except checking for updates, activating a license, Sign in with Google, and email alerts. A computer that can't go online can use a license file instead, and if you sign in with Google, you can set a password to sign in without the internet."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can several people review the same project?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. On every plan, each person who reviews on a computer gets their own account, and every record says who confirmed it. With a Lab or Organization plan, projects can also be shared across computers."
+        }
+      }
+    ]
+  }
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @keyframes fade-in {
@@ -166,6 +263,7 @@
     }
     .animate-fade-in { animation: fade-in 1s ease-out both; }
     .tier-card { min-height: 100%; }
+    #faq summary::-webkit-details-marker { display: none; }
   </style>
 </head>
 <body class="bg-stone-50 font-sans text-slate-800 antialiased">
@@ -302,6 +400,62 @@
 
         <!-- The preprints are also in the "subjectOf" structured data above. Update both places if one is revised or published in a journal. See CLAUDE.md. -->
         <p class="mx-auto mt-10 max-w-4xl border-t border-slate-200 pt-6 text-sm leading-6 text-slate-500">The methods and tests behind WildObserve™ are described in two preprints: <a href="https://doi.org/10.64898/2026.10.06.757089" class="font-medium text-emerald-700 hover:text-emerald-800 hover:underline">WildObserve: Camera-trap software that learns species labels during review and estimates occupancy and abundance</a> (Tabak 2026, <i>bioRxiv</i>) and <a href="https://doi.org/10.32942/X20M63" class="font-medium text-emerald-700 hover:text-emerald-800 hover:underline">Which camera-trap images to review? Estimating occupancy from a small part of a survey</a> (Tabak 2026, <i>EcoEvoRxiv</i>).</p>
+      </div>
+    </section>
+
+    <!-- Each question and answer here is repeated in the FAQPage structured data in <head>. Change both together. See CLAUDE.md. -->
+    <section id="faq" class="px-6 py-16 sm:py-20">
+      <div class="mx-auto max-w-3xl">
+        <div class="text-center">
+          <p class="text-sm font-bold uppercase tracking-[.16em] text-emerald-700">FAQ</p>
+          <h2 class="mt-3 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">Frequently asked questions</h2>
+        </div>
+        <div class="mt-10 divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white shadow-sm">
+          <details class="group px-5 py-4 sm:px-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4"><h3 class="text-base font-semibold text-slate-900 sm:text-lg">Is WildObserve™ free?</h3><span aria-hidden="true" class="text-2xl leading-none text-emerald-700 transition group-open:rotate-45">+</span></summary>
+            <p class="mt-3 leading-7 text-slate-600">Yes. The Community plan is free for non-commercial use. It includes AI-assisted labeling and review, occupancy and abundance estimates, export, unlimited image processing, and a Project Model in up to 3 projects. Paid annual plans add Project Models in any number of projects, work across several computers, and commercial use. See <a href="plans.html" class="font-medium text-emerald-700 hover:text-emerald-800 hover:underline">Plans</a>.</p>
+          </details>
+          <details class="group px-5 py-4 sm:px-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4"><h3 class="text-base font-semibold text-slate-900 sm:text-lg">Do my images leave my computer?</h3><span aria-hidden="true" class="text-2xl leading-none text-emerald-700 transition group-open:rotate-45">+</span></summary>
+            <p class="mt-3 leading-7 text-slate-600">No. WildObserve™ processes everything on your computer. Your images, their metadata, and your annotations stay there, and we never receive them. The app goes online only to check for updates, activate a license, sign you in with Google if you choose to, and send email alerts if you turn them on. See the <a href="privacy.html" class="font-medium text-emerald-700 hover:text-emerald-800 hover:underline">Privacy Policy</a>.</p>
+          </details>
+          <details class="group px-5 py-4 sm:px-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4"><h3 class="text-base font-semibold text-slate-900 sm:text-lg">What computers does it run on?</h3><span aria-hidden="true" class="text-2xl leading-none text-emerald-700 transition group-open:rotate-45">+</span></summary>
+            <p class="mt-3 leading-7 text-slate-600">Macs with Apple silicon (M1 or later) and macOS 14 or later; Windows 10 or later, from the Microsoft Store; and Linux (Ubuntu 22.04 or later, on a 64-bit Intel or AMD processor). Every plan processes any number of images; how fast depends on your computer.</p>
+          </details>
+          <details class="group px-5 py-4 sm:px-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4"><h3 class="text-base font-semibold text-slate-900 sm:text-lg">Do I need to write code, or have a graphics card (GPU)?</h3><span aria-hidden="true" class="text-2xl leading-none text-emerald-700 transition group-open:rotate-45">+</span></summary>
+            <p class="mt-3 leading-7 text-slate-600">No. WildObserve™ is a desktop app, so there's no code to write, and it doesn't need a separate graphics card: in tests, it processed 8.1 images a second on an Apple M1 Pro laptop (<a href="https://doi.org/10.64898/2026.10.06.757089" class="font-medium text-emerald-700 hover:text-emerald-800 hover:underline">Tabak 2026, bioRxiv</a>). On Linux, it uses an NVIDIA graphics card if one is set up, and the processor otherwise.</p>
+          </details>
+          <details class="group px-5 py-4 sm:px-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4"><h3 class="text-base font-semibold text-slate-900 sm:text-lg">What species can it identify?</h3><span aria-hidden="true" class="text-2xl leading-none text-emerald-700 transition group-open:rotate-45">+</span></summary>
+            <p class="mt-3 leading-7 text-slate-600">Any species you label. After MegaDetector finds the animals, species suggestions start from SpeciesNet, a general species model from Google. Your Project Model then learns your project's own species, and the names you use, as you label them, including species SpeciesNet doesn't know.</p>
+          </details>
+          <details class="group px-5 py-4 sm:px-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4"><h3 class="text-base font-semibold text-slate-900 sm:text-lg">How accurate are the species suggestions?</h3><span aria-hidden="true" class="text-2xl leading-none text-emerald-700 transition group-open:rotate-45">+</span></summary>
+            <p class="mt-3 leading-7 text-slate-600">It depends on your images, and the suggestions improve as you review. On a dataset released after SpeciesNet was trained, the Project Model passed SpeciesNet's accuracy with ten labels per species (balanced accuracy 0.783 against 0.751; <a href="https://doi.org/10.64898/2026.10.06.757089" class="font-medium text-emerald-700 hover:text-emerald-800 hover:underline">Tabak 2026, bioRxiv</a>). In the app, Project &gt; Models… shows how well each version of your Project Model did on labels held out from its training.</p>
+          </details>
+          <details class="group px-5 py-4 sm:px-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4"><h3 class="text-base font-semibold text-slate-900 sm:text-lg">How is it different from running MegaDetector and SpeciesNet myself?</h3><span aria-hidden="true" class="text-2xl leading-none text-emerald-700 transition group-open:rotate-45">+</span></summary>
+            <p class="mt-3 leading-7 text-slate-600">WildObserve™ runs both for you, with no code, and adds what comes after: a review screen that groups images into capture events, a Project Model that learns your species as you review, occupancy and abundance estimates, and exports in the formats you need.</p>
+          </details>
+          <details class="group px-5 py-4 sm:px-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4"><h3 class="text-base font-semibold text-slate-900 sm:text-lg">Can it estimate occupancy and abundance?</h3><span aria-hidden="true" class="text-2xl leading-none text-emerald-700 transition group-open:rotate-45">+</span></summary>
+            <p class="mt-3 leading-7 text-slate-600">Yes, on every plan. From your reviewed images, it estimates each species' occupancy, allowing for missed detections, and its abundance with the Royle–Nichols model, with site covariates, plots, and tables and a script for R. Its For occupancy list picks which images to review: reviewing about 20% of them this way gives occupancy estimates nearly the same as reviewing all of them (<a href="https://doi.org/10.32942/X20M63" class="font-medium text-emerald-700 hover:text-emerald-800 hover:underline">Tabak 2026, EcoEvoRxiv</a>). See the <a href="user_guide.html#occupancy" class="font-medium text-emerald-700 hover:text-emerald-800 hover:underline">user guide</a>.</p>
+          </details>
+          <details class="group px-5 py-4 sm:px-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4"><h3 class="text-base font-semibold text-slate-900 sm:text-lg">What formats can I export?</h3><span aria-hidden="true" class="text-2xl leading-none text-emerald-700 transition group-open:rotate-45">+</span></summary>
+            <p class="mt-3 leading-7 text-slate-600">CSV (for Excel, R, or Python), Camtrap DP (for GBIF), Wildlife Insights bulk upload, COCO and COCO Camera Traps, YOLO, MegaDetector results, occupancy tables for R, and JSON with full provenance: what the models suggested beside what reviewers saved.</p>
+          </details>
+          <details class="group px-5 py-4 sm:px-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4"><h3 class="text-base font-semibold text-slate-900 sm:text-lg">Does it work offline?</h3><span aria-hidden="true" class="text-2xl leading-none text-emerald-700 transition group-open:rotate-45">+</span></summary>
+            <p class="mt-3 leading-7 text-slate-600">Yes. Everything works offline except checking for updates, activating a license, Sign in with Google, and email alerts. A computer that can't go online can use a license file instead, and if you sign in with Google, you can set a password to sign in without the internet.</p>
+          </details>
+          <details class="group px-5 py-4 sm:px-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4"><h3 class="text-base font-semibold text-slate-900 sm:text-lg">Can several people review the same project?</h3><span aria-hidden="true" class="text-2xl leading-none text-emerald-700 transition group-open:rotate-45">+</span></summary>
+            <p class="mt-3 leading-7 text-slate-600">Yes. On every plan, each person who reviews on a computer gets their own account, and every record says who confirmed it. With a Lab or Organization plan, projects can also be shared across computers.</p>
+          </details>
+        </div>
       </div>
     </section>
 

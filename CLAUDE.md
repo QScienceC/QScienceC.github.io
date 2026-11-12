@@ -36,6 +36,10 @@ Each `<video>` in `WildObserve/user_guide.html` has a matching `VideoObject` in 
 
 The `SoftwareApplication` JSON-LD in `WildObserve/index.html` repeats the landing page's features (`featureList`), operating systems, and download links. If those change on the page, update the JSON-LD.
 
+### The WildObserve FAQ
+
+The FAQ section of `WildObserve/index.html` (`<section id="faq">`) is repeated word for word, as plain text, in the `FAQPage` JSON-LD in that page's `<head>`. When a question or answer changes, change both. The answers repeat facts from elsewhere: plans and prices, system requirements, export formats, and the preprints' numbers. When one of those changes, check the FAQ too.
+
 ### The WildObserve preprints
 
 Two preprints are linked in `WildObserve/index.html`:
