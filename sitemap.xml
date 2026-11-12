@@ -2,204 +2,199 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://www.qsc.earth/</loc>
+    <loc>https://qsc.earth/</loc>
     <lastmod>2026-02-21</lastmod>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://www.qsc.earth/about.html</loc>
+    <loc>https://qsc.earth/about.html</loc>
     <lastmod>2026-02-21</lastmod>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.qsc.earth/services.html</loc>
+    <loc>https://qsc.earth/services.html</loc>
     <lastmod>2026-02-21</lastmod>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.qsc.earth/mission.html</loc>
+    <loc>https://qsc.earth/mission.html</loc>
     <lastmod>2026-01-29</lastmod>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.qsc.earth/blog.html</loc>
+    <loc>https://qsc.earth/blog.html</loc>
     <lastmod>2026-02-21</lastmod>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.qsc.earth/contact.html</loc>
+    <loc>https://qsc.earth/contact.html</loc>
     <lastmod>2026-02-21</lastmod>
     <priority>0.8</priority>
   </url>
 
   <!-- Service Pages -->
   <url>
-    <loc>https://www.qsc.earth/reinforcement_learning.html</loc>
+    <loc>https://qsc.earth/reinforcement_learning.html</loc>
     <lastmod>2026-02-21</lastmod>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.qsc.earth/data_science_biology.html</loc>
+    <loc>https://qsc.earth/data_science_biology.html</loc>
     <lastmod>2026-02-21</lastmod>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.qsc.earth/scientific_consulting.html</loc>
+    <loc>https://qsc.earth/scientific_consulting.html</loc>
     <lastmod>2026-01-29</lastmod>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.qsc.earth/partnerships.html</loc>
+    <loc>https://qsc.earth/partnerships.html</loc>
     <lastmod>2026-01-29</lastmod>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.qsc.earth/business_solutions.html</loc>
+    <loc>https://qsc.earth/business_solutions.html</loc>
     <lastmod>2026-02-21</lastmod>
     <priority>0.8</priority>
   </url>
 
 
   <url>
-    <loc>https://www.qsc.earth/case_studies.html</loc>
+    <loc>https://qsc.earth/case_studies.html</loc>
     <lastmod>2026-03-06</lastmod>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.qsc.earth/case_study_production_risk.html</loc>
+    <loc>https://qsc.earth/case_study_production_risk.html</loc>
     <lastmod>2026-03-04</lastmod>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.qsc.earth/case_study_adaptive_production_scheduling.html</loc>
+    <loc>https://qsc.earth/case_study_adaptive_production_scheduling.html</loc>
     <lastmod>2026-03-05</lastmod>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.qsc.earth/case_study_industrial_sensor_data_operational_insight.html</loc>
-    <lastmod>2026-03-05</lastmod>
-    <priority>0.7</priority>
-  </url>
-
-
-  <url>
-    <loc>https://www.qsc.earth/case_study_monitoring_progress_safety_risks_computer_vision.html</loc>
-    <lastmod>2026-03-05</lastmod>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://www.qsc.earth/case_study_agrivoltaic_geospatial_modeling.html</loc>
+    <loc>https://qsc.earth/case_study_industrial_sensor_data_operational_insight.html</loc>
     <lastmod>2026-03-05</lastmod>
     <priority>0.7</priority>
   </url>
 
 
   <url>
-    <loc>https://www.qsc.earth/case_study_wildlife_disease_risk_surveillance.html</loc>
+    <loc>https://qsc.earth/case_study_monitoring_progress_safety_risks_computer_vision.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://qsc.earth/case_study_agrivoltaic_geospatial_modeling.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+
+  <url>
+    <loc>https://qsc.earth/case_study_wildlife_disease_risk_surveillance.html</loc>
     <lastmod>2026-03-06</lastmod>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.qsc.earth/computer_vision.html</loc>
+    <loc>https://qsc.earth/computer_vision.html</loc>
     <lastmod>2026-03-05</lastmod>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.qsc.earth/WildObserve/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <loc>https://qsc.earth/WildObserve/</loc>
+    <lastmod>2026-09-26</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.qsc.earth/WildObserve/plans.html</loc>
-    <lastmod>2026-11-04</lastmod>
+    <loc>https://qsc.earth/WildObserve/plans.html</loc>
+    <lastmod>2026-09-28</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.qsc.earth/WildObserve/user_guide.html</loc>
-    <lastmod>2026-11-12</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.qsc.earth/WildObserve/privacy.html</loc>
+    <loc>https://qsc.earth/WildObserve/privacy.html</loc>
     <lastmod>2026-09-28</lastmod>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.qsc.earth/WildObserve/terms.html</loc>
+    <loc>https://qsc.earth/WildObserve/terms.html</loc>
     <lastmod>2026-09-28</lastmod>
     <priority>0.3</priority>
   </url>
 
 
   <url>
-    <loc>https://www.qsc.earth/geospatial.html</loc>
+    <loc>https://qsc.earth/geospatial.html</loc>
     <lastmod>2026-03-05</lastmod>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.qsc.earth/cds.html</loc>
+    <loc>https://qsc.earth/cds.html</loc>
     <lastmod>2026-03-05</lastmod>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.qsc.earth/faq.html</loc>
+    <loc>https://qsc.earth/faq.html</loc>
     <lastmod>2026-02-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.qsc.earth/mobile_detect_guide.html</loc>
+    <loc>https://qsc.earth/mobile_detect_guide.html</loc>
     <lastmod>2026-01-29</lastmod>
     <priority>0.6</priority>
   </url>
     <url>
-    <loc>https://www.qsc.earth/blog_posts/ai_definition.html</loc>
+    <loc>https://qsc.earth/blog_posts/ai_definition.html</loc>
       <lastmod>2026-03-11</lastmod>
       <priority>0.7</priority>
     </url>
     <url>
-    <loc>https://www.qsc.earth/blog_posts/202603_data_storage.html</loc>
+    <loc>https://qsc.earth/blog_posts/202603_data_storage.html</loc>
       <lastmod>2026-02-25</lastmod>
       <priority>0.7</priority>
     </url>
     <url>
-    <loc>https://www.qsc.earth/blog_posts/202508_workforce_scheduling.html</loc>
+    <loc>https://qsc.earth/blog_posts/202508_workforce_scheduling.html</loc>
       <lastmod>2025-08-21</lastmod>
       <priority>0.6</priority>
     </url>
   <url>
-    <loc>https://www.qsc.earth/blog_posts/202507_equipment_maintenance_demo.html</loc>
+    <loc>https://qsc.earth/blog_posts/202507_equipment_maintenance_demo.html</loc>
       <lastmod>2025-07-16</lastmod>
       <priority>0.6</priority>
     </url>
       <url>
-    <loc>https://www.qsc.earth/blog_posts/202412_apy_blog.html</loc>
+    <loc>https://qsc.earth/blog_posts/202412_apy_blog.html</loc>
       <lastmod>2026-02-25</lastmod>
       <priority>0.5</priority>
     </url>
       <url>
-      <loc>https://www.qsc.earth/blog_posts/epi_rl_blog_202410.html</loc>
+      <loc>https://qsc.earth/blog_posts/epi_rl_blog_202410.html</loc>
         <lastmod>2025-07-02</lastmod>
         <priority>0.5</priority>
     </url>
       <url>
-    <loc>https://www.qsc.earth/blog_posts/inventory_optimization_202411.html</loc>
+    <loc>https://qsc.earth/blog_posts/inventory_optimization_202411.html</loc>
       <lastmod>2024-11-03</lastmod>
       <priority>0.5</priority>
   </url>

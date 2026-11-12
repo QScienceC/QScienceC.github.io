@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.qsc.earth/sitemap.xml
+Sitemap: https://qsc.earth/sitemap.xml
