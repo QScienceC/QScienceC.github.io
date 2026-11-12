@@ -194,7 +194,7 @@
 
       <p class="mt-8">Some features come with a paid plan, and are marked here with the plans that include them. Everything else is in the free Community plan. See <a href="plans.html" class="font-semibold text-emerald-700 underline">Plans</a> for what each includes.</p>
       <p class="mt-4">Short videos of the main steps are also on YouTube, in the <a href="https://www.youtube.com/playlist?list=PLSHbm1lb9jpg" class="font-semibold text-emerald-700 underline">WildObserve Instructions</a> playlist.</p>
-      <p class="mt-4">This guide names the Mac's menus. On Linux, the same items are in the window: <b>Projects…</b> at the top left, <b>Models…</b> with the buttons in the header, <b>About</b> at the top right, and <b>License</b> in the menu under your name.</p>
+      <p class="mt-4">This guide names the Mac's menus. On Windows and Linux, the same items are in the window: <b>Projects…</b> at the top left, <b>Models…</b> with the buttons in the header, <b>About</b> at the top right, and <b>License</b> in the menu under your name.</p>
 
       <!-- 1 -->
       <h2 id="install" class="mt-12 text-2xl font-semibold text-slate-900">1. Installing and signing in</h2>
@@ -202,9 +202,10 @@
       <h3 class="mt-8 text-lg font-semibold text-slate-900">What you need</h3>
       <ul class="mt-4 list-disc space-y-2 pl-6">
         <li><b>Mac:</b> Apple silicon (M1 or later) and macOS 14 or later.</li>
+        <li><b>Windows:</b> Windows 10 or later, on a 64-bit Intel or AMD processor, from the Microsoft Store. WildObserve™ processes images on the processor.</li>
         <li><b>Linux:</b> Ubuntu 22.04 or later, on a 64-bit Intel or AMD processor (x86_64). WildObserve™ uses an NVIDIA graphics card if the computer has one and it's <a href="#nvidia" class="text-emerald-700 underline">set up</a>, and the processor otherwise, which is slower.</li>
       </ul>
-      <p class="mt-4">A Windows version is coming. WildObserve™ processes any number of images on every plan; how fast depends on your computer.</p>
+      <p class="mt-4">WildObserve™ processes any number of images on every plan; how fast depends on your computer.</p>
 
       <h3 class="mt-8 text-lg font-semibold text-slate-900">Installing on a Mac</h3>
       <ol class="mt-4 list-decimal space-y-2 pl-6">
@@ -213,6 +214,13 @@
         <li>Open WildObserve from Applications. The first launch takes longer while it prepares the AI models for your Mac.</li>
       </ol>
       <p class="mt-4">To update, WildObserve™ tells you when a new version is out (in About). Download it the same way, and drag it to Applications to replace the old one. Your accounts and projects are kept. If macOS says WildObserve is in use, quit it first: see <a href="#troubleshooting" class="text-emerald-700 underline">Troubleshooting</a>.</p>
+
+      <h3 id="windows" class="mt-8 text-lg font-semibold text-slate-900">Installing on Windows</h3>
+      <ol class="mt-4 list-decimal space-y-2 pl-6">
+        <li>Install WildObserve™ from the <a href="https://apps.microsoft.com/detail/9nlwg3wvnzbk?hl=en-US&amp;gl=US" class="text-emerald-700 underline">Microsoft Store</a>.</li>
+        <li>Open WildObserve from the Start menu.</li>
+      </ol>
+      <p class="mt-4">The Microsoft Store keeps WildObserve™ up to date. Your accounts, license, and list of projects are kept in the <code class="rounded bg-slate-100 px-1">WildObserve</code> folder in your user folder, so they stay even if you uninstall the app.</p>
 
       <h3 class="mt-8 text-lg font-semibold text-slate-900">Installing on Linux</h3>
       <ol class="mt-4 list-decimal space-y-2 pl-6">
@@ -248,7 +256,7 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
 
       <h3 class="mt-8 text-lg font-semibold text-slate-900">Making a project</h3>
       <ol class="mt-4 list-decimal space-y-2 pl-6">
-        <li>In the menu bar, choose <b>Project &gt; Projects…</b> (on Linux, click <b>Projects…</b> at the top left), then <b>New project…</b> (the first time, this is where WildObserve™ starts).</li>
+        <li>In the menu bar, choose <b>Project &gt; Projects…</b> (on Windows and Linux, click <b>Projects…</b> at the top left), then <b>New project…</b> (the first time, this is where WildObserve™ starts).</li>
         <li>Give it a name, and choose where to keep it (<b>Keep it in</b>).</li>
         <li>Under <b>Image folders</b>, click <b>Add a folder…</b> and choose a folder of images. Subfolders are included, and each folder of images becomes a <a href="#deployments" class="text-emerald-700 underline">deployment</a>. You can add more folders later.</li>
         <li>Click <b>Make project</b>. WildObserve™ finds the images, reads their capture times and camera details, and groups them into capture events.</li>
@@ -280,8 +288,8 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
         <li>suggests a species for each animal with <b>SpeciesNet</b>, and with your <a href="#models" class="text-emerald-700 underline">Project Model</a> once it has learned from your labels.</li>
       </ul>
       <p class="mt-4">The header shows progress and the time left. <b>Pause</b> stops after the current image. Click the button again, now or after reopening WildObserve™, to carry on where it stopped. You can review while processing continues.</p>
-      <p class="mt-4">While images are processed, a Mac doesn't go to sleep. On Linux, closing the window quits WildObserve and stops processing until you open it again, and the computer can still go to sleep, so for a long run turn off <b>Automatic Suspend</b> in Settings &gt; Power.</p>
-      <p class="mt-4">Processing uses your computer's own hardware: a Mac's AI hardware, or on Linux an <a href="#nvidia" class="text-emerald-700 underline">NVIDIA graphics card</a> or the processor. Nothing is sent anywhere.</p>
+      <p class="mt-4">While images are processed, a Mac doesn't go to sleep. On Windows and Linux, closing the window quits WildObserve and stops processing until you open it again, and the computer can still go to sleep. For a long run, turn sleep off: in Windows' power settings, or on Linux, <b>Automatic Suspend</b> in Settings &gt; Power.</p>
+      <p class="mt-4">Processing uses your computer's own hardware: a Mac's AI hardware, the processor on Windows, or on Linux an <a href="#nvidia" class="text-emerald-700 underline">NVIDIA graphics card</a> or the processor. Nothing is sent anywhere.</p>
 
       <!-- 4 -->
       <h2 id="deployments" class="mt-12 text-2xl font-semibold text-slate-900">4. Deployments and capture events</h2>
@@ -484,7 +492,7 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
       <h3 class="mt-8 text-lg font-semibold text-slate-900">Watched folders</h3>
       <p class="mt-4">In <b>Images…</b>, tick <b>Watch for new images</b> under a folder, a folder your camera images sync or copy into, say. Its new images are then added and processed as they arrive, and the folder shows when WildObserve™ last looked. A project with watched folders keeps watching while another project is open.</p>
       <p class="mt-4">On a Mac, closing the window while a folder is watched, or while images are being added or processed, keeps WildObserve™ working in the background, with an icon in the menu bar. Its menu says what WildObserve is doing, opens the window again, or quits. Once the work is done and nothing is watched, it quits by itself. To keep watching after your Mac restarts, turn on <b>Open WildObserve when you log in</b> in About.</p>
-      <p class="mt-4">On Linux, folders are watched while WildObserve™ is open. Closing the window quits it; when you open it again, it adds whatever arrived in the meantime.</p>
+      <p class="mt-4">On Windows and Linux, folders are watched while WildObserve™ is open. Closing the window quits it; when you open it again, it adds whatever arrived in the meantime.</p>
 
       <h3 id="rules" class="mt-8 text-lg font-semibold text-slate-900">Production rules</h3>
       <p class="mt-4">Click <b>Rules…</b> in the header for what WildObserve™ decides by itself once images are processed, as they arrive in watched folders too. An administrator sets them for each project.</p>
@@ -500,7 +508,7 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
       <h3 class="mt-8 text-lg font-semibold text-slate-900">Email alerts</h3>
       <p class="mt-4">Email alerts tell people away from the computer when a species of concern turns up in a watched folder. They go through your own mail server, never ours. Set them up in <b>Rules… &gt; Alerts by email…</b>:</p>
       <ol class="mt-4 list-decimal space-y-2 pl-6">
-        <li><b>Mail server</b>, once for every project on the computer. <b>Fill in for</b> sets the server, port, and security for Gmail, iCloud Mail, Yahoo Mail, or Fastmail. Enter your <b>mail account's</b> user name (usually its email address) and password. Most mail accounts need an <b>app password</b> for this, made in the account's security settings: in Gmail, turn on 2-Step Verification, then make one under App passwords (<a href="https://support.google.com/mail/answer/185833" class="text-emerald-700 underline">Google's help</a>). Outlook.com doesn't allow it, and Microsoft 365 only where your IT turns on SMTP sign-in; a mail-sending service such as Amazon SES works too. Click <b>Save mail server</b>. The password is kept in your Mac's Keychain, or on Linux in a file only your user account can read.</li>
+        <li><b>Mail server</b>, once for every project on the computer. <b>Fill in for</b> sets the server, port, and security for Gmail, iCloud Mail, Yahoo Mail, or Fastmail. Enter your <b>mail account's</b> user name (usually its email address) and password. Most mail accounts need an <b>app password</b> for this, made in the account's security settings: in Gmail, turn on 2-Step Verification, then make one under App passwords (<a href="https://support.google.com/mail/answer/185833" class="text-emerald-700 underline">Google's help</a>). Outlook.com doesn't allow it, and Microsoft 365 only where your IT turns on SMTP sign-in; a mail-sending service such as Amazon SES works too. Click <b>Save mail server</b>. The password is kept in your Mac's Keychain, or on Windows and Linux in a file only your user account can read.</li>
         <li><b>This project</b>: list the addresses alerts go to, and turn on <b>Send alerts for this project</b>. Optionally, <b>Attach the image</b>: a smaller copy with a box around what was found, and none of the original's metadata. You can also set how long to wait before another alert about the same species at the same deployment.</li>
         <li><b>Send a test</b> to check it all works.</li>
       </ol>
@@ -516,10 +524,10 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
       <p class="mt-4">Click your name at the top right for your account: <b>Change password</b> and <b>Sign out</b>. Administrators also find <b>People</b> there: everyone who uses WildObserve™ on this computer. <b>Add a person</b> with their email address, name, and a password, as a reviewer or an administrator. Reviewers review images; administrators can also manage people, the rules, alerts, and the models a project uses. A turned-off account can't sign in, and its reviews keep its name.</p>
 
       <h3 class="mt-8 text-lg font-semibold text-slate-900">Licenses</h3>
-      <p class="mt-4">The free Community plan needs no license. For a paid plan, choose <b>WildObserve &gt; License…</b> in the menu bar (on Linux, <b>License</b> in the menu under your name) and enter your license key under <b>Activate with a license key</b>. On a computer that can't go online, choose the license file you received instead (<b>Choose license file…</b>; its name ends in <code class="rounded bg-slate-100 px-1">.wolicense</code>).</p>
+      <p class="mt-4">The free Community plan needs no license. For a paid plan, choose <b>WildObserve &gt; License…</b> in the menu bar (on Windows and Linux, <b>License</b> in the menu under your name) and enter your license key under <b>Activate with a license key</b>. On a computer that can't go online, choose the license file you received instead (<b>Choose license file…</b>; its name ends in <code class="rounded bg-slate-100 px-1">.wolicense</code>).</p>
 
       <h3 class="mt-8 text-lg font-semibold text-slate-900">About</h3>
-      <p class="mt-4"><b>WildObserve &gt; About WildObserve</b> (on Linux, <b>About</b> at the top right) has:</p>
+      <p class="mt-4"><b>WildObserve &gt; About WildObserve</b> (on Windows and Linux, <b>About</b> at the top right) has:</p>
       <ul class="mt-4 list-disc space-y-2 pl-6">
         <li><b>Updates</b>: whether a newer version is out. Untick <b>Go online to check for updates and activate licenses</b> to keep WildObserve™ offline; email alerts stop too. Everything else works offline.</li>
         <li><b>Working in the background</b> (Mac): <b>Open WildObserve when you log in</b>.</li>
@@ -561,7 +569,7 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
       <p class="mt-4">Its drive isn't connected, or the folder was moved or renamed. Connect the drive, or in <b>Images…</b>, click <b>Moved?</b> and <b>Find it…</b> to point WildObserve™ at where it is now. Your reviews are kept.</p>
 
       <h3 class="mt-8 text-lg font-semibold text-slate-900">Moving a project to another computer</h3>
-      <p class="mt-4">Copy the project's folder, and your image folders, to the other computer. There, choose <b>Project &gt; Projects… &gt; Open a project folder…</b> (on Linux, <b>Projects…</b> at the top left) and open the copy. Then in <b>Images…</b>, use <b>Moved?</b> to point each image folder at its new place.</p>
+      <p class="mt-4">Copy the project's folder, and your image folders, to the other computer. There, choose <b>Project &gt; Projects… &gt; Open a project folder…</b> (on Windows and Linux, <b>Projects…</b> at the top left) and open the copy. Then in <b>Images…</b>, use <b>Moved?</b> to point each image folder at its new place.</p>
 
       <h3 class="mt-8 text-lg font-semibold text-slate-900">Capture events are far too big</h3>
       <p class="mt-4">Images with no capture time in their EXIF data use the file's date instead, and copying, downloading, or syncing files often gives many of them the same date, so they chain into one huge event. WildObserve™ warns about this when you name capture events. Check <b>Deployments…</b>: the event gap, and each camera's clock.</p>
@@ -577,9 +585,10 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
       <pre class="mt-4 overflow-x-auto rounded-xl bg-slate-900 px-4 py-3 text-sm text-slate-100"><code>/Applications/WildObserve.app/Contents/MacOS/WildObserve --reset-password you@example.org</code></pre>
       <p class="mt-4">On Linux, close WildObserve and run this in a terminal instead:</p>
       <pre class="mt-4 overflow-x-auto rounded-xl bg-slate-900 px-4 py-3 text-sm text-slate-100"><code>wildobserve --reset-password you@example.org</code></pre>
+      <p class="mt-4">On Windows, close WildObserve and open <b>WildObserve Password Reset</b> from the Start menu instead. It asks for the account's email address and a new password.</p>
 
       <h3 class="mt-8 text-lg font-semibold text-slate-900">Getting help</h3>
-      <p class="mt-4">In <b>WildObserve &gt; About WildObserve</b> (on Linux, <b>About</b>), click <b>Save diagnostic report</b>, and email it to <a href="mailto:info@qsc.earth" class="font-semibold text-emerald-700 underline">info@qsc.earth</a> with a description of the problem.</p>
+      <p class="mt-4">In <b>WildObserve &gt; About WildObserve</b> (on Windows and Linux, <b>About</b>), click <b>Save diagnostic report</b>, and email it to <a href="mailto:info@qsc.earth" class="font-semibold text-emerald-700 underline">info@qsc.earth</a> with a description of the problem.</p>
 
       <h2 class="mt-12 text-2xl font-semibold text-slate-900">Your privacy</h2>
       <p class="mt-4">WildObserve™ runs on your computer. Your images, their metadata, and your annotations stay there, and we never receive them. It goes online only to check for updates, activate a license, sign you in with Google if you choose to, and send email alerts if you opt in. The <a href="privacy.html" class="text-emerald-700 underline">Privacy Policy</a> has the details.</p>
@@ -595,7 +604,7 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
         <p class="mt-1">Science-grounded AI for sustainable impact.</p>
       </div>
       <div class="sm:text-right">
-        <p><a href="plans.html" class="hover:text-white hover:underline">Plans</a> · <a href="user_guide.html" class="hover:text-white hover:underline">User guide</a> · <a href="privacy.html" class="hover:text-white hover:underline">Privacy</a> · <a href="terms.html" class="hover:text-white hover:underline">Terms</a></p>
+        <p><a href="plans.html" class="hover:text-white hover:underline">Plans</a> · <a href="user_guide.html" class="hover:text-white hover:underline">User guide</a> · <a href="./#faq" class="hover:text-white hover:underline">FAQ</a> · <a href="privacy.html" class="hover:text-white hover:underline">Privacy</a> · <a href="terms.html" class="hover:text-white hover:underline">Terms</a></p>
         <p class="mt-1">&copy; <script>document.write(new Date().getFullYear())</script> QSC. All rights reserved.</p>
       </div>
     </div>
