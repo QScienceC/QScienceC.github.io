@@ -44,6 +44,16 @@ The video above the FAQ in `WildObserve/index.html` (`<section id="video">`, whe
 
 The FAQ section of `WildObserve/index.html` (`<section id="faq">`) is repeated word for word, as plain text, in the `FAQPage` JSON-LD in that page's `<head>`. When a question or answer changes, change both. The answers repeat facts from elsewhere: plans and prices, system requirements, export formats, and the preprints' numbers. When one of those changes, check the FAQ too.
 
+### The comparison page
+
+`WildObserve/compare.html` compares WildObserve with Timelapse, AddaxAI, Wildlife Insights, and AIDE.
+
+- Every entry about another tool comes from that tool's own website or documentation, listed under Sources on the page. Never fill one in from memory, a review, or another site.
+- A dash means the tool's documentation doesn't say.
+- Don't claim WildObserve is the only tool that does something: that depends on what the others don't document.
+- When re-checking, update the "Last checked" date and the Sources date together.
+- The WildObserve column repeats facts from elsewhere (prices, platforms, features, exports). Update it when those change.
+
 ### The WildObserve preprints
 
 Two preprints are linked in `WildObserve/index.html`:
