@@ -36,6 +36,23 @@ Each `<video>` in `WildObserve/user_guide.html` has a matching `VideoObject` in 
 
 The `SoftwareApplication` JSON-LD in `WildObserve/index.html` repeats the landing page's features (`featureList`), operating systems, and download links. If those change on the page, update the JSON-LD.
 
+### The WildObserve landing page video
+
+The video above the FAQ in `WildObserve/index.html` (`<section id="video">`, where "Watch it in action" at the top of the page jumps) is a YouTube video shown behind a poster (`images/videos/reviewing.jpg`, its YouTube thumbnail saved to the site). Nothing loads from YouTube until someone clicks it. It's also in the `VideoObject` JSON-LD in that page's `<head>`. To change the video, update the link, `data-youtube-id`, the poster, the caption under it, and the `VideoObject` (name, description, thumbnails, `uploadDate`, `duration`, `embedUrl`, `sameAs`).
+
+### The WildObserve FAQ
+
+The FAQ section of `WildObserve/index.html` (`<section id="faq">`) is repeated word for word, as plain text, in the `FAQPage` JSON-LD in that page's `<head>`. When a question or answer changes, change both. The answers repeat facts from elsewhere: plans and prices, system requirements, export formats, and the preprints' numbers. When one of those changes, check the FAQ too.
+
+### The WildObserve preprints
+
+Two preprints are linked in `WildObserve/index.html`:
+
+- "WildObserve: Camera-trap software that learns species labels during review and estimates occupancy and abundance" (bioRxiv, DOI `10.64898/2026.10.06.757089`).
+- "Which camera-trap images to review? Estimating occupancy from a small part of a survey" (EcoEvoRxiv, DOI `10.32942/X20M63`). The "Tells you which images to review" bullet quotes its results.
+
+Each is in two places: the line under the "What WildObserve does" list, and `subjectOf` in the JSON-LD. Link them by DOI (`https://doi.org/...`), which always leads to the newest version. If one is published in a journal, update its title, link, and citation in both places, and check that any numbers quoted on the page still match. The user guide's occupancy references also cite the EcoEvoRxiv preprint.
+
 ## Personal details
 
 Mikey Tabak's GitHub account and ORCID appear only in JSON-LD (the `Person` entry in `WildObserve/index.html`). Never put them in visible page text.
