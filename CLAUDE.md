@@ -36,6 +36,15 @@ Each `<video>` in `WildObserve/user_guide.html` has a matching `VideoObject` in 
 
 The `SoftwareApplication` JSON-LD in `WildObserve/index.html` repeats the landing page's features (`featureList`), operating systems, and download links. If those change on the page, update the JSON-LD.
 
+### The WildObserve preprints
+
+Two preprints are linked in `WildObserve/index.html`:
+
+- "WildObserve: Camera-trap software that learns species labels during review and estimates occupancy and abundance" (bioRxiv, DOI `10.64898/2026.10.06.757089`).
+- "Which camera-trap images to review? Estimating occupancy from a small part of a survey" (EcoEvoRxiv, DOI `10.32942/X20M63`). The "Tells you which images to review" bullet quotes its results.
+
+Each is in two places: the line under the "What WildObserve does" list, and `subjectOf` in the JSON-LD. Link them by DOI (`https://doi.org/...`), which always leads to the newest version. If one is published in a journal, update its title, link, and citation in both places, and check that any numbers quoted on the page still match. The user guide's occupancy references also cite the EcoEvoRxiv preprint.
+
 ## Personal details
 
 Mikey Tabak's GitHub account and ORCID appear only in JSON-LD (the `Person` entry in `WildObserve/index.html`). Never put them in visible page text.
