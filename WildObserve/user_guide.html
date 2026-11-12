@@ -267,7 +267,7 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
         <li><b>Moved?</b> appears when a folder can't be found, because it was moved or its drive isn't connected. Connect the drive, or click <b>Find it…</b> and point it at where the folder is now.</li>
       </ul>
       <p class="mt-4">If a folder is in iCloud Drive or another cloud service, make it available offline first: images that are only online download as WildObserve reads them, which is slow.</p>
-      <p class="mt-4"><b>Copies of an image</b> (the same file in two folders) are noticed and processed, reviewed, and exported once. They're listed under <b>Duplicates</b>. For images processed before WildObserve checked for copies, click <b>Find duplicates among … images processed earlier</b> in <b>Images…</b>.</p>
+      <p class="mt-4"><b>Copies of an image</b> (the same file in two folders) are noticed and processed, reviewed, and exported once. They're in the <b>Duplicates</b> list, in the <b>Show</b> menu. For images processed before WildObserve checked for copies, click <b>Find duplicates among … images processed earlier</b> in <b>Images…</b>.</p>
 
       <!-- 3 -->
       <h2 id="processing" class="mt-12 text-2xl font-semibold text-slate-900">3. Processing images</h2>
@@ -310,10 +310,10 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
 
       <!-- 5 -->
       <h2 id="reviewing" class="mt-12 text-2xl font-semibold text-slate-900">5. Reviewing images</h2>
-      <p class="mt-4">The review screen has the <b>filter panel</b> on the left (the lists, the filters, and the images in the list), the image in the middle with its boxes and species, and the capture event's bar and filmstrip below it. To give the image more room, hide the filter panel with <b>‹</b> at its top right (<b>›</b> brings it back), and the capture event's panel with <b>^</b> at its right end.</p>
+      <p class="mt-4">The review screen has the <b>filter panel</b> on the left (the <b>Show</b> menu of lists, the filters, and the images in the list), the image in the middle with its boxes and species, and the capture event's bar and filmstrip below it. To give the image more room, hide the filter panel with <b>‹</b> at its top right (<b>›</b> brings it back), and the capture event's panel with <b>^</b> at its right end.</p>
 
       <h3 class="mt-8 text-lg font-semibold text-slate-900">Lists</h3>
-      <p class="mt-4">Each list button shows a set of images. Click a list to turn it on, and again to turn it off. With several on, you see the images that are in all of them: <b>Reviewed</b> with <b>Uncertain</b> shows the reviewed images marked uncertain. Lists no image can be in together (<b>To review</b> and <b>Reviewed</b>, say) don't stay on together. With none on, you see every image.</p>
+      <p class="mt-4">Each list shows a set of images. The lists are in the <b>Show</b> menu at the top of the filter panel; its button names the lists that are on, or <b>All images</b> when none is. Click it, then tick a list to turn it on, or untick it to turn it off. Each list says in a few words what it holds; hover over it for more. The menu groups them under <b>To review</b> and <b>Reviewed</b>, with <b>Uncertain</b> (and <b>Duplicates</b>, when there are copies) at the end. With several on, you see the images that are in all of them: <b>Reviewed</b> with <b>Uncertain</b> shows the reviewed images marked uncertain. A list that can't go with those on (<b>To review</b> and <b>Reviewed</b>, say) is dimmed, and ticking it turns those off. <b>All images</b> unticks every list, so you see every image.</p>
       <div class="mt-4 overflow-x-auto">
         <table class="w-full text-left text-sm">
           <thead class="border-b border-slate-300 text-slate-900">
@@ -326,6 +326,7 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
             <tr><td class="py-2 pr-4 font-medium">People &amp; vehicles</td><td class="py-2">Images to review with a person or vehicle.</td></tr>
             <tr><td class="py-2 pr-4 font-medium">Close calls</td><td class="py-2">Images whose species suggestions are least sure, closest call first.</td></tr>
             <tr><td class="py-2 pr-4 font-medium">New species?</td><td class="py-2">Images where SpeciesNet names an animal not labeled in this project yet.</td></tr>
+            <tr><td class="py-2 pr-4 font-medium">For occupancy</td><td class="py-2">Images to review for an occupancy survey, a capture event at a time, in the order that confirms the most detections for the least review (<a href="#for-occupancy" class="text-emerald-700 underline">Which images to review</a>).</td></tr>
             <tr><td class="py-2 pr-4 font-medium">Flagged</td><td class="py-2">Images the production rules flagged, each with why (<a href="#rules" class="text-emerald-700 underline">Rules</a>).</td></tr>
             <tr><td class="py-2 pr-4 font-medium">Reviewed</td><td class="py-2">Images reviewed already.</td></tr>
             <tr><td class="py-2 pr-4 font-medium">Saved by rules</td><td class="py-2">Images the production rules saved by themselves.</td></tr>
@@ -334,7 +335,7 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
           </tbody>
         </table>
       </div>
-      <p class="mt-4">Under the lists, <b>filters</b> narrow any list to a place or camera, to dates (<b>From</b> and <b>To</b>, by the camera's corrected clock), or to a species. <b>Show boxes scoring ≥ …%</b> sets the threshold: boxes the detector is less sure of than that are hidden (50% to start).</p>
+      <p class="mt-4">Under the <b>Show</b> button, <b>filters</b> narrow any list to a place or camera, to dates (<b>From</b> and <b>To</b>, by the camera's corrected clock), or to a species. <b>Show boxes scoring ≥ …%</b> sets the threshold: boxes the detector is less sure of than that are hidden (50% to start).</p>
 
       <h3 class="mt-8 text-lg font-semibold text-slate-900">Boxes</h3>
       <ul class="mt-4 list-disc space-y-2 pl-6">
@@ -366,7 +367,7 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
       <p class="mt-4">Click <b>Species list</b> in the header for the species offered when you label boxes. Give the common ones a key: in the review, pressing it names the selected box, or with none selected, every animal box in the image. The keys show under the image as a reminder. <b>Import a list</b> adds species from a CSV file, one per line: its name, then optionally its scientific name and key, for example <code class="rounded bg-slate-100 px-1">Raccoon,Procyon lotor,R</code>.</p>
 
       <h3 id="mark-empty" class="mt-8 text-lg font-semibold text-slate-900">Marking empty images together</h3>
-      <p class="mt-4">Turn on <b>Likely empty</b>, then click <b>Mark … as empty…</b>. WildObserve™ says what it will save, and how sure it is: how many images the detector found nothing in, and the highest score among the rest. Click <b>Mark them empty</b>. With <b>Skip bursts with boxes</b> ticked, images in a capture event where another picture has a box are left for you to check, since the animal may be in them too, missed. <b>Undo</b> puts the images back to review.</p>
+      <p class="mt-4">In the <b>Show</b> menu, tick <b>Likely empty</b>, then click <b>Mark … as empty…</b>. WildObserve™ says what it will save, and how sure it is: how many images the detector found nothing in, and the highest score among the rest. Click <b>Mark them empty</b>. With <b>Skip bursts with boxes</b> ticked, images in a capture event where another picture has a box are left for you to check, since the animal may be in them too, missed. <b>Undo</b> puts the images back to review.</p>
 
       <h3 class="mt-8 text-lg font-semibold text-slate-900">Naming whole capture events</h3>
       <p class="mt-4">When you can see that a run of pictures shows one species, tick their images in the list (Shift-click ticks a run), type the species, and click <b>Name their events…</b>. WildObserve™ says what it will do: how many animal boxes it will name, in how many images and capture events. It leaves alone images with no animal box (to review one by one, since the animal may be there, missed) and images reviewed already, and it lists any species the suggestions prefer instead. Confirm, and the images are saved as reviewed. <b>Undo</b> puts them back.</p>
@@ -401,6 +402,16 @@ sudo apt install cuda-cudart-13-0 libcublas-13-0 libcurand-13-0 cuda-nvrtc-13-0 
         <li><b>Only species on the Species list</b>, on by default when suggestions count. SpeciesNet's names include wider groups (Canine family), people (Human), and species from other places, and each would count as a species of its own. With this on, a suggestion counts only if it names a species on your <a href="#species-list" class="text-emerald-700 underline">Species list</a>, and a warning lists the names left out. To include one, add it to the Species list, spelled as the suggestion spells it.</li>
         <li><b>Include images marked uncertain</b>.</li>
       </ul>
+
+      <h3 id="for-occupancy" class="mt-8 text-lg font-semibold text-slate-900">Which images to review: the For occupancy list</h3>
+      <p class="mt-4">You don't need to review every image to estimate occupancy. The models use whether each species was seen at each site in each occasion, not how many images show it. With week-long occasions, that's a <b>species-site-week</b> (the app says species-site-occasion for other lengths). The <b>For occupancy</b> list offers capture events to review in the order that confirms the most species-site-weeks for the least review. In tests on four surveys, reviewing from it until it said to stop took 15–27% of the images, and occupancy from the reviewed images came within 0.04 of a full review's on average (<a href="https://doi.org/10.32942/X20M63" class="text-emerald-700 underline">Tabak 2026</a>). It's in every plan.</p>
+      <p class="mt-4">In the review screen, open the <b>Show</b> menu and tick <b>For occupancy</b>. The list goes in two steps, and the panel under it says which step it's on and what's left:</p>
+      <ol class="mt-4 list-decimal space-y-2 pl-6">
+        <li><b>Two capture events with animals from each site</b>, one site at a time, so your Project Model learns the common species from every site. Capture events reviewed already, from any list, count.</li>
+        <li><b>For each species-site-week that the suggestions show but no review has confirmed, the capture event with the surest suggestion.</b> Suggestions count as they do in the Occupancy panel: an animal's top suggestion (your Project Model's once it has trained, SpeciesNet's before that), scoring at least the number given for <b>Also images not reviewed yet</b> (0.9 unless you change it), and naming a species on your Species list unless the panel counts every name. If a capture event doesn't show its species, the next surest one for that species-site-week comes up.</li>
+      </ol>
+      <p class="mt-4">The list is made again each time it loads, and when you reach its end, so it follows your latest reviews and your Project Model as it last retrained. <b>Make again</b> remakes it now. <b>Settings…</b> opens the Occupancy panel, whose sites, occasions, and suggestion settings the list uses.</p>
+      <p class="mt-4"><b>When to stop.</b> The panel shows how many of the capture events you've reviewed from the list (the last 50, once there are that many) confirmed a new species-site-week. Once you've reviewed 50 and fewer than 1 in 5 of the last 50 did, it says you can stop. It also says <b>Done</b> when your reviews confirm every species-site-week the suggestions show. Then estimate occupancy from your reviewed images, with <b>Also images not reviewed yet</b> off, as the tests did.</p>
 
       <h3 class="mt-8 text-lg font-semibold text-slate-900">The results</h3>
       <p class="mt-4">Under <b>Table</b>, a row per species: the sites it was seen at, its <b>Occupancy</b>, the chance of seeing it in an occasion at a site it uses (<b>Seen in 7 days</b>, for week-long occasions), and <b>Animals per site</b>. Each comes with its 95% interval (lower and upper). The <b>Notes</b> column says when to be careful: a species seen at very few sites, a model that didn't settle, or an estimate at its limit. Warnings above the table are about the whole survey. Under <b>Plots</b>, choose one of six:</p>
