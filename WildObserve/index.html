@@ -24,6 +24,119 @@
   <meta name="twitter:image" content="https://www.qsc.earth/images/wildobserve_social.jpg" />
   <link rel="canonical" href="https://www.qsc.earth/WildObserve/" />
   <link rel="icon" href="../images/logo.webp" />
+  <!-- Structured data for search engines. The "offers" prices must match WildObserve/plans.html. See CLAUDE.md. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://www.qsc.earth/WildObserve/#software",
+        "name": "WildObserve",
+        "url": "https://www.qsc.earth/WildObserve/",
+        "description": "WildObserve is a desktop app that turns folders of camera-trap images into reviewed data that's ready for analysis. It finds animals, people, and vehicles, suggests species with SpeciesNet and with a Project Model that learns from your labels on your own computer, estimates occupancy and abundance, and exports your data. Images and their metadata don't leave your computer.",
+        "applicationCategory": "MultimediaApplication",
+        "applicationSubCategory": "Camera-trap image analysis",
+        "operatingSystem": "macOS, Windows, Linux",
+        "downloadUrl": [
+          "https://github.com/mikeyEcology/wildobserve-releases/releases/latest/download/WildObserve.dmg",
+          "https://apps.microsoft.com/detail/9nlwg3wvnzbk",
+          "https://github.com/mikeyEcology/wildobserve-releases/releases/latest/download/WildObserve-amd64.deb"
+        ],
+        "featureList": [
+          "Marks animals, people, and vehicles, and flags images that look empty",
+          "Suggests species with SpeciesNet, then with a Project Model that learns from your labels",
+          "Groups images into capture events so a whole sequence can be named at once",
+          "Filters by site, camera, date, or species, and records counts, sex, life stage, and behavior",
+          "Estimates site occupancy and abundance while accounting for detection probability, with site covariates",
+          "Watches folders for new images and sends email alerts when chosen species show up",
+          "Exports to CSV, Camtrap DP, Wildlife Insights, COCO, YOLO, and MegaDetector formats",
+          "Images and their metadata stay on your computer"
+        ],
+        "image": "https://www.qsc.earth/images/wildobserve_social.jpg",
+        "screenshot": "https://www.qsc.earth/images/videos/process_images.jpg",
+        "softwareHelp": {
+          "@type": "WebPage",
+          "url": "https://www.qsc.earth/WildObserve/user_guide.html"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Community",
+            "price": "0",
+            "priceCurrency": "USD",
+            "url": "https://www.qsc.earth/WildObserve/plans.html"
+          },
+          {
+            "@type": "Offer",
+            "name": "Researcher",
+            "price": "399",
+            "priceCurrency": "USD",
+            "priceSpecification": { "@type": "UnitPriceSpecification", "price": "399", "priceCurrency": "USD", "unitText": "year" },
+            "url": "https://www.qsc.earth/WildObserve/plans.html"
+          },
+          {
+            "@type": "Offer",
+            "name": "Lab",
+            "price": "1995",
+            "priceCurrency": "USD",
+            "priceSpecification": { "@type": "UnitPriceSpecification", "price": "1995", "priceCurrency": "USD", "unitText": "year" },
+            "url": "https://www.qsc.earth/WildObserve/plans.html"
+          },
+          {
+            "@type": "Offer",
+            "name": "Organization",
+            "price": "5995",
+            "priceCurrency": "USD",
+            "priceSpecification": { "@type": "UnitPriceSpecification", "price": "5995", "priceCurrency": "USD", "unitText": "year" },
+            "url": "https://www.qsc.earth/WildObserve/plans.html"
+          }
+        ],
+        "creator": { "@id": "https://www.qsc.earth/about.html#mikey-tabak" },
+        "publisher": { "@id": "https://www.qsc.earth/#organization" },
+        "sameAs": [
+          "https://apps.microsoft.com/detail/9nlwg3wvnzbk",
+          "https://www.youtube.com/@WildObserve-QSC"
+        ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.qsc.earth/#organization",
+        "name": "Quantitative Science Consulting",
+        "alternateName": "QSC",
+        "url": "https://www.qsc.earth/",
+        "logo": "https://www.qsc.earth/images/logo.webp",
+        "email": "info@qsc.earth",
+        "founder": { "@id": "https://www.qsc.earth/about.html#mikey-tabak" },
+        "sameAs": [
+          "https://www.linkedin.com/company/quantitative-science-consulting"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.qsc.earth/about.html#mikey-tabak",
+        "name": "Mikey Tabak",
+        "alternateName": ["Michael Tabak", "Michael A. Tabak"],
+        "honorificSuffix": "PhD",
+        "jobTitle": "Chief Science Officer & Founder",
+        "url": "https://www.qsc.earth/about.html",
+        "worksFor": { "@id": "https://www.qsc.earth/#organization" },
+        "sameAs": [
+          "https://orcid.org/0000-0002-2986-7885",
+          "https://scholar.google.com/citations?user=YkiPcGUAAAAJ",
+          "https://github.com/mikeyEcology"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "QSC", "item": "https://www.qsc.earth/" },
+          { "@type": "ListItem", "position": 2, "name": "WildObserve", "item": "https://www.qsc.earth/WildObserve/" }
+        ]
+      }
+    ]
+  }
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @keyframes fade-in {
