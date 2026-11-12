@@ -36,6 +36,10 @@ Each `<video>` in `WildObserve/user_guide.html` has a matching `VideoObject` in 
 
 The `SoftwareApplication` JSON-LD in `WildObserve/index.html` repeats the landing page's features (`featureList`), operating systems, and download links. If those change on the page, update the JSON-LD.
 
+### The WildObserve landing page video
+
+The video above the FAQ in `WildObserve/index.html` (`<section id="video">`, where "Watch it in action" at the top of the page jumps) is a YouTube video shown behind a poster (`images/videos/reviewing.jpg`, its YouTube thumbnail saved to the site). Nothing loads from YouTube until someone clicks it. It's also in the `VideoObject` JSON-LD in that page's `<head>`. To change the video, update the link, `data-youtube-id`, the poster, the caption under it, and the `VideoObject` (name, description, thumbnails, `uploadDate`, `duration`, `embedUrl`, `sameAs`).
+
 ### The WildObserve FAQ
 
 The FAQ section of `WildObserve/index.html` (`<section id="faq">`) is repeated word for word, as plain text, in the `FAQPage` JSON-LD in that page's `<head>`. When a question or answer changes, change both. The answers repeat facts from elsewhere: plans and prices, system requirements, export formats, and the preprints' numbers. When one of those changes, check the FAQ too.
