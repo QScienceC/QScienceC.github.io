@@ -1,1 +1,4 @@
 .DS_Store
+
+# Private notes (such as ideas for blog posts): kept on this computer, never on GitHub or the website
+/blog/

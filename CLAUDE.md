@@ -63,6 +63,10 @@ Two preprints are linked in `WildObserve/index.html`:
 
 Each is in two places: the line under the "What WildObserve does" list, and `subjectOf` in the JSON-LD. Link them by DOI (`https://doi.org/...`), which always leads to the newest version. If one is published in a journal, update its title, link, and citation in both places, and check that any numbers quoted on the page still match. The user guide's occupancy references also cite the EcoEvoRxiv preprint.
 
+## Private notes
+
+`blog/` is in `.gitignore`, so it stays on this computer and never reaches GitHub (the repo is public) or the website. `blog/ideas.md` is the list of ideas for future blog posts, with the source for each. When a post is published, move its entry to the list's "Published" table. Never copy anything from `blog/` into a public page without the user's say.
+
 ## Personal details
 
 Mikey Tabak's GitHub account and ORCID appear only in JSON-LD: the `Person` entry, which is in both `about.html` and `WildObserve/index.html`. Keep the two entries the same. Never put them in visible page text.
