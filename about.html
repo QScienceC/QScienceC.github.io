@@ -60,6 +60,30 @@
       }
     }
   </script>
+  <!-- Mikey's Person entry. The same entry (same @id, names, and sameAs links) is in WildObserve/index.html: keep the two the same. The ORCID and GitHub links belong here only, never in visible text. -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://www.qsc.earth/about.html#mikey-tabak",
+      "name": "Mikey Tabak",
+      "alternateName": ["Michael Tabak", "Michael A. Tabak"],
+      "honorificSuffix": "PhD",
+      "jobTitle": "Chief Science Officer & Founder",
+      "url": "https://www.qsc.earth/about.html",
+      "image": "https://www.qsc.earth/images/team/mikey.webp",
+      "worksFor": {
+        "@type": "Organization",
+        "@id": "https://www.qsc.earth/#organization",
+        "name": "Quantitative Science Consulting"
+      },
+      "sameAs": [
+        "https://orcid.org/0000-0002-2986-7885",
+        "https://scholar.google.com/citations?user=YkiPcGUAAAAJ",
+        "https://github.com/mikeyEcology"
+      ]
+    }
+  </script>
 
   <style>
   .parallax-hogback {
@@ -159,7 +183,7 @@
       <h2 class="text-3xl font-bold text-center mb-12">Meet the Team</h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
         <!-- Team Member -->
-        <div class="text-center">
+        <div id="mikey-tabak" class="text-center">
           <img src="images/team/mikey.webp" alt="Dr. Mikey Tabak" class="mx-auto w-40 h-40 object-cover rounded-full shadow mb-4" />
           <h3 class="text-xl font-semibold">Mikey Tabak, PhD</h3>
           <p class="text-sm text-gray-600 mb-2">Chief Science Officer & Founder</p>
