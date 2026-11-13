@@ -65,7 +65,7 @@ Each is in two places: the line under the "What WildObserve does" list, and `sub
 
 ## Personal details
 
-Mikey Tabak's GitHub account and ORCID appear only in JSON-LD (the `Person` entry in `WildObserve/index.html`). Never put them in visible page text.
+Mikey Tabak's GitHub account and ORCID appear only in JSON-LD: the `Person` entry, which is in both `about.html` and `WildObserve/index.html`. Keep the two entries the same. Never put them in visible page text.
 
 ## Checking changes
 
