@@ -4,19 +4,58 @@
 <head><meta charset="utf-8" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Inventory Optimization with Artificial Intelligence. Quantitative Science Consulting">
+<meta name="description" content="Forecast demand with a seasonal (SARIMA) model, then set safety stock and reorder timing from holding costs, shortage costs, and lead time to lower inventory costs.">
 <meta name="author" content="Dr. Mikey Tabak">
 <link rel="stylesheet" href="../css/styles.css">
 <link href="../css/bootstrap.min.css" rel="stylesheet">
 <link href="../css/font-awesome.min.css" rel="stylesheet">
 <link href="../css/animate.min.css" rel="stylesheet"> 
 <link href="../css/prettyPhoto.css" rel="stylesheet">
-<title>Inventory Optimization with AI</title>
+<title>Inventory Optimization with AI | QSC</title>
 <link rel="shortcut icon" href="../images/logo.webp">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="canonical" href="https://www.qsc.earth/blog_posts/inventory_optimization_202411.html" />
 
-<title>inventory_timeseries_optimization</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<!-- Open Graph -->
+<meta property="og:title" content="Optimizing Inventory Costs Through Demand Forecasting and Safety Stock Adjustment | QSC Blog">
+<meta property="og:description" content="Forecast demand with a seasonal (SARIMA) model, then set safety stock and reorder timing to lower inventory costs.">
+<meta property="og:url" content="https://www.qsc.earth/blog_posts/inventory_optimization_202411.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.qsc.earth/images/logo.webp">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Optimizing Inventory Costs Through Demand Forecasting and Safety Stock Adjustment | QSC Blog">
+<meta name="twitter:description" content="Forecast demand with a seasonal (SARIMA) model, then set safety stock and reorder timing to lower inventory costs.">
+<meta name="twitter:image" content="https://www.qsc.earth/images/logo.webp">
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Optimizing Inventory Costs Through Demand Forecasting and Safety Stock Adjustment",
+    "description": "Forecast demand with a seasonal (SARIMA) model, then set safety stock and reorder timing from holding costs, shortage costs, and lead time to lower inventory costs.",
+    "image": "https://www.qsc.earth/images/logo.webp",
+    "datePublished": "2024-11-08",
+    "author": {
+      "@type": "Person",
+      "@id": "https://www.qsc.earth/about.html#mikey-tabak",
+      "name": "Mikey Tabak"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Quantitative Science Consulting",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.qsc.earth/images/logo.webp"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.qsc.earth/blog_posts/inventory_optimization_202411.html"
+    }
+  }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <!--MT: End add this to get top-->
 
 
@@ -14627,7 +14666,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
   <section class="page-title">
     <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Optimizing Inventory Costs Through Demand Forecasting and Safety Stock Adjustment</h2>
+          <h1 class="section-title">Optimizing Inventory Costs Through Demand Forecasting and Safety Stock Adjustment</h1>
         </div>
     </div>
   </section>

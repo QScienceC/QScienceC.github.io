@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLH2Y342RP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-SLH2Y342RP');
+  </script>
+  <!-- End Google tag -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page not found | QSC</title>
+  <meta name="robots" content="noindex" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="/images/logo.webp" />
+</head>
+<!--
+  GitHub Pages shows this page for any address that doesn't exist, at that address,
+  so every link here starts with "/" to work from any folder. It's not in sitemap.xml.
+-->
+<body class="bg-white text-gray-800 font-sans">
+  <!-- Header -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <!-- Logo -->
+    <a href="/" class="flex items-center space-x-3">
+      <img src="/images/logo.webp" alt="QSC logo" class="h-10 w-10" />
+      <span class="text-xl font-bold text-gray-800">Quantitative Science Consulting</span>
+    </a>
+
+    <!-- Hamburger Icon (mobile only) -->
+    <button id="menu-toggle" class="md:hidden text-gray-800 focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
+    <!-- Navigation Links -->
+    <nav id="menu" class="hidden md:flex md:space-x-4 lg:space-x-6 text-sm font-semibold">
+      <a href="/" class="hover:text-green-600">Home</a>
+      <a href="/about.html" class="hover:text-green-600">About</a>
+      <a href="/services.html" class="hover:text-green-600">Services</a>
+      <a href="/WildObserve/" class="hover:text-green-600">WildObserve</a>
+      <a href="/mission.html" class="hover:text-green-600">Mission</a>
+      <a href="/blog.html" class="hover:text-green-600">Blog</a>
+      <a href="/contact.html" class="hover:text-green-600">Contact</a>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <nav id="mobile-menu" class="hidden flex-col space-y-2 px-4 pt-2 pb-4 text-sm font-semibold bg-white shadow-md md:hidden">
+      <a href="/" class="block hover:text-green-600">Home</a>
+      <a href="/about.html" class="block hover:text-green-600">About</a>
+      <a href="/services.html" class="block hover:text-green-600">Services</a>
+      <a href="/WildObserve/" class="block hover:text-green-600">WildObserve</a>
+      <a href="/mission.html" class="block hover:text-green-600">Mission</a>
+      <a href="/blog.html" class="block hover:text-green-600">Blog</a>
+      <a href="/contact.html" class="block hover:text-green-600">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  toggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+<!-- End Header-->
+
+  <main class="bg-gradient-to-br from-green-100 to-blue-100 py-20 px-6">
+    <div class="max-w-3xl mx-auto text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Page not found</h1>
+      <p class="text-lg text-gray-700 mb-10">
+        There's no page at this address. It may have moved, or the link may have a typo.
+      </p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-xl shadow-md">Home</a>
+        <a href="/WildObserve/" class="bg-white hover:bg-green-50 text-green-800 font-semibold py-3 px-6 rounded-xl shadow-sm">WildObserve™</a>
+        <a href="/services.html" class="bg-white hover:bg-green-50 text-green-800 font-semibold py-3 px-6 rounded-xl shadow-sm">Services</a>
+        <a href="/blog.html" class="bg-white hover:bg-green-50 text-green-800 font-semibold py-3 px-6 rounded-xl shadow-sm">Blog</a>
+        <a href="/contact.html" class="bg-white hover:bg-green-50 text-green-800 font-semibold py-3 px-6 rounded-xl shadow-sm">Contact</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-300 py-10 text-sm">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-6">
+      <div>
+        <p class="font-bold text-white mb-2">Quantitative Science Consulting</p>
+        <p>Science-grounded AI for sustainable impact. Upper Peninsula Science</p>
+      </div>
+      <div class="flex flex-col md:items-end space-y-2">
+        <a href="mailto:info@qsc.earth" class="hover:underline">info@qsc.earth</a>
+        <a href="https://www.linkedin.com/company/quantitative-science-consulting" class="hover:underline" target="_blank">LinkedIn</a>
+        <a href="/faq.html" class="hover:underline">FAQ</a>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> QSC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
