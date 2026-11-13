@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLH2Y342RP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SLH2Y342RP');
+  </script>
+  <!-- End Google tag -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Train a Camera-Trap Species Model While You Review | QSC</title>
+  <meta name="description" content="WildObserve's Project Model learns your project's species from the labels you make during review. It trains in about a second, with no code, no GPU, and no uploads." />
+  <meta name="author" content="Mikey Tabak, PhD" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Train a camera-trap species model while you review: no code, no GPU" />
+  <meta property="og:description" content="WildObserve's Project Model learns your species from the labels you make during review, on your own computer." />
+  <meta property="og:url" content="https://www.qsc.earth/blog_posts/202611_project_model.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://www.qsc.earth/images/blog/project_model_review_screen.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Train a camera-trap species model while you review: no code, no GPU" />
+  <meta name="twitter:description" content="WildObserve's Project Model learns your species from the labels you make during review, on your own computer." />
+  <meta name="twitter:image" content="https://www.qsc.earth/images/blog/project_model_review_screen.jpg" />
+
+  <link rel="icon" href="../images/logo.webp" />
+  <link rel="canonical" href="https://www.qsc.earth/blog_posts/202611_project_model.html" />
+
+  <!-- Every number in this post comes from the bioRxiv preprint (doi:10.64898/2026.10.06.757089):
+       the abstract, the Species suggestions and Occupancy results, and Appendix S1. -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Train a camera-trap species model while you review: no code, no GPU",
+      "description": "WildObserve's Project Model learns your project's species from the labels you make during review. It trains in about a second, with no code, no GPU, and no uploads.",
+      "image": "https://www.qsc.earth/images/blog/project_model_review_screen.jpg",
+      "datePublished": "2026-11-13",
+      "author": {
+        "@type": "Person",
+        "@id": "https://www.qsc.earth/about.html#mikey-tabak",
+        "name": "Mikey Tabak"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.qsc.earth/#organization",
+        "name": "Quantitative Science Consulting",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.qsc.earth/images/logo.webp"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.qsc.earth/blog_posts/202611_project_model.html"
+      },
+      "about": { "@id": "https://www.qsc.earth/WildObserve/#software" },
+      "citation": {
+        "@type": "ScholarlyArticle",
+        "name": "WildObserve: Camera-trap software that learns species labels during review and estimates occupancy and abundance",
+        "url": "https://doi.org/10.64898/2026.10.06.757089"
+      }
+    }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .article_body {
+      background: linear-gradient(to bottom, #f8fafc 0%, #ffffff 18rem);
+    }
+
+    .blog_article p {
+      color: #1f2937;
+      line-height: 1.9;
+    }
+
+    .blog_article h2 {
+      letter-spacing: -0.01em;
+      padding-bottom: 0.45rem;
+      margin-bottom: 0.9rem;
+      border-bottom: 2px solid #d1fae5;
+    }
+
+    .blog_article a:not(.button_link) {
+      color: #15803d;
+      text-decoration: underline;
+    }
+
+    .tip_card {
+      background-color: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.9rem;
+      padding: 1.5rem;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+    }
+
+    .intro_note {
+      background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
+      border: 1px solid #a7f3d0;
+      border-radius: 1rem;
+      padding: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .intro_note {
+        padding: 1.5rem;
+      }
+    }
+
+    .conclusion_panel {
+      background: #1f2937;
+      color: #f9fafb;
+    }
+
+    .blog_article .conclusion_panel p {
+      color: #f9fafb;
+    }
+
+    .blog_article .conclusion_panel a {
+      color: #bbf7d0;
+    }
+
+    /* The chart: one series (the Project Model), a labeled reference line (SpeciesNet alone),
+       hairline grid, and a crosshair tooltip that also works from the keyboard. */
+    .chart_tip {
+      position: absolute;
+      pointer-events: none;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.12);
+      padding: 0.5rem 0.75rem;
+      font-size: 0.875rem;
+      line-height: 1.4;
+      white-space: nowrap;
+    }
+
+    .chart_tip .tip_row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .chart_tip .tip_key {
+      display: inline-block;
+      width: 14px;
+      height: 0;
+      border-top-width: 2px;
+      border-top-style: solid;
+    }
+
+    #pm_chart .hit:focus {
+      outline: none;
+    }
+
+    #pm_chart .hit:focus-visible {
+      outline: 2px solid #15803d;
+      outline-offset: -2px;
+    }
+  </style>
+</head>
+<body class="article_body text-gray-800 font-sans">
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="../index.html" class="flex items-center space-x-3">
+        <img src="../images/logo.webp" alt="QSC logo" class="h-10 w-10" />
+        <span class="text-xl font-bold text-gray-800">Quantitative Science Consulting</span>
+      </a>
+
+      <button id="menu-toggle" class="md:hidden text-gray-800 focus:outline-none" aria-label="Toggle menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <nav id="menu" class="hidden md:flex md:space-x-4 lg:space-x-6 text-sm font-semibold">
+        <a href="../index.html" class="hover:text-green-600">Home</a>
+        <a href="../about.html" class="hover:text-green-600">About</a>
+        <a href="../services.html" class="hover:text-green-600">Services</a>
+        <a href="../WildObserve/" class="hover:text-green-600">WildObserve</a>
+        <a href="../mission.html" class="hover:text-green-600">Mission</a>
+        <a href="../blog.html" class="hover:text-green-600">Blog</a>
+        <a href="../contact.html" class="hover:text-green-600">Contact</a>
+      </nav>
+    </div>
+
+    <nav id="mobile-menu" class="hidden flex-col space-y-2 px-4 pt-2 pb-4 text-sm font-semibold bg-white shadow-md md:hidden">
+      <a href="../index.html" class="block hover:text-green-600">Home</a>
+      <a href="../about.html" class="block hover:text-green-600">About</a>
+      <a href="../services.html" class="block hover:text-green-600">Services</a>
+      <a href="../WildObserve/" class="block hover:text-green-600">WildObserve</a>
+      <a href="../mission.html" class="block hover:text-green-600">Mission</a>
+      <a href="../blog.html" class="block hover:text-green-600">Blog</a>
+      <a href="../contact.html" class="block hover:text-green-600">Contact</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const mobile_menu = document.getElementById('mobile-menu');
+
+    toggle.addEventListener('click', () => {
+      mobile_menu.classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-green-100 to-blue-100 py-20 px-6 text-center">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+        Train a Camera-Trap Species Model While You Review: No Code, No GPU
+      </h1>
+      <p class="text-lg md:text-xl mb-2">WildObserve™'s Project Model learns your species from the labels you already make</p>
+      <p class="text-md text-gray-600">Mikey Tabak, PhD &bull; November 2026</p>
+    </div>
+  </section>
+
+  <!-- Blog Content -->
+  <main class="blog_article max-w-4xl mx-auto px-6 py-14 md:py-16 space-y-10 text-lg leading-relaxed">
+    <section class="intro_note space-y-5">
+      <p class="text-xl md:text-2xl font-medium text-gray-800 leading-relaxed">
+        General species models are a good start, but they often don't work well on individual projects.
+        <a href="../WildObserve/">WildObserve™</a>'s Project Model learns both from the labels you make during review, on your own computer.
+      </p>
+      <div class="bg-white/70 border border-green-100 rounded-xl p-4 md:p-5">
+        <p class="text-base font-semibold text-green-900 mb-2">In short</p>
+        <ul class="grid md:grid-cols-2 gap-x-6 gap-y-2 text-base text-gray-700">
+          <li>✓ Learns your species from just 5–10 labels each</li>
+          <li>✓ Retrains in about a second as you label</li>
+          <li>✓ No code, no GPU, no uploads</li>
+          <li>✓ Free for non-commercial use</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="space-y-5">
+      <h2 class="text-2xl font-semibold text-gray-800">Why a general model isn't enough</h2>
+      <p>
+        SpeciesNet, Google's species model, was trained on more than 65 million camera-trap images, and WildObserve uses it to suggest a species
+        for every animal from the first image. But any model loses accuracy on images unlike the ones it learned from.
+        On Oregon Critters, a dataset from western Oregon released after SpeciesNet was trained, it named none of the mountain beavers correctly
+        (it most often said "Mammal") and only 7% of woodrats (it most often said "Rodent"). For 60% of birds, its best answer was just "Bird".
+      </p>
+      <p>
+        It also uses its own names. On cameras in Malawi's Nkhotakota Wildlife Reserve, it called yellow baboons "Kinda baboon", a related species,
+        bushpigs "wild boar", and many duikers and other antelopes "white-tailed deer".
+      </p>
+      <p>
+        The usual fix is to retrain a deep network on your own images. That takes many labeled images per species, a graphics card (GPU),
+        choices about how to train the network, and often programming. The alternative is uploading your images to a cloud platform.
+      </p>
+    </section>
+
+    <section class="space-y-5">
+      <h2 class="text-2xl font-semibold text-gray-800">What the Project Model is</h2>
+      <p>
+        Every WildObserve project gets its own model, trained on your computer from the animals you label in that project.
+      </p>
+      <p>
+        When WildObserve processes an image, SpeciesNet describes each animal as a list of 1,280 numbers, a kind of fingerprint, and WildObserve saves it.
+        The Project Model is a simple classifier (a logistic regression) that learns your labels from those fingerprints. Because the fingerprints are already
+        stored, no image is read again, and training takes about a second on a laptop's processor. In the paper's test, training on 437 labeled animals took 0.36 seconds.
+      </p>
+      <ul class="list-disc pl-8 space-y-2">
+        <li>It starts once you've labeled at least three animals each of two species.</li>
+        <li>It retrains in the background as you review, so the suggestions keep improving.</li>
+        <li>Its suggestions are tagged <b>project</b> and use your project's own names, including groups such as "small rodent" and species SpeciesNet doesn't know.</li>
+      </ul>
+      <figure class="space-y-3">
+        <img src="../images/blog/project_model_review_screen.webp" width="1600" height="988" loading="lazy"
+             alt="WildObserve's review screen: a bobcat in a camera-trap image, boxed, with the suggestion Bobcat 99% tagged project"
+             class="w-full h-auto rounded-xl border border-gray-200 shadow" />
+        <figcaption class="text-base text-gray-600">
+          The review screen. The suggestion for this bobcat comes from a Project Model trained on 31 reviewed images.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="space-y-5">
+      <h2 class="text-2xl font-semibold text-gray-800">How well it works</h2>
+      <p>
+        I tested the Project Model on public datasets in a
+        <a href="https://doi.org/10.64898/2026.10.06.757089">preprint on bioRxiv</a>. The scores below are <i>balanced accuracy</i>:
+        the share of each species' animals a model names correctly, averaged over species, so common species don't dominate.
+      </p>
+
+      <figure class="tip_card space-y-2" role="group" aria-labelledby="pm_chart_title" aria-describedby="pm_chart_summary">
+        <p id="pm_chart_title" class="text-base md:text-lg font-semibold text-gray-800" style="line-height: 1.4;">Species accuracy on a dataset SpeciesNet hadn't seen</p>
+        <p id="pm_chart_summary" class="text-sm text-gray-600" style="line-height: 1.5;">
+          Oregon Critters, 38 categories. The Project Model passes SpeciesNet alone at 10 labels per species.
+        </p>
+        <div id="pm_chart" class="relative mt-3" style="height: 300px;">
+          <div id="pm_tip" class="chart_tip" hidden></div>
+        </div>
+        <figcaption class="text-sm text-gray-600" style="line-height: 1.6;">
+          Each point is the mean of five random draws of training labels, with training and test images from the same cameras.
+          SpeciesNet alone gets credit for "Bird" on any bird; without that, it scored 0.528.
+        </figcaption>
+        <details class="text-sm text-gray-700 pt-2">
+          <summary class="cursor-pointer font-semibold text-gray-800">Show the numbers</summary>
+          <div class="overflow-x-auto mt-3">
+            <table class="min-w-full text-sm">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th class="px-3 py-2 text-left font-semibold">Labels per species</th>
+                  <th class="px-3 py-2 text-right font-semibold">Project Model, same cameras</th>
+                  <th class="px-3 py-2 text-right font-semibold">Project Model, new cameras</th>
+                  <th class="px-3 py-2 text-right font-semibold">SpeciesNet alone</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100" style="font-variant-numeric: tabular-nums;">
+                <tr><td class="px-3 py-2">3</td><td class="px-3 py-2 text-right">0.697</td><td class="px-3 py-2 text-right">0.689</td><td class="px-3 py-2 text-right">0.751</td></tr>
+                <tr><td class="px-3 py-2">5</td><td class="px-3 py-2 text-right">0.741</td><td class="px-3 py-2 text-right">0.727</td><td class="px-3 py-2 text-right">0.751</td></tr>
+                <tr><td class="px-3 py-2">10</td><td class="px-3 py-2 text-right">0.783</td><td class="px-3 py-2 text-right">0.776</td><td class="px-3 py-2 text-right">0.751</td></tr>
+                <tr><td class="px-3 py-2">25</td><td class="px-3 py-2 text-right">0.822</td><td class="px-3 py-2 text-right">0.794</td><td class="px-3 py-2 text-right">0.751</td></tr>
+                <tr><td class="px-3 py-2">50</td><td class="px-3 py-2 text-right">0.831</td><td class="px-3 py-2 text-right">0.811</td><td class="px-3 py-2 text-right">0.751</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+      </figure>
+
+      <p>
+        On Oregon Critters, SpeciesNet alone scored 0.751. The Project Model passed it with ten labels per species (0.783) and reached 0.831 with 50.
+        At cameras it hadn't been trained on, it scored at most 0.028 lower, so what it learns carries over to new cameras.
+      </p>
+      <p>
+        Accuracy matters because of what comes next, and many camera-trap studies are used to predict occupancy: the share of sites a species uses.
+        On 63 cameras in Nkhotakota, which SpeciesNet also hadn't seen, I reviewed part of the survey and let WildObserve estimate occupancy, then compared it with a full review of every image:
+      </p>
+      <ul class="list-disc pl-8 space-y-2">
+        <li><b>5% reviewed, with the Project Model's suggestions for the rest:</b> occupancy within 0.11 of the full review, on average (11 percentage points).</li>
+        <li><b>5% reviewed, without suggestions:</b> 0.41 away.</li>
+        <li><b>SpeciesNet's suggestions, with no review:</b> 0.24 away, mostly because of the names above.</li>
+      </ul>
+      <p>
+        From 5% reviewed, the 95% intervals with the Project Model's suggestions held the full review's estimate for 94 to 96% of species.
+      </p>
+      <p>
+        When SpeciesNet already knows your images, it does well on its own. On Caltech Camera Traps, which it was probably trained on, its suggestions alone
+        gave occupancy within 0.06 of a full review. There, the Project Model's suggestions were less accurate with little review, and matched SpeciesNet's
+        with half the survey reviewed. In review, you don't have to choose: WildObserve lists both models' suggestions for every animal.
+      </p>
+    </section>
+
+    <section class="space-y-5">
+      <h2 class="text-2xl font-semibold text-gray-800">Knowing when to trust it</h2>
+      <p>
+        A model taught only your species can be confidently wrong about an animal it has never seen, so the two models check each other.
+        WildObserve fills in the Project Model's suggestion only when SpeciesNet agrees. When they disagree, nothing is filled in and the box is flagged,
+        and it shows up first in the <b>Close calls</b> list.
+      </p>
+      <p>
+        In <b>Project &gt; Models…</b>, every version of your Project Model is listed with how well it did on labels held out from its training,
+        which species it finds, and which it mixes up. You can go back to an earlier version, and images you mark uncertain are left out of training.
+      </p>
+    </section>
+
+    <section class="space-y-5">
+      <h2 class="text-2xl font-semibold text-gray-800">Questions</h2>
+      <div>
+        <h3 class="text-xl font-semibold text-gray-800">How many labels does it need?</h3>
+        <p>It starts with three labeled animals each of two species. In the paper's tests, ten labels per species passed SpeciesNet on a dataset it hadn't seen, and five nearly matched it on a dataset it probably had.</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-gray-800">Do I need a GPU or programming?</h3>
+        <p>No. It trains in about a second on a laptop's processor, and there are no settings to choose. WildObserve runs on Mac, Windows, and Linux.</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-gray-800">Can it learn species SpeciesNet doesn't know?</h3>
+        <p>Yes. It learns whatever you label, in your own names, including species SpeciesNet doesn't know and groups such as "small rodent".</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-gray-800">Do my images leave my computer?</h3>
+        <p>No. The Project Model trains and runs on your computer, and your images, their metadata, and your labels stay there.</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-gray-800">Is it free?</h3>
+        <p>Yes, in up to 3 projects simultaneously on the free Community plan, for non-commercial use. The paid plans include a Project Model in any number of projects.</p>
+      </div>
+    </section>
+
+    <section class="conclusion_panel rounded-2xl p-7 md:p-8 space-y-4">
+      <p class="text-lg md:text-xl">
+        A general model gets you started, and a Project Model learns the rest from the review you'd do anyway.
+        <a href="../WildObserve/">Download WildObserve™</a> for free, or read how the models work in the
+        <a href="../WildObserve/user_guide.html#models">user guide</a>.
+      </p>
+      <p>
+        The details are in the preprint: Tabak, M. A. (2026).
+        <a href="https://doi.org/10.64898/2026.10.06.757089">WildObserve: Camera-trap software that learns species labels during review and estimates occupancy and abundance</a>.
+        bioRxiv.
+      </p>
+      <p><a href="../blog.html">← Back to Blog</a></p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-300 py-10 text-sm mt-10">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-6">
+      <div>
+        <p class="font-bold text-white mb-2">Quantitative Science Consulting</p>
+        <p>Science-grounded AI for sustainable impact.</p>
+      </div>
+      <div class="flex flex-col md:items-end space-y-2">
+        <a href="mailto:info@qsc.earth" class="hover:underline">info@qsc.earth</a>
+        <a href="https://www.linkedin.com/company/quantitative-science-consulting" target="_blank" class="hover:underline">LinkedIn</a>
+        <a href="../faq.html" class="hover:underline">FAQ</a>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> QSC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- The chart. Data: Oregon Critters, balanced accuracy, same cameras (preprint, Species suggestions results). -->
+  <script>
+    (function () {
+      const data = [
+        { n: 3, pm: 0.697 },
+        { n: 5, pm: 0.741 },
+        { n: 10, pm: 0.783 },
+        { n: 25, pm: 0.822 },
+        { n: 50, pm: 0.831 }
+      ];
+      const speciesnet = 0.751;
+      const series_color = '#15803d';
+      const reference_color = '#6b7280';
+      const host = document.getElementById('pm_chart');
+      const tip = document.getElementById('pm_tip');
+      const NS = 'http://www.w3.org/2000/svg';
+
+      function el(name, attrs, parent) {
+        const node = document.createElementNS(NS, name);
+        for (const key in attrs) node.setAttribute(key, attrs[key]);
+        if (parent) parent.appendChild(node);
+        return node;
+      }
+
+      function text(parent, x, y, content, attrs) {
+        const node = el('text', Object.assign({ x: x, y: y, 'font-size': 12, fill: '#6b7280' }, attrs || {}), parent);
+        node.textContent = content;
+        return node;
+      }
+
+      function tip_row(value, label, color, dashed) {
+        const row = document.createElement('div');
+        row.className = 'tip_row';
+        const key = document.createElement('span');
+        key.className = 'tip_key';
+        key.style.borderTopColor = color;
+        if (dashed) key.style.borderTopStyle = 'dashed';
+        const strong = document.createElement('b');
+        strong.className = 'text-gray-900';
+        strong.textContent = value.toFixed(3);
+        const name = document.createElement('span');
+        name.className = 'text-gray-600';
+        name.textContent = label;
+        row.append(key, strong, name);
+        return row;
+      }
+
+      function render() {
+        const old = host.querySelector('svg');
+        if (old) old.remove();
+        tip.hidden = true;
+
+        const w = host.clientWidth;
+        const h = host.clientHeight;
+        const narrow = w < 480;
+        const m = { top: 24, right: narrow ? 16 : 120, bottom: 42, left: 40 };
+        const iw = w - m.left - m.right;
+        const ih = h - m.top - m.bottom;
+        const x_min = Math.log(2.6), x_max = Math.log(56);
+        const y_min = 0.6, y_max = 0.9;
+        const sx = (n) => m.left + (Math.log(n) - x_min) / (x_max - x_min) * iw;
+        const sy = (v) => m.top + (1 - (v - y_min) / (y_max - y_min)) * ih;
+
+        const svg = el('svg', { width: w, height: h }, host);
+
+        // Hairline grid and y ticks
+        [0.6, 0.7, 0.8, 0.9].forEach((v) => {
+          el('line', { x1: m.left, x2: m.left + iw, y1: sy(v), y2: sy(v), stroke: '#e5e7eb', 'stroke-width': 1 }, svg);
+          text(svg, m.left - 8, sy(v) + 4, v.toFixed(1), { 'text-anchor': 'end', style: 'font-variant-numeric: tabular-nums' });
+        });
+        // X ticks and title
+        data.forEach((d) => {
+          text(svg, sx(d.n), m.top + ih + 18, String(d.n), { 'text-anchor': 'middle' });
+        });
+        text(svg, m.left + iw / 2, h - 4, 'Labeled examples per species', { 'text-anchor': 'middle', fill: '#4b5563' });
+
+        // Reference line: SpeciesNet alone
+        el('line', { x1: m.left, x2: m.left + iw, y1: sy(speciesnet), y2: sy(speciesnet), stroke: reference_color, 'stroke-width': 1.5, 'stroke-dasharray': '5 4' }, svg);
+        // Its label sits below the line at the right, where the series is above it, so they never cross
+        text(svg, m.left + iw, sy(speciesnet) + 18, 'SpeciesNet alone, 0.751', { 'text-anchor': 'end', fill: '#4b5563' });
+
+        // Crosshair (drawn under the series)
+        const cross = el('line', { y1: m.top, y2: m.top + ih, stroke: '#9ca3af', 'stroke-width': 1, visibility: 'hidden' }, svg);
+
+        // The series
+        const path = data.map((d, i) => (i ? 'L' : 'M') + sx(d.n).toFixed(1) + ' ' + sy(d.pm).toFixed(1)).join(' ');
+        el('path', { d: path, fill: 'none', stroke: series_color, 'stroke-width': 2, 'stroke-linejoin': 'round', 'stroke-linecap': 'round' }, svg);
+        data.forEach((d) => {
+          el('circle', { cx: sx(d.n), cy: sy(d.pm), r: 4.5, fill: series_color, stroke: '#ffffff', 'stroke-width': 2 }, svg);
+        });
+
+        // Selective labels: the point where it passes SpeciesNet, and the end
+        const ten = data[2], last = data[data.length - 1];
+        text(svg, sx(ten.n), sy(ten.pm) - 12, '0.783', { 'text-anchor': 'middle', fill: '#1f2937', 'font-weight': 600 });
+        if (narrow) {
+          text(svg, sx(last.n), sy(last.pm) - 12, 'Project Model, 0.831', { 'text-anchor': 'end', fill: '#1f2937', 'font-weight': 600 });
+        } else {
+          text(svg, sx(last.n) + 10, sy(last.pm) + 4, 'Project Model', { fill: '#1f2937', 'font-weight': 600 });
+          text(svg, sx(last.n) + 10, sy(last.pm) + 20, '0.831', { fill: '#4b5563' });
+        }
+
+        // Hit areas: one column per x position, focusable, bigger than the marks
+        function show(i) {
+          const d = data[i];
+          cross.setAttribute('x1', sx(d.n));
+          cross.setAttribute('x2', sx(d.n));
+          cross.setAttribute('visibility', 'visible');
+          tip.replaceChildren();
+          const head = document.createElement('div');
+          head.className = 'text-gray-600 mb-1';
+          head.textContent = d.n + ' labels per species';
+          tip.append(head, tip_row(d.pm, 'Project Model', series_color, false), tip_row(speciesnet, 'SpeciesNet alone', reference_color, true));
+          tip.hidden = false;
+          const tw = tip.offsetWidth;
+          let left = sx(d.n) + 12;
+          if (left + tw > w) left = sx(d.n) - tw - 12;
+          tip.style.left = Math.max(0, left) + 'px';
+          tip.style.top = (m.top + 4) + 'px';
+        }
+        function hide() {
+          cross.setAttribute('visibility', 'hidden');
+          tip.hidden = true;
+        }
+        data.forEach((d, i) => {
+          const left = i === 0 ? m.left : (sx(data[i - 1].n) + sx(d.n)) / 2;
+          const right = i === data.length - 1 ? m.left + iw : (sx(d.n) + sx(data[i + 1].n)) / 2;
+          const hit = el('rect', {
+            class: 'hit', role: 'img', x: left, y: m.top, width: right - left, height: ih, fill: 'transparent', tabindex: 0,
+            'aria-label': d.n + ' labels per species: Project Model ' + d.pm.toFixed(3) + ', SpeciesNet alone ' + speciesnet.toFixed(3)
+          }, svg);
+          hit.addEventListener('pointerenter', () => show(i));
+          hit.addEventListener('pointermove', () => show(i));
+          hit.addEventListener('focus', () => show(i));
+          hit.addEventListener('pointerleave', hide);
+          hit.addEventListener('blur', hide);
+        });
+      }
+
+      render();
+      if ('ResizeObserver' in window) {
+        new ResizeObserver(render).observe(host);
+      } else {
+        window.addEventListener('resize', render);
+      }
+    })();
+  </script>
+</body>
+</html>
